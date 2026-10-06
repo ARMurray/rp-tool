@@ -1,0 +1,35 @@
+DMR sample coverage report  (2026-06-16 12:59:53)
+Source DB: data/pr_rp.sqlite
+Full table rows:        286895
+Sample rows:            769
+Distinct parameters:    full=106  sample=106
+Distinct units:         full=26  sample=26
+Distinct stat bases:    full=4  sample=4
+
+Units present in full data (and whether captured in sample):
+  %                    captured
+  Colony Forming Units per 100ml captured
+  Cubic Meters per Day captured
+  Days                 captured
+  MGD                  captured
+  Million fibers per Liter captured
+  Most Probable Number (MPN) per 100ml captured
+  NTU                  captured
+  Number per 100 Liters captured
+  Number per 100 Milliliters captured
+  Parts per Million    captured
+  Parts per Thousand   captured
+  Parts per Trillion   captured
+  Pass=0; Fail=1       captured
+  SU                   captured
+  Toxicity Units       captured
+  col unit (pc)        captured
+  deg C                captured
+  deg F                captured
+  gal/d                captured
+  kg/d                 captured
+  lbs/d                captured
+  mL/L                 captured
+  mg/L                 captured
+  ug/L                 captured
+  (blank)              captured

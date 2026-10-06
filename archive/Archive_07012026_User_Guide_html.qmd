@@ -1,0 +1,41 @@
+---
+title: "Puerto Rico Reasonable Potential (RP) Calculator"
+subtitle: "User Guide"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    toc-title: "Contents"
+    page-layout: full
+    embed-resources: true
+    theme: cosmo
+    css: |
+      body { font-size: 15px; line-height: 1.7; }
+      h1 { color: #07648d; border-bottom: 2px solid #07648d; padding-bottom: 6px; }
+      h2 { color: #07648d; }
+      h3 { color: #1a1a1a; }
+      .callout { border-radius: 6px; }
+      code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
+      .formula-box {
+        background: #f0f6fb;
+        border-left: 4px solid #07648d;
+        padding: 12px 16px;
+        margin: 12px 0;
+        border-radius: 0 6px 6px 0;
+        font-size: 0.95em;
+      }
+      table { font-size: 0.9em; }
+      .screenshot-placeholder {
+        background: #f8f8f8;
+        border: 1.5px dashed #aaa;
+        border-radius: 6px;
+        padding: 18px;
+        text-align: center;
+        color: #888;
+        margin: 16px 0;
+        font-style: italic;
+      }
+---
+
+{{< include _user_guide_body.qmd >}}

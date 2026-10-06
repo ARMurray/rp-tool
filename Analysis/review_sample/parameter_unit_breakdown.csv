@@ -1,0 +1,241 @@
+"parameter_code","parameter_desc","dmr_unit_desc","n_records","n_permits","value_min","value_max"
+"00010","Temperature, water deg. centigrade","deg C",12664,181,0,305
+"00010","Temperature, water deg. centigrade","(blank)",2018,39,,
+"00011","Temperature, water deg. fahrenheit","deg F",568,6,1.6,117.3
+"00011","Temperature, water deg. fahrenheit","(blank)",240,5,,
+"00016","Temp. diff. between samp. & upstrm deg. C","deg C",72,2,0.6,5.88
+"00016","Temp. diff. between samp. & upstrm deg. C","(blank)",5,1,,
+"00070","Turbidity","NTU",6710,159,0,7700
+"00070","Turbidity","(blank)",1188,27,,
+"00080","Color [PT-CO units]","col unit (pc)",7502,151,0,120000
+"00080","Color [PT-CO units]","(blank)",1273,28,,
+"00152","Oil and grease per production","(blank)",72,1,,
+"00300","Oxygen, dissolved [DO]","mg/L",10729,167,0,5240
+"00300","Oxygen, dissolved [DO]","(blank)",1376,33,,
+"00300","Oxygen, dissolved [DO]","ug/L",4,1,5,9.47
+"00310","BOD, 5-day, 20 deg. C","mg/L",17643,142,0,15345
+"00310","BOD, 5-day, 20 deg. C","kg/d",5993,47,0,52338
+"00310","BOD, 5-day, 20 deg. C","(blank)",2078,41,27,27
+"00310","BOD, 5-day, 20 deg. C","lbs/d",226,1,0.9,573.3
+"00310","BOD, 5-day, 20 deg. C","mL/L",21,1,1,39
+"00310","BOD, 5-day, 20 deg. C","%",3,1,30.5,806.5
+"00340","Oxygen demand, chem. [high level] [COD]","(blank)",118,1,,
+"00340","Oxygen demand, chem. [high level] [COD]","mg/L",1,1,49,49
+"00400","pH","SU",25490,184,0,7046
+"00400","pH","(blank)",4458,44,,
+"00480","Salinity","mg/L",45,5,0.01541,3432
+"00480","Salinity","(blank)",34,5,,
+"00480","Salinity","Parts per Thousand",26,7,0.607,999
+"00480","Salinity","Parts per Trillion",1,1,1.693,1.693
+"00530","Solids, total suspended","mg/L",16223,78,0,49000
+"00530","Solids, total suspended","kg/d",6330,50,0,24201
+"00530","Solids, total suspended","(blank)",3337,32,,
+"00530","Solids, total suspended","lbs/d",316,1,5,1245.2
+"00530","Solids, total suspended","mL/L",19,2,5,36.4
+"00530","Solids, total suspended","%",3,1,22.2,239.5
+"00545","Solids, settleable","mL/L",9945,157,0,10000
+"00545","Solids, settleable","(blank)",1625,31,,
+"00545","Solids, settleable","mg/L",6,2,0.1,5.6
+"00556","Oil & Grease","mg/L",7706,86,0,1500
+"00556","Oil & Grease","(blank)",3438,36,,
+"00556","Oil & Grease","lbs/d",270,1,0.4,125.4
+"00556","Oil & Grease","mL/L",16,1,1.4,2
+"00556","Oil & Grease","ug/L",10,2,1.4,14000
+"00600","Nitrogen, total [as N]","ug/L",3456,58,0,1802000
+"00600","Nitrogen, total [as N]","(blank)",335,17,,
+"00600","Nitrogen, total [as N]","mg/L",116,2,0.59,36
+"00609","Ammonia nitrogen, total, [as N] 30 day","lbs/d",228,1,0,1735
+"00609","Ammonia nitrogen, total, [as N] 30 day","(blank)",10,1,,
+"00610","Nitrogen, ammonia total [as N]","mg/L",117,1,0,115
+"00610","Nitrogen, ammonia total [as N]","(blank)",2,1,,
+"00625","Nitrogen, Kjeldahl, total [as N]","ug/L",541,7,200,113000
+"00625","Nitrogen, Kjeldahl, total [as N]","(blank)",1,1,,
+"00630","Nitrite + Nitrate total [as N]","ug/L",284,3,0,80500
+"00630","Nitrite + Nitrate total [as N]","(blank)",29,2,,
+"00665","Phosphorus, total [as P]","ug/L",5016,103,0,55000
+"00665","Phosphorus, total [as P]","(blank)",938,27,,
+"00665","Phosphorus, total [as P]","mg/L",863,34,0,17.25
+"00670","Phosphorous, total organic [as P]","ug/L",1,1,9.5,9.5
+"00680","Carbon, tot organic [TOC]","(blank)",460,1,,
+"00680","Carbon, tot organic [TOC]","mg/L",336,1,0.5,29.2
+"00680","Carbon, tot organic [TOC]","lbs/d",268,1,0.11,933.8
+"00719","Cyanide, free-water plus wastewaters","(blank)",89,1,,
+"00720","Cyanide, total [as CN]","ug/L",664,26,1.1,29.8
+"00720","Cyanide, total [as CN]","(blank)",6,5,,
+"00745","Sulfide, total [as S]","lbs/d",274,1,0,219.96
+"00745","Sulfide, total [as S]","ug/L",193,3,0.014,7440
+"00745","Sulfide, total [as S]","(blank)",189,3,,
+"00945","Sulfate, total [as SO4]","mg/L",1206,44,0.09,2745
+"00945","Sulfate, total [as SO4]","ug/L",242,3,2,3040000
+"00945","Sulfate, total [as SO4]","(blank)",221,12,,
+"00948","Asbestos","(blank)",26,1,,
+"00948","Asbestos","Million fibers per Liter",8,1,0.812,656
+"00951","Fluoride, total [as F]","ug/L",93,1,0,700
+"00951","Fluoride, total [as F]","(blank)",26,1,,
+"01002","Arsenic, total [as As]","ug/L",385,17,0,122.6
+"01002","Arsenic, total [as As]","(blank)",335,10,,
+"01027","Cadmium, total [as Cd]","ug/L",862,27,0.001,10.8
+"01027","Cadmium, total [as Cd]","(blank)",592,19,,
+"01032","Chromium, hexavalent [as Cr]","ug/L",231,12,0.011,2000
+"01032","Chromium, hexavalent [as Cr]","(blank)",217,5,,
+"01032","Chromium, hexavalent [as Cr]","lbs/d",2,1,0,0
+"01034","Chromium, total [as Cr]","(blank)",756,4,,
+"01034","Chromium, total [as Cr]","mg/L",750,4,0,0.133
+"01034","Chromium, total [as Cr]","lbs/d",30,1,0,0.03
+"01040","Copper, dissolved [as Cu]","(blank)",18,1,,
+"01040","Copper, dissolved [as Cu]","ug/L",2,1,12.4,12.4
+"01042","Copper, total [as Cu]","ug/L",8686,151,0,13800
+"01042","Copper, total [as Cu]","(blank)",1093,35,,
+"01042","Copper, total [as Cu]","kg/d",400,2,0,0.355
+"01042","Copper, total [as Cu]","mg/L",208,2,0.002,0.749
+"01045","Iron, total [as Fe]","kg/d",400,2,0,1.66
+"01045","Iron, total [as Fe]","mg/L",181,2,1e-04,2.09
+"01045","Iron, total [as Fe]","(blank)",59,5,,
+"01051","Lead, total [as Pb]","ug/L",2843,85,0,679
+"01051","Lead, total [as Pb]","(blank)",1169,54,,
+"01059","Thallium, total [as Tl]","ug/L",474,7,0,35.06
+"01059","Thallium, total [as Tl]","(blank)",291,7,,
+"01065","Nickel, dissolved [as Ni]","(blank)",18,1,,
+"01065","Nickel, dissolved [as Ni]","ug/L",2,1,8.8,8.8
+"01067","Nickel, total [as Ni]","ug/L",693,14,0.002,335
+"01067","Nickel, total [as Ni]","(blank)",593,8,,
+"01077","Silver, total [as Ag]","ug/L",678,21,0,16
+"01077","Silver, total [as Ag]","(blank)",413,15,,
+"01092","Zinc, total [as Zn]","ug/L",1999,44,0.0016,1820
+"01092","Zinc, total [as Zn]","(blank)",1399,14,,
+"01092","Zinc, total [as Zn]","mg/L",844,3,0,1
+"01092","Zinc, total [as Zn]","%",1,1,44.9,44.9
+"01105","Aluminum, total [as Al]","mg/L",28,1,0.004,0.401
+"01105","Aluminum, total [as Al]","(blank)",26,2,,
+"01147","Selenium, total [as Se]","(blank)",278,6,,
+"01147","Selenium, total [as Se]","ug/L",141,6,0.157,150
+"01220","Chromium, hexavalent dissolved [as Cr]","(blank)",18,1,,
+"01220","Chromium, hexavalent dissolved [as Cr]","ug/L",2,1,0.45,0.45
+"01252","Arsenic","(blank)",18,1,,
+"01252","Arsenic","ug/L",2,1,8.9,8.9
+"03615","2-Methyl-4,6-dinitrophenol","(blank)",633,7,,
+"03615","2-Methyl-4,6-dinitrophenol","ug/L",69,6,0,12
+"22414","Whole effluent toxicity","%",51,3,1.63,30.77
+"22414","Whole effluent toxicity","(blank)",8,5,,
+"30500","Coliform, fecal - % samples exceeding limit","%",688,6,0,100
+"30500","Coliform, fecal - % samples exceeding limit","(blank)",126,4,,
+"31639","Enterococci: group D, MF trans, M-E, EIA","Number per 100 Milliliters",212,1,0,724960
+"31639","Enterococci: group D, MF trans, M-E, EIA","(blank)",14,1,,
+"32103","1,2-Dichloroethane","(blank)",89,1,,
+"32106","Chloroform","ug/L",26,1,1.2,16.7
+"34030","Benzene","(blank)",89,1,,
+"34242","Benzo[k]fluoranthene","(blank)",19,1,,
+"34242","Benzo[k]fluoranthene","ug/L",7,1,0.05,0.052
+"34247","Benzo[a]pyrene","(blank)",198,1,,
+"34247","Benzo[a]pyrene","ug/L",51,1,0.18,0.18
+"34320","Chrysene","(blank)",217,2,,
+"34320","Chrysene","ug/L",58,2,0.05,0.18
+"34423","Methylene chloride","(blank)",89,1,,
+"34526","Benzo[a]anthracene","(blank)",217,2,,
+"34526","Benzo[a]anthracene","ug/L",58,2,0.05,0.18
+"34586","2-Chlorophenol","(blank)",427,5,,
+"34586","2-Chlorophenol","ug/L",18,2,0,2
+"34601","2,4-Dichlorophenol","(blank)",427,5,,
+"34601","2,4-Dichlorophenol","ug/L",18,2,0,2
+"34606","2,4-Dimethylphenol","(blank)",104,2,,
+"34616","2,4-Dinitrophenol","(blank)",223,3,,
+"34621","2,4,6-Trichlorophenol","(blank)",631,6,,
+"34621","2,4,6-Trichlorophenol","ug/L",22,2,0,2
+"34694","Phenol","(blank)",104,2,,
+"38260","Surfactants [MBAS]","ug/L",2430,52,0,15600
+"38260","Surfactants [MBAS]","(blank)",690,16,,
+"38260","Surfactants [MBAS]","mg/L",24,1,0.025,113
+"39032","Pentachlorophenol","(blank)",1192,18,,
+"39032","Pentachlorophenol","ug/L",53,5,0,11
+"39100","Di[2-ethylhexyl] phthalate [DEHP]","(blank)",17,1,,
+"39120","Benzidine","(blank)",198,1,,
+"39120","Benzidine","ug/L",51,1,0.002,0.002
+"39516","Polychlorinated biphenyls [PCBs]","(blank)",444,3,,
+"39516","Polychlorinated biphenyls [PCBs]","ug/L",12,2,0,0.5
+"39700","Hexachlorobenzene","(blank)",198,1,,
+"39700","Hexachlorobenzene","ug/L",51,1,0.0029,0.0029
+"45600","Temperature, length of excursion","Days",189,2,0,751.5
+"45600","Temperature, length of excursion","(blank)",8,1,,
+"46225","Chloride","(blank)",89,1,,
+"50008","Priority Pollutants","(blank)",137,3,,
+"50050","Flow, in conduit or thru treatment plant","MGD",19693,182,0,511617
+"50050","Flow, in conduit or thru treatment plant","(blank)",3199,51,,
+"50050","Flow, in conduit or thru treatment plant","gal/d",500,4,6e-04,1512000
+"50050","Flow, in conduit or thru treatment plant","Cubic Meters per Day",5,1,20730.3,27264.3
+"5005E","Flow, Excluding Stormwater Discharge","MGD",414,3,0,751.5
+"5005E","Flow, Excluding Stormwater Discharge","(blank)",129,3,,
+"50060","Chlorine, total residual","(blank)",7716,153,,
+"50060","Chlorine, total residual","ug/L",3379,106,0,14500
+"50060","Chlorine, total residual","mg/L",1713,21,0,460
+"50060","Chlorine, total residual","Parts per Million",138,3,0,3.6
+"50060","Chlorine, total residual","%",2,1,0.29,0.29
+"50064","Chlorine, free available","(blank)",970,4,,
+"50064","Chlorine, free available","mg/L",718,5,0,0.8
+"50064","Chlorine, free available","mL/L",32,1,0.03,0.15
+"51173","Cyanide, free available","ug/L",2018,48,0,249
+"51173","Cyanide, free available","(blank)",520,22,,
+"51202","Sulfide-hydrogen sulfide [undissociated]","ug/L",2498,58,0,171000
+"51202","Sulfide-hydrogen sulfide [undissociated]","(blank)",806,15,,
+"51202","Sulfide-hydrogen sulfide [undissociated]","mg/L",88,3,1e-04,0.0215
+"51445","Nitrogen, Total","(blank)",26,1,,
+"51445","Nitrogen, Total","ug/L",15,1,15.9,3250
+"51489","Nitrogen, Total as NO3 + NH3","ug/L",104,1,8.51,71700
+"51489","Nitrogen, Total as NO3 + NH3","(blank)",9,1,,
+"51577","Priority Pollutant Results","(blank)",118,1,,
+"51577","Priority Pollutant Results","Pass=0; Fail=1",1,1,0,0
+"51618","Enterococci - % of upper confidence limit","%",292,3,0,104
+"51618","Enterococci - % of upper confidence limit","(blank)",8,1,,
+"51712","Whole Effluent Toxicity [WET] - M. beryllina","%",58,9,0,100
+"51712","Whole Effluent Toxicity [WET] - M. beryllina","(blank)",30,2,,
+"51713","Whole Effluent Toxicity [WET] - Americamysis bahia (formerly Mysidopsis bahia)","%",151,18,0,100
+"51713","Whole Effluent Toxicity [WET] - Americamysis bahia (formerly Mysidopsis bahia)","(blank)",36,5,,
+"51714","Whole Effluent Toxicity [WET] - P. promelas","%",339,57,1.8,100
+"51714","Whole Effluent Toxicity [WET] - P. promelas","(blank)",40,5,,
+"51865","Sulfates, total [as SO4]","(blank)",59,2,,
+"51865","Sulfates, total [as SO4]","mg/L",16,2,34.6,3854
+"51865","Sulfates, total [as SO4]","ug/L",14,1,1995,3150000
+"51923","Whole Effluent Toxicity  [WET] - D. magna","%",338,57,1.8,100
+"51923","Whole Effluent Toxicity  [WET] - D. magna","(blank)",40,5,,
+"61211","Enterococci","Number per 100 Milliliters",8615,76,0,1680000
+"61211","Enterococci","(blank)",1486,25,,
+"61211","Enterococci","Number per 100 Liters",145,4,0,60000
+"61211","Enterococci","Colony Forming Units per 100ml",12,1,10,220
+"70029","Phenolic compounds, total","lbs/d",272,1,0,1.98
+"70029","Phenolic compounds, total","(blank)",78,1,,
+"70295","Solids, total dissolved","mg/L",2016,69,0.1,42730
+"70295","Solids, total dissolved","(blank)",424,18,,
+"70295","Solids, total dissolved","ug/L",32,2,110000,3900000
+"70300","Solids, total dissolved- 180 deg. C","mg/L",46,9,34.92,100360
+"70300","Solids, total dissolved- 180 deg. C","(blank)",28,4,,
+"71900","Mercury, total [as Hg]","ug/L",1878,51,0,66
+"71900","Mercury, total [as Hg]","(blank)",537,14,,
+"74055","Coliform, fecal general","Number per 100 Milliliters",894,9,0,230000
+"74055","Coliform, fecal general","(blank)",455,7,,
+"74055","Coliform, fecal general","Number per 100 Liters",46,1,136.21,2200000
+"74055","Coliform, fecal general","Most Probable Number (MPN) per 100ml",2,1,38512.52,92000
+"74056","Coliform, total general","Number per 100 Milliliters",251,3,0,169425.15
+"74056","Coliform, total general","(blank)",82,2,,
+"74056","Coliform, total general","Number per 100 Liters",23,1,159.22,560656.76
+"74056","Coliform, total general","Most Probable Number (MPN) per 100ml",1,1,103191.01,103191.01
+"81010","BOD, 5-day, percent removal","%",4143,70,-433,9904
+"81010","BOD, 5-day, percent removal","(blank)",385,14,,
+"81011","Solids, suspended percent removal","%",4038,70,-721,100
+"81011","Solids, suspended percent removal","(blank)",379,14,,
+"81017","Chemical Oxygen Demand [COD]","(blank)",178,1,,
+"81395","Storm water flow","(blank)",1367,5,,
+"81395","Storm water flow","MGD",891,5,-7.85,61956.9
+"82230","Ammonia & ammonium- total","ug/L",5765,81,0.1,77100
+"82230","Ammonia & ammonium- total","mg/L",1313,42,0,292
+"82230","Ammonia & ammonium- total","(blank)",446,38,,
+"TCP3A","% Effect Static Chronic Arbacia punctulata","%",156,10,1,417
+"TCP3A","% Effect Static Chronic Arbacia punctulata","(blank)",9,7,,
+"TDA6A","NOAEL Static 48Hr Acute Cyprinodon variegatus","%",93,9,1,21.1
+"TDA6A","NOAEL Static 48Hr Acute Cyprinodon variegatus","(blank)",6,3,,
+"TPP6A","NOEC Sub-Lethal Static Renewal 7 Day Chronic Cyprinodeon variegatus","%",128,9,0.89,476.2
+"TPP6A","NOEC Sub-Lethal Static Renewal 7 Day Chronic Cyprinodeon variegatus","(blank)",9,7,,
+"TPP6C","NOEC Sub-Lethal Static Renewal 7 Day Chronic Pimephales promelas","(blank)",1,1,,
+"TQT3C","% Coefficient Of Variation 21 Day Chronic Daphnia Magna","(blank)",1,1,,
+"TS000","Toxicity, Acute","(blank)",39,1,,
+"TS000","Toxicity, Acute","Toxicity Units",3,1,100,100
+"TZP3E","% Growth Reduction Static Renewal 7 Day Chronic Americamysis bahia (formerly Mysidopsis bahia)","%",128,9,1.63,156
+"TZP3E","% Growth Reduction Static Renewal 7 Day Chronic Americamysis bahia (formerly Mysidopsis bahia)","(blank)",9,7,,

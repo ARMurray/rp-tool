@@ -1,0 +1,1695 @@
+npdes_id,perm_feature_nmbr,parameter_code,parameter_desc,dmr_value_nmbr,value_type_code,statistical_base_type_code,value_type_desc,dmr_unit_desc,dmr_value_standard_units,standard_unit_desc,limit_value_nmbr,limit_unit_desc,nodi_code,monitoring_period_end_date
+PR0024333,001,00010,"Temperature, water deg. centigrade",24.3,C3,MAX,Concentration3,deg C,24.3,deg C,32.2,deg C,,01/31/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",24.5,C3,MAX,Concentration3,deg C,24.5,deg C,32.2,deg C,,02/29/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",24.6,C3,MAX,Concentration3,deg C,24.6,deg C,32.2,deg C,,03/31/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",25,C3,MAX,Concentration3,deg C,25,deg C,32.2,deg C,,04/30/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.6,C3,MAX,Concentration3,deg C,25.6,deg C,32.2,deg C,,05/31/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.5,C3,MAX,Concentration3,deg C,27.5,deg C,32.2,deg C,,06/30/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",26.9,C3,MAX,Concentration3,deg C,26.9,deg C,32.2,deg C,,07/31/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.2,C3,MAX,Concentration3,deg C,27.2,deg C,32.2,deg C,,08/31/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.1,C3,MAX,Concentration3,deg C,27.1,deg C,32.2,deg C,,09/30/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,10/31/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,11/30/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,12/31/2020
+PR0024333,001,00010,"Temperature, water deg. centigrade",23.4,C3,MAX,Concentration3,deg C,23.4,deg C,32.2,deg C,,01/31/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",23.1,C3,MAX,Concentration3,deg C,23.1,deg C,32.2,deg C,,02/28/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.6,C3,MAX,Concentration3,deg C,25.6,deg C,32.2,deg C,,03/31/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",24.1,C3,MAX,Concentration3,deg C,24.1,deg C,32.2,deg C,,04/30/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.1,C3,MAX,Concentration3,deg C,27.1,deg C,32.2,deg C,,05/31/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",26.5,C3,MAX,Concentration3,deg C,26.5,deg C,32.2,deg C,,06/30/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.9,C3,MAX,Concentration3,deg C,27.9,deg C,32.2,deg C,,07/31/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",29.1,C3,MAX,Concentration3,deg C,29.1,deg C,32.2,deg C,,08/31/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.9,C3,MAX,Concentration3,deg C,27.9,deg C,32.2,deg C,,09/30/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",27,C3,MAX,Concentration3,deg C,27,deg C,32.2,deg C,,10/31/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,11/30/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.1,C3,MAX,Concentration3,deg C,27.1,deg C,32.2,deg C,,12/31/2021
+PR0024333,001,00010,"Temperature, water deg. centigrade",26.7,C3,MAX,Concentration3,deg C,26.7,deg C,32.2,deg C,,01/31/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",24.5,C3,MAX,Concentration3,deg C,24.5,deg C,32.2,deg C,,02/28/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",24.1,C3,MAX,Concentration3,deg C,24.1,deg C,32.2,deg C,,03/31/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.6,C3,MAX,Concentration3,deg C,25.6,deg C,32.2,deg C,,04/30/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",28,C3,MAX,Concentration3,deg C,28,deg C,32.2,deg C,,05/31/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",29.1,C3,MAX,Concentration3,deg C,29.1,deg C,32.2,deg C,,06/30/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",29.4,C3,MAX,Concentration3,deg C,29.4,deg C,32.2,deg C,,07/31/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",29.2,C3,MAX,Concentration3,deg C,29.2,deg C,32.2,deg C,,08/31/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",28.1,C3,MAX,Concentration3,deg C,28.1,deg C,32.2,deg C,,09/30/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",28.9,C3,MAX,Concentration3,deg C,28.9,deg C,32.2,deg C,,10/31/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.4,C3,MAX,Concentration3,deg C,27.4,deg C,32.2,deg C,,11/30/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",26.4,C3,MAX,Concentration3,deg C,26.4,deg C,32.2,deg C,,12/31/2022
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.8,C3,MAX,Concentration3,deg C,25.8,deg C,32.2,deg C,,01/31/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.4,C3,MAX,Concentration3,deg C,25.4,deg C,32.2,deg C,,02/28/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",26.6,C3,MAX,Concentration3,deg C,26.6,deg C,32.2,deg C,,03/31/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.3,C3,MAX,Concentration3,deg C,27.3,deg C,32.2,deg C,,04/30/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",28.3,C3,MAX,Concentration3,deg C,28.3,deg C,32.2,deg C,,05/31/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",29,C3,MAX,Concentration3,deg C,29,deg C,32.2,deg C,,06/30/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",28.7,C3,MAX,Concentration3,deg C,28.7,deg C,32.2,deg C,,07/31/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",29.4,C3,MAX,Concentration3,deg C,29.4,deg C,32.2,deg C,,08/31/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.7,C3,MAX,Concentration3,deg C,27.7,deg C,32.2,deg C,,09/30/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",27.1,C3,MAX,Concentration3,deg C,27.1,deg C,32.2,deg C,,10/31/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",26.7,C3,MAX,Concentration3,deg C,26.7,deg C,32.2,deg C,,11/30/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,12/31/2023
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.2,C3,MAX,Concentration3,deg C,25.2,deg C,32.2,deg C,,01/31/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.2,C3,MAX,Concentration3,deg C,25.2,deg C,32.2,deg C,,02/29/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.2,C3,MAX,Concentration3,deg C,25.2,deg C,32.2,deg C,,03/31/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.2,C3,MAX,Concentration3,deg C,25.2,deg C,32.2,deg C,,04/30/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.1,C3,MAX,Concentration3,deg C,25.1,deg C,32.2,deg C,,05/31/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",27,C3,MAX,Concentration3,deg C,27,deg C,32.2,deg C,,06/30/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",26.5,C3,MAX,Concentration3,deg C,26.5,deg C,32.2,deg C,,07/31/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,08/31/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,09/30/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,10/31/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,11/30/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",25,C3,MAX,Concentration3,deg C,25,deg C,32.2,deg C,,12/31/2024
+PR0024333,001,00010,"Temperature, water deg. centigrade",25.5,C3,MAX,Concentration3,deg C,25.5,deg C,32.2,deg C,,01/31/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,02/28/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,03/31/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,04/30/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,05/31/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,06/30/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,07/31/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,08/31/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,09/30/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,10/31/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,11/30/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,12/31/2025
+PR0024333,001,00010,"Temperature, water deg. centigrade",26,C3,MAX,Concentration3,deg C,26,deg C,32.2,deg C,,01/31/2026
+PR0024333,001,00070,Turbidity,15.3,C3,MAX,Concentration3,NTU,15.3,NTU,50,NTU,,11/30/2020
+PR0024333,001,00070,Turbidity,3.93,C3,MAX,Concentration3,NTU,3.93,NTU,50,NTU,,11/30/2021
+PR0024333,001,00070,Turbidity,17.1,C3,MAX,Concentration3,NTU,17.1,NTU,50,NTU,,11/30/2022
+PR0024333,001,00070,Turbidity,22,C3,MAX,Concentration3,NTU,22,NTU,50,NTU,,11/30/2023
+PR0024333,001,00070,Turbidity,3.4,C3,MAX,Concentration3,NTU,3.4,NTU,50,NTU,,11/30/2024
+PR0024333,001,00070,Turbidity,4.7,C3,MAX,Concentration3,NTU,4.7,NTU,50,NTU,,11/30/2025
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,01/31/2020
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,02/29/2020
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,03/31/2020
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,04/30/2020
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,05/31/2020
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,06/30/2020
+PR0024333,001,00080,Color [PT-CO units],20,C3,MAX,Concentration3,col unit (pc),20,col unit (pc),20,col unit (pc),,07/31/2020
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,08/31/2020
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,09/30/2020
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,10/31/2020
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,11/30/2020
+PR0024333,001,00080,Color [PT-CO units],6.61,C3,MAX,Concentration3,col unit (pc),6.61,col unit (pc),20,col unit (pc),,12/31/2020
+PR0024333,001,00080,Color [PT-CO units],7.93,C3,MAX,Concentration3,col unit (pc),7.93,col unit (pc),20,col unit (pc),,01/31/2021
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,02/28/2021
+PR0024333,001,00080,Color [PT-CO units],7.12,C3,MAX,Concentration3,col unit (pc),7.12,col unit (pc),20,col unit (pc),,03/31/2021
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,04/30/2021
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,05/31/2021
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,06/30/2021
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,07/31/2021
+PR0024333,001,00080,Color [PT-CO units],25,C3,MAX,Concentration3,col unit (pc),25,col unit (pc),20,col unit (pc),,08/31/2021
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,09/30/2021
+PR0024333,001,00080,Color [PT-CO units],20,C3,MAX,Concentration3,col unit (pc),20,col unit (pc),20,col unit (pc),,10/31/2021
+PR0024333,001,00080,Color [PT-CO units],20,C3,MAX,Concentration3,col unit (pc),20,col unit (pc),20,col unit (pc),,11/30/2021
+PR0024333,001,00080,Color [PT-CO units],35,C3,MAX,Concentration3,col unit (pc),35,col unit (pc),20,col unit (pc),,12/31/2021
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,01/31/2022
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,02/28/2022
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,03/31/2022
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,04/30/2022
+PR0024333,001,00080,Color [PT-CO units],100,C3,MAX,Concentration3,col unit (pc),100,col unit (pc),20,col unit (pc),,05/31/2022
+PR0024333,001,00080,Color [PT-CO units],25,C3,MAX,Concentration3,col unit (pc),25,col unit (pc),20,col unit (pc),,06/30/2022
+PR0024333,001,00080,Color [PT-CO units],30,C3,MAX,Concentration3,col unit (pc),30,col unit (pc),20,col unit (pc),,07/31/2022
+PR0024333,001,00080,Color [PT-CO units],30,C3,MAX,Concentration3,col unit (pc),30,col unit (pc),20,col unit (pc),,08/31/2022
+PR0024333,001,00080,Color [PT-CO units],15,C3,MAX,Concentration3,col unit (pc),15,col unit (pc),20,col unit (pc),,09/30/2022
+PR0024333,001,00080,Color [PT-CO units],150,C3,MAX,Concentration3,col unit (pc),150,col unit (pc),20,col unit (pc),,10/31/2022
+PR0024333,001,00080,Color [PT-CO units],250,C3,MAX,Concentration3,col unit (pc),250,col unit (pc),20,col unit (pc),,11/30/2022
+PR0024333,001,00080,Color [PT-CO units],20,C3,MAX,Concentration3,col unit (pc),20,col unit (pc),20,col unit (pc),,12/31/2022
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,01/31/2023
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,02/28/2023
+PR0024333,001,00080,Color [PT-CO units],20,C3,MAX,Concentration3,col unit (pc),20,col unit (pc),20,col unit (pc),,03/31/2023
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,04/30/2023
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,05/31/2023
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,06/30/2023
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,07/31/2023
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,08/31/2023
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,09/30/2023
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,10/31/2023
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,11/30/2023
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,12/31/2023
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,01/31/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,02/29/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,03/31/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,04/30/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,05/31/2024
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,06/30/2024
+PR0024333,001,00080,Color [PT-CO units],30,C3,MAX,Concentration3,col unit (pc),30,col unit (pc),20,col unit (pc),,07/31/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,08/31/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,09/30/2024
+PR0024333,001,00080,Color [PT-CO units],10,C3,MAX,Concentration3,col unit (pc),10,col unit (pc),20,col unit (pc),,10/31/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,11/30/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,12/31/2024
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,01/31/2025
+PR0024333,001,00080,Color [PT-CO units],5,C3,MAX,Concentration3,col unit (pc),5,col unit (pc),20,col unit (pc),,02/28/2025
+PR0024333,001,00080,Color [PT-CO units],7.01,C3,MAX,Concentration3,col unit (pc),7.01,col unit (pc),20,col unit (pc),,03/31/2025
+PR0024333,001,00080,Color [PT-CO units],6.6,C3,MAX,Concentration3,col unit (pc),6.6,col unit (pc),20,col unit (pc),,04/30/2025
+PR0024333,001,00080,Color [PT-CO units],7.19,C3,MAX,Concentration3,col unit (pc),7.19,col unit (pc),20,col unit (pc),,05/31/2025
+PR0024333,001,00080,Color [PT-CO units],7.45,C3,MAX,Concentration3,col unit (pc),7.45,col unit (pc),20,col unit (pc),,06/30/2025
+PR0024333,001,00080,Color [PT-CO units],6.96,C3,MAX,Concentration3,col unit (pc),6.96,col unit (pc),20,col unit (pc),,07/31/2025
+PR0024333,001,00080,Color [PT-CO units],7.88,C3,MAX,Concentration3,col unit (pc),7.88,col unit (pc),20,col unit (pc),,08/31/2025
+PR0024333,001,00080,Color [PT-CO units],7.32,C3,MAX,Concentration3,col unit (pc),7.32,col unit (pc),20,col unit (pc),,09/30/2025
+PR0024333,001,00080,Color [PT-CO units],7.22,C3,MAX,Concentration3,col unit (pc),7.22,col unit (pc),20,col unit (pc),,10/31/2025
+PR0024333,001,00080,Color [PT-CO units],7.5,C3,MAX,Concentration3,col unit (pc),7.5,col unit (pc),20,col unit (pc),,11/30/2025
+PR0024333,001,00080,Color [PT-CO units],7.77,C3,MAX,Concentration3,col unit (pc),7.77,col unit (pc),20,col unit (pc),,12/31/2025
+PR0024333,001,00080,Color [PT-CO units],6.21,C3,MAX,Concentration3,col unit (pc),6.21,col unit (pc),20,col unit (pc),,01/31/2026
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.1,C1,MIN,Concentration1,mg/L,7.1,mg/L,5,mg/L,,01/31/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6.15,C1,MIN,Concentration1,mg/L,6.15,mg/L,5,mg/L,,02/29/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6,C1,MIN,Concentration1,mg/L,6,mg/L,5,mg/L,,03/31/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6.1,C1,MIN,Concentration1,mg/L,6.1,mg/L,5,mg/L,,04/30/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.2,C1,MIN,Concentration1,mg/L,7.2,mg/L,5,mg/L,,05/31/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6.1,C1,MIN,Concentration1,mg/L,6.1,mg/L,5,mg/L,,06/30/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6,C1,MIN,Concentration1,mg/L,6,mg/L,5,mg/L,,07/31/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.9,C1,MIN,Concentration1,mg/L,5.9,mg/L,5,mg/L,,08/31/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.9,C1,MIN,Concentration1,mg/L,7.9,mg/L,5,mg/L,,09/30/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6.3,C1,MIN,Concentration1,mg/L,6.3,mg/L,5,mg/L,,10/31/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.8,C1,MIN,Concentration1,mg/L,7.8,mg/L,5,mg/L,,11/30/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.9,C1,MIN,Concentration1,mg/L,7.9,mg/L,5,mg/L,,12/31/2020
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6,C1,MIN,Concentration1,mg/L,6,mg/L,5,mg/L,,01/31/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6,C1,MIN,Concentration1,mg/L,6,mg/L,5,mg/L,,02/28/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.6,C1,MIN,Concentration1,mg/L,7.6,mg/L,5,mg/L,,03/31/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.31,C1,MIN,Concentration1,mg/L,5.31,mg/L,5,mg/L,,04/30/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.22,C1,MIN,Concentration1,mg/L,5.22,mg/L,5,mg/L,,05/31/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.86,C1,MIN,Concentration1,mg/L,5.86,mg/L,5,mg/L,,06/30/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.05,C1,MIN,Concentration1,mg/L,7.05,mg/L,5,mg/L,,07/31/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.1,C1,MIN,Concentration1,mg/L,5.1,mg/L,5,mg/L,,08/31/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.01,C1,MIN,Concentration1,mg/L,5.01,mg/L,5,mg/L,,09/30/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",4.91,C1,MIN,Concentration1,mg/L,4.91,mg/L,5,mg/L,,10/31/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.1,C1,MIN,Concentration1,mg/L,5.1,mg/L,5,mg/L,,11/30/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.1,C1,MIN,Concentration1,mg/L,5.1,mg/L,5,mg/L,,12/31/2021
+PR0024333,001,00300,"Oxygen, dissolved [DO]",4.98,C1,MIN,Concentration1,mg/L,4.98,mg/L,5,mg/L,,01/31/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6.2,C1,MIN,Concentration1,mg/L,6.2,mg/L,5,mg/L,,02/28/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",7.03,C1,MIN,Concentration1,mg/L,7.03,mg/L,5,mg/L,,03/31/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",6.64,C1,MIN,Concentration1,mg/L,6.64,mg/L,5,mg/L,,04/30/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.1,C1,MIN,Concentration1,mg/L,5.1,mg/L,5,mg/L,,05/31/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.07,C1,MIN,Concentration1,mg/L,5.07,mg/L,5,mg/L,,06/30/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.21,C1,MIN,Concentration1,mg/L,5.21,mg/L,5,mg/L,,07/31/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.1,C1,MIN,Concentration1,mg/L,5.1,mg/L,5,mg/L,,08/31/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",4.89,C1,MIN,Concentration1,mg/L,4.89,mg/L,5,mg/L,,09/30/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5,C1,MIN,Concentration1,mg/L,5,mg/L,5,mg/L,,10/31/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,11/30/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5,C1,MIN,Concentration1,mg/L,5,mg/L,5,mg/L,,12/31/2022
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5,C1,MIN,Concentration1,mg/L,5,mg/L,5,mg/L,,01/31/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5,C1,MIN,Concentration1,mg/L,5,mg/L,5,mg/L,,02/28/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,03/31/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,04/30/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.1,C1,MIN,Concentration1,mg/L,5.1,mg/L,5,mg/L,,05/31/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,06/30/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.3,C1,MIN,Concentration1,mg/L,5.3,mg/L,5,mg/L,,07/31/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.1,C1,MIN,Concentration1,mg/L,5.1,mg/L,5,mg/L,,08/31/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,09/30/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,10/31/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,11/30/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,12/31/2023
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.5,C1,MIN,Concentration1,mg/L,5.5,mg/L,5,mg/L,,01/31/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.8,C1,MIN,Concentration1,mg/L,5.8,mg/L,5,mg/L,,02/29/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.5,C1,MIN,Concentration1,mg/L,5.5,mg/L,5,mg/L,,03/31/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,04/30/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.7,C1,MIN,Concentration1,mg/L,5.7,mg/L,5,mg/L,,05/31/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.5,C1,MIN,Concentration1,mg/L,5.5,mg/L,5,mg/L,,06/30/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.3,C1,MIN,Concentration1,mg/L,5.3,mg/L,5,mg/L,,07/31/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.5,C1,MIN,Concentration1,mg/L,5.5,mg/L,5,mg/L,,08/31/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.8,C1,MIN,Concentration1,mg/L,5.8,mg/L,5,mg/L,,09/30/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",4.32,C1,MIN,Concentration1,mg/L,4.32,mg/L,5,mg/L,,10/31/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.2,C1,MIN,Concentration1,mg/L,5.2,mg/L,5,mg/L,,11/30/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.7,C1,MIN,Concentration1,mg/L,5.7,mg/L,5,mg/L,,12/31/2024
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.8,C1,MIN,Concentration1,mg/L,5.8,mg/L,5,mg/L,,01/31/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.7,C1,MIN,Concentration1,mg/L,5.7,mg/L,5,mg/L,,02/28/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,03/31/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,04/30/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,05/31/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,06/30/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.7,C1,MIN,Concentration1,mg/L,5.7,mg/L,5,mg/L,,07/31/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.7,C1,MIN,Concentration1,mg/L,5.7,mg/L,5,mg/L,,08/31/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,09/30/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,10/31/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.6,C1,MIN,Concentration1,mg/L,5.6,mg/L,5,mg/L,,11/30/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.5,C1,MIN,Concentration1,mg/L,5.5,mg/L,5,mg/L,,12/31/2025
+PR0024333,001,00300,"Oxygen, dissolved [DO]",5.5,C1,MIN,Concentration1,mg/L,5.5,mg/L,5,mg/L,,01/31/2026
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,01/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.16,C1,AVG,Concentration1,mg/L,.16,mg/L,30,mg/L,,01/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,01/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,02/29/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,02/29/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.16,C1,AVG,Concentration1,mg/L,.16,mg/L,30,mg/L,,02/29/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.37,C3,MAX,Concentration3,mg/L,5.37,mg/L,30,mg/L,,03/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.18,C1,AVG,Concentration1,mg/L,.18,mg/L,30,mg/L,,03/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.12,C2,AVG,Concentration2,mg/L,.12,mg/L,45,mg/L,,03/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,04/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,04/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,04/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,05/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,05/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,05/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,06/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,06/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,06/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,07/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,07/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,07/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,08/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,08/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,08/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,09/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,09/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,09/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,10/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,10/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,10/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,11/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,11/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,11/30/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,12/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,12/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,12/31/2020
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,01/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,01/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,01/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,02/28/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,02/28/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,02/28/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.17,C1,AVG,Concentration1,mg/L,.17,mg/L,30,mg/L,,03/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,03/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0.11,C2,AVG,Concentration2,mg/L,.11,mg/L,45,mg/L,,03/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.06,C2,AVG,Concentration2,mg/L,5.06,mg/L,45,mg/L,,04/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.11,C3,MAX,Concentration3,mg/L,5.11,mg/L,30,mg/L,,04/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.06,C1,AVG,Concentration1,mg/L,5.06,mg/L,30,mg/L,,04/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,05/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,05/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,05/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.64,C3,MAX,Concentration3,mg/L,8.64,mg/L,30,mg/L,,06/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.82,C2,AVG,Concentration2,mg/L,6.82,mg/L,45,mg/L,,06/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.82,C1,AVG,Concentration1,mg/L,6.82,mg/L,30,mg/L,,06/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,07/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,07/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,07/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,08/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,08/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,08/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,09/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,09/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,09/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.88,C2,AVG,Concentration2,mg/L,6.88,mg/L,45,mg/L,,10/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.76,C3,MAX,Concentration3,mg/L,8.76,mg/L,30,mg/L,,10/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.88,C1,AVG,Concentration1,mg/L,6.88,mg/L,30,mg/L,,10/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,11/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,11/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,11/30/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,12/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,12/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,12/31/2021
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",NA,C3,MAX,Concentration3,,,mg/L,30,mg/L,B,01/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",NA,C1,AVG,Concentration1,,,mg/L,30,mg/L,B,01/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",NA,C2,AVG,Concentration2,,,mg/L,45,mg/L,B,01/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",NA,C3,MAX,Concentration3,,,mg/L,30,mg/L,B,02/28/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",NA,C2,AVG,Concentration2,,,mg/L,45,mg/L,B,02/28/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",NA,C1,AVG,Concentration1,,,mg/L,30,mg/L,B,02/28/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",16.73,C1,AVG,Concentration1,mg/L,16.73,mg/L,30,mg/L,,03/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",26.4,C3,MAX,Concentration3,mg/L,26.4,mg/L,30,mg/L,,03/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",16.73,C2,AVG,Concentration2,mg/L,16.73,mg/L,45,mg/L,,03/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",41.15,C2,AVG,Concentration2,mg/L,41.15,mg/L,45,mg/L,,04/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",77.3,C3,MAX,Concentration3,mg/L,77.3,mg/L,30,mg/L,,04/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",41.15,C1,AVG,Concentration1,mg/L,41.15,mg/L,30,mg/L,,04/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.45,C1,AVG,Concentration1,mg/L,8.45,mg/L,30,mg/L,,05/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",11.9,C3,MAX,Concentration3,mg/L,11.9,mg/L,30,mg/L,,05/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.45,C2,AVG,Concentration2,mg/L,8.45,mg/L,45,mg/L,,05/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",22.6,C3,MAX,Concentration3,mg/L,22.6,mg/L,30,mg/L,,06/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",16.7,C2,AVG,Concentration2,mg/L,16.7,mg/L,45,mg/L,,06/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",16.7,C1,AVG,Concentration1,mg/L,16.7,mg/L,30,mg/L,,06/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",40.1,C3,MAX,Concentration3,mg/L,40.1,mg/L,30,mg/L,,07/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",29.1,C1,AVG,Concentration1,mg/L,29.1,mg/L,30,mg/L,,07/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",29.1,C2,AVG,Concentration2,mg/L,29.1,mg/L,45,mg/L,,07/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,08/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,08/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,08/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,09/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,09/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,09/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",14.15,C2,AVG,Concentration2,mg/L,14.15,mg/L,45,mg/L,,10/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",23.3,C3,MAX,Concentration3,mg/L,23.3,mg/L,30,mg/L,,10/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",14.15,C1,AVG,Concentration1,mg/L,14.15,mg/L,30,mg/L,,10/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",9.3,C1,AVG,Concentration1,mg/L,9.3,mg/L,30,mg/L,,11/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",13.6,C3,MAX,Concentration3,mg/L,13.6,mg/L,30,mg/L,,11/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",9.3,C2,AVG,Concentration2,mg/L,9.3,mg/L,45,mg/L,,11/30/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",15.1,C2,AVG,Concentration2,mg/L,15.1,mg/L,45,mg/L,,12/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",25.2,C3,MAX,Concentration3,mg/L,25.2,mg/L,30,mg/L,,12/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",15.1,C1,AVG,Concentration1,mg/L,15.1,mg/L,30,mg/L,,12/31/2022
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",57.4,C3,MAX,Concentration3,mg/L,57.4,mg/L,30,mg/L,,01/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.86,C1,AVG,Concentration1,mg/L,6.86,mg/L,30,mg/L,,01/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.86,C2,AVG,Concentration2,mg/L,6.86,mg/L,45,mg/L,,01/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.03,C2,AVG,Concentration2,mg/L,6.03,mg/L,45,mg/L,,02/28/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,02/28/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.03,C1,AVG,Concentration1,mg/L,6.03,mg/L,30,mg/L,,02/28/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",12.3,C1,AVG,Concentration1,mg/L,12.3,mg/L,30,mg/L,,03/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",19.6,C3,MAX,Concentration3,mg/L,19.6,mg/L,30,mg/L,,03/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",12.3,C2,AVG,Concentration2,mg/L,12.3,mg/L,45,mg/L,,03/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",14.2,C3,MAX,Concentration3,mg/L,14.2,mg/L,30,mg/L,,04/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",11.65,C1,AVG,Concentration1,mg/L,11.65,mg/L,30,mg/L,,04/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",11.65,C2,AVG,Concentration2,mg/L,11.65,mg/L,45,mg/L,,04/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",15.25,C2,AVG,Concentration2,mg/L,15.25,mg/L,45,mg/L,,05/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",17,C3,MAX,Concentration3,mg/L,17,mg/L,30,mg/L,,05/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",15.25,C1,AVG,Concentration1,mg/L,15.25,mg/L,30,mg/L,,05/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",56,C2,AVG,Concentration2,mg/L,56,mg/L,45,mg/L,,06/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",56,C1,AVG,Concentration1,mg/L,56,mg/L,30,mg/L,,06/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",107,C3,MAX,Concentration3,mg/L,107,mg/L,30,mg/L,,06/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,07/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,07/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,07/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,08/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",21.3,C3,MAX,Concentration3,mg/L,21.3,mg/L,30,mg/L,,08/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",9.08,C1,AVG,Concentration1,mg/L,9.08,mg/L,30,mg/L,,08/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,09/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,09/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,09/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,10/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,10/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,10/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.68,C3,MAX,Concentration3,mg/L,5.68,mg/L,30,mg/L,,11/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.34,C2,AVG,Concentration2,mg/L,5.34,mg/L,45,mg/L,,11/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.17,C1,AVG,Concentration1,mg/L,5.17,mg/L,30,mg/L,,11/30/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.67,C2,AVG,Concentration2,mg/L,6.67,mg/L,45,mg/L,,12/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.34,C3,MAX,Concentration3,mg/L,8.34,mg/L,30,mg/L,,12/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.84,C1,AVG,Concentration1,mg/L,5.84,mg/L,30,mg/L,,12/31/2023
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,01/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,01/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,01/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,02/29/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,02/29/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,02/29/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,03/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,03/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,03/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.25,C2,AVG,Concentration2,mg/L,6.25,mg/L,45,mg/L,,04/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",7.5,C3,MAX,Concentration3,mg/L,7.5,mg/L,30,mg/L,,04/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.21,C1,AVG,Concentration1,mg/L,6.21,mg/L,30,mg/L,,04/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.36,C1,AVG,Concentration1,mg/L,5.36,mg/L,30,mg/L,,05/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.42,C3,MAX,Concentration3,mg/L,6.42,mg/L,30,mg/L,,05/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,05/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,06/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,06/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,06/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.08,C3,MAX,Concentration3,mg/L,10.08,mg/L,30,mg/L,,07/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.96,C1,AVG,Concentration1,mg/L,6.96,mg/L,30,mg/L,,07/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.37,C2,AVG,Concentration2,mg/L,6.37,mg/L,45,mg/L,,07/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,08/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.84,C3,MAX,Concentration3,mg/L,10.84,mg/L,30,mg/L,,08/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.46,C1,AVG,Concentration1,mg/L,6.46,mg/L,30,mg/L,,08/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",16.78,C3,MAX,Concentration3,mg/L,16.78,mg/L,30,mg/L,,09/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.38,C1,AVG,Concentration1,mg/L,8.38,mg/L,30,mg/L,,09/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.9,C2,AVG,Concentration2,mg/L,10.9,mg/L,45,mg/L,,09/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,10/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.37,C3,MAX,Concentration3,mg/L,8.37,mg/L,30,mg/L,,10/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.45,C1,AVG,Concentration1,mg/L,6.45,mg/L,30,mg/L,,10/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,11/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C3,MAX,Concentration3,mg/L,5,mg/L,30,mg/L,,11/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,11/30/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",7.7,C2,AVG,Concentration2,mg/L,7.7,mg/L,45,mg/L,,12/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.4,C3,MAX,Concentration3,mg/L,10.4,mg/L,30,mg/L,,12/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.35,C1,AVG,Concentration1,mg/L,6.35,mg/L,30,mg/L,,12/31/2024
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.23,C1,AVG,Concentration1,mg/L,6.23,mg/L,30,mg/L,,01/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",11.17,C3,MAX,Concentration3,mg/L,11.17,mg/L,30,mg/L,,01/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,01/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.96,C1,AVG,Concentration1,mg/L,6.96,mg/L,30,mg/L,,02/28/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.96,C2,AVG,Concentration2,mg/L,6.96,mg/L,45,mg/L,,02/28/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",11.25,C3,MAX,Concentration3,mg/L,11.25,mg/L,30,mg/L,,02/28/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.58,C3,MAX,Concentration3,mg/L,6.58,mg/L,30,mg/L,,03/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.61,C1,AVG,Concentration1,mg/L,6.61,mg/L,30,mg/L,,03/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.61,C2,AVG,Concentration2,mg/L,6.61,mg/L,45,mg/L,,03/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.15,C1,AVG,Concentration1,mg/L,6.15,mg/L,30,mg/L,,04/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.15,C2,AVG,Concentration2,mg/L,6.15,mg/L,45,mg/L,,04/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",7.31,C3,MAX,Concentration3,mg/L,7.31,mg/L,30,mg/L,,04/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",11.3,C3,MAX,Concentration3,mg/L,11.3,mg/L,30,mg/L,,05/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.92,C1,AVG,Concentration1,mg/L,6.92,mg/L,30,mg/L,,05/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",6.92,C2,AVG,Concentration2,mg/L,6.92,mg/L,45,mg/L,,05/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.31,C1,AVG,Concentration1,mg/L,10.31,mg/L,30,mg/L,,06/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.31,C2,AVG,Concentration2,mg/L,10.31,mg/L,45,mg/L,,06/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",18.61,C3,MAX,Concentration3,mg/L,18.61,mg/L,30,mg/L,,06/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.43,C3,MAX,Concentration3,mg/L,8.43,mg/L,30,mg/L,,07/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.69,C1,AVG,Concentration1,mg/L,5.69,mg/L,30,mg/L,,07/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.69,C2,AVG,Concentration2,mg/L,5.69,mg/L,45,mg/L,,07/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C1,AVG,Concentration1,mg/L,5,mg/L,30,mg/L,,08/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5,C2,AVG,Concentration2,mg/L,5,mg/L,45,mg/L,,08/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",0,C3,MAX,Concentration3,mg/L,0,mg/L,30,mg/L,,08/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",7.2,C3,MAX,Concentration3,mg/L,7.2,mg/L,30,mg/L,,09/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.55,C1,AVG,Concentration1,mg/L,5.55,mg/L,30,mg/L,,09/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.55,C2,AVG,Concentration2,mg/L,5.55,mg/L,45,mg/L,,09/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.97,C1,AVG,Concentration1,mg/L,5.97,mg/L,30,mg/L,,10/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",5.97,C2,AVG,Concentration2,mg/L,5.97,mg/L,45,mg/L,,10/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.45,C3,MAX,Concentration3,mg/L,8.45,mg/L,30,mg/L,,10/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",19.25,C3,MAX,Concentration3,mg/L,19.25,mg/L,30,mg/L,,11/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.42,C1,AVG,Concentration1,mg/L,10.42,mg/L,30,mg/L,,11/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",10.42,C2,AVG,Concentration2,mg/L,10.42,mg/L,45,mg/L,,11/30/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",13.44,C3,MAX,Concentration3,mg/L,13.44,mg/L,30,mg/L,,12/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.13,C2,AVG,Concentration2,mg/L,8.13,mg/L,45,mg/L,,12/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",8.13,C1,AVG,Concentration1,mg/L,8.13,mg/L,30,mg/L,,12/31/2025
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",7.66,C1,AVG,Concentration1,mg/L,7.66,mg/L,30,mg/L,,01/31/2026
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",7.66,C2,AVG,Concentration2,mg/L,7.66,mg/L,45,mg/L,,01/31/2026
+PR0024333,001,00310,"BOD, 5-day, 20 deg. C",11.4,C3,MAX,Concentration3,mg/L,11.4,mg/L,30,mg/L,,01/31/2026
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,01/31/2020
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,01/31/2020
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,02/29/2020
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,02/29/2020
+PR0024333,001,00400,pH,6,C1,MIN,Concentration1,SU,6,SU,6,SU,,03/31/2020
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,03/31/2020
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,04/30/2020
+PR0024333,001,00400,pH,6.8,C1,MIN,Concentration1,SU,6.8,SU,6,SU,,04/30/2020
+PR0024333,001,00400,pH,6.9,C1,MIN,Concentration1,SU,6.9,SU,6,SU,,05/31/2020
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,05/31/2020
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,06/30/2020
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,06/30/2020
+PR0024333,001,00400,pH,6.9,C1,MIN,Concentration1,SU,6.9,SU,6,SU,,07/31/2020
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,07/31/2020
+PR0024333,001,00400,pH,7.8,C3,MAX,Concentration3,SU,7.8,SU,9,SU,,08/31/2020
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,08/31/2020
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,09/30/2020
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,09/30/2020
+PR0024333,001,00400,pH,6.3,C1,MIN,Concentration1,SU,6.3,SU,6,SU,,10/31/2020
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,10/31/2020
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,11/30/2020
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,11/30/2020
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,12/31/2020
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,12/31/2020
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,01/31/2021
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,01/31/2021
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,02/28/2021
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,02/28/2021
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,03/31/2021
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,03/31/2021
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,04/30/2021
+PR0024333,001,00400,pH,7.7,C3,MAX,Concentration3,SU,7.7,SU,9,SU,,04/30/2021
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,05/31/2021
+PR0024333,001,00400,pH,7.8,C3,MAX,Concentration3,SU,7.8,SU,9,SU,,05/31/2021
+PR0024333,001,00400,pH,7.8,C3,MAX,Concentration3,SU,7.8,SU,9,SU,,06/30/2021
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,06/30/2021
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,07/31/2021
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,07/31/2021
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,08/31/2021
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,08/31/2021
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,09/30/2021
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,09/30/2021
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,10/31/2021
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,10/31/2021
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,11/30/2021
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,11/30/2021
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,12/31/2021
+PR0024333,001,00400,pH,7.8,C3,MAX,Concentration3,SU,7.8,SU,9,SU,,12/31/2021
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,01/31/2022
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,01/31/2022
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,02/28/2022
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,02/28/2022
+PR0024333,001,00400,pH,7.8,C3,MAX,Concentration3,SU,7.8,SU,9,SU,,03/31/2022
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,03/31/2022
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,04/30/2022
+PR0024333,001,00400,pH,7.6,C3,MAX,Concentration3,SU,7.6,SU,9,SU,,04/30/2022
+PR0024333,001,00400,pH,8,C3,MAX,Concentration3,SU,8,SU,9,SU,,05/31/2022
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,05/31/2022
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,06/30/2022
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,06/30/2022
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,07/31/2022
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,07/31/2022
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,08/31/2022
+PR0024333,001,00400,pH,6.6,C1,MIN,Concentration1,SU,6.6,SU,6,SU,,08/31/2022
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,09/30/2022
+PR0024333,001,00400,pH,6.8,C1,MIN,Concentration1,SU,6.8,SU,6,SU,,09/30/2022
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,10/31/2022
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,10/31/2022
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,11/30/2022
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,11/30/2022
+PR0024333,001,00400,pH,7.2,C3,MAX,Concentration3,SU,7.2,SU,9,SU,,12/31/2022
+PR0024333,001,00400,pH,6.9,C1,MIN,Concentration1,SU,6.9,SU,6,SU,,12/31/2022
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,01/31/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,01/31/2023
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,02/28/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,02/28/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,03/31/2023
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,03/31/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,04/30/2023
+PR0024333,001,00400,pH,7.2,C3,MAX,Concentration3,SU,7.2,SU,9,SU,,04/30/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,05/31/2023
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,05/31/2023
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,06/30/2023
+PR0024333,001,00400,pH,6.9,C1,MIN,Concentration1,SU,6.9,SU,6,SU,,06/30/2023
+PR0024333,001,00400,pH,7.2,C3,MAX,Concentration3,SU,7.2,SU,9,SU,,07/31/2023
+PR0024333,001,00400,pH,6.4,C1,MIN,Concentration1,SU,6.4,SU,6,SU,,07/31/2023
+PR0024333,001,00400,pH,6.8,C1,MIN,Concentration1,SU,6.8,SU,6,SU,,08/31/2023
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,08/31/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,09/30/2023
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,09/30/2023
+PR0024333,001,00400,pH,6.8,C1,MIN,Concentration1,SU,6.8,SU,6,SU,,10/31/2023
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,10/31/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,11/30/2023
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,11/30/2023
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,12/31/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,12/31/2023
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,01/31/2024
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,01/31/2024
+PR0024333,001,00400,pH,6.8,C1,MIN,Concentration1,SU,6.8,SU,6,SU,,02/29/2024
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,02/29/2024
+PR0024333,001,00400,pH,6.8,C1,MIN,Concentration1,SU,6.8,SU,6,SU,,03/31/2024
+PR0024333,001,00400,pH,7.4,C3,MAX,Concentration3,SU,7.4,SU,9,SU,,03/31/2024
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,04/30/2024
+PR0024333,001,00400,pH,7.3,C3,MAX,Concentration3,SU,7.3,SU,9,SU,,04/30/2024
+PR0024333,001,00400,pH,6.7,C1,MIN,Concentration1,SU,6.7,SU,6,SU,,05/31/2024
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,05/31/2024
+PR0024333,001,00400,pH,6,C1,MIN,Concentration1,SU,6,SU,6,SU,,06/30/2024
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,06/30/2024
+PR0024333,001,00400,pH,8.1,C3,MAX,Concentration3,SU,8.1,SU,9,SU,,07/31/2024
+PR0024333,001,00400,pH,6.4,C1,MIN,Concentration1,SU,6.4,SU,6,SU,,07/31/2024
+PR0024333,001,00400,pH,7.3,C1,MIN,Concentration1,SU,7.3,SU,6,SU,,08/31/2024
+PR0024333,001,00400,pH,8.2,C3,MAX,Concentration3,SU,8.2,SU,9,SU,,08/31/2024
+PR0024333,001,00400,pH,7.5,C1,MIN,Concentration1,SU,7.5,SU,6,SU,,09/30/2024
+PR0024333,001,00400,pH,8.2,C3,MAX,Concentration3,SU,8.2,SU,9,SU,,09/30/2024
+PR0024333,001,00400,pH,7.6,C1,MIN,Concentration1,SU,7.6,SU,6,SU,,10/31/2024
+PR0024333,001,00400,pH,8.4,C3,MAX,Concentration3,SU,8.4,SU,9,SU,,10/31/2024
+PR0024333,001,00400,pH,7.1,C1,MIN,Concentration1,SU,7.1,SU,6,SU,,11/30/2024
+PR0024333,001,00400,pH,8.2,C3,MAX,Concentration3,SU,8.2,SU,9,SU,,11/30/2024
+PR0024333,001,00400,pH,8.1,C3,MAX,Concentration3,SU,8.1,SU,9,SU,,12/31/2024
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,12/31/2024
+PR0024333,001,00400,pH,8,C3,MAX,Concentration3,SU,8,SU,9,SU,,01/31/2025
+PR0024333,001,00400,pH,7.3,C1,MIN,Concentration1,SU,7.3,SU,6,SU,,01/31/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,02/28/2025
+PR0024333,001,00400,pH,7.2,C1,MIN,Concentration1,SU,7.2,SU,6,SU,,02/28/2025
+PR0024333,001,00400,pH,7.1,C1,MIN,Concentration1,SU,7.1,SU,6,SU,,03/31/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,03/31/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,04/30/2025
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,04/30/2025
+PR0024333,001,00400,pH,7.1,C1,MIN,Concentration1,SU,7.1,SU,6,SU,,05/31/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,05/31/2025
+PR0024333,001,00400,pH,7.4,C1,MIN,Concentration1,SU,7.4,SU,6,SU,,06/30/2025
+PR0024333,001,00400,pH,8.1,C3,MAX,Concentration3,SU,8.1,SU,9,SU,,06/30/2025
+PR0024333,001,00400,pH,7.3,C1,MIN,Concentration1,SU,7.3,SU,6,SU,,07/31/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,07/31/2025
+PR0024333,001,00400,pH,7.3,C1,MIN,Concentration1,SU,7.3,SU,6,SU,,08/31/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,08/31/2025
+PR0024333,001,00400,pH,7.3,C1,MIN,Concentration1,SU,7.3,SU,6,SU,,09/30/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,09/30/2025
+PR0024333,001,00400,pH,7.3,C1,MIN,Concentration1,SU,7.3,SU,6,SU,,10/31/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,10/31/2025
+PR0024333,001,00400,pH,7.3,C1,MIN,Concentration1,SU,7.3,SU,6,SU,,11/30/2025
+PR0024333,001,00400,pH,7.9,C3,MAX,Concentration3,SU,7.9,SU,9,SU,,11/30/2025
+PR0024333,001,00400,pH,7.8,C3,MAX,Concentration3,SU,7.8,SU,9,SU,,12/31/2025
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,12/31/2025
+PR0024333,001,00400,pH,7,C1,MIN,Concentration1,SU,7,SU,6,SU,,01/31/2026
+PR0024333,001,00400,pH,7.5,C3,MAX,Concentration3,SU,7.5,SU,9,SU,,01/31/2026
+PR0024333,001,00530,"Solids, total suspended",0.13,C2,AVG,Concentration2,mg/L,.13,mg/L,30,mg/L,,01/31/2020
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,01/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.64,C3,AVG,Concentration3,mg/L,.64,mg/L,45,mg/L,,02/29/2020
+PR0024333,001,00530,"Solids, total suspended",0.97,C2,AVG,Concentration2,mg/L,.97,mg/L,30,mg/L,,02/29/2020
+PR0024333,001,00530,"Solids, total suspended",0.46,C3,AVG,Concentration3,mg/L,.46,mg/L,45,mg/L,,03/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.68,C2,AVG,Concentration2,mg/L,.68,mg/L,30,mg/L,,03/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.57,C2,AVG,Concentration2,mg/L,.57,mg/L,30,mg/L,,04/30/2020
+PR0024333,001,00530,"Solids, total suspended",0.38,C3,AVG,Concentration3,mg/L,.38,mg/L,45,mg/L,,04/30/2020
+PR0024333,001,00530,"Solids, total suspended",2.08,C2,AVG,Concentration2,mg/L,2.08,mg/L,30,mg/L,,05/31/2020
+PR0024333,001,00530,"Solids, total suspended",1.39,C3,AVG,Concentration3,mg/L,1.39,mg/L,45,mg/L,,05/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.57,C3,AVG,Concentration3,mg/L,.57,mg/L,45,mg/L,,06/30/2020
+PR0024333,001,00530,"Solids, total suspended",0.85,C2,AVG,Concentration2,mg/L,.85,mg/L,30,mg/L,,06/30/2020
+PR0024333,001,00530,"Solids, total suspended",0.83,C2,AVG,Concentration2,mg/L,.83,mg/L,30,mg/L,,07/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.55,C3,AVG,Concentration3,mg/L,.55,mg/L,45,mg/L,,07/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.49,C3,AVG,Concentration3,mg/L,.49,mg/L,45,mg/L,,08/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.73,C2,AVG,Concentration2,mg/L,.73,mg/L,30,mg/L,,08/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.67,C2,AVG,Concentration2,mg/L,.67,mg/L,30,mg/L,,09/30/2020
+PR0024333,001,00530,"Solids, total suspended",0.44,C3,AVG,Concentration3,mg/L,.44,mg/L,45,mg/L,,09/30/2020
+PR0024333,001,00530,"Solids, total suspended",0.77,C2,AVG,Concentration2,mg/L,.77,mg/L,30,mg/L,,10/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.51,C3,AVG,Concentration3,mg/L,.51,mg/L,45,mg/L,,10/31/2020
+PR0024333,001,00530,"Solids, total suspended",14.5,C2,AVG,Concentration2,mg/L,14.5,mg/L,30,mg/L,,11/30/2020
+PR0024333,001,00530,"Solids, total suspended",9.37,C3,AVG,Concentration3,mg/L,9.37,mg/L,45,mg/L,,11/30/2020
+PR0024333,001,00530,"Solids, total suspended",0.58,C2,AVG,Concentration2,mg/L,.58,mg/L,30,mg/L,,12/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.39,C3,AVG,Concentration3,mg/L,.39,mg/L,45,mg/L,,12/31/2020
+PR0024333,001,00530,"Solids, total suspended",0.78,C3,AVG,Concentration3,mg/L,.78,mg/L,45,mg/L,,01/31/2021
+PR0024333,001,00530,"Solids, total suspended",1.17,C2,AVG,Concentration2,mg/L,1.17,mg/L,30,mg/L,,01/31/2021
+PR0024333,001,00530,"Solids, total suspended",0.79,C3,AVG,Concentration3,mg/L,.79,mg/L,45,mg/L,,02/28/2021
+PR0024333,001,00530,"Solids, total suspended",1.17,C2,AVG,Concentration2,mg/L,1.17,mg/L,30,mg/L,,02/28/2021
+PR0024333,001,00530,"Solids, total suspended",0.54,C3,AVG,Concentration3,mg/L,.54,mg/L,45,mg/L,,03/31/2021
+PR0024333,001,00530,"Solids, total suspended",0.8,C2,AVG,Concentration2,mg/L,.8,mg/L,30,mg/L,,03/31/2021
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,04/30/2021
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,04/30/2021
+PR0024333,001,00530,"Solids, total suspended",4.5,C2,AVG,Concentration2,mg/L,4.5,mg/L,30,mg/L,,05/31/2021
+PR0024333,001,00530,"Solids, total suspended",4.5,C3,AVG,Concentration3,mg/L,4.5,mg/L,45,mg/L,,05/31/2021
+PR0024333,001,00530,"Solids, total suspended",9.5,C3,AVG,Concentration3,mg/L,9.5,mg/L,45,mg/L,,06/30/2021
+PR0024333,001,00530,"Solids, total suspended",9.5,C2,AVG,Concentration2,mg/L,9.5,mg/L,30,mg/L,,06/30/2021
+PR0024333,001,00530,"Solids, total suspended",40,C2,AVG,Concentration2,mg/L,40,mg/L,30,mg/L,,07/31/2021
+PR0024333,001,00530,"Solids, total suspended",40,C3,AVG,Concentration3,mg/L,40,mg/L,45,mg/L,,07/31/2021
+PR0024333,001,00530,"Solids, total suspended",34.4,C3,AVG,Concentration3,mg/L,34.4,mg/L,45,mg/L,,08/31/2021
+PR0024333,001,00530,"Solids, total suspended",34.4,C2,AVG,Concentration2,mg/L,34.4,mg/L,30,mg/L,,08/31/2021
+PR0024333,001,00530,"Solids, total suspended",5.5,C2,AVG,Concentration2,mg/L,5.5,mg/L,30,mg/L,,09/30/2021
+PR0024333,001,00530,"Solids, total suspended",5.5,C3,AVG,Concentration3,mg/L,5.5,mg/L,45,mg/L,,09/30/2021
+PR0024333,001,00530,"Solids, total suspended",68.5,C3,AVG,Concentration3,mg/L,68.5,mg/L,45,mg/L,,10/31/2021
+PR0024333,001,00530,"Solids, total suspended",68.5,C2,AVG,Concentration2,mg/L,68.5,mg/L,30,mg/L,,10/31/2021
+PR0024333,001,00530,"Solids, total suspended",12.5,C3,AVG,Concentration3,mg/L,12.5,mg/L,45,mg/L,,11/30/2021
+PR0024333,001,00530,"Solids, total suspended",12.5,C2,AVG,Concentration2,mg/L,12.5,mg/L,30,mg/L,,11/30/2021
+PR0024333,001,00530,"Solids, total suspended",20,C3,AVG,Concentration3,mg/L,20,mg/L,45,mg/L,,12/31/2021
+PR0024333,001,00530,"Solids, total suspended",20,C2,AVG,Concentration2,mg/L,20,mg/L,30,mg/L,,12/31/2021
+PR0024333,001,00530,"Solids, total suspended",NA,C3,AVG,Concentration3,,,mg/L,45,mg/L,B,01/31/2022
+PR0024333,001,00530,"Solids, total suspended",NA,C2,AVG,Concentration2,,,mg/L,30,mg/L,B,01/31/2022
+PR0024333,001,00530,"Solids, total suspended",NA,C2,AVG,Concentration2,,,mg/L,30,mg/L,B,02/28/2022
+PR0024333,001,00530,"Solids, total suspended",NA,C3,AVG,Concentration3,,,mg/L,45,mg/L,B,02/28/2022
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,03/31/2022
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,03/31/2022
+PR0024333,001,00530,"Solids, total suspended",15.5,C2,AVG,Concentration2,mg/L,15.5,mg/L,30,mg/L,,04/30/2022
+PR0024333,001,00530,"Solids, total suspended",15.5,C3,AVG,Concentration3,mg/L,15.5,mg/L,45,mg/L,,04/30/2022
+PR0024333,001,00530,"Solids, total suspended",8,C3,AVG,Concentration3,mg/L,8,mg/L,45,mg/L,,05/31/2022
+PR0024333,001,00530,"Solids, total suspended",8,C2,AVG,Concentration2,mg/L,8,mg/L,30,mg/L,,05/31/2022
+PR0024333,001,00530,"Solids, total suspended",16,C2,AVG,Concentration2,mg/L,16,mg/L,30,mg/L,,06/30/2022
+PR0024333,001,00530,"Solids, total suspended",16,C3,AVG,Concentration3,mg/L,16,mg/L,45,mg/L,,06/30/2022
+PR0024333,001,00530,"Solids, total suspended",22.5,C2,AVG,Concentration2,mg/L,22.5,mg/L,30,mg/L,,07/31/2022
+PR0024333,001,00530,"Solids, total suspended",22.5,C3,AVG,Concentration3,mg/L,22.5,mg/L,45,mg/L,,07/31/2022
+PR0024333,001,00530,"Solids, total suspended",11,C3,AVG,Concentration3,mg/L,11,mg/L,45,mg/L,,08/31/2022
+PR0024333,001,00530,"Solids, total suspended",11,C2,AVG,Concentration2,mg/L,11,mg/L,30,mg/L,,08/31/2022
+PR0024333,001,00530,"Solids, total suspended",15,C3,AVG,Concentration3,mg/L,15,mg/L,45,mg/L,,09/30/2022
+PR0024333,001,00530,"Solids, total suspended",15,C2,AVG,Concentration2,mg/L,15,mg/L,30,mg/L,,09/30/2022
+PR0024333,001,00530,"Solids, total suspended",10,C3,AVG,Concentration3,mg/L,10,mg/L,45,mg/L,,10/31/2022
+PR0024333,001,00530,"Solids, total suspended",10,C2,AVG,Concentration2,mg/L,10,mg/L,30,mg/L,,10/31/2022
+PR0024333,001,00530,"Solids, total suspended",44.1,C3,AVG,Concentration3,mg/L,44.1,mg/L,45,mg/L,,11/30/2022
+PR0024333,001,00530,"Solids, total suspended",44.1,C2,AVG,Concentration2,mg/L,44.1,mg/L,30,mg/L,,11/30/2022
+PR0024333,001,00530,"Solids, total suspended",23.5,C2,AVG,Concentration2,mg/L,23.5,mg/L,30,mg/L,,12/31/2022
+PR0024333,001,00530,"Solids, total suspended",23.5,C3,AVG,Concentration3,mg/L,23.5,mg/L,45,mg/L,,12/31/2022
+PR0024333,001,00530,"Solids, total suspended",24.5,C2,AVG,Concentration2,mg/L,24.5,mg/L,30,mg/L,,01/31/2023
+PR0024333,001,00530,"Solids, total suspended",24.5,C3,AVG,Concentration3,mg/L,24.5,mg/L,45,mg/L,,01/31/2023
+PR0024333,001,00530,"Solids, total suspended",32.5,C3,AVG,Concentration3,mg/L,32.5,mg/L,45,mg/L,,02/28/2023
+PR0024333,001,00530,"Solids, total suspended",32.5,C2,AVG,Concentration2,mg/L,32.5,mg/L,30,mg/L,,02/28/2023
+PR0024333,001,00530,"Solids, total suspended",27,C2,AVG,Concentration2,mg/L,27,mg/L,30,mg/L,,03/31/2023
+PR0024333,001,00530,"Solids, total suspended",27,C3,AVG,Concentration3,mg/L,27,mg/L,45,mg/L,,03/31/2023
+PR0024333,001,00530,"Solids, total suspended",12.5,C2,AVG,Concentration2,mg/L,12.5,mg/L,30,mg/L,,04/30/2023
+PR0024333,001,00530,"Solids, total suspended",12.5,C3,AVG,Concentration3,mg/L,12.5,mg/L,45,mg/L,,04/30/2023
+PR0024333,001,00530,"Solids, total suspended",6.5,C3,AVG,Concentration3,mg/L,6.5,mg/L,45,mg/L,,05/31/2023
+PR0024333,001,00530,"Solids, total suspended",6.5,C2,AVG,Concentration2,mg/L,6.5,mg/L,30,mg/L,,05/31/2023
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,06/30/2023
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,06/30/2023
+PR0024333,001,00530,"Solids, total suspended",9.5,C3,AVG,Concentration3,mg/L,9.5,mg/L,45,mg/L,,07/31/2023
+PR0024333,001,00530,"Solids, total suspended",9.5,C2,AVG,Concentration2,mg/L,9.5,mg/L,30,mg/L,,07/31/2023
+PR0024333,001,00530,"Solids, total suspended",8,C2,AVG,Concentration2,mg/L,8,mg/L,30,mg/L,,08/31/2023
+PR0024333,001,00530,"Solids, total suspended",10,C3,AVG,Concentration3,mg/L,10,mg/L,45,mg/L,,08/31/2023
+PR0024333,001,00530,"Solids, total suspended",8,C2,AVG,Concentration2,mg/L,8,mg/L,30,mg/L,,09/30/2023
+PR0024333,001,00530,"Solids, total suspended",8,C3,AVG,Concentration3,mg/L,8,mg/L,45,mg/L,,09/30/2023
+PR0024333,001,00530,"Solids, total suspended",7,C3,AVG,Concentration3,mg/L,7,mg/L,45,mg/L,,10/31/2023
+PR0024333,001,00530,"Solids, total suspended",12.5,C2,AVG,Concentration2,mg/L,12.5,mg/L,30,mg/L,,10/31/2023
+PR0024333,001,00530,"Solids, total suspended",110.5,C3,AVG,Concentration3,mg/L,110.5,mg/L,45,mg/L,,11/30/2023
+PR0024333,001,00530,"Solids, total suspended",61.5,C2,AVG,Concentration2,mg/L,61.5,mg/L,30,mg/L,,11/30/2023
+PR0024333,001,00530,"Solids, total suspended",21,C3,AVG,Concentration3,mg/L,21,mg/L,45,mg/L,,12/31/2023
+PR0024333,001,00530,"Solids, total suspended",13.25,C2,AVG,Concentration2,mg/L,13.25,mg/L,30,mg/L,,12/31/2023
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,01/31/2024
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,01/31/2024
+PR0024333,001,00530,"Solids, total suspended",6,C2,AVG,Concentration2,mg/L,6,mg/L,30,mg/L,,02/29/2024
+PR0024333,001,00530,"Solids, total suspended",6,C3,AVG,Concentration3,mg/L,6,mg/L,45,mg/L,,02/29/2024
+PR0024333,001,00530,"Solids, total suspended",15.3,C2,AVG,Concentration2,mg/L,15.3,mg/L,30,mg/L,,03/31/2024
+PR0024333,001,00530,"Solids, total suspended",14,C3,AVG,Concentration3,mg/L,14,mg/L,45,mg/L,,03/31/2024
+PR0024333,001,00530,"Solids, total suspended",12.5,C3,AVG,Concentration3,mg/L,12.5,mg/L,45,mg/L,,04/30/2024
+PR0024333,001,00530,"Solids, total suspended",27,C2,AVG,Concentration2,mg/L,27,mg/L,30,mg/L,,04/30/2024
+PR0024333,001,00530,"Solids, total suspended",29,C3,AVG,Concentration3,mg/L,29,mg/L,45,mg/L,,05/31/2024
+PR0024333,001,00530,"Solids, total suspended",26.25,C2,AVG,Concentration2,mg/L,26.25,mg/L,30,mg/L,,05/31/2024
+PR0024333,001,00530,"Solids, total suspended",8,C3,AVG,Concentration3,mg/L,8,mg/L,45,mg/L,,06/30/2024
+PR0024333,001,00530,"Solids, total suspended",10.5,C2,AVG,Concentration2,mg/L,10.5,mg/L,30,mg/L,,06/30/2024
+PR0024333,001,00530,"Solids, total suspended",17.5,C3,AVG,Concentration3,mg/L,17.5,mg/L,45,mg/L,,07/31/2024
+PR0024333,001,00530,"Solids, total suspended",13.5,C2,AVG,Concentration2,mg/L,13.5,mg/L,30,mg/L,,07/31/2024
+PR0024333,001,00530,"Solids, total suspended",8.5,C3,AVG,Concentration3,mg/L,8.5,mg/L,45,mg/L,,08/31/2024
+PR0024333,001,00530,"Solids, total suspended",13.25,C2,AVG,Concentration2,mg/L,13.25,mg/L,30,mg/L,,08/31/2024
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,09/30/2024
+PR0024333,001,00530,"Solids, total suspended",4.5,C2,AVG,Concentration2,mg/L,4.5,mg/L,30,mg/L,,09/30/2024
+PR0024333,001,00530,"Solids, total suspended",8.25,C2,AVG,Concentration2,mg/L,8.25,mg/L,30,mg/L,,10/31/2024
+PR0024333,001,00530,"Solids, total suspended",7,C3,AVG,Concentration3,mg/L,7,mg/L,45,mg/L,,10/31/2024
+PR0024333,001,00530,"Solids, total suspended",4.5,C3,AVG,Concentration3,mg/L,4.5,mg/L,45,mg/L,,11/30/2024
+PR0024333,001,00530,"Solids, total suspended",8.25,C2,AVG,Concentration2,mg/L,8.25,mg/L,30,mg/L,,11/30/2024
+PR0024333,001,00530,"Solids, total suspended",48,C2,AVG,Concentration2,mg/L,48,mg/L,30,mg/L,,12/31/2024
+PR0024333,001,00530,"Solids, total suspended",76,C3,AVG,Concentration3,mg/L,76,mg/L,45,mg/L,,12/31/2024
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,01/31/2025
+PR0024333,001,00530,"Solids, total suspended",40,C3,AVG,Concentration3,mg/L,40,mg/L,45,mg/L,,01/31/2025
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,02/28/2025
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,02/28/2025
+PR0024333,001,00530,"Solids, total suspended",13.75,C3,AVG,Concentration3,mg/L,13.75,mg/L,45,mg/L,,03/31/2025
+PR0024333,001,00530,"Solids, total suspended",13.75,C2,AVG,Concentration2,mg/L,13.75,mg/L,30,mg/L,,03/31/2025
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,04/30/2025
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,04/30/2025
+PR0024333,001,00530,"Solids, total suspended",4.25,C3,AVG,Concentration3,mg/L,4.25,mg/L,45,mg/L,,05/31/2025
+PR0024333,001,00530,"Solids, total suspended",4.25,C2,AVG,Concentration2,mg/L,4.25,mg/L,30,mg/L,,05/31/2025
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,06/30/2025
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,06/30/2025
+PR0024333,001,00530,"Solids, total suspended",4.6,C2,AVG,Concentration2,mg/L,4.6,mg/L,30,mg/L,,07/31/2025
+PR0024333,001,00530,"Solids, total suspended",4.6,C3,AVG,Concentration3,mg/L,4.6,mg/L,45,mg/L,,07/31/2025
+PR0024333,001,00530,"Solids, total suspended",6,C2,AVG,Concentration2,mg/L,6,mg/L,30,mg/L,,08/31/2025
+PR0024333,001,00530,"Solids, total suspended",6,C3,AVG,Concentration3,mg/L,6,mg/L,45,mg/L,,08/31/2025
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,09/30/2025
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,09/30/2025
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,10/31/2025
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,10/31/2025
+PR0024333,001,00530,"Solids, total suspended",5,C3,AVG,Concentration3,mg/L,5,mg/L,45,mg/L,,11/30/2025
+PR0024333,001,00530,"Solids, total suspended",5,C2,AVG,Concentration2,mg/L,5,mg/L,30,mg/L,,11/30/2025
+PR0024333,001,00530,"Solids, total suspended",4,C2,AVG,Concentration2,mg/L,4,mg/L,30,mg/L,,12/31/2025
+PR0024333,001,00530,"Solids, total suspended",4,C3,AVG,Concentration3,mg/L,4,mg/L,45,mg/L,,12/31/2025
+PR0024333,001,00530,"Solids, total suspended",9,C2,AVG,Concentration2,mg/L,9,mg/L,30,mg/L,,01/31/2026
+PR0024333,001,00530,"Solids, total suspended",9,C3,AVG,Concentration3,mg/L,9,mg/L,45,mg/L,,01/31/2026
+PR0024333,001,00545,"Solids, settleable",0,C3,MAX,Concentration3,mL/L,0,mg/L,,mL/L,,01/31/2020
+PR0024333,001,00545,"Solids, settleable",0,C3,MAX,Concentration3,mL/L,0,mg/L,,mL/L,,02/29/2020
+PR0024333,001,00545,"Solids, settleable",0,C3,MAX,Concentration3,mL/L,0,mg/L,,mL/L,,03/31/2020
+PR0024333,001,00545,"Solids, settleable",0,C3,MAX,Concentration3,mL/L,0,mg/L,,mL/L,,04/30/2020
+PR0024333,001,00545,"Solids, settleable",0,C3,MAX,Concentration3,mL/L,0,mg/L,,mL/L,,07/31/2020
+PR0024333,001,00545,"Solids, settleable",2.98,C3,MAX,Concentration3,mL/L,.00298,mg/L,,mL/L,,03/31/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,04/30/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,05/31/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,06/30/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,07/31/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,08/31/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,09/30/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,11/30/2021
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,12/31/2021
+PR0024333,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,B,01/31/2022
+PR0024333,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,B,02/28/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,03/31/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,04/30/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,05/31/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,06/30/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,07/31/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,08/31/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,09/30/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,10/31/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,11/30/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,12/31/2022
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,01/31/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,02/28/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,03/31/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,04/30/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,05/31/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,06/30/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,07/31/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,08/31/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,09/30/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,10/31/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,11/30/2023
+PR0024333,001,00545,"Solids, settleable",0.6,C3,MAX,Concentration3,mL/L,.0006,mg/L,,mL/L,,12/31/2023
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,01/31/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,02/29/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,03/31/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,04/30/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,05/31/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,06/30/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,07/31/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,08/31/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,09/30/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,10/31/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,11/30/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,12/31/2024
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,01/31/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,02/28/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,03/31/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,04/30/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,05/31/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,06/30/2025
+PR0024333,001,00545,"Solids, settleable",0.5,C3,MAX,Concentration3,mL/L,.0005,mg/L,,mL/L,,07/31/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,08/31/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,09/30/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,10/31/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,11/30/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,12/31/2025
+PR0024333,001,00545,"Solids, settleable",0.1,C3,MAX,Concentration3,mL/L,.0001,mg/L,,mL/L,,01/31/2026
+PR0024333,001,00556,Oil & Grease,1,C3,AVG,Concentration3,mg/L,1,mg/L,,mg/L,,01/31/2020
+PR0024333,001,00556,Oil & Grease,1.2,C3,AVG,Concentration3,mg/L,1.2,mg/L,,mg/L,,02/29/2020
+PR0024333,001,00556,Oil & Grease,1.85,C3,AVG,Concentration3,mg/L,1.85,mg/L,,mg/L,,03/31/2020
+PR0024333,001,00556,Oil & Grease,1.2,C3,AVG,Concentration3,mg/L,1.2,mg/L,,mg/L,,04/30/2020
+PR0024333,001,00556,Oil & Grease,11.6,C3,AVG,Concentration3,mg/L,11.6,mg/L,,mg/L,,05/31/2020
+PR0024333,001,00556,Oil & Grease,10.2,C3,AVG,Concentration3,mg/L,10.2,mg/L,,mg/L,,06/30/2020
+PR0024333,001,00556,Oil & Grease,23.7,C3,AVG,Concentration3,mg/L,23.7,mg/L,,mg/L,,07/31/2020
+PR0024333,001,00556,Oil & Grease,4,C3,AVG,Concentration3,mg/L,4,mg/L,,mg/L,,08/31/2020
+PR0024333,001,00556,Oil & Grease,12.1,C3,AVG,Concentration3,mg/L,12.1,mg/L,,mg/L,,09/30/2020
+PR0024333,001,00556,Oil & Grease,2.06,C3,AVG,Concentration3,mg/L,2.06,mg/L,,mg/L,,10/31/2020
+PR0024333,001,00556,Oil & Grease,6.08,C3,AVG,Concentration3,mg/L,6.08,mg/L,,mg/L,,11/30/2020
+PR0024333,001,00556,Oil & Grease,1.2,C3,AVG,Concentration3,mg/L,1.2,mg/L,,mg/L,,12/31/2020
+PR0024333,001,00556,Oil & Grease,7.92,C3,AVG,Concentration3,mg/L,7.92,mg/L,,mg/L,,01/31/2021
+PR0024333,001,00556,Oil & Grease,1.2,C3,AVG,Concentration3,mg/L,1.2,mg/L,,mg/L,,02/28/2021
+PR0024333,001,00556,Oil & Grease,2.98,C3,AVG,Concentration3,mg/L,2.98,mg/L,,mg/L,,03/31/2021
+PR0024333,001,00556,Oil & Grease,9.01,C3,AVG,Concentration3,mg/L,9.01,mg/L,,mg/L,,04/30/2021
+PR0024333,001,00556,Oil & Grease,1.98,C3,AVG,Concentration3,mg/L,1.98,mg/L,,mg/L,,05/31/2021
+PR0024333,001,00556,Oil & Grease,6.34,C3,AVG,Concentration3,mg/L,6.34,mg/L,,mg/L,,06/30/2021
+PR0024333,001,00556,Oil & Grease,12.8,C3,AVG,Concentration3,mg/L,12.8,mg/L,,mg/L,,07/31/2021
+PR0024333,001,00556,Oil & Grease,4.48,C3,AVG,Concentration3,mg/L,4.48,mg/L,,mg/L,,08/31/2021
+PR0024333,001,00556,Oil & Grease,3.4,C3,AVG,Concentration3,mg/L,3.4,mg/L,,mg/L,,09/30/2021
+PR0024333,001,00556,Oil & Grease,0.1,C3,AVG,Concentration3,mg/L,.1,mg/L,,mg/L,,10/31/2021
+PR0024333,001,00556,Oil & Grease,2.67,C3,AVG,Concentration3,mg/L,2.67,mg/L,,mg/L,,11/30/2021
+PR0024333,001,00556,Oil & Grease,4.04,C3,AVG,Concentration3,mg/L,4.04,mg/L,,mg/L,,12/31/2021
+PR0024333,001,00556,Oil & Grease,2.06,C3,AVG,Concentration3,mg/L,2.06,mg/L,,mg/L,,01/31/2022
+PR0024333,001,00556,Oil & Grease,4.07,C3,AVG,Concentration3,mg/L,4.07,mg/L,,mg/L,,02/28/2022
+PR0024333,001,00556,Oil & Grease,2.93,C3,AVG,Concentration3,mg/L,2.93,mg/L,,mg/L,,03/31/2022
+PR0024333,001,00556,Oil & Grease,4.23,C3,AVG,Concentration3,mg/L,4.23,mg/L,,mg/L,,04/30/2022
+PR0024333,001,00556,Oil & Grease,8.29,C3,AVG,Concentration3,mg/L,8.29,mg/L,,mg/L,,05/31/2022
+PR0024333,001,00556,Oil & Grease,6.39,C3,AVG,Concentration3,mg/L,6.39,mg/L,,mg/L,,06/30/2022
+PR0024333,001,00556,Oil & Grease,3.51,C3,AVG,Concentration3,mg/L,3.51,mg/L,,mg/L,,07/31/2022
+PR0024333,001,00556,Oil & Grease,12,C3,AVG,Concentration3,mg/L,12,mg/L,,mg/L,,08/31/2022
+PR0024333,001,00556,Oil & Grease,7.91,C3,AVG,Concentration3,mg/L,7.91,mg/L,,mg/L,,09/30/2022
+PR0024333,001,00556,Oil & Grease,15.5,C3,AVG,Concentration3,mg/L,15.5,mg/L,,mg/L,,10/31/2022
+PR0024333,001,00556,Oil & Grease,3.92,C3,AVG,Concentration3,mg/L,3.92,mg/L,,mg/L,,11/30/2022
+PR0024333,001,00556,Oil & Grease,4.64,C3,AVG,Concentration3,mg/L,4.64,mg/L,,mg/L,,12/31/2022
+PR0024333,001,00556,Oil & Grease,4.24,C3,AVG,Concentration3,mg/L,4.24,mg/L,,mg/L,,01/31/2023
+PR0024333,001,00556,Oil & Grease,5.15,C3,AVG,Concentration3,mg/L,5.15,mg/L,,mg/L,,02/28/2023
+PR0024333,001,00556,Oil & Grease,8.66,C3,AVG,Concentration3,mg/L,8.66,mg/L,,mg/L,,03/31/2023
+PR0024333,001,00556,Oil & Grease,1.2,C3,AVG,Concentration3,mg/L,1.2,mg/L,,mg/L,,04/30/2023
+PR0024333,001,00556,Oil & Grease,1.4,C3,AVG,Concentration3,mg/L,1.4,mg/L,,mg/L,,05/31/2023
+PR0024333,001,00556,Oil & Grease,2,C3,AVG,Concentration3,mg/L,2,mg/L,,mg/L,,06/30/2023
+PR0024333,001,00556,Oil & Grease,1.8,C3,AVG,Concentration3,mg/L,1.8,mg/L,,mg/L,,07/31/2023
+PR0024333,001,00556,Oil & Grease,2.8,C3,AVG,Concentration3,mg/L,2.8,mg/L,,mg/L,,08/31/2023
+PR0024333,001,00556,Oil & Grease,10.85,C3,AVG,Concentration3,mg/L,10.85,mg/L,,mg/L,,09/30/2023
+PR0024333,001,00556,Oil & Grease,1.67,C3,AVG,Concentration3,mg/L,1.67,mg/L,,mg/L,,10/31/2023
+PR0024333,001,00556,Oil & Grease,3.2,C3,AVG,Concentration3,mg/L,3.2,mg/L,,mg/L,,11/30/2023
+PR0024333,001,00556,Oil & Grease,18.35,C3,AVG,Concentration3,mg/L,18.35,mg/L,,mg/L,,12/31/2023
+PR0024333,001,00556,Oil & Grease,5.13,C3,AVG,Concentration3,mg/L,5.13,mg/L,,mg/L,,01/31/2024
+PR0024333,001,00556,Oil & Grease,1.4,C3,AVG,Concentration3,mg/L,1.4,mg/L,,mg/L,,02/29/2024
+PR0024333,001,00556,Oil & Grease,4.42,C3,AVG,Concentration3,mg/L,4.42,mg/L,,mg/L,,03/31/2024
+PR0024333,001,00556,Oil & Grease,16.63,C3,AVG,Concentration3,mg/L,16.63,mg/L,,mg/L,,04/30/2024
+PR0024333,001,00556,Oil & Grease,3.33,C3,AVG,Concentration3,mg/L,3.33,mg/L,,mg/L,,05/31/2024
+PR0024333,001,00556,Oil & Grease,4.63,C3,AVG,Concentration3,mg/L,4.63,mg/L,,mg/L,,06/30/2024
+PR0024333,001,00556,Oil & Grease,2.75,C3,AVG,Concentration3,mg/L,2.75,mg/L,,mg/L,,07/31/2024
+PR0024333,001,00556,Oil & Grease,1.4,C3,AVG,Concentration3,mg/L,1.4,mg/L,,mg/L,,08/31/2024
+PR0024333,001,00556,Oil & Grease,1.81,C3,AVG,Concentration3,mg/L,1.81,mg/L,,mg/L,,09/30/2024
+PR0024333,001,00556,Oil & Grease,13.98,C3,AVG,Concentration3,mg/L,13.98,mg/L,,mg/L,,10/31/2024
+PR0024333,001,00556,Oil & Grease,2.81,C3,AVG,Concentration3,mg/L,2.81,mg/L,,mg/L,,11/30/2024
+PR0024333,001,00556,Oil & Grease,1.4,C3,AVG,Concentration3,mg/L,1.4,mg/L,,mg/L,,12/31/2024
+PR0024333,001,00556,Oil & Grease,3.5,C3,AVG,Concentration3,mg/L,3.5,mg/L,,mg/L,,01/31/2025
+PR0024333,001,00556,Oil & Grease,1.96,C3,AVG,Concentration3,mg/L,1.96,mg/L,,mg/L,,02/28/2025
+PR0024333,001,00556,Oil & Grease,1.4,C3,AVG,Concentration3,mg/L,1.4,mg/L,,mg/L,,03/31/2025
+PR0024333,001,00556,Oil & Grease,2.94,C3,AVG,Concentration3,mg/L,2.94,mg/L,,mg/L,,04/30/2025
+PR0024333,001,00556,Oil & Grease,8.94,C3,AVG,Concentration3,mg/L,8.94,mg/L,,mg/L,,05/31/2025
+PR0024333,001,00556,Oil & Grease,5.75,C3,AVG,Concentration3,mg/L,5.75,mg/L,,mg/L,,06/30/2025
+PR0024333,001,00556,Oil & Grease,4.38,C3,AVG,Concentration3,mg/L,4.38,mg/L,,mg/L,,07/31/2025
+PR0024333,001,00556,Oil & Grease,2.78,C3,AVG,Concentration3,mg/L,2.78,mg/L,,mg/L,,08/31/2025
+PR0024333,001,00556,Oil & Grease,1.61,C3,AVG,Concentration3,mg/L,1.61,mg/L,,mg/L,,09/30/2025
+PR0024333,001,00556,Oil & Grease,1.4,C3,AVG,Concentration3,mg/L,1.4,mg/L,,mg/L,,10/31/2025
+PR0024333,001,00556,Oil & Grease,26.63,C3,AVG,Concentration3,mg/L,26.63,mg/L,,mg/L,,11/30/2025
+PR0024333,001,00556,Oil & Grease,11.84,C3,AVG,Concentration3,mg/L,11.84,mg/L,,mg/L,,12/31/2025
+PR0024333,001,00556,Oil & Grease,10.81,C3,AVG,Concentration3,mg/L,10.81,mg/L,,mg/L,,01/31/2026
+PR0024333,001,00600,"Nitrogen, total [as N]",0,C3,MAX,Concentration3,ug/L,0,mg/L,128964,ug/L,,01/31/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",49590,C3,MAX,Concentration3,ug/L,49.59000236,mg/L,128964,ug/L,,02/29/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",25000,C3,MAX,Concentration3,ug/L,25.00000119,mg/L,128964,ug/L,,03/31/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",40520,C3,MAX,Concentration3,ug/L,40.52000192,mg/L,128964,ug/L,,04/30/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",39700,C3,MAX,Concentration3,ug/L,39.70000189,mg/L,128964,ug/L,,05/31/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",2530,C3,MAX,Concentration3,ug/L,2.53000012,mg/L,128964,ug/L,,06/30/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",54730,C3,MAX,Concentration3,ug/L,54.7300026,mg/L,128964,ug/L,,07/31/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",35230,C3,MAX,Concentration3,ug/L,35.23000167,mg/L,128964,ug/L,,08/31/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",36130,C3,MAX,Concentration3,ug/L,36.13000172,mg/L,128964,ug/L,,09/30/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",24950,C3,MAX,Concentration3,ug/L,24.95000119,mg/L,128964,ug/L,,10/31/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",36650,C3,MAX,Concentration3,ug/L,36.65000174,mg/L,128964,ug/L,,11/30/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",36080,C3,MAX,Concentration3,ug/L,36.08000171,mg/L,128964,ug/L,,12/31/2020
+PR0024333,001,00600,"Nitrogen, total [as N]",10140,C3,MAX,Concentration3,ug/L,10.14000048,mg/L,128964,ug/L,,01/31/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",9510,C3,MAX,Concentration3,ug/L,9.51000045,mg/L,128964,ug/L,,02/28/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",27400,C3,MAX,Concentration3,ug/L,27.4000013,mg/L,128964,ug/L,,03/31/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",51840,C3,MAX,Concentration3,ug/L,51.84000246,mg/L,128964,ug/L,,04/30/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",34900,C3,MAX,Concentration3,ug/L,34.90000166,mg/L,128964,ug/L,,05/31/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",50360,C3,MAX,Concentration3,ug/L,50.36000239,mg/L,128964,ug/L,,06/30/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",42070,C3,MAX,Concentration3,ug/L,42.070002,mg/L,128964,ug/L,,07/31/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",27510,C3,MAX,Concentration3,ug/L,27.51000131,mg/L,128964,ug/L,,08/31/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",39080,C3,MAX,Concentration3,ug/L,39.08000186,mg/L,128964,ug/L,,09/30/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",27070,C3,MAX,Concentration3,ug/L,27.07000129,mg/L,128964,ug/L,,10/31/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",22010,C3,MAX,Concentration3,ug/L,22.01000105,mg/L,128964,ug/L,,11/30/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",24850,C3,MAX,Concentration3,ug/L,24.85000118,mg/L,128964,ug/L,,12/31/2021
+PR0024333,001,00600,"Nitrogen, total [as N]",22100,C3,MAX,Concentration3,ug/L,22.10000105,mg/L,128964,ug/L,,01/31/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",36400,C3,MAX,Concentration3,ug/L,36.40000173,mg/L,128964,ug/L,,02/28/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",6760,C3,MAX,Concentration3,ug/L,6.76000032,mg/L,128964,ug/L,,03/31/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",3340,C3,MAX,Concentration3,ug/L,3.34000016,mg/L,128964,ug/L,,04/30/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",25930,C3,MAX,Concentration3,ug/L,25.93000123,mg/L,128964,ug/L,,05/31/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",9620,C3,MAX,Concentration3,ug/L,9.62000046,mg/L,128964,ug/L,,06/30/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",10890,C3,MAX,Concentration3,ug/L,10.89000052,mg/L,128964,ug/L,,07/31/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",8140,C3,MAX,Concentration3,ug/L,8.14000039,mg/L,128964,ug/L,,08/31/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",26190,C3,MAX,Concentration3,ug/L,26.19000124,mg/L,128964,ug/L,,09/30/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",40300,C3,MAX,Concentration3,ug/L,40.30000191,mg/L,128964,ug/L,,10/31/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",15160,C3,MAX,Concentration3,ug/L,15.16000072,mg/L,128964,ug/L,,11/30/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",46990,C3,MAX,Concentration3,ug/L,46.99000223,mg/L,128964,ug/L,,12/31/2022
+PR0024333,001,00600,"Nitrogen, total [as N]",15370,C3,MAX,Concentration3,ug/L,15.37000073,mg/L,128964,ug/L,,01/31/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",24790,C3,MAX,Concentration3,ug/L,24.79000118,mg/L,128964,ug/L,,02/28/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",22180,C3,MAX,Concentration3,ug/L,22.18000105,mg/L,128964,ug/L,,03/31/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",19800,C3,MAX,Concentration3,ug/L,19.80000094,mg/L,128964,ug/L,,04/30/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",23360,C3,MAX,Concentration3,ug/L,23.36000111,mg/L,128964,ug/L,,05/31/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",18900,C3,MAX,Concentration3,ug/L,18.9000009,mg/L,128964,ug/L,,06/30/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",38030,C3,MAX,Concentration3,ug/L,38.03000181,mg/L,128964,ug/L,,07/31/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",31940,C3,MAX,Concentration3,ug/L,31.94000152,mg/L,128964,ug/L,,08/31/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",29450,C3,MAX,Concentration3,ug/L,29.4500014,mg/L,128964,ug/L,,09/30/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",2786,C3,MAX,Concentration3,ug/L,2.78600013,mg/L,128964,ug/L,,10/31/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",32206,C3,MAX,Concentration3,ug/L,32.20600153,mg/L,128964,ug/L,,11/30/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",29217,C3,MAX,Concentration3,ug/L,29.21700139,mg/L,128964,ug/L,,12/31/2023
+PR0024333,001,00600,"Nitrogen, total [as N]",27210,C3,MAX,Concentration3,ug/L,27.21000129,mg/L,128964,ug/L,,01/31/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",32994,C3,MAX,Concentration3,ug/L,32.99400157,mg/L,128964,ug/L,,02/29/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",37202,C3,MAX,Concentration3,ug/L,37.20200177,mg/L,128964,ug/L,,03/31/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",24391,C3,MAX,Concentration3,ug/L,24.39100116,mg/L,128964,ug/L,,04/30/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",33553,C3,MAX,Concentration3,ug/L,33.55300159,mg/L,128964,ug/L,,05/31/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",32019,C3,MAX,Concentration3,ug/L,32.01900152,mg/L,128964,ug/L,,06/30/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",26059,C3,MAX,Concentration3,ug/L,26.05900124,mg/L,128964,ug/L,,07/31/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",136050,C3,MAX,Concentration3,ug/L,136.05000646,mg/L,128964,ug/L,,08/31/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",22441,C3,MAX,Concentration3,ug/L,22.44100107,mg/L,128964,ug/L,,09/30/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",21450,C3,MAX,Concentration3,ug/L,21.45000102,mg/L,128964,ug/L,,10/31/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",37475,C3,MAX,Concentration3,ug/L,37.47500178,mg/L,128964,ug/L,,11/30/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",1758,C3,MAX,Concentration3,ug/L,1.75800008,mg/L,128964,ug/L,,12/31/2024
+PR0024333,001,00600,"Nitrogen, total [as N]",7860,C3,MAX,Concentration3,ug/L,7.86000037,mg/L,128964,ug/L,,01/31/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",29703,C3,MAX,Concentration3,ug/L,29.70300141,mg/L,128964,ug/L,,02/28/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",14821,C3,MAX,Concentration3,ug/L,14.8210007,mg/L,128964,ug/L,,03/31/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",25937,C3,MAX,Concentration3,ug/L,25.93700123,mg/L,128964,ug/L,,04/30/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",2403,C3,MAX,Concentration3,ug/L,2.40300011,mg/L,128964,ug/L,,05/31/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",893,C3,MAX,Concentration3,ug/L,.89300004,mg/L,128964,ug/L,,06/30/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",21333,C3,MAX,Concentration3,ug/L,21.33300101,mg/L,128964,ug/L,,07/31/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",27056,C3,MAX,Concentration3,ug/L,27.05600129,mg/L,128964,ug/L,,08/31/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",26324,C3,MAX,Concentration3,ug/L,26.32400125,mg/L,128964,ug/L,,09/30/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",29792,C3,MAX,Concentration3,ug/L,29.79200142,mg/L,128964,ug/L,,10/31/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",3659,C3,MAX,Concentration3,ug/L,3.65900017,mg/L,128964,ug/L,,11/30/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",1160,C3,MAX,Concentration3,ug/L,1.16000006,mg/L,128964,ug/L,,12/31/2025
+PR0024333,001,00600,"Nitrogen, total [as N]",31900,C3,MAX,Concentration3,ug/L,31.90000152,mg/L,128964,ug/L,,01/31/2026
+PR0024333,001,00665,"Phosphorus, total [as P]",1.26,C3,MAX,Concentration3,ug/L,.00126,mg/L,,ug/L,,01/31/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",2150,C3,MAX,Concentration3,ug/L,2.1500001,mg/L,,ug/L,,02/29/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",100,C3,MAX,Concentration3,ug/L,.1,mg/L,4131,ug/L,,03/31/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",4610,C3,MAX,Concentration3,ug/L,4.61000022,mg/L,4131,ug/L,,04/30/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",680,C3,MAX,Concentration3,ug/L,.68000003,mg/L,4131,ug/L,,05/31/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",1630,C3,MAX,Concentration3,ug/L,1.63000008,mg/L,4131,ug/L,,06/30/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",3260,C3,MAX,Concentration3,ug/L,3.26000015,mg/L,4131,ug/L,,07/31/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",1690,C3,MAX,Concentration3,ug/L,1.69000008,mg/L,4131,ug/L,,08/31/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",1450,C3,MAX,Concentration3,ug/L,1.45000007,mg/L,4131,ug/L,,09/30/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",270,C3,MAX,Concentration3,ug/L,.27000001,mg/L,4131,ug/L,,10/31/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",1600,C3,MAX,Concentration3,ug/L,1.60000008,mg/L,4131,ug/L,,11/30/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",1220,C3,MAX,Concentration3,ug/L,1.22000006,mg/L,4131,ug/L,,12/31/2020
+PR0024333,001,00665,"Phosphorus, total [as P]",450,C3,MAX,Concentration3,ug/L,.45000002,mg/L,4131,ug/L,,01/31/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",290,C3,MAX,Concentration3,ug/L,.29000001,mg/L,4131,ug/L,,02/28/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",990,C3,MAX,Concentration3,ug/L,.99000005,mg/L,4131,ug/L,,03/31/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",2780,C3,MAX,Concentration3,ug/L,2.78000013,mg/L,4131,ug/L,,04/30/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",3420,C3,MAX,Concentration3,ug/L,3.42000016,mg/L,4131,ug/L,,05/31/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",3100,C3,MAX,Concentration3,ug/L,3.10000015,mg/L,4131,ug/L,,06/30/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",2490,C3,MAX,Concentration3,ug/L,2.49000012,mg/L,4131,ug/L,,07/31/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",3550,C3,MAX,Concentration3,ug/L,3.55000017,mg/L,4131,ug/L,,08/31/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",3290,C3,MAX,Concentration3,ug/L,3.29000016,mg/L,4131,ug/L,,09/30/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",3670,C3,MAX,Concentration3,ug/L,3.67000017,mg/L,4131,ug/L,,10/31/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",3210,C3,MAX,Concentration3,ug/L,3.21000015,mg/L,4131,ug/L,,11/30/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,4131,ug/L,,12/31/2021
+PR0024333,001,00665,"Phosphorus, total [as P]",2670,C3,MAX,Concentration3,ug/L,2.67000013,mg/L,4131,ug/L,,01/31/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",6830,C3,MAX,Concentration3,ug/L,6.83000032,mg/L,4131,ug/L,,02/28/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",835,C3,MAX,Concentration3,ug/L,.83500004,mg/L,4131,ug/L,,03/31/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,4131,ug/L,,04/30/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",3700,C3,MAX,Concentration3,ug/L,3.70000018,mg/L,4131,ug/L,,05/31/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",1250,C3,MAX,Concentration3,ug/L,1.25000006,mg/L,4131,ug/L,,06/30/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",1150,C3,MAX,Concentration3,ug/L,1.15000005,mg/L,4131,ug/L,,07/31/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",790,C3,MAX,Concentration3,ug/L,.79000004,mg/L,4131,ug/L,,08/31/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",2690,C3,MAX,Concentration3,ug/L,2.69000013,mg/L,4131,ug/L,,09/30/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",5200,C3,MAX,Concentration3,ug/L,5.20000025,mg/L,4131,ug/L,,10/31/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",400,C3,MAX,Concentration3,ug/L,.40000002,mg/L,4131,ug/L,,11/30/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",2520,C3,MAX,Concentration3,ug/L,2.52000012,mg/L,4131,ug/L,,12/31/2022
+PR0024333,001,00665,"Phosphorus, total [as P]",1710,C3,MAX,Concentration3,ug/L,1.71000008,mg/L,4131,ug/L,,01/31/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",4520,C3,MAX,Concentration3,ug/L,4.52000021,mg/L,4131,ug/L,,02/28/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",2550,C3,MAX,Concentration3,ug/L,2.55000012,mg/L,4131,ug/L,,03/31/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",10,C3,MAX,Concentration3,ug/L,.01,mg/L,4131,ug/L,,04/30/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",380,C3,MAX,Concentration3,ug/L,.38000002,mg/L,4131,ug/L,,05/31/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",100,C3,MAX,Concentration3,ug/L,.1,mg/L,4131,ug/L,,06/30/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",270,C3,MAX,Concentration3,ug/L,.27000001,mg/L,4131,ug/L,,07/31/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",800,C3,MAX,Concentration3,ug/L,.80000004,mg/L,4131,ug/L,,08/31/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",38,C3,MAX,Concentration3,ug/L,.038,mg/L,4131,ug/L,,09/30/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",390,C3,MAX,Concentration3,ug/L,.39000002,mg/L,4131,ug/L,,10/31/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",880,C3,MAX,Concentration3,ug/L,.88000004,mg/L,4131,ug/L,,11/30/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",479,C3,MAX,Concentration3,ug/L,.47900002,mg/L,4131,ug/L,,12/31/2023
+PR0024333,001,00665,"Phosphorus, total [as P]",110,C3,MAX,Concentration3,ug/L,.11000001,mg/L,4131,ug/L,,01/31/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",160,C3,MAX,Concentration3,ug/L,.16000001,mg/L,4131,ug/L,,02/29/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",1200,C3,MAX,Concentration3,ug/L,1.20000006,mg/L,4131,ug/L,,03/31/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",1060,C3,MAX,Concentration3,ug/L,1.06000005,mg/L,4131,ug/L,,04/30/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",920,C3,MAX,Concentration3,ug/L,.92000004,mg/L,4131,ug/L,,05/31/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",1150,C3,MAX,Concentration3,ug/L,1.15000005,mg/L,4131,ug/L,,06/30/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",2150,C3,MAX,Concentration3,ug/L,2.1500001,mg/L,4131,ug/L,,07/31/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",330,C3,MAX,Concentration3,ug/L,.33000002,mg/L,4131,ug/L,,08/31/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",280,C3,MAX,Concentration3,ug/L,.28000001,mg/L,4131,ug/L,,09/30/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",250,C3,MAX,Concentration3,ug/L,.25000001,mg/L,4131,ug/L,,10/31/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",250,C3,MAX,Concentration3,ug/L,.25000001,mg/L,4131,ug/L,,11/30/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",100,C3,MAX,Concentration3,ug/L,.1,mg/L,4131,ug/L,,12/31/2024
+PR0024333,001,00665,"Phosphorus, total [as P]",700,C3,MAX,Concentration3,ug/L,.70000003,mg/L,4131,ug/L,,01/31/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",690,C3,MAX,Concentration3,ug/L,.69000003,mg/L,4131,ug/L,,02/28/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",980,C3,MAX,Concentration3,ug/L,.98000005,mg/L,4131,ug/L,,03/31/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",1630,C3,MAX,Concentration3,ug/L,1.63000008,mg/L,4131,ug/L,,04/30/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",260,C3,MAX,Concentration3,ug/L,.26000001,mg/L,4131,ug/L,,05/31/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",100,C3,MAX,Concentration3,ug/L,.1,mg/L,4131,ug/L,,06/30/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",570,C3,MAX,Concentration3,ug/L,.57000003,mg/L,4131,ug/L,,07/31/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",1680,C3,MAX,Concentration3,ug/L,1.68000008,mg/L,4131,ug/L,,08/31/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",1300,C3,MAX,Concentration3,ug/L,1.30000006,mg/L,4131,ug/L,,09/30/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",1470,C3,MAX,Concentration3,ug/L,1.47000007,mg/L,4131,ug/L,,10/31/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",410,C3,MAX,Concentration3,ug/L,.41000002,mg/L,4131,ug/L,,11/30/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",100,C3,MAX,Concentration3,ug/L,.1,mg/L,4131,ug/L,,12/31/2025
+PR0024333,001,00665,"Phosphorus, total [as P]",1220,C3,MAX,Concentration3,ug/L,1.22000006,mg/L,4131,ug/L,,01/31/2026
+PR0024333,001,01042,"Copper, total [as Cu]",18.4,C3,MAX,Concentration3,ug/L,.0184,mg/L,6,ug/L,,01/31/2020
+PR0024333,001,01042,"Copper, total [as Cu]",30,C3,MAX,Concentration3,ug/L,.03,mg/L,6,ug/L,,02/29/2020
+PR0024333,001,01042,"Copper, total [as Cu]",32,C3,MAX,Concentration3,ug/L,.032,mg/L,6,ug/L,,03/31/2020
+PR0024333,001,01042,"Copper, total [as Cu]",33,C3,MAX,Concentration3,ug/L,.033,mg/L,6,ug/L,,04/30/2020
+PR0024333,001,01042,"Copper, total [as Cu]",9,C3,MAX,Concentration3,ug/L,.009,mg/L,6,ug/L,,05/31/2020
+PR0024333,001,01042,"Copper, total [as Cu]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,6,ug/L,,06/30/2020
+PR0024333,001,01042,"Copper, total [as Cu]",23,C3,MAX,Concentration3,ug/L,.023,mg/L,6,ug/L,,07/31/2020
+PR0024333,001,01042,"Copper, total [as Cu]",17,C3,MAX,Concentration3,ug/L,.017,mg/L,6,ug/L,,08/31/2020
+PR0024333,001,01042,"Copper, total [as Cu]",29,C3,MAX,Concentration3,ug/L,.029,mg/L,6,ug/L,,09/30/2020
+PR0024333,001,01042,"Copper, total [as Cu]",15,C3,MAX,Concentration3,ug/L,.015,mg/L,6,ug/L,,10/31/2020
+PR0024333,001,01042,"Copper, total [as Cu]",15,C3,MAX,Concentration3,ug/L,.015,mg/L,6,ug/L,,11/30/2020
+PR0024333,001,01042,"Copper, total [as Cu]",12,C3,MAX,Concentration3,ug/L,.012,mg/L,6,ug/L,,12/31/2020
+PR0024333,001,01042,"Copper, total [as Cu]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,6,ug/L,,01/31/2021
+PR0024333,001,01042,"Copper, total [as Cu]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,6,ug/L,,02/28/2021
+PR0024333,001,01042,"Copper, total [as Cu]",10,C3,MAX,Concentration3,ug/L,.01,mg/L,6,ug/L,,03/31/2021
+PR0024333,001,01042,"Copper, total [as Cu]",23,C3,MAX,Concentration3,ug/L,.023,mg/L,6,ug/L,,04/30/2021
+PR0024333,001,01042,"Copper, total [as Cu]",23,C3,MAX,Concentration3,ug/L,.023,mg/L,6,ug/L,,04/30/2021
+PR0024333,001,01042,"Copper, total [as Cu]",19,C3,MAX,Concentration3,ug/L,.019,mg/L,6,ug/L,,05/31/2021
+PR0024333,001,01042,"Copper, total [as Cu]",13,C3,MAX,Concentration3,ug/L,.013,mg/L,6,ug/L,,06/30/2021
+PR0024333,001,01042,"Copper, total [as Cu]",29,C3,MAX,Concentration3,ug/L,.029,mg/L,6,ug/L,,07/31/2021
+PR0024333,001,01042,"Copper, total [as Cu]",18,C3,MAX,Concentration3,ug/L,.018,mg/L,6,ug/L,,08/31/2021
+PR0024333,001,01042,"Copper, total [as Cu]",16,C3,MAX,Concentration3,ug/L,.016,mg/L,6,ug/L,,09/30/2021
+PR0024333,001,01042,"Copper, total [as Cu]",28,C3,MAX,Concentration3,ug/L,.028,mg/L,6,ug/L,,10/31/2021
+PR0024333,001,01042,"Copper, total [as Cu]",12,C3,MAX,Concentration3,ug/L,.012,mg/L,6,ug/L,,11/30/2021
+PR0024333,001,01042,"Copper, total [as Cu]",11,C3,MAX,Concentration3,ug/L,.011,mg/L,6,ug/L,,12/31/2021
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,01/31/2022
+PR0024333,001,01042,"Copper, total [as Cu]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,6,ug/L,,02/28/2022
+PR0024333,001,01042,"Copper, total [as Cu]",8,C3,MAX,Concentration3,ug/L,.008,mg/L,6,ug/L,,03/31/2022
+PR0024333,001,01042,"Copper, total [as Cu]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,6,ug/L,,04/30/2022
+PR0024333,001,01042,"Copper, total [as Cu]",13,C3,MAX,Concentration3,ug/L,.013,mg/L,6,ug/L,,05/31/2022
+PR0024333,001,01042,"Copper, total [as Cu]",10,C3,MAX,Concentration3,ug/L,.01,mg/L,6,ug/L,,06/30/2022
+PR0024333,001,01042,"Copper, total [as Cu]",8,C3,MAX,Concentration3,ug/L,.008,mg/L,6,ug/L,,07/31/2022
+PR0024333,001,01042,"Copper, total [as Cu]",11,C3,MAX,Concentration3,ug/L,.011,mg/L,6,ug/L,,08/31/2022
+PR0024333,001,01042,"Copper, total [as Cu]",12,C3,MAX,Concentration3,ug/L,.012,mg/L,6,ug/L,,09/30/2022
+PR0024333,001,01042,"Copper, total [as Cu]",41,C3,MAX,Concentration3,ug/L,.041,mg/L,6,ug/L,,10/31/2022
+PR0024333,001,01042,"Copper, total [as Cu]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,6,ug/L,,11/30/2022
+PR0024333,001,01042,"Copper, total [as Cu]",20,C3,MAX,Concentration3,ug/L,.02,mg/L,6,ug/L,,12/31/2022
+PR0024333,001,01042,"Copper, total [as Cu]",17,C3,MAX,Concentration3,ug/L,.017,mg/L,6,ug/L,,01/31/2023
+PR0024333,001,01042,"Copper, total [as Cu]",21,C3,MAX,Concentration3,ug/L,.021,mg/L,6,ug/L,,02/28/2023
+PR0024333,001,01042,"Copper, total [as Cu]",19,C3,MAX,Concentration3,ug/L,.019,mg/L,6,ug/L,,03/31/2023
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,04/30/2023
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,05/31/2023
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,06/30/2023
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,07/31/2023
+PR0024333,001,01042,"Copper, total [as Cu]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,6,ug/L,,08/31/2023
+PR0024333,001,01042,"Copper, total [as Cu]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,6,ug/L,,09/30/2023
+PR0024333,001,01042,"Copper, total [as Cu]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,6,ug/L,,10/31/2023
+PR0024333,001,01042,"Copper, total [as Cu]",8,C3,MAX,Concentration3,ug/L,.008,mg/L,6,ug/L,,11/30/2023
+PR0024333,001,01042,"Copper, total [as Cu]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,6,ug/L,,12/31/2023
+PR0024333,001,01042,"Copper, total [as Cu]",0.009,C3,MAX,Concentration3,ug/L,.000009,mg/L,6,ug/L,,01/31/2024
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,02/29/2024
+PR0024333,001,01042,"Copper, total [as Cu]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,6,ug/L,,03/31/2024
+PR0024333,001,01042,"Copper, total [as Cu]",12,C3,MAX,Concentration3,ug/L,.012,mg/L,6,ug/L,,04/30/2024
+PR0024333,001,01042,"Copper, total [as Cu]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,6,ug/L,,05/31/2024
+PR0024333,001,01042,"Copper, total [as Cu]",13,C3,MAX,Concentration3,ug/L,.013,mg/L,6,ug/L,,06/30/2024
+PR0024333,001,01042,"Copper, total [as Cu]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,6,ug/L,,07/31/2024
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,08/31/2024
+PR0024333,001,01042,"Copper, total [as Cu]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,6,ug/L,,09/30/2024
+PR0024333,001,01042,"Copper, total [as Cu]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,6,ug/L,,10/31/2024
+PR0024333,001,01042,"Copper, total [as Cu]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,6,ug/L,,11/30/2024
+PR0024333,001,01042,"Copper, total [as Cu]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,6,ug/L,,12/31/2024
+PR0024333,001,01042,"Copper, total [as Cu]",12,C3,MAX,Concentration3,ug/L,.012,mg/L,6,ug/L,,01/31/2025
+PR0024333,001,01042,"Copper, total [as Cu]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,6,ug/L,,02/28/2025
+PR0024333,001,01042,"Copper, total [as Cu]",33,C3,MAX,Concentration3,ug/L,.033,mg/L,6,ug/L,,03/31/2025
+PR0024333,001,01042,"Copper, total [as Cu]",24,C3,MAX,Concentration3,ug/L,.024,mg/L,6,ug/L,,04/30/2025
+PR0024333,001,01042,"Copper, total [as Cu]",8,C3,MAX,Concentration3,ug/L,.008,mg/L,6,ug/L,,05/31/2025
+PR0024333,001,01042,"Copper, total [as Cu]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,6,ug/L,,06/30/2025
+PR0024333,001,01042,"Copper, total [as Cu]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,6,ug/L,,07/31/2025
+PR0024333,001,01042,"Copper, total [as Cu]",10,C3,MAX,Concentration3,ug/L,.01,mg/L,6,ug/L,,08/31/2025
+PR0024333,001,01042,"Copper, total [as Cu]",14,C3,MAX,Concentration3,ug/L,.014,mg/L,6,ug/L,,09/30/2025
+PR0024333,001,01042,"Copper, total [as Cu]",14,C3,MAX,Concentration3,ug/L,.014,mg/L,6,ug/L,,10/31/2025
+PR0024333,001,01042,"Copper, total [as Cu]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,6,ug/L,,11/30/2025
+PR0024333,001,01042,"Copper, total [as Cu]",8,C3,MAX,Concentration3,ug/L,.008,mg/L,6,ug/L,,12/31/2025
+PR0024333,001,01042,"Copper, total [as Cu]",12,C3,MAX,Concentration3,ug/L,.012,mg/L,6,ug/L,,01/31/2026
+PR0024333,001,01051,"Lead, total [as Pb]",NA,C3,MAX,Concentration3,,,mg/L,1.5,ug/L,B,01/31/2020
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,02/29/2020
+PR0024333,001,01051,"Lead, total [as Pb]",1.5,C3,MAX,Concentration3,ug/L,.0015,mg/L,1.5,ug/L,,03/31/2020
+PR0024333,001,01051,"Lead, total [as Pb]",1.5,C3,MAX,Concentration3,ug/L,.0015,mg/L,1.5,ug/L,,04/30/2020
+PR0024333,001,01051,"Lead, total [as Pb]",1.5,C3,MAX,Concentration3,ug/L,.0015,mg/L,1.5,ug/L,,05/31/2020
+PR0024333,001,01051,"Lead, total [as Pb]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,1.5,ug/L,,06/30/2020
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,07/31/2020
+PR0024333,001,01051,"Lead, total [as Pb]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,1.5,ug/L,,08/31/2020
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,09/30/2020
+PR0024333,001,01051,"Lead, total [as Pb]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,1.5,ug/L,,10/31/2020
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,11/30/2020
+PR0024333,001,01051,"Lead, total [as Pb]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,1.5,ug/L,,12/31/2020
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,01/31/2021
+PR0024333,001,01051,"Lead, total [as Pb]",13,C3,MAX,Concentration3,ug/L,.013,mg/L,1.5,ug/L,,02/28/2021
+PR0024333,001,01051,"Lead, total [as Pb]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,1.5,ug/L,,03/31/2021
+PR0024333,001,01051,"Lead, total [as Pb]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,1.5,ug/L,,04/30/2021
+PR0024333,001,01051,"Lead, total [as Pb]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,1.5,ug/L,,04/30/2021
+PR0024333,001,01051,"Lead, total [as Pb]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,1.5,ug/L,,05/31/2021
+PR0024333,001,01051,"Lead, total [as Pb]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,1.5,ug/L,,06/30/2021
+PR0024333,001,01051,"Lead, total [as Pb]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,1.5,ug/L,,07/31/2021
+PR0024333,001,01051,"Lead, total [as Pb]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,1.5,ug/L,,08/31/2021
+PR0024333,001,01051,"Lead, total [as Pb]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,1.5,ug/L,,09/30/2021
+PR0024333,001,01051,"Lead, total [as Pb]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,1.5,ug/L,,10/31/2021
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,11/30/2021
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,12/31/2021
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,01/31/2022
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,02/28/2022
+PR0024333,001,01051,"Lead, total [as Pb]",5,C3,MAX,Concentration3,ug/L,.005,mg/L,1.5,ug/L,,03/31/2022
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,04/30/2022
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,05/31/2022
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,06/30/2022
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,07/31/2022
+PR0024333,001,01051,"Lead, total [as Pb]",7,C3,MAX,Concentration3,ug/L,.007,mg/L,1.5,ug/L,,08/31/2022
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,09/30/2022
+PR0024333,001,01051,"Lead, total [as Pb]",6,C3,MAX,Concentration3,ug/L,.006,mg/L,1.5,ug/L,,10/31/2022
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,11/30/2022
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,12/31/2022
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,01/31/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,02/28/2023
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,03/31/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,04/30/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,05/31/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,06/30/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,07/31/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,08/31/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,09/30/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,10/31/2023
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,11/30/2023
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,12/31/2023
+PR0024333,001,01051,"Lead, total [as Pb]",0.025,C3,MAX,Concentration3,ug/L,.000025,mg/L,1.5,ug/L,,01/31/2024
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,02/29/2024
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,03/31/2024
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,04/30/2024
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,05/31/2024
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,06/30/2024
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,07/31/2024
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,08/31/2024
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,09/30/2024
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,10/31/2024
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,11/30/2024
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,12/31/2024
+PR0024333,001,01051,"Lead, total [as Pb]",3,C3,MAX,Concentration3,ug/L,.003,mg/L,1.5,ug/L,,01/31/2025
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,02/28/2025
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,03/31/2025
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,04/30/2025
+PR0024333,001,01051,"Lead, total [as Pb]",4,C3,MAX,Concentration3,ug/L,.004,mg/L,1.5,ug/L,,05/31/2025
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,06/30/2025
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,07/31/2025
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,08/31/2025
+PR0024333,001,01051,"Lead, total [as Pb]",1,C3,MAX,Concentration3,ug/L,.001,mg/L,1.5,ug/L,,09/30/2025
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,10/31/2025
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,11/30/2025
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,12/31/2025
+PR0024333,001,01051,"Lead, total [as Pb]",2,C3,MAX,Concentration3,ug/L,.002,mg/L,1.5,ug/L,,01/31/2026
+PR0024333,001,38260,Surfactants [MBAS],16,C3,MAX,Concentration3,ug/L,.016,mg/L,100,ug/L,,01/31/2020
+PR0024333,001,38260,Surfactants [MBAS],44,C3,MAX,Concentration3,ug/L,.044,mg/L,100,ug/L,,02/29/2020
+PR0024333,001,38260,Surfactants [MBAS],62,C3,MAX,Concentration3,ug/L,.062,mg/L,100,ug/L,,03/31/2020
+PR0024333,001,38260,Surfactants [MBAS],94,C3,MAX,Concentration3,ug/L,.094,mg/L,100,ug/L,,04/30/2020
+PR0024333,001,38260,Surfactants [MBAS],62,C3,MAX,Concentration3,ug/L,.062,mg/L,100,ug/L,,05/31/2020
+PR0024333,001,38260,Surfactants [MBAS],0.1,C3,MAX,Concentration3,ug/L,.0001,mg/L,100,ug/L,,06/30/2020
+PR0024333,001,38260,Surfactants [MBAS],43,C3,MAX,Concentration3,ug/L,.043,mg/L,100,ug/L,,07/31/2020
+PR0024333,001,38260,Surfactants [MBAS],61,C3,MAX,Concentration3,ug/L,.061,mg/L,100,ug/L,,08/31/2020
+PR0024333,001,38260,Surfactants [MBAS],42,C3,MAX,Concentration3,ug/L,.042,mg/L,100,ug/L,,09/30/2020
+PR0024333,001,38260,Surfactants [MBAS],53,C3,MAX,Concentration3,ug/L,.053,mg/L,100,ug/L,,10/31/2020
+PR0024333,001,38260,Surfactants [MBAS],36,C3,MAX,Concentration3,ug/L,.036,mg/L,100,ug/L,,11/30/2020
+PR0024333,001,38260,Surfactants [MBAS],47,C3,MAX,Concentration3,ug/L,.047,mg/L,100,ug/L,,12/31/2020
+PR0024333,001,38260,Surfactants [MBAS],77,C3,MAX,Concentration3,ug/L,.077,mg/L,100,ug/L,,01/31/2021
+PR0024333,001,38260,Surfactants [MBAS],71,C3,MAX,Concentration3,ug/L,.071,mg/L,100,ug/L,,02/28/2021
+PR0024333,001,38260,Surfactants [MBAS],45,C3,MAX,Concentration3,ug/L,.045,mg/L,100,ug/L,,03/31/2021
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,04/30/2021
+PR0024333,001,38260,Surfactants [MBAS],134,C3,MAX,Concentration3,ug/L,.13400001,mg/L,100,ug/L,,05/31/2021
+PR0024333,001,38260,Surfactants [MBAS],91,C3,MAX,Concentration3,ug/L,.091,mg/L,100,ug/L,,06/30/2021
+PR0024333,001,38260,Surfactants [MBAS],84,C3,MAX,Concentration3,ug/L,.084,mg/L,100,ug/L,,07/31/2021
+PR0024333,001,38260,Surfactants [MBAS],20,C3,MAX,Concentration3,ug/L,.02,mg/L,100,ug/L,,08/31/2021
+PR0024333,001,38260,Surfactants [MBAS],27,C3,MAX,Concentration3,ug/L,.027,mg/L,100,ug/L,,09/30/2021
+PR0024333,001,38260,Surfactants [MBAS],27,C3,MAX,Concentration3,ug/L,.027,mg/L,100,ug/L,,10/31/2021
+PR0024333,001,38260,Surfactants [MBAS],15,C3,MAX,Concentration3,ug/L,.015,mg/L,100,ug/L,,11/30/2021
+PR0024333,001,38260,Surfactants [MBAS],37,C3,MAX,Concentration3,ug/L,.037,mg/L,100,ug/L,,12/31/2021
+PR0024333,001,38260,Surfactants [MBAS],38,C3,MAX,Concentration3,ug/L,.038,mg/L,100,ug/L,,01/31/2022
+PR0024333,001,38260,Surfactants [MBAS],31,C3,MAX,Concentration3,ug/L,.031,mg/L,100,ug/L,,02/28/2022
+PR0024333,001,38260,Surfactants [MBAS],29,C3,MAX,Concentration3,ug/L,.029,mg/L,100,ug/L,,03/31/2022
+PR0024333,001,38260,Surfactants [MBAS],33,C3,MAX,Concentration3,ug/L,.033,mg/L,100,ug/L,,04/30/2022
+PR0024333,001,38260,Surfactants [MBAS],130,C3,MAX,Concentration3,ug/L,.13000001,mg/L,100,ug/L,,05/31/2022
+PR0024333,001,38260,Surfactants [MBAS],35,C3,MAX,Concentration3,ug/L,.035,mg/L,100,ug/L,,06/30/2022
+PR0024333,001,38260,Surfactants [MBAS],11,C3,MAX,Concentration3,ug/L,.011,mg/L,100,ug/L,,07/31/2022
+PR0024333,001,38260,Surfactants [MBAS],37,C3,MAX,Concentration3,ug/L,.037,mg/L,100,ug/L,,08/31/2022
+PR0024333,001,38260,Surfactants [MBAS],45,C3,MAX,Concentration3,ug/L,.045,mg/L,100,ug/L,,09/30/2022
+PR0024333,001,38260,Surfactants [MBAS],13,C3,MAX,Concentration3,ug/L,.013,mg/L,100,ug/L,,10/31/2022
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,11/30/2022
+PR0024333,001,38260,Surfactants [MBAS],20,C3,MAX,Concentration3,ug/L,.02,mg/L,100,ug/L,,12/31/2022
+PR0024333,001,38260,Surfactants [MBAS],39,C3,MAX,Concentration3,ug/L,.039,mg/L,100,ug/L,,01/31/2023
+PR0024333,001,38260,Surfactants [MBAS],28,C3,MAX,Concentration3,ug/L,.028,mg/L,100,ug/L,,02/28/2023
+PR0024333,001,38260,Surfactants [MBAS],45,C3,MAX,Concentration3,ug/L,.045,mg/L,100,ug/L,,03/31/2023
+PR0024333,001,38260,Surfactants [MBAS],62,C3,MAX,Concentration3,ug/L,.062,mg/L,100,ug/L,,04/30/2023
+PR0024333,001,38260,Surfactants [MBAS],62,C3,MAX,Concentration3,ug/L,.062,mg/L,100,ug/L,,05/31/2023
+PR0024333,001,38260,Surfactants [MBAS],60,C3,MAX,Concentration3,ug/L,.06,mg/L,100,ug/L,,06/30/2023
+PR0024333,001,38260,Surfactants [MBAS],29,C3,MAX,Concentration3,ug/L,.029,mg/L,100,ug/L,,07/31/2023
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,08/31/2023
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,09/30/2023
+PR0024333,001,38260,Surfactants [MBAS],31,C3,MAX,Concentration3,ug/L,.031,mg/L,100,ug/L,,10/31/2023
+PR0024333,001,38260,Surfactants [MBAS],47,C3,MAX,Concentration3,ug/L,.047,mg/L,100,ug/L,,11/30/2023
+PR0024333,001,38260,Surfactants [MBAS],48,C3,MAX,Concentration3,ug/L,.048,mg/L,100,ug/L,,12/31/2023
+PR0024333,001,38260,Surfactants [MBAS],17,C3,MAX,Concentration3,ug/L,.017,mg/L,100,ug/L,,01/31/2024
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,02/29/2024
+PR0024333,001,38260,Surfactants [MBAS],35,C3,MAX,Concentration3,ug/L,.035,mg/L,100,ug/L,,03/31/2024
+PR0024333,001,38260,Surfactants [MBAS],22,C3,MAX,Concentration3,ug/L,.022,mg/L,100,ug/L,,04/30/2024
+PR0024333,001,38260,Surfactants [MBAS],28,C3,MAX,Concentration3,ug/L,.028,mg/L,100,ug/L,,05/31/2024
+PR0024333,001,38260,Surfactants [MBAS],30,C3,MAX,Concentration3,ug/L,.03,mg/L,100,ug/L,,06/30/2024
+PR0024333,001,38260,Surfactants [MBAS],71,C3,MAX,Concentration3,ug/L,.071,mg/L,100,ug/L,,07/31/2024
+PR0024333,001,38260,Surfactants [MBAS],39,C3,MAX,Concentration3,ug/L,.039,mg/L,100,ug/L,,08/31/2024
+PR0024333,001,38260,Surfactants [MBAS],36,C3,MAX,Concentration3,ug/L,.036,mg/L,100,ug/L,,09/30/2024
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,10/31/2024
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,11/30/2024
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,12/31/2024
+PR0024333,001,38260,Surfactants [MBAS],42,C3,MAX,Concentration3,ug/L,.042,mg/L,100,ug/L,,01/31/2025
+PR0024333,001,38260,Surfactants [MBAS],58,C3,MAX,Concentration3,ug/L,.058,mg/L,100,ug/L,,02/28/2025
+PR0024333,001,38260,Surfactants [MBAS],67,C3,MAX,Concentration3,ug/L,.067,mg/L,100,ug/L,,03/31/2025
+PR0024333,001,38260,Surfactants [MBAS],60,C3,MAX,Concentration3,ug/L,.06,mg/L,100,ug/L,,04/30/2025
+PR0024333,001,38260,Surfactants [MBAS],14,C3,MAX,Concentration3,ug/L,.014,mg/L,100,ug/L,,05/31/2025
+PR0024333,001,38260,Surfactants [MBAS],24,C3,MAX,Concentration3,ug/L,.024,mg/L,100,ug/L,,06/30/2025
+PR0024333,001,38260,Surfactants [MBAS],77,C3,MAX,Concentration3,ug/L,.077,mg/L,100,ug/L,,07/31/2025
+PR0024333,001,38260,Surfactants [MBAS],108,C3,MAX,Concentration3,ug/L,.10800001,mg/L,100,ug/L,,08/31/2025
+PR0024333,001,38260,Surfactants [MBAS],53,C3,MAX,Concentration3,ug/L,.053,mg/L,100,ug/L,,09/30/2025
+PR0024333,001,38260,Surfactants [MBAS],55,C3,MAX,Concentration3,ug/L,.055,mg/L,100,ug/L,,10/31/2025
+PR0024333,001,38260,Surfactants [MBAS],22,C3,MAX,Concentration3,ug/L,.022,mg/L,100,ug/L,,11/30/2025
+PR0024333,001,38260,Surfactants [MBAS],10,C3,MAX,Concentration3,ug/L,.01,mg/L,100,ug/L,,12/31/2025
+PR0024333,001,38260,Surfactants [MBAS],14,C3,MAX,Concentration3,ug/L,.014,mg/L,100,ug/L,,01/31/2026
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,01/31/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,02/29/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.005,Q2,MAX,Quantity2,MGD,.005,MGD,.009,MGD,,03/31/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,04/30/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,05/31/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,06/30/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,07/31/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,08/31/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,09/30/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,10/31/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,11/30/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,12/31/2020
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,01/31/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,02/28/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,03/31/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.00804,Q2,MAX,Quantity2,MGD,.00804,MGD,.009,MGD,,04/30/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0069,Q2,MAX,Quantity2,MGD,.0069,MGD,.009,MGD,,05/31/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.006781,Q2,MAX,Quantity2,MGD,.006781,MGD,.009,MGD,,06/30/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.007,Q2,MAX,Quantity2,MGD,.007,MGD,.009,MGD,,07/31/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.007385,Q2,MAX,Quantity2,MGD,.007385,MGD,.009,MGD,,08/31/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.006666,Q2,MAX,Quantity2,MGD,.006666,MGD,.009,MGD,,09/30/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.007714,Q2,MAX,Quantity2,MGD,.007714,MGD,.009,MGD,,10/31/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.008957,Q2,MAX,Quantity2,MGD,.008957,MGD,.009,MGD,,11/30/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004888,Q2,MAX,Quantity2,MGD,.004888,MGD,.009,MGD,,12/31/2021
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,01/31/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,02/28/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.005,Q2,MAX,Quantity2,MGD,.005,MGD,.009,MGD,,03/31/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,04/30/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.008,Q2,MAX,Quantity2,MGD,.008,MGD,.009,MGD,,05/31/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,06/30/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,07/31/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,08/31/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,09/30/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,10/31/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,11/30/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,12/31/2022
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,01/31/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,02/28/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,03/31/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,04/30/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,05/31/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,06/30/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.005,Q2,MAX,Quantity2,MGD,.005,MGD,.009,MGD,,07/31/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,08/31/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,09/30/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.003,Q2,MAX,Quantity2,MGD,.003,MGD,.009,MGD,,10/31/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,11/30/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,12/31/2023
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,01/31/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,02/29/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.002,Q2,MAX,Quantity2,MGD,.002,MGD,.009,MGD,,03/31/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0045,Q2,MAX,Quantity2,MGD,.0045,MGD,.009,MGD,,04/30/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0086,Q2,MAX,Quantity2,MGD,.0086,MGD,.009,MGD,,05/31/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.004,Q2,MAX,Quantity2,MGD,.004,MGD,.009,MGD,,06/30/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0027,Q2,MAX,Quantity2,MGD,.0027,MGD,.009,MGD,,07/31/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0042,Q2,MAX,Quantity2,MGD,.0042,MGD,.009,MGD,,08/31/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0043,Q2,MAX,Quantity2,MGD,.0043,MGD,.009,MGD,,09/30/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0024,Q2,MAX,Quantity2,MGD,.0024,MGD,.009,MGD,,10/31/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0029,Q2,MAX,Quantity2,MGD,.0029,MGD,.009,MGD,,11/30/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0018,Q2,MAX,Quantity2,MGD,.0018,MGD,.009,MGD,,12/31/2024
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",7e-4,Q2,MAX,Quantity2,MGD,.0007,MGD,.009,MGD,,01/31/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0026,Q2,MAX,Quantity2,MGD,.0026,MGD,.009,MGD,,02/28/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0027,Q2,MAX,Quantity2,MGD,.0027,MGD,.009,MGD,,03/31/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0029,Q2,MAX,Quantity2,MGD,.0029,MGD,.009,MGD,,04/30/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0035,Q2,MAX,Quantity2,MGD,.0035,MGD,.009,MGD,,05/31/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0024,Q2,MAX,Quantity2,MGD,.0024,MGD,.009,MGD,,06/30/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.0019,Q2,MAX,Quantity2,MGD,.0019,MGD,.009,MGD,,07/31/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.00195,Q2,MAX,Quantity2,MGD,.00195,MGD,.009,MGD,,08/31/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.00259,Q2,MAX,Quantity2,MGD,.00259,MGD,.009,MGD,,09/30/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.00293,Q2,MAX,Quantity2,MGD,.00293,MGD,.009,MGD,,10/31/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.00168,Q2,MAX,Quantity2,MGD,.00168,MGD,.009,MGD,,11/30/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",7.7e-4,Q2,MAX,Quantity2,MGD,.00077,MGD,.009,MGD,,12/31/2025
+PR0024333,001,50050,"Flow, in conduit or thru treatment plant",0.00685,Q2,MAX,Quantity2,MGD,.00685,MGD,.009,MGD,,01/31/2026
+PR0024333,001,50060,"Chlorine, total residual",0.4,C3,MAX,Concentration3,ug/L,.0004,mg/L,11,ug/L,,01/31/2020
+PR0024333,001,50060,"Chlorine, total residual",0.58,C3,MAX,Concentration3,ug/L,.00058,mg/L,11,ug/L,,02/29/2020
+PR0024333,001,50060,"Chlorine, total residual",0.49,C3,MAX,Concentration3,ug/L,.00049,mg/L,11,ug/L,,03/31/2020
+PR0024333,001,50060,"Chlorine, total residual",0.4,C3,MAX,Concentration3,ug/L,.0004,mg/L,11,ug/L,,04/30/2020
+PR0024333,001,50060,"Chlorine, total residual",0.43,C3,MAX,Concentration3,ug/L,.00043,mg/L,11,ug/L,,05/31/2020
+PR0024333,001,50060,"Chlorine, total residual",0.59,C3,MAX,Concentration3,ug/L,.00059,mg/L,11,ug/L,,06/30/2020
+PR0024333,001,50060,"Chlorine, total residual",0.42,C3,MAX,Concentration3,ug/L,.00042,mg/L,11,ug/L,,07/31/2020
+PR0024333,001,50060,"Chlorine, total residual",0.4,C3,MAX,Concentration3,ug/L,.0004,mg/L,11,ug/L,,08/31/2020
+PR0024333,001,50060,"Chlorine, total residual",0.48,C3,MAX,Concentration3,ug/L,.00048,mg/L,11,ug/L,,09/30/2020
+PR0024333,001,50060,"Chlorine, total residual",0.44,C3,MAX,Concentration3,ug/L,.00044,mg/L,11,ug/L,,10/31/2020
+PR0024333,001,50060,"Chlorine, total residual",0.42,C3,MAX,Concentration3,ug/L,.00042,mg/L,11,ug/L,,11/30/2020
+PR0024333,001,50060,"Chlorine, total residual",0.39,C3,MAX,Concentration3,ug/L,.00039,mg/L,11,ug/L,,12/31/2020
+PR0024333,001,50060,"Chlorine, total residual",0.42,C3,MAX,Concentration3,ug/L,.00042,mg/L,11,ug/L,,01/31/2021
+PR0024333,001,50060,"Chlorine, total residual",0.39,C3,MAX,Concentration3,ug/L,.00039,mg/L,11,ug/L,,02/28/2021
+PR0024333,001,50060,"Chlorine, total residual",0.45,C3,MAX,Concentration3,ug/L,.00045,mg/L,11,ug/L,,03/31/2021
+PR0024333,001,50060,"Chlorine, total residual",2100,C3,MAX,Concentration3,ug/L,2.1000001,mg/L,11,ug/L,,04/30/2021
+PR0024333,001,50060,"Chlorine, total residual",2100,C3,MAX,Concentration3,ug/L,2.1000001,mg/L,11,ug/L,,04/30/2021
+PR0024333,001,50060,"Chlorine, total residual",100,C3,MAX,Concentration3,ug/L,.1,mg/L,11,ug/L,,05/31/2021
+PR0024333,001,50060,"Chlorine, total residual",260,C3,MAX,Concentration3,ug/L,.26000001,mg/L,11,ug/L,,06/30/2021
+PR0024333,001,50060,"Chlorine, total residual",270,C3,MAX,Concentration3,ug/L,.27000001,mg/L,11,ug/L,,07/31/2021
+PR0024333,001,50060,"Chlorine, total residual",310,C3,MAX,Concentration3,ug/L,.31000001,mg/L,11,ug/L,,08/31/2021
+PR0024333,001,50060,"Chlorine, total residual",270,C3,MAX,Concentration3,ug/L,.27000001,mg/L,11,ug/L,,09/30/2021
+PR0024333,001,50060,"Chlorine, total residual",10,C3,MAX,Concentration3,ug/L,.01,mg/L,11,ug/L,,10/31/2021
+PR0024333,001,50060,"Chlorine, total residual",10,C3,MAX,Concentration3,ug/L,.01,mg/L,11,ug/L,,11/30/2021
+PR0024333,001,50060,"Chlorine, total residual",0.1,C3,MAX,Concentration3,ug/L,.0001,mg/L,11,ug/L,,12/31/2021
+PR0024333,001,50060,"Chlorine, total residual",NA,C3,MAX,Concentration3,,,mg/L,11,ug/L,B,01/31/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,02/28/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,03/31/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,04/30/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,05/31/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,06/30/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,07/31/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,08/31/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,09/30/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,10/31/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,11/30/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,12/31/2022
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,01/31/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,02/28/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,03/31/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,04/30/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,05/31/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,06/30/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,07/31/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,08/31/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,09/30/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,10/31/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,11/30/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,12/31/2023
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,01/31/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,02/29/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,03/31/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,04/30/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,05/31/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,06/30/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,07/31/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,08/31/2024
+PR0024333,001,50060,"Chlorine, total residual",0,C3,MAX,Concentration3,ug/L,0,mg/L,11,ug/L,,09/30/2024
+PR0024333,001,50060,"Chlorine, total residual",100,C3,MAX,Concentration3,ug/L,.1,mg/L,11,ug/L,,10/31/2024
+PR0024333,001,50060,"Chlorine, total residual",50,C3,MAX,Concentration3,ug/L,.05,mg/L,11,ug/L,,11/30/2024
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,12/31/2024
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,01/31/2025
+PR0024333,001,50060,"Chlorine, total residual",30,C3,MAX,Concentration3,ug/L,.03,mg/L,11,ug/L,,02/28/2025
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,03/31/2025
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,04/30/2025
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,05/31/2025
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,06/30/2025
+PR0024333,001,50060,"Chlorine, total residual",60,C3,MAX,Concentration3,ug/L,.06,mg/L,11,ug/L,,07/31/2025
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,08/31/2025
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,09/30/2025
+PR0024333,001,50060,"Chlorine, total residual",30,C3,MAX,Concentration3,ug/L,.03,mg/L,11,ug/L,,10/31/2025
+PR0024333,001,50060,"Chlorine, total residual",0.02,C3,MAX,Concentration3,ug/L,.00002,mg/L,11,ug/L,,11/30/2025
+PR0024333,001,50060,"Chlorine, total residual",20,C3,MAX,Concentration3,ug/L,.02,mg/L,11,ug/L,,12/31/2025
+PR0024333,001,50060,"Chlorine, total residual",130,C3,MAX,Concentration3,ug/L,.13000001,mg/L,11,ug/L,,01/31/2026
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,9,01/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,9,01/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,02/29/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,02/29/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,03/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,03/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,04/30/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,04/30/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,05/31/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,05/31/2020
+PR0024333,001,61211,Enterococci,4.5,C3,MAX,Concentration3,#/100mL,4.5,MPN/100mL,130,#/100mL,,06/30/2020
+PR0024333,001,61211,Enterococci,4.3,C2,AVG,Concentration2,#/100mL,4.3,MPN/100mL,35,#/100mL,,06/30/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,07/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,07/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,08/31/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,08/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,09/30/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,09/30/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,10/31/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,10/31/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,11/30/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,11/30/2020
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,12/31/2020
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,12/31/2020
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,01/31/2021
+PR0024333,001,61211,Enterococci,1.8,C2,AVG,Concentration2,#/100mL,1.8,MPN/100mL,35,#/100mL,,01/31/2021
+PR0024333,001,61211,Enterococci,NA,C2,AVG,Concentration2,,,MPN/100mL,35,#/100mL,B,02/28/2021
+PR0024333,001,61211,Enterococci,NA,C3,MAX,Concentration3,,,MPN/100mL,130,#/100mL,B,02/28/2021
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,03/31/2021
+PR0024333,001,61211,Enterococci,1.8,C2,AVG,Concentration2,#/100mL,1.8,MPN/100mL,35,#/100mL,,03/31/2021
+PR0024333,001,61211,Enterococci,1.95,C2,AVG,Concentration2,#/100mL,1.95,MPN/100mL,35,#/100mL,,04/30/2021
+PR0024333,001,61211,Enterococci,1.82,C3,MAX,Concentration3,#/100mL,1.82,MPN/100mL,130,#/100mL,,04/30/2021
+PR0024333,001,61211,Enterococci,8.4,C3,MAX,Concentration3,#/100mL,8.4,MPN/100mL,130,#/100mL,,05/31/2021
+PR0024333,001,61211,Enterococci,2.78,C2,AVG,Concentration2,#/100mL,2.78,MPN/100mL,35,#/100mL,,05/31/2021
+PR0024333,001,61211,Enterococci,8.4,C3,MAX,Concentration3,#/100mL,8.4,MPN/100mL,130,#/100mL,,06/30/2021
+PR0024333,001,61211,Enterococci,2.89,C2,AVG,Concentration2,#/100mL,2.89,MPN/100mL,35,#/100mL,,06/30/2021
+PR0024333,001,61211,Enterococci,7.95,C3,MAX,Concentration3,#/100mL,7.95,MPN/100mL,130,#/100mL,,07/31/2021
+PR0024333,001,61211,Enterococci,2.67,C2,AVG,Concentration2,#/100mL,2.67,MPN/100mL,35,#/100mL,,07/31/2021
+PR0024333,001,61211,Enterococci,7.77,C2,AVG,Concentration2,#/100mL,7.77,MPN/100mL,35,#/100mL,,08/31/2021
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,08/31/2021
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,09/30/2021
+PR0024333,001,61211,Enterococci,14.09,C2,AVG,Concentration2,#/100mL,14.09,MPN/100mL,35,#/100mL,,09/30/2021
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,10/31/2021
+PR0024333,001,61211,Enterococci,14.14,C2,AVG,Concentration2,#/100mL,14.14,MPN/100mL,35,#/100mL,,10/31/2021
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,11/30/2021
+PR0024333,001,61211,Enterococci,20.1,C2,AVG,Concentration2,#/100mL,20.1,MPN/100mL,35,#/100mL,,11/30/2021
+PR0024333,001,61211,Enterococci,15,C2,AVG,Concentration2,#/100mL,15,MPN/100mL,35,#/100mL,,12/31/2021
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,12/31/2021
+PR0024333,001,61211,Enterococci,16.2,C2,AVG,Concentration2,#/100mL,16.2,MPN/100mL,35,#/100mL,,01/31/2022
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,01/31/2022
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,02/28/2022
+PR0024333,001,61211,Enterococci,9.8,C2,AVG,Concentration2,#/100mL,9.8,MPN/100mL,35,#/100mL,,02/28/2022
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,03/31/2022
+PR0024333,001,61211,Enterococci,7.04,C2,AVG,Concentration2,#/100mL,7.04,MPN/100mL,35,#/100mL,,03/31/2022
+PR0024333,001,61211,Enterococci,1600,C3,MAX,Concentration3,#/100mL,1600,MPN/100mL,130,#/100mL,,04/30/2022
+PR0024333,001,61211,Enterococci,15.6,C2,AVG,Concentration2,#/100mL,15.6,MPN/100mL,35,#/100mL,,04/30/2022
+PR0024333,001,61211,Enterococci,4.6,C2,AVG,Concentration2,#/100mL,4.6,MPN/100mL,35,#/100mL,,05/31/2022
+PR0024333,001,61211,Enterococci,107.5,C3,MAX,Concentration3,#/100mL,107.5,MPN/100mL,130,#/100mL,,05/31/2022
+PR0024333,001,61211,Enterococci,4.7,C2,AVG,Concentration2,#/100mL,4.7,MPN/100mL,35,#/100mL,,06/30/2022
+PR0024333,001,61211,Enterococci,107.5,C3,MAX,Concentration3,#/100mL,107.5,MPN/100mL,130,#/100mL,,06/30/2022
+PR0024333,001,61211,Enterococci,2.2,C3,MAX,Concentration3,#/100mL,2.2,MPN/100mL,130,#/100mL,,07/31/2022
+PR0024333,001,61211,Enterococci,2.07,C2,AVG,Concentration2,#/100mL,2.07,MPN/100mL,35,#/100mL,,07/31/2022
+PR0024333,001,61211,Enterococci,1.98,C2,AVG,Concentration2,#/100mL,1.98,MPN/100mL,35,#/100mL,,08/31/2022
+PR0024333,001,61211,Enterococci,2,C3,MAX,Concentration3,#/100mL,2,MPN/100mL,130,#/100mL,,08/31/2022
+PR0024333,001,61211,Enterococci,1.89,C2,AVG,Concentration2,#/100mL,1.89,MPN/100mL,35,#/100mL,,09/30/2022
+PR0024333,001,61211,Enterococci,2,C3,MAX,Concentration3,#/100mL,2,MPN/100mL,130,#/100mL,,09/30/2022
+PR0024333,001,61211,Enterococci,2.11,C3,MAX,Concentration3,#/100mL,2.11,MPN/100mL,130,#/100mL,,10/31/2022
+PR0024333,001,61211,Enterococci,2.07,C2,AVG,Concentration2,#/100mL,2.07,MPN/100mL,35,#/100mL,,10/31/2022
+PR0024333,001,61211,Enterococci,2.07,C3,MAX,Concentration3,#/100mL,2.07,MPN/100mL,130,#/100mL,,11/30/2022
+PR0024333,001,61211,Enterococci,2.11,C2,AVG,Concentration2,#/100mL,2.11,MPN/100mL,35,#/100mL,,11/30/2022
+PR0024333,001,61211,Enterococci,2.19,C2,AVG,Concentration2,#/100mL,2.19,MPN/100mL,35,#/100mL,,12/31/2022
+PR0024333,001,61211,Enterococci,4.5,C3,MAX,Concentration3,#/100mL,4.5,MPN/100mL,130,#/100mL,,12/31/2022
+PR0024333,001,61211,Enterococci,22.2,C3,MAX,Concentration3,#/100mL,22.2,MPN/100mL,130,#/100mL,,01/31/2023
+PR0024333,001,61211,Enterococci,3.17,C2,AVG,Concentration2,#/100mL,3.17,MPN/100mL,35,#/100mL,,01/31/2023
+PR0024333,001,61211,Enterococci,3.18,C2,AVG,Concentration2,#/100mL,3.18,MPN/100mL,35,#/100mL,,02/28/2023
+PR0024333,001,61211,Enterococci,22.2,C3,MAX,Concentration3,#/100mL,22.2,MPN/100mL,130,#/100mL,,02/28/2023
+PR0024333,001,61211,Enterococci,3.07,C2,AVG,Concentration2,#/100mL,3.07,MPN/100mL,35,#/100mL,,03/31/2023
+PR0024333,001,61211,Enterococci,22.2,C3,MAX,Concentration3,#/100mL,22.2,MPN/100mL,130,#/100mL,,03/31/2023
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,04/30/2023
+PR0024333,001,61211,Enterococci,1.8,C2,AVG,Concentration2,#/100mL,1.8,MPN/100mL,35,#/100mL,,04/30/2023
+PR0024333,001,61211,Enterococci,2.2,C3,MAX,Concentration3,#/100mL,2.2,MPN/100mL,130,#/100mL,,05/31/2023
+PR0024333,001,61211,Enterococci,1.9,C2,AVG,Concentration2,#/100mL,1.9,MPN/100mL,35,#/100mL,,05/31/2023
+PR0024333,001,61211,Enterococci,1.9,C2,AVG,Concentration2,#/100mL,1.9,MPN/100mL,35,#/100mL,,06/30/2023
+PR0024333,001,61211,Enterococci,2.2,C3,MAX,Concentration3,#/100mL,2.2,MPN/100mL,130,#/100mL,,06/30/2023
+PR0024333,001,61211,Enterococci,10.5,C2,AVG,Concentration2,#/100mL,10.5,MPN/100mL,35,#/100mL,,07/31/2023
+PR0024333,001,61211,Enterococci,540,C3,MAX,Concentration3,#/100mL,540,MPN/100mL,130,#/100mL,,07/31/2023
+PR0024333,001,61211,Enterococci,20.8,C2,AVG,Concentration2,#/100mL,20.8,MPN/100mL,35,#/100mL,,08/31/2023
+PR0024333,001,61211,Enterococci,540,C3,MAX,Concentration3,#/100mL,540,MPN/100mL,130,#/100mL,,08/31/2023
+PR0024333,001,61211,Enterococci,20.76,C2,AVG,Concentration2,#/100mL,20.76,MPN/100mL,35,#/100mL,,09/30/2023
+PR0024333,001,61211,Enterococci,540,C3,MAX,Concentration3,#/100mL,540,MPN/100mL,130,#/100mL,,09/30/2023
+PR0024333,001,61211,Enterococci,140,C3,MAX,Concentration3,#/100mL,140,MPN/100mL,130,#/100mL,,10/31/2023
+PR0024333,001,61211,Enterococci,3.82,C2,AVG,Concentration2,#/100mL,3.82,MPN/100mL,35,#/100mL,,10/31/2023
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,11/30/2023
+PR0024333,001,61211,Enterococci,1.81,C2,AVG,Concentration2,#/100mL,1.81,MPN/100mL,35,#/100mL,,11/30/2023
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,12/31/2023
+PR0024333,001,61211,Enterococci,1.81,C2,AVG,Concentration2,#/100mL,1.81,MPN/100mL,35,#/100mL,,12/31/2023
+PR0024333,001,61211,Enterococci,8.32,C3,MAX,Concentration3,#/100mL,8.32,MPN/100mL,130,#/100mL,,01/31/2024
+PR0024333,001,61211,Enterococci,2.55,C2,AVG,Concentration2,#/100mL,2.55,MPN/100mL,35,#/100mL,,01/31/2024
+PR0024333,001,61211,Enterococci,3.05,C2,AVG,Concentration2,#/100mL,3.05,MPN/100mL,35,#/100mL,,02/29/2024
+PR0024333,001,61211,Enterococci,13.1,C3,MAX,Concentration3,#/100mL,13.1,MPN/100mL,130,#/100mL,,02/29/2024
+PR0024333,001,61211,Enterococci,13.1,C3,MAX,Concentration3,#/100mL,13.1,MPN/100mL,130,#/100mL,,03/31/2024
+PR0024333,001,61211,Enterococci,3.07,C2,AVG,Concentration2,#/100mL,3.07,MPN/100mL,35,#/100mL,,03/31/2024
+PR0024333,001,61211,Enterococci,11,C3,MAX,Concentration3,#/100mL,11,MPN/100mL,130,#/100mL,,04/30/2024
+PR0024333,001,61211,Enterococci,2.52,C2,AVG,Concentration2,#/100mL,2.52,MPN/100mL,35,#/100mL,,04/30/2024
+PR0024333,001,61211,Enterococci,2.2,C3,MAX,Concentration3,#/100mL,2.2,MPN/100mL,130,#/100mL,,05/31/2024
+PR0024333,001,61211,Enterococci,2.12,C2,AVG,Concentration2,#/100mL,2.12,MPN/100mL,35,#/100mL,,05/31/2024
+PR0024333,001,61211,Enterococci,2.1,C2,AVG,Concentration2,#/100mL,2.1,MPN/100mL,35,#/100mL,,06/30/2024
+PR0024333,001,61211,Enterococci,2.2,C3,MAX,Concentration3,#/100mL,2.2,MPN/100mL,130,#/100mL,,06/30/2024
+PR0024333,001,61211,Enterococci,1.81,C2,AVG,Concentration2,#/100mL,1.81,MPN/100mL,35,#/100mL,,07/31/2024
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,07/31/2024
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,08/31/2024
+PR0024333,001,61211,Enterococci,1.8,C2,AVG,Concentration2,#/100mL,1.8,MPN/100mL,35,#/100mL,,08/31/2024
+PR0024333,001,61211,Enterococci,23.5,C3,MAX,Concentration3,#/100mL,23.5,MPN/100mL,130,#/100mL,,09/30/2024
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,09/30/2024
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,10/31/2024
+PR0024333,001,61211,Enterococci,23.5,C3,MAX,Concentration3,#/100mL,23.5,MPN/100mL,130,#/100mL,,10/31/2024
+PR0024333,001,61211,Enterococci,23.5,C3,MAX,Concentration3,#/100mL,23.5,MPN/100mL,130,#/100mL,,11/30/2024
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,11/30/2024
+PR0024333,001,61211,Enterococci,223.5,C3,MAX,Concentration3,#/100mL,223.5,MPN/100mL,130,#/100mL,,12/31/2024
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,12/31/2024
+PR0024333,001,61211,Enterococci,23.5,C3,MAX,Concentration3,#/100mL,23.5,MPN/100mL,130,#/100mL,,01/31/2025
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,01/31/2025
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,02/28/2025
+PR0024333,001,61211,Enterococci,23.5,C3,MAX,Concentration3,#/100mL,23.5,MPN/100mL,130,#/100mL,,02/28/2025
+PR0024333,001,61211,Enterococci,23.5,C3,MAX,Concentration3,#/100mL,23.5,MPN/100mL,130,#/100mL,,03/31/2025
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,03/31/2025
+PR0024333,001,61211,Enterococci,2.96,C2,AVG,Concentration2,#/100mL,2.96,MPN/100mL,35,#/100mL,,04/30/2025
+PR0024333,001,61211,Enterococci,23.5,C3,MAX,Concentration3,#/100mL,23.5,MPN/100mL,130,#/100mL,,04/30/2025
+PR0024333,001,61211,Enterococci,1.8,C2,AVG,Concentration2,#/100mL,1.8,MPN/100mL,35,#/100mL,,05/31/2025
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,05/31/2025
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,06/30/2025
+PR0024333,001,61211,Enterococci,1.8,C2,AVG,Concentration2,#/100mL,1.8,MPN/100mL,35,#/100mL,,06/30/2025
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,07/31/2025
+PR0024333,001,61211,Enterococci,1.8,C2,AVG,Concentration2,#/100mL,1.8,MPN/100mL,35,#/100mL,,07/31/2025
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,08/31/2025
+PR0024333,001,61211,Enterococci,1.81,C2,AVG,Concentration2,#/100mL,1.81,MPN/100mL,35,#/100mL,,08/31/2025
+PR0024333,001,61211,Enterococci,1.82,C2,AVG,Concentration2,#/100mL,1.82,MPN/100mL,35,#/100mL,,09/30/2025
+PR0024333,001,61211,Enterococci,1.8,C3,MAX,Concentration3,#/100mL,1.8,MPN/100mL,130,#/100mL,,09/30/2025
+PR0024333,001,61211,Enterococci,20.25,C3,MAX,Concentration3,#/100mL,20.25,MPN/100mL,130,#/100mL,,10/31/2025
+PR0024333,001,61211,Enterococci,4.7,C2,AVG,Concentration2,#/100mL,4.7,MPN/100mL,35,#/100mL,,10/31/2025
+PR0024333,001,61211,Enterococci,22.5,C3,MAX,Concentration3,#/100mL,22.5,MPN/100mL,130,#/100mL,,11/30/2025
+PR0024333,001,61211,Enterococci,6.24,C2,AVG,Concentration2,#/100mL,6.24,MPN/100mL,35,#/100mL,,11/30/2025
+PR0024333,001,61211,Enterococci,22.5,C3,MAX,Concentration3,#/100mL,22.5,MPN/100mL,130,#/100mL,,12/31/2025
+PR0024333,001,61211,Enterococci,6.24,C2,AVG,Concentration2,#/100mL,6.24,MPN/100mL,35,#/100mL,,12/31/2025
+PR0024333,001,61211,Enterococci,3.73,C2,AVG,Concentration2,#/100mL,3.73,MPN/100mL,35,#/100mL,,01/31/2026
+PR0024333,001,61211,Enterococci,10.8,C3,MAX,Concentration3,#/100mL,10.8,MPN/100mL,130,#/100mL,,01/31/2026
+PR0024333,001,70295,"Solids, total dissolved",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,9,01/31/2020
+PR0024333,001,70295,"Solids, total dissolved",489,C3,MAX,Concentration3,mg/L,489,mg/L,,mg/L,,02/29/2020
+PR0024333,001,70295,"Solids, total dissolved",419,C3,MAX,Concentration3,mg/L,419,mg/L,,mg/L,,03/31/2020
+PR0024333,001,70295,"Solids, total dissolved",524,C3,MAX,Concentration3,mg/L,524,mg/L,,mg/L,,04/30/2020
+PR0024333,001,70295,"Solids, total dissolved",610,C3,MAX,Concentration3,mg/L,610,mg/L,,mg/L,,05/31/2020
+PR0024333,001,70295,"Solids, total dissolved",613,C3,MAX,Concentration3,mg/L,613,mg/L,,mg/L,,06/30/2020
+PR0024333,001,70295,"Solids, total dissolved",459,C3,MAX,Concentration3,mg/L,459,mg/L,,mg/L,,07/31/2020
+PR0024333,001,70295,"Solids, total dissolved",466,C3,MAX,Concentration3,mg/L,466,mg/L,,mg/L,,08/31/2020
+PR0024333,001,70295,"Solids, total dissolved",0.1,C3,MAX,Concentration3,mg/L,.1,mg/L,,mg/L,,09/30/2020
+PR0024333,001,70295,"Solids, total dissolved",1,C3,MAX,Concentration3,mg/L,1,mg/L,,mg/L,,10/31/2020
+PR0024333,001,70295,"Solids, total dissolved",489,C3,MAX,Concentration3,mg/L,489,mg/L,,mg/L,,11/30/2020
+PR0024333,001,70295,"Solids, total dissolved",275,C3,MAX,Concentration3,mg/L,275,mg/L,,mg/L,,11/30/2021
+PR0024333,001,70295,"Solids, total dissolved",374,C3,MAX,Concentration3,mg/L,374,mg/L,,mg/L,,11/30/2022
+PR0024333,001,70295,"Solids, total dissolved",380,C3,MAX,Concentration3,mg/L,380,mg/L,,mg/L,,11/30/2023
+PR0024333,001,70295,"Solids, total dissolved",394,C3,MAX,Concentration3,mg/L,394,mg/L,,mg/L,,11/30/2024
+PR0024333,001,70295,"Solids, total dissolved",473,C3,MAX,Concentration3,mg/L,473,mg/L,,mg/L,,11/30/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",99,C2,MIN,Concentration2,%,99,%,85,%,,01/31/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",99,C2,MIN,Concentration2,%,99,%,85,%,,02/29/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,03/31/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,04/30/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,05/31/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,06/30/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,07/31/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,08/31/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,09/30/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,10/31/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",99,C2,MIN,Concentration2,%,99,%,85,%,,11/30/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,12/31/2020
+PR0024333,001,81010,"BOD, 5-day, percent removal",99,C2,MIN,Concentration2,%,99,%,85,%,,01/31/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",99,C2,MIN,Concentration2,%,99,%,85,%,,02/28/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",98,C2,MIN,Concentration2,%,98,%,85,%,,03/31/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.6,C2,MIN,Concentration2,%,98.6,%,85,%,,04/30/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",99.1,C2,MIN,Concentration2,%,99.1,%,85,%,,05/31/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.2,C2,MIN,Concentration2,%,98.2,%,85,%,,06/30/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.9,C2,MIN,Concentration2,%,97.9,%,85,%,,07/31/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.9,C2,MIN,Concentration2,%,97.9,%,85,%,,08/31/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",94.6,C2,MIN,Concentration2,%,94.6,%,85,%,,09/30/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.8,C2,MIN,Concentration2,%,97.8,%,85,%,,10/31/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",99.5,C2,MIN,Concentration2,%,99.5,%,85,%,,11/30/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",99,C2,MIN,Concentration2,%,99,%,85,%,,12/31/2021
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.9,C2,MIN,Concentration2,%,98.9,%,85,%,,01/31/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.8,C2,MIN,Concentration2,%,97.8,%,85,%,,02/28/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",96.4,C2,MIN,Concentration2,%,96.4,%,85,%,,03/31/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",91.9,C2,MIN,Concentration2,%,91.9,%,85,%,,04/30/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.5,C2,MIN,Concentration2,%,97.5,%,85,%,,05/31/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",93.7,C2,MIN,Concentration2,%,93.7,%,85,%,,06/30/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",91.2,C2,MIN,Concentration2,%,91.2,%,85,%,,07/31/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.6,C2,MIN,Concentration2,%,98.6,%,85,%,,08/31/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.7,C2,MIN,Concentration2,%,98.7,%,85,%,,09/30/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.2,C2,MIN,Concentration2,%,97.2,%,85,%,,10/31/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.5,C2,MIN,Concentration2,%,97.5,%,85,%,,11/30/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",95.2,C2,MIN,Concentration2,%,95.2,%,85,%,,12/31/2022
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.6,C2,MIN,Concentration2,%,97.6,%,85,%,,01/31/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.3,C2,MIN,Concentration2,%,98.3,%,85,%,,02/28/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",96.3,C2,MIN,Concentration2,%,96.3,%,85,%,,03/31/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.4,C2,MIN,Concentration2,%,97.4,%,85,%,,04/30/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.9,C2,MIN,Concentration2,%,97.9,%,85,%,,05/31/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",85,C2,MIN,Concentration2,%,85,%,85,%,,06/30/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.6,C2,MIN,Concentration2,%,97.6,%,85,%,,07/31/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",96.9,C2,MIN,Concentration2,%,96.9,%,85,%,,08/31/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.6,C2,MIN,Concentration2,%,98.6,%,85,%,,09/30/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.8,C2,MIN,Concentration2,%,98.8,%,85,%,,10/31/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.9,C2,MIN,Concentration2,%,97.9,%,85,%,,11/30/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.3,C2,MIN,Concentration2,%,98.3,%,85,%,,12/31/2023
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.1,C2,MIN,Concentration2,%,98.1,%,85,%,,01/31/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.5,C2,MIN,Concentration2,%,97.5,%,85,%,,02/29/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.5,C2,MIN,Concentration2,%,98.5,%,85,%,,03/31/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.1,C2,MIN,Concentration2,%,98.1,%,85,%,,04/30/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.3,C2,MIN,Concentration2,%,98.3,%,85,%,,05/31/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.1,C2,MIN,Concentration2,%,98.1,%,85,%,,06/30/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.1,C2,MIN,Concentration2,%,98.1,%,85,%,,07/31/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.8,C2,MIN,Concentration2,%,97.8,%,85,%,,08/31/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.4,C2,MIN,Concentration2,%,97.4,%,85,%,,09/30/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.3,C2,MIN,Concentration2,%,98.3,%,85,%,,10/31/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.5,C2,MIN,Concentration2,%,98.5,%,85,%,,11/30/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.8,C2,MIN,Concentration2,%,97.8,%,85,%,,12/31/2024
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.2,C2,MIN,Concentration2,%,97.2,%,85,%,,01/31/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.5,C2,MIN,Concentration2,%,97.5,%,85,%,,02/28/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.1,C2,MIN,Concentration2,%,98.1,%,85,%,,03/31/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.9,C2,MIN,Concentration2,%,97.9,%,85,%,,04/30/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",96.9,C2,MIN,Concentration2,%,96.9,%,85,%,,05/31/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",90.6,C2,MIN,Concentration2,%,90.6,%,85,%,,06/30/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.64,C2,MIN,Concentration2,%,97.64,%,85,%,,07/31/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.88,C2,MIN,Concentration2,%,97.88,%,85,%,,08/31/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.65,C2,MIN,Concentration2,%,97.65,%,85,%,,09/30/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",98.04,C2,MIN,Concentration2,%,98.04,%,85,%,,10/31/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",96.24,C2,MIN,Concentration2,%,96.24,%,85,%,,11/30/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",97.72,C2,MIN,Concentration2,%,97.72,%,85,%,,12/31/2025
+PR0024333,001,81010,"BOD, 5-day, percent removal",96.3,C2,MIN,Concentration2,%,96.3,%,85,%,,01/31/2026
+PR0024333,001,82230,Ammonia & ammonium- total,0.27,C3,MAX,Concentration3,ug/L,.00027,mg/L,,ug/L,,01/31/2020
+PR0024333,001,82230,Ammonia & ammonium- total,140,C3,MAX,Concentration3,ug/L,.14000001,mg/L,,ug/L,,02/29/2020
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,03/31/2020
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,04/30/2020
+PR0024333,001,82230,Ammonia & ammonium- total,10100,C3,MAX,Concentration3,ug/L,10.10000048,mg/L,,ug/L,,05/31/2020
+PR0024333,001,82230,Ammonia & ammonium- total,150,C3,MAX,Concentration3,ug/L,.15000001,mg/L,,ug/L,,06/30/2020
+PR0024333,001,82230,Ammonia & ammonium- total,4010,C3,MAX,Concentration3,ug/L,4.01000019,mg/L,,ug/L,,07/31/2020
+PR0024333,001,82230,Ammonia & ammonium- total,130,C3,MAX,Concentration3,ug/L,.13000001,mg/L,,ug/L,,08/31/2020
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,09/30/2020
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,10/31/2020
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,11/30/2020
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,12/31/2020
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,01/31/2021
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,02/28/2021
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,03/31/2021
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,04/30/2021
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,05/31/2021
+PR0024333,001,82230,Ammonia & ammonium- total,290,C3,MAX,Concentration3,ug/L,.29000001,mg/L,,ug/L,,06/30/2021
+PR0024333,001,82230,Ammonia & ammonium- total,312,C3,MAX,Concentration3,ug/L,.31200001,mg/L,,ug/L,,07/31/2021
+PR0024333,001,82230,Ammonia & ammonium- total,70,C3,MAX,Concentration3,ug/L,.07,mg/L,,ug/L,,08/31/2021
+PR0024333,001,82230,Ammonia & ammonium- total,260,C3,MAX,Concentration3,ug/L,.26000001,mg/L,,ug/L,,09/30/2021
+PR0024333,001,82230,Ammonia & ammonium- total,160,C3,MAX,Concentration3,ug/L,.16000001,mg/L,,ug/L,,10/31/2021
+PR0024333,001,82230,Ammonia & ammonium- total,190,C3,MAX,Concentration3,ug/L,.19000001,mg/L,,ug/L,,11/30/2021
+PR0024333,001,82230,Ammonia & ammonium- total,518,C3,MAX,Concentration3,ug/L,.51800002,mg/L,,ug/L,,12/31/2021
+PR0024333,001,82230,Ammonia & ammonium- total,50,C3,MAX,Concentration3,ug/L,.05,mg/L,,ug/L,,01/31/2022
+PR0024333,001,82230,Ammonia & ammonium- total,NA,C3,MAX,Concentration3,,,mg/L,,ug/L,B,02/28/2022
+PR0024333,001,82230,Ammonia & ammonium- total,3510,C3,MAX,Concentration3,ug/L,3.51000017,mg/L,,ug/L,,03/31/2022
+PR0024333,001,82230,Ammonia & ammonium- total,810,C3,MAX,Concentration3,ug/L,.81000004,mg/L,,ug/L,,04/30/2022
+PR0024333,001,82230,Ammonia & ammonium- total,1600,C3,MAX,Concentration3,ug/L,1.60000008,mg/L,,ug/L,,05/31/2022
+PR0024333,001,82230,Ammonia & ammonium- total,2810,C3,MAX,Concentration3,ug/L,2.81000013,mg/L,,ug/L,,06/30/2022
+PR0024333,001,82230,Ammonia & ammonium- total,2930,C3,MAX,Concentration3,ug/L,2.93000014,mg/L,,ug/L,,07/31/2022
+PR0024333,001,82230,Ammonia & ammonium- total,4870,C3,MAX,Concentration3,ug/L,4.87000023,mg/L,,ug/L,,08/31/2022
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,09/30/2022
+PR0024333,001,82230,Ammonia & ammonium- total,8400,C3,MAX,Concentration3,ug/L,8.4000004,mg/L,,ug/L,,10/31/2022
+PR0024333,001,82230,Ammonia & ammonium- total,660,C3,MAX,Concentration3,ug/L,.66000003,mg/L,,ug/L,,11/30/2022
+PR0024333,001,82230,Ammonia & ammonium- total,710,C3,MAX,Concentration3,ug/L,.71000003,mg/L,,ug/L,,12/31/2022
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,01/31/2023
+PR0024333,001,82230,Ammonia & ammonium- total,390,C3,MAX,Concentration3,ug/L,.39000002,mg/L,,ug/L,,02/28/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,03/31/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,04/30/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,05/31/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,06/30/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,07/31/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,08/31/2023
+PR0024333,001,82230,Ammonia & ammonium- total,170,C3,MAX,Concentration3,ug/L,.17000001,mg/L,,ug/L,,09/30/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,10/31/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,11/30/2023
+PR0024333,001,82230,Ammonia & ammonium- total,1410,C3,MAX,Concentration3,ug/L,1.41000007,mg/L,,ug/L,,12/31/2023
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,01/31/2024
+PR0024333,001,82230,Ammonia & ammonium- total,140,C3,MAX,Concentration3,ug/L,.14000001,mg/L,,ug/L,,02/29/2024
+PR0024333,001,82230,Ammonia & ammonium- total,100,C3,MAX,Concentration3,ug/L,.1,mg/L,,ug/L,,03/31/2024
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,04/30/2024
+PR0024333,001,82230,Ammonia & ammonium- total,4250,C3,MAX,Concentration3,ug/L,4.2500002,mg/L,,ug/L,,05/31/2024
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,06/30/2024
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,07/31/2024
+PR0024333,001,82230,Ammonia & ammonium- total,640,C3,MAX,Concentration3,ug/L,.64000003,mg/L,,ug/L,,08/31/2024
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,09/30/2024
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,10/31/2024
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,11/30/2024
+PR0024333,001,82230,Ammonia & ammonium- total,14720,C3,MAX,Concentration3,ug/L,14.7200007,mg/L,,ug/L,,12/31/2024
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,01/31/2025
+PR0024333,001,82230,Ammonia & ammonium- total,280,C3,MAX,Concentration3,ug/L,.28000001,mg/L,,ug/L,,02/28/2025
+PR0024333,001,82230,Ammonia & ammonium- total,700,C3,MAX,Concentration3,ug/L,.70000003,mg/L,,ug/L,,03/31/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,04/30/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,05/31/2025
+PR0024333,001,82230,Ammonia & ammonium- total,370,C3,MAX,Concentration3,ug/L,.37000002,mg/L,,ug/L,,06/30/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,07/31/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,08/31/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,09/30/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,10/31/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,11/30/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,12/31/2025
+PR0024333,001,82230,Ammonia & ammonium- total,200,C3,MAX,Concentration3,ug/L,.20000001,mg/L,,ug/L,,01/31/2026

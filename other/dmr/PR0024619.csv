@@ -1,0 +1,73 @@
+npdes_id,perm_feature_nmbr,parameter_code,parameter_desc,dmr_value_nmbr,value_type_code,statistical_base_type_code,value_type_desc,dmr_unit_desc,dmr_value_standard_units,standard_unit_desc,limit_value_nmbr,limit_unit_desc,nodi_code,monitoring_period_end_date
+PR0024619,001,00010,"Temperature, water deg. centigrade",NA,C3,MAX,Concentration3,,,deg C,32.2,deg C,C,01/31/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",NA,C3,MAX,Concentration3,,,deg C,32.2,deg C,C,02/29/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",NA,C3,MAX,Concentration3,,,deg C,32.2,deg C,C,03/31/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",28.9,C3,MAX,Concentration3,deg C,28.9,deg C,32.2,deg C,,04/30/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",NA,C3,MAX,Concentration3,,,deg C,32.2,deg C,C,05/31/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",NA,C3,MAX,Concentration3,,,deg C,32.2,deg C,C,06/30/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",NA,C3,MAX,Concentration3,,,deg C,32.2,deg C,C,07/31/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",28,C3,MAX,Concentration3,deg C,28,deg C,32.2,deg C,,08/31/2020
+PR0024619,001,00010,"Temperature, water deg. centigrade",NA,C3,MAX,Concentration3,,,deg C,32.2,deg C,C,09/30/2020
+PR0024619,001,00080,Color [PT-CO units],NA,C3,MAX,Concentration3,,,col unit (pc),,col unit (pc),C,01/31/2020
+PR0024619,001,00080,Color [PT-CO units],NA,C3,MAX,Concentration3,,,col unit (pc),,col unit (pc),C,02/29/2020
+PR0024619,001,00080,Color [PT-CO units],NA,C3,MAX,Concentration3,,,col unit (pc),,col unit (pc),C,03/31/2020
+PR0024619,001,00080,Color [PT-CO units],40,C3,MAX,Concentration3,col unit (pc),40,col unit (pc),,col unit (pc),,04/30/2020
+PR0024619,001,00080,Color [PT-CO units],NA,C3,MAX,Concentration3,,,col unit (pc),,col unit (pc),C,05/31/2020
+PR0024619,001,00080,Color [PT-CO units],NA,C3,MAX,Concentration3,,,col unit (pc),,col unit (pc),C,06/30/2020
+PR0024619,001,00080,Color [PT-CO units],NA,C3,MAX,Concentration3,,,col unit (pc),,col unit (pc),C,07/31/2020
+PR0024619,001,00080,Color [PT-CO units],20,C3,MAX,Concentration3,col unit (pc),20,col unit (pc),,col unit (pc),,08/31/2020
+PR0024619,001,00080,Color [PT-CO units],NA,C3,MAX,Concentration3,,,col unit (pc),,col unit (pc),C,09/30/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,01/31/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,02/29/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,03/31/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",125,C3,MAX,Concentration3,mg/L,125,mg/L,,mg/L,,04/30/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,05/31/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,06/30/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,07/31/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",136,C3,MAX,Concentration3,mg/L,136,mg/L,,mg/L,,08/31/2020
+PR0024619,001,00340,"Oxygen demand, chem. [high level] [COD]",NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,09/30/2020
+PR0024619,001,00400,pH,NA,C3,MAX,Concentration3,,,SU,8.5,SU,C,01/31/2020
+PR0024619,001,00400,pH,NA,C1,MIN,Concentration1,,,SU,7.3,SU,C,01/31/2020
+PR0024619,001,00400,pH,NA,C1,MIN,Concentration1,,,SU,7.3,SU,C,02/29/2020
+PR0024619,001,00400,pH,NA,C3,MAX,Concentration3,,,SU,8.5,SU,C,02/29/2020
+PR0024619,001,00400,pH,NA,C3,MAX,Concentration3,,,SU,8.5,SU,C,03/31/2020
+PR0024619,001,00400,pH,NA,C1,MIN,Concentration1,,,SU,7.3,SU,C,03/31/2020
+PR0024619,001,00400,pH,7.64,C1,MIN,Concentration1,SU,7.64,SU,7.3,SU,,04/30/2020
+PR0024619,001,00400,pH,7.64,C3,MAX,Concentration3,SU,7.64,SU,8.5,SU,,04/30/2020
+PR0024619,001,00400,pH,NA,C3,MAX,Concentration3,,,SU,8.5,SU,C,05/31/2020
+PR0024619,001,00400,pH,NA,C1,MIN,Concentration1,,,SU,7.3,SU,C,05/31/2020
+PR0024619,001,00400,pH,NA,C1,MIN,Concentration1,,,SU,7.3,SU,C,06/30/2020
+PR0024619,001,00400,pH,NA,C3,MAX,Concentration3,,,SU,8.5,SU,C,06/30/2020
+PR0024619,001,00400,pH,NA,C3,MAX,Concentration3,,,SU,8.5,SU,C,07/31/2020
+PR0024619,001,00400,pH,NA,C1,MIN,Concentration1,,,SU,7.3,SU,C,07/31/2020
+PR0024619,001,00400,pH,7.2,C1,MIN,Concentration1,SU,7.2,SU,7.3,SU,,08/31/2020
+PR0024619,001,00400,pH,7.2,C3,MAX,Concentration3,SU,7.2,SU,8.5,SU,,08/31/2020
+PR0024619,001,00400,pH,NA,C3,MAX,Concentration3,,,SU,8.5,SU,C,09/30/2020
+PR0024619,001,00400,pH,NA,C1,MIN,Concentration1,,,SU,7.3,SU,C,09/30/2020
+PR0024619,001,00530,"Solids, total suspended",NA,C3,MAX,Concentration3,,,mg/L,71.1,mg/L,C,01/31/2020
+PR0024619,001,00530,"Solids, total suspended",NA,C3,MAX,Concentration3,,,mg/L,71.1,mg/L,C,02/29/2020
+PR0024619,001,00530,"Solids, total suspended",NA,C3,MAX,Concentration3,,,mg/L,71.1,mg/L,C,03/31/2020
+PR0024619,001,00530,"Solids, total suspended",42,C3,MAX,Concentration3,mg/L,42,mg/L,71.1,mg/L,,04/30/2020
+PR0024619,001,00530,"Solids, total suspended",NA,C3,MAX,Concentration3,,,mg/L,71.1,mg/L,C,05/31/2020
+PR0024619,001,00530,"Solids, total suspended",NA,C3,MAX,Concentration3,,,mg/L,71.1,mg/L,C,06/30/2020
+PR0024619,001,00530,"Solids, total suspended",NA,C3,MAX,Concentration3,,,mg/L,71.1,mg/L,C,07/31/2020
+PR0024619,001,00530,"Solids, total suspended",58,C3,MAX,Concentration3,mg/L,58,mg/L,71.1,mg/L,,08/31/2020
+PR0024619,001,00530,"Solids, total suspended",NA,C3,MAX,Concentration3,,,mg/L,71.1,mg/L,C,09/30/2020
+PR0024619,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,C,01/31/2020
+PR0024619,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,C,02/29/2020
+PR0024619,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,C,03/31/2020
+PR0024619,001,00545,"Solids, settleable",0,C3,MAX,Concentration3,mL/L,0,mg/L,,mL/L,,04/30/2020
+PR0024619,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,C,05/31/2020
+PR0024619,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,C,06/30/2020
+PR0024619,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,C,07/31/2020
+PR0024619,001,00545,"Solids, settleable",0,C3,MAX,Concentration3,mL/L,0,mg/L,,mL/L,,08/31/2020
+PR0024619,001,00545,"Solids, settleable",NA,C3,MAX,Concentration3,,,mg/L,,mL/L,C,09/30/2020
+PR0024619,001,00556,Oil & Grease,NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,01/31/2020
+PR0024619,001,00556,Oil & Grease,NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,02/29/2020
+PR0024619,001,00556,Oil & Grease,NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,03/31/2020
+PR0024619,001,00556,Oil & Grease,4.1,C3,MAX,Concentration3,mg/L,4.1,mg/L,,mg/L,,04/30/2020
+PR0024619,001,00556,Oil & Grease,NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,05/31/2020
+PR0024619,001,00556,Oil & Grease,NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,06/30/2020
+PR0024619,001,00556,Oil & Grease,NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,07/31/2020
+PR0024619,001,00556,Oil & Grease,8.7,C3,MAX,Concentration3,mg/L,8.7,mg/L,,mg/L,,08/31/2020
+PR0024619,001,00556,Oil & Grease,NA,C3,MAX,Concentration3,,,mg/L,,mg/L,C,09/30/2020

@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Renviron
+*.db
+*.sqlite
+*.rds
+rsconnect/
+data/

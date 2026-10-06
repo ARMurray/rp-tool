@@ -1,0 +1,546 @@
+NPDES_Pollutant,CRITERION_ID,POLLUTANT_NAME,CRITERION_VALUE,UNIT_NAME,Method,Formula,CRITERIATYPEAQUAHUMHLTH.x,CRITERIATYPEFRESHSALTWATER.x,USE_CLASS_NAME_LOCATION_ETC,NPDES_WQS_Join,parameter_code,CRITERIATYPEAQUAHUMHLTH.y,CRITERIATYPEFRESHSALTWATER.y,USE_CLASS_NAME_LOCATION_ETC_ID
+"1,1,1-trichloroethane",79351,"1,1,1-trichloroethane",200000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34506,H,NA,5088
+"1,1,1-trichloroethane",79352,"1,1,1-trichloroethane",200,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34506,NA,NA,5092
+"1,1,1-trichloroethane",79353,"1,1,1-trichloroethane",200,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34506,NA,NA,5093
+"1,1,2,2-tetrachloroethane",79416,"1,1,2,2-tetrachloroethane",30,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34516,H,NA,5088
+"1,1,2,2-tetrachloroethane",79417,"1,1,2,2-tetrachloroethane",2,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34516,H,NA,5089
+"1,1,2,2-tetrachloroethane",79418,"1,1,2,2-tetrachloroethane",2,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34516,H,NA,5090
+"1,1,2-trichloroethane",79413,"1,1,2-trichloroethane",89,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34511,H,NA,5088
+"1,1,2-trichloroethane",79414,"1,1,2-trichloroethane",5,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34511,NA,NA,5092
+"1,1,2-trichloroethane",79415,"1,1,2-trichloroethane",5,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34511,NA,NA,5093
+"1,1-dichloroethane",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"1,1-dichloroethylene",79348,"1,1-dichloroethylene",20000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34501,H,NA,5088
+"1,1-dichloroethylene",79349,"1,1-dichloroethylene",7,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34501,NA,NA,5092
+"1,1-dichloroethylene",79350,"1,1-dichloroethylene",7,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34501,NA,NA,5093
+"1,2,4-trichlorobenzene",79419,"1,2,4-trichlorobenzene",0.76,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34551,H,NA,5088
+"1,2,4-trichlorobenzene",79420,"1,2,4-trichlorobenzene",0.71,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34551,H,NA,5089
+"1,2,4-trichlorobenzene",79421,"1,2,4-trichlorobenzene",0.71,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34551,H,NA,5090
+"1,2-dichlorobenzene",79354,"1,2-dichlorobenzene",3000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34536,H,NA,5088
+"1,2-dichlorobenzene",79355,"1,2-dichlorobenzene",600,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34536,NA,NA,5092
+"1,2-dichlorobenzene",79356,"1,2-dichlorobenzene",600,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34536,NA,NA,5093
+"1,2-dichloroethane",79357,"1,2-dichloroethane",6500,ug/L,Concentration,NA,H,NA,class SB waters,CAS,32103,H,NA,5088
+"1,2-dichloroethane",79358,"1,2-dichloroethane",5,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,32103,NA,NA,5092
+"1,2-dichloroethane",79359,"1,2-dichloroethane",5,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,32103,NA,NA,5093
+"1,2-dichloropropane",79425,"1,2-dichloropropane",310,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34541,H,NA,5088
+"1,2-dichloropropane",79426,"1,2-dichloropropane",5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34541,H,NA,5089
+"1,2-dichloropropane",79427,"1,2-dichloropropane",5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34541,H,NA,5090
+"1,2-diphenylhydrazine",79469,"1,2-diphenylhydrazine",2,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34346,H,NA,5088
+"1,2-diphenylhydrazine",79470,"1,2-diphenylhydrazine",0.3,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34346,H,NA,5089
+"1,2-diphenylhydrazine",79471,"1,2-diphenylhydrazine",0.3,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34346,H,NA,5090
+"1,2-trans-dichloroethylene",79472,"trans-1,2-dichloroethylene",4000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34546,H,NA,5088
+"1,2-trans-dichloroethylene",79472,"trans-1,2-dichloroethylene",4000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,85810,H,NA,5088
+"1,2-trans-dichloroethylene",79473,"trans-1,2-dichloroethylene",100,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34546,H,NA,5089
+"1,2-trans-dichloroethylene",79473,"trans-1,2-dichloroethylene",100,ug/L,Concentration,NA,H,NA,class SD waters,CAS,85810,H,NA,5089
+"1,2-trans-dichloroethylene",79474,"trans-1,2-dichloroethylene",100,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34546,NA,NA,5092
+"1,2-trans-dichloroethylene",79474,"trans-1,2-dichloroethylene",100,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,85810,NA,NA,5092
+"1,2-trans-dichloroethylene",79475,"trans-1,2-dichloroethylene",100,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34546,NA,NA,5093
+"1,2-trans-dichloroethylene",79475,"trans-1,2-dichloroethylene",100,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,85810,NA,NA,5093
+"1,3-dichlorobenzene",79360,"1,3-dichlorobenzene",10,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34566,H,NA,5088
+"1,3-dichlorobenzene",79361,"1,3-dichlorobenzene",7,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34566,H,NA,5089
+"1,3-dichlorobenzene",79362,"1,3-dichlorobenzene",7,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34566,H,NA,5090
+"1,3-dichloropropylene",79428,"1,3-dichloropropene",120,ug/L,Concentration,NA,H,NA,class SB waters,CAS,77163,H,NA,5088
+"1,3-dichloropropylene",79429,"1,3-dichloropropene",2.7,ug/L,Concentration,NA,H,NA,class SD waters,CAS,77163,H,NA,5089
+"1,3-dichloropropylene",79430,"1,3-dichloropropene",2.7,ug/L,Concentration,NA,H,NA,class SG waters,CAS,77163,H,NA,5090
+"1,4-dichlorobenzene",79363,"1,4-dichlorobenzene",900,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34571,H,NA,5088
+"1,4-dichlorobenzene",79364,"1,4-dichlorobenzene",75,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34571,NA,NA,5092
+"1,4-dichlorobenzene",79365,"1,4-dichlorobenzene",75,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34571,NA,NA,5093
+"2,4,6-trichlorophenol",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2,4-dichlorophenol",79375,"2,4-dichlorophenol",60,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34601,H,NA,5088
+"2,4-dichlorophenol",79376,"2,4-dichlorophenol",10,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34601,H,NA,5089
+"2,4-dichlorophenol",79377,"2,4-dichlorophenol",10,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34601,H,NA,5090
+"2,4-dimethylphenol",79378,"2,4-dimethylphenol",3000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34606,H,NA,5088
+"2,4-dimethylphenol",79379,"2,4-dimethylphenol",100,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34606,H,NA,5089
+"2,4-dimethylphenol",79380,"2,4-dimethylphenol",100,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34606,H,NA,5090
+"2,4-dinitrophenol",79390,"2,4-dinitrophenol",300,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34616,H,NA,5088
+"2,4-dinitrophenol",79391,"2,4-dinitrophenol",10,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34616,H,NA,5089
+"2,4-dinitrophenol",79392,"2,4-dinitrophenol",10,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34616,H,NA,5090
+"2,4-dinitrotoluene",79479,"2,4-dinitrotoluene",17,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34611,H,NA,5088
+"2,4-dinitrotoluene",79480,"2,4-dinitrotoluene",0.49,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34611,H,NA,5089
+"2,4-dinitrotoluene",79481,"2,4-dinitrotoluene",0.49,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34611,H,NA,5090
+"2,6-dinitrotoluene",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2-chloroethylvinyl ether,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2-chloronaphthalene,79476,2-chloronaphthalene,1000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34581,H,NA,5088
+2-chloronaphthalene,79477,2-chloronaphthalene,800,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34581,H,NA,5089
+2-chloronaphthalene,79478,2-chloronaphthalene,800,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34581,H,NA,5090
+2-chlorophenol,79381,2-chlorophenol,800,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34586,H,NA,5088
+2-chlorophenol,79382,2-chlorophenol,30,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34586,H,NA,5089
+2-chlorophenol,79383,2-chlorophenol,30,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34586,H,NA,5090
+2-nitrophenol,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3,3-dichlorobenzidine",79482,"3,3'-dichlorobenzidine",1.5,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34631,H,NA,5088
+"3,3-dichlorobenzidine",79483,"3,3'-dichlorobenzidine",0.49,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34631,H,NA,5089
+"3,3-dichlorobenzidine",79484,"3,3'-dichlorobenzidine",0.49,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34631,H,NA,5090
+"3,4-benzofluoranthene",79500,benzo(b) fluoranthene,0.013,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34230,H,NA,5088
+"3,4-benzofluoranthene",79501,benzo(b) fluoranthene,0.012,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34230,H,NA,5089
+"3,4-benzofluoranthene",79502,benzo(b) fluoranthene,0.012,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34230,H,NA,5090
+"4,4'-DDD",79279,"4,4'-ddd",0.0012,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39310,H,NA,5088
+"4,4'-DDD",79280,"4,4'-ddd",0.0012,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39310,H,NA,5089
+"4,4'-DDD",79281,"4,4'-ddd",0.0012,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39310,H,NA,5090
+"4,4'-DDE",79282,"4,4'-dde",1.8e-4,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39320,H,NA,5088
+"4,4'-DDE",79283,"4,4'-dde",1.8e-4,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39320,H,NA,5089
+"4,4'-DDE",79284,"4,4'-dde",1.8e-4,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39320,H,NA,5090
+"4,4'-DDT",79285,"4,4'-ddt",3e-4,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39300,H,NA,5088
+"4,4'-DDT",79286,"4,4'-ddt",3e-4,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39300,H,NA,5089
+"4,4'-DDT",79287,"4,4'-ddt",3e-4,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39300,H,NA,5090
+"4,6-dinitro-o-cresol",79384,"2-methyl-4,6-dinitrophenol",30,ug/L,Concentration,NA,H,NA,class SB waters,CAS,03615,H,NA,5088
+"4,6-dinitro-o-cresol",79385,"2-methyl-4,6-dinitrophenol",2,ug/L,Concentration,NA,H,NA,class SD waters,CAS,03615,H,NA,5089
+"4,6-dinitro-o-cresol",79386,"2-methyl-4,6-dinitrophenol",2,ug/L,Concentration,NA,H,NA,class SG waters,CAS,03615,H,NA,5090
+4-bromophenyl phenyl ether,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4-chlorophenyl phenyl ether,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4-nitrophenol,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Acenaphthene,79485,acenaphthene,90,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34205,H,NA,5088
+Acenaphthene,79486,acenaphthene,70,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34205,H,NA,5089
+Acenaphthene,79487,acenaphthene,70,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34205,H,NA,5090
+Acenaphthylene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Acrolein,79434,acrolein,400,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34210,H,NA,5088
+Acrolein,79435,acrolein,3,ug/L,Concentration,NA,A,NA,class SD waters,CAS,34210,A,NA,5089
+Acrolein,79436,acrolein,3,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34210,H,NA,5089
+Acrolein,79437,acrolein,3,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34210,H,NA,5090
+Acrylonitrile,79431,acrylonitrile,70,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34215,H,NA,5088
+Acrylonitrile,79432,acrylonitrile,0.61,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34215,H,NA,5089
+Acrylonitrile,79433,acrylonitrile,0.61,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34215,H,NA,5090
+Aldrin,79265,aldrin,7.7e-6,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39330,H,NA,5088
+Aldrin,79266,aldrin,7.7e-6,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39330,H,NA,5089
+Aldrin,79267,aldrin,7.7e-6,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39330,H,NA,5090
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Ammonia (as N),79613,total ammonia nitrogen,NA,[no units],Special,NA,NA,NA,class SD waters,Manual,00610,NA,NA,5089
+Anthracene,79488,anthracene,400,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34220,H,NA,5088
+Anthracene,79489,anthracene,300,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34220,H,NA,5089
+Anthracene,79490,anthracene,300,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34220,H,NA,5090
+Antimony,79221,antimony,640,ug/L,Concentration,NA,H,NA,class SB waters,CAS,01095,H,NA,5088
+Antimony,79221,antimony,640,ug/L,Concentration,NA,H,NA,class SB waters,CAS,01097,H,NA,5088
+Antimony,79221,antimony,640,ug/L,Concentration,NA,H,NA,class SB waters,CAS,01268,H,NA,5088
+Antimony,79222,antimony,5.6,ug/L,Concentration,NA,H,NA,class SD waters,CAS,01095,H,NA,5089
+Antimony,79222,antimony,5.6,ug/L,Concentration,NA,H,NA,class SD waters,CAS,01097,H,NA,5089
+Antimony,79222,antimony,5.6,ug/L,Concentration,NA,H,NA,class SD waters,CAS,01268,H,NA,5089
+Antimony,79223,antimony,5.6,ug/L,Concentration,NA,H,NA,class SG waters,CAS,01095,H,NA,5090
+Antimony,79223,antimony,5.6,ug/L,Concentration,NA,H,NA,class SG waters,CAS,01097,H,NA,5090
+Antimony,79223,antimony,5.6,ug/L,Concentration,NA,H,NA,class SG waters,CAS,01268,H,NA,5090
+Antimony,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Arsenic,79224,arsenic,36,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01002,A,NA,5088
+Arsenic,79225,arsenic,10,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,01002,NA,NA,5092
+Arsenic,79226,arsenic,10,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,01002,NA,NA,5093
+Arsenic,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Benzene,79438,benzene,160,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34030,H,NA,5088
+Benzene,79439,benzene,5,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34030,NA,NA,5092
+Benzene,79440,benzene,5,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34030,NA,NA,5093
+Benzidine,79491,benzidine,0.11,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39120,H,NA,5088
+Benzidine,79492,benzidine,0.0014,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39120,H,NA,5089
+Benzidine,79493,benzidine,0.0014,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39120,H,NA,5090
+Benzo (a) anthracene,79494,benzo(a) anthracene,0.013,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34526,H,NA,5088
+Benzo (a) anthracene,79495,benzo(a) anthracene,0.012,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34526,H,NA,5089
+Benzo (a) anthracene,79496,benzo(a) anthracene,0.012,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34526,H,NA,5090
+Benzo (a) pyrene,79497,benzo(a) pyrene,0.0013,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34247,H,NA,5088
+Benzo (a) pyrene,79498,benzo(a) pyrene,0.0012,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34247,H,NA,5089
+Benzo (a) pyrene,79499,benzo(a) pyrene,0.0012,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34247,H,NA,5090
+Benzo (ghi) perylene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Benzo (k) fluoranthene,79503,benzo(k) fluoranthene,0.13,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34242,H,NA,5088
+Benzo (k) fluoranthene,79504,benzo(k) fluoranthene,0.12,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34242,H,NA,5089
+Benzo (k) fluoranthene,79505,benzo(k) fluoranthene,0.12,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34242,H,NA,5090
+Benzo(a)anthracene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Benzo(a)pyrene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Benzo(ghi)perylene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Benzo(k)fluoranthene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Beryllium,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Beryllium,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Biochemical oxygen demand (BOD),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Biochemical oxygen demand (BOD5),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Biochemical oxygen demand (CBOD),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bis (2-chloroethoxy) methane,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bis (2-chloroethyl) ether,79506,bis(2-chloroethyl) ether,22,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34273,H,NA,5088
+Bis (2-chloroethyl) ether,79507,bis(2-chloroethyl) ether,0.3,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34273,H,NA,5089
+Bis (2-chloroethyl) ether,79508,bis(2-chloroethyl) ether,0.3,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34273,H,NA,5090
+Bis (2-chloroisopropyl) ether,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Bis (2-ethylhexyl) phthalate,79512,bis(2-ethylhexyl) phthalate,3.7,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39100,H,NA,5088
+Bis (2-ethylhexyl) phthalate,79513,bis(2-ethylhexyl) phthalate,3.2,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39100,H,NA,5089
+Bis (2-ethylhexyl) phthalate,79514,bis(2-ethylhexyl) phthalate,3.2,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39100,H,NA,5090
+Bromoform,79441,bromoform,1200,ug/L,Concentration,NA,H,NA,class SB waters,CAS,32104,H,NA,5088
+Bromoform,79442,bromoform,70,ug/L,Concentration,NA,H,NA,class SD waters,CAS,32104,H,NA,5089
+Bromoform,79443,bromoform,70,ug/L,Concentration,NA,H,NA,class SG waters,CAS,32104,H,NA,5090
+Butyl benzyl phthalate,79518,butylbenzyl phthalate,1,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34292,H,NA,5088
+Butyl benzyl phthalate,79519,butylbenzyl phthalate,1,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34292,H,NA,5089
+Butyl benzyl phthalate,79520,butylbenzyl phthalate,1,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34292,H,NA,5090
+Cadmium,79227,cadmium,7.95,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01027,A,NA,5088
+Cadmium,79228,cadmium,NA,ug/L,Special,e^(0.7977*(ln(Hardness)-3.909,A,NA,class SD waters,CAS,01027,A,NA,5089
+Cadmium,79229,cadmium,5,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,01027,NA,NA,5093
+Carbon tetrachloride,79393,carbon tetrachloride,50,ug/L,Concentration,NA,H,NA,class SB waters,CAS,32102,H,NA,5088
+Carbon tetrachloride,79394,carbon tetrachloride,4,ug/L,Concentration,NA,H,NA,class SD waters,CAS,32102,H,NA,5089
+Carbon tetrachloride,79395,carbon tetrachloride,4,ug/L,Concentration,NA,H,NA,class SG waters,CAS,32102,H,NA,5090
+Chemical oxygen demand (COD),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Chlordane,79276,chlordane,0.0032,ug/L,Concentration,NA,H,NA,class SB waters,CAS,51032,H,NA,5088
+Chlordane,79277,chlordane,0.0031,ug/L,Concentration,NA,H,NA,class SD waters,CAS,51032,H,NA,5089
+Chlordane,79278,chlordane,0.0031,ug/L,Concentration,NA,H,NA,class SG waters,CAS,51032,H,NA,5090
+"Chlorine (total residual, TRC)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Chlorobenzene,79444,chlorobenzene,800,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34301,H,NA,5088
+Chlorobenzene,79445,chlorobenzene,100,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34301,H,NA,5089
+Chlorobenzene,79446,chlorobenzene,100,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,34301,NA,NA,5092
+Chlorobenzene,79447,chlorobenzene,100,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,34301,NA,NA,5093
+Chlorodibromomethane,79448,chlorodibromomethane,210,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34306,H,NA,5088
+Chlorodibromomethane,79449,chlorodibromomethane,8,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34306,H,NA,5089
+Chlorodibromomethane,79450,chlorodibromomethane,8,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34306,H,NA,5090
+Chloroethane,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Chloroform,79451,chloroform,2000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,32106,H,NA,5088
+Chloroform,79452,chloroform,60,ug/L,Concentration,NA,H,NA,class SD waters,CAS,32106,H,NA,5089
+Chloroform,79453,chloroform,60,ug/L,Concentration,NA,H,NA,class SG waters,CAS,32106,H,NA,5090
+Chromium,79241,chromium,100,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,01034,NA,NA,5093
+Chrysene,79521,chrysene,1.3,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34320,H,NA,5088
+Chrysene,79522,chrysene,1.2,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34320,H,NA,5089
+Chrysene,79523,chrysene,1.2,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34320,H,NA,5090
+Copper,79235,copper,3.73,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01042,A,NA,5088
+Copper,79236,copper,NA,ug/L,Special,e^(0.8545*(ln(Hardness)-1.702,A,NA,class SD waters,CAS,01042,A,NA,5089
+Copper,79237,copper,1300,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,01042,NA,NA,5093
+Cyanide,79233,cyanide,4,ug/L,Concentration,NA,H,NA,class SD waters,CAS,00720,H,NA,5089
+Cyanide,79234,cyanide,4,ug/L,Concentration,NA,H,NA,class SG waters,CAS,00720,H,NA,5090
+Cyanide,79232,cyanide (free),1,ug/L,Concentration,NA,A,NA,class SB waters,CAS,51173,A,NA,5088
+Design flow rate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Dibenzo (a,h) anthracene",79524,"dibenz(a,h)anthracene",0.0013,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34556,H,NA,5088
+"Dibenzo (a,h) anthracene",79525,"dibenz(a,h)anthracene",0.0012,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34556,H,NA,5089
+"Dibenzo (a,h) anthracene",79526,"dibenz(a,h)anthracene",0.0012,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34556,H,NA,5090
+"Dibenzo(a,h)anthracene",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Dichlorobromomethane,79454,dichlorobromomethane,270,ug/L,Concentration,NA,H,NA,class SB waters,CAS,32101,H,NA,5088
+Dichlorobromomethane,79455,dichlorobromomethane,9.5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,32101,H,NA,5089
+Dichlorobromomethane,79456,dichlorobromomethane,9.5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,32101,H,NA,5090
+Dieldrin,79288,dieldrin,1.2e-5,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39380,H,NA,5088
+Dieldrin,79289,dieldrin,1.2e-5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39380,H,NA,5089
+Dieldrin,79290,dieldrin,1.2e-5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39380,H,NA,5090
+Diethyl phthalate,79527,diethyl phthalate,600,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34336,H,NA,5088
+Diethyl phthalate,79528,diethyl phthalate,600,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34336,H,NA,5089
+Diethyl phthalate,79529,diethyl phthalate,600,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34336,H,NA,5090
+Dimethyl phthalate,79530,dimethyl phthalate,2000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34341,H,NA,5088
+Dimethyl phthalate,79530,dimethyl phthalate,2000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34342,H,NA,5088
+Dimethyl phthalate,79531,dimethyl phthalate,2000,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34341,H,NA,5089
+Dimethyl phthalate,79531,dimethyl phthalate,2000,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34342,H,NA,5089
+Dimethyl phthalate,79532,dimethyl phthalate,2000,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34341,H,NA,5090
+Dimethyl phthalate,79532,dimethyl phthalate,2000,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34342,H,NA,5090
+Di-n-butyl phthalate,79533,di-n-butyl phthalate,30,ug/L,Concentration,NA,H,NA,class SB waters,CAS,51011,H,NA,5088
+Di-n-butyl phthalate,79534,di-n-butyl phthalate,20,ug/L,Concentration,NA,H,NA,class SD waters,CAS,51011,H,NA,5089
+Di-n-butyl phthalate,79535,di-n-butyl phthalate,20,ug/L,Concentration,NA,H,NA,class SG waters,CAS,51011,H,NA,5090
+di-n-butyl phthalate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+di-n-octyl phthalate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Di-n-octyl phthalate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Discharge flow,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Dissolved oxygen,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+E. coli,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Endosulfan sulfate,79297,endosulfan sulfate,40,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34351,H,NA,5088
+Endosulfan sulfate,79298,endosulfan sulfate,20,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34351,H,NA,5089
+Endosulfan sulfate,79299,endosulfan sulfate,20,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34351,H,NA,5090
+Endrin,79300,endrin,0.0023,ug/L,Concentration,NA,A,NA,class SB waters,CAS,39390,A,NA,5088
+Endrin,79301,endrin,0.03,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39390,H,NA,5089
+Endrin,79302,endrin,0.03,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39390,H,NA,5090
+Endrin aldehyde,79303,endrin aldehyde,1,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34366,H,NA,5088
+Endrin aldehyde,79304,endrin aldehyde,1,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34366,H,NA,5089
+Endrin aldehyde,79305,endrin aldehyde,1,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34366,H,NA,5090
+Enterococci,79593,enterococci,35,#/100mL,Concentration,NA,NA,NA,class SB waters,Name,61211,NA,NA,5088
+Enterococci,79594,enterococci,130,#/100mL,Concentration,NA,NA,NA,class SB waters,Name,61211,NA,NA,5088
+Enterococci,79604,enterococci,35,#/100mL,Concentration,NA,NA,NA,class SD waters,Name,61211,NA,NA,5089
+Enterococci,79605,enterococci,130,#/100mL,Concentration,NA,NA,NA,class SD waters,Name,61211,NA,NA,5089
+Ethylbenzene,79457,ethylbenzene,130,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34371,H,NA,5088
+Ethylbenzene,79457,ethylbenzene,130,ug/L,Concentration,NA,H,NA,class SB waters,CAS,37371,H,NA,5088
+Ethylbenzene,79457,ethylbenzene,130,ug/L,Concentration,NA,H,NA,class SB waters,CAS,78113,H,NA,5088
+Ethylbenzene,79458,ethylbenzene,68,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34371,H,NA,5089
+Ethylbenzene,79458,ethylbenzene,68,ug/L,Concentration,NA,H,NA,class SD waters,CAS,37371,H,NA,5089
+Ethylbenzene,79458,ethylbenzene,68,ug/L,Concentration,NA,H,NA,class SD waters,CAS,78113,H,NA,5089
+Ethylbenzene,79459,ethylbenzene,68,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34371,H,NA,5090
+Ethylbenzene,79459,ethylbenzene,68,ug/L,Concentration,NA,H,NA,class SG waters,CAS,37371,H,NA,5090
+Ethylbenzene,79459,ethylbenzene,68,ug/L,Concentration,NA,H,NA,class SG waters,CAS,78113,H,NA,5090
+Fecal coliform,79591,fecal coliform,14,#/100mL,Concentration,NA,A,NA,class SB waters,Name,74055,A,NA,5088
+Fecal coliform,79592,fecal coliform,43,#/100mL,Concentration,NA,A,NA,class SB waters,Name,74055,A,NA,5088
+Fecal coliform,79602,fecal coliform,14,#/100mL,Concentration,NA,A,NA,class SD waters,Name,74055,A,NA,5089
+Fecal coliform,79603,fecal coliform,43,#/100mL,Concentration,NA,A,NA,class SD waters,Name,74055,A,NA,5089
+Fecal coliform,79618,fecal coliform,0,#/100mL,Concentration,NA,NA,NA,class SG waters,Name,74055,NA,NA,5090
+Flow,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Fluoranthene,79536,fluoranthene,20,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34376,H,NA,5088
+Fluoranthene,79537,fluoranthene,20,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34376,H,NA,5089
+Fluoranthene,79538,fluoranthene,20,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34376,H,NA,5090
+Fluorene,79539,fluorene,70,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34381,H,NA,5088
+Fluorene,79540,fluorene,50,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34381,H,NA,5089
+Fluorene,79541,fluorene,50,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34381,H,NA,5090
+Hardness (as CaCO3),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Heptachlor,79306,heptachlor,5.9e-5,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39410,H,NA,5088
+Heptachlor,79307,heptachlor,5.9e-5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39410,H,NA,5089
+Heptachlor,79308,heptachlor,5.9e-5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39410,H,NA,5090
+Heptachlor epoxide,79309,heptachlor epoxide,3.2e-4,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39420,H,NA,5088
+Heptachlor epoxide,79310,heptachlor epoxide,3.2e-4,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39420,H,NA,5089
+Heptachlor epoxide,79311,heptachlor epoxide,3.2e-4,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39420,H,NA,5090
+Hexachlorobenzene,79542,hexachlorobenzene,7.9e-4,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39700,H,NA,5088
+Hexachlorobenzene,79543,hexachlorobenzene,7.9e-4,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39700,H,NA,5089
+Hexachlorobenzene,79544,hexachlorobenzene,7.9e-4,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39700,H,NA,5090
+Hexachlorobutadiene,79545,hexachlorobutadiene,0.1,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34391,H,NA,5088
+Hexachlorobutadiene,79545,hexachlorobutadiene,0.1,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39702,H,NA,5088
+Hexachlorobutadiene,79546,hexachlorobutadiene,0.1,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34391,H,NA,5089
+Hexachlorobutadiene,79546,hexachlorobutadiene,0.1,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39702,H,NA,5089
+Hexachlorobutadiene,79547,hexachlorobutadiene,0.1,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34391,H,NA,5090
+Hexachlorobutadiene,79547,hexachlorobutadiene,0.1,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39702,H,NA,5090
+Hexachlorocyclopentadiene,79548,hexachlorocyclopentadiene,4,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34386,H,NA,5088
+Hexachlorocyclopentadiene,79549,hexachlorocyclopentadiene,4,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34386,H,NA,5089
+Hexachlorocyclopentadiene,79550,hexachlorocyclopentadiene,4,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34386,H,NA,5090
+Hexachlorocyclo-pentadiene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Hexachloroethane,79551,hexachloroethane,1,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34396,H,NA,5088
+Hexachloroethane,79552,hexachloroethane,1,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34396,H,NA,5089
+Hexachloroethane,79553,hexachloroethane,1,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34396,H,NA,5090
+alpha-BHC,79268,alpha-bhc,0.0039,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39336,H,NA,5088
+alpha-BHC,79268,alpha-bhc,0.0039,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39337,H,NA,5088
+alpha-BHC,79269,alpha-bhc,0.0036,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39336,H,NA,5089
+alpha-BHC,79269,alpha-bhc,0.0036,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39337,H,NA,5089
+alpha-BHC,79270,alpha-bhc,0.0036,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39336,H,NA,5090
+alpha-BHC,79270,alpha-bhc,0.0036,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39337,H,NA,5090
+NA,83713,endosulfan (alpha & beta),0.0087,ug/L,Concentration,NA,A,S,class SB waters,CAS,39388,A,S,5088
+NA,83714,endosulfan (alpha & beta),0.056,ug/L,Concentration,NA,A,F,class SD waters,CAS,39388,A,F,5089
+beta-BHC,79271,beta-bhc,0.14,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34255,H,NA,5088
+beta-BHC,79271,beta-bhc,0.14,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39338,H,NA,5088
+beta-BHC,79271,beta-bhc,0.14,ug/L,Concentration,NA,H,NA,class SB waters,CAS,51007,H,NA,5088
+beta-BHC,79272,beta-bhc,0.08,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34255,H,NA,5089
+beta-BHC,79272,beta-bhc,0.08,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39338,H,NA,5089
+beta-BHC,79272,beta-bhc,0.08,ug/L,Concentration,NA,H,NA,class SD waters,CAS,51007,H,NA,5089
+beta-BHC,79273,beta-bhc,0.08,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34255,H,NA,5090
+beta-BHC,79273,beta-bhc,0.08,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39338,H,NA,5090
+beta-BHC,79273,beta-bhc,0.08,ug/L,Concentration,NA,H,NA,class SG waters,CAS,51007,H,NA,5090
+NA,83713,endosulfan (alpha & beta),0.0087,ug/L,Concentration,NA,A,S,class SB waters,CAS,39388,A,S,5088
+NA,83714,endosulfan (alpha & beta),0.056,ug/L,Concentration,NA,A,F,class SD waters,CAS,39388,A,F,5089
+gamma-BHC,79315,lindane,0.16,ug/L,Concentration,NA,A,NA,class SB waters,CAS,39782,A,NA,5088
+gamma-BHC,79316,lindane,0.2,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,CAS,39782,NA,NA,5092
+gamma-BHC,79317,lindane,0.2,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,39782,NA,NA,5093
+"Indeno (1,2,3-cd) pyrene",79554,"indeno (1,2,3-cd) pyrene",0.013,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34403,H,NA,5088
+"Indeno (1,2,3-cd) pyrene",79555,"indeno (1,2,3-cd) pyrene",0.012,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34403,H,NA,5089
+"Indeno (1,2,3-cd) pyrene",79556,"indeno (1,2,3-cd) pyrene",0.012,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34403,H,NA,5090
+"Indeno(1,2,3-cd)pyrene",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Isophorone,79557,isophorone,18000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34408,H,NA,5088
+Isophorone,79558,isophorone,340,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34408,H,NA,5089
+Isophorone,79559,isophorone,340,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34408,H,NA,5090
+Kjeldahl nitrogen,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Lead,79252,lead,8.52,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01051,A,NA,5088
+Lead,79253,lead,NA,ug/L,Special,e^(1.273*(ln(Hardness)-4.705,A,NA,class SD waters,CAS,01051,A,NA,5089
+Lead,79254,lead,15,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,01051,NA,NA,5093
+Mercury,79244,mercury,0.051,ug/L,Concentration,NA,H,NA,class SB waters,CAS,71900,H,NA,5088
+Mercury,79245,mercury,0.05,ug/L,Concentration,NA,H,NA,class SD waters,CAS,71900,H,NA,5089
+Mercury,79246,mercury,0.05,ug/L,Concentration,NA,H,NA,class SG waters,CAS,71900,H,NA,5090
+Methyl bromide,79460,methyl bromide,10000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34413,H,NA,5088
+Methyl bromide,79461,methyl bromide,100,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34413,H,NA,5089
+Methyl bromide,79462,methyl bromide,100,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34413,H,NA,5090
+Methyl chloride,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Methylene chloride,79463,methylene chloride,10000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34423,H,NA,5088
+Methylene chloride,79464,methylene chloride,200,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34423,H,NA,5089
+Methylene chloride,79465,methylene chloride,200,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34423,H,NA,5090
+NA,79422,"1,2,4,5-tetrachlorobenzene",0.03,ug/L,Concentration,NA,H,NA,class SB waters,NA,77734,H,NA,5088
+NA,79423,"1,2,4,5-tetrachlorobenzene",0.03,ug/L,Concentration,NA,H,NA,class SD waters,NA,77734,H,NA,5089
+NA,79424,"1,2,4,5-tetrachlorobenzene",0.03,ug/L,Concentration,NA,H,NA,class SG waters,NA,77734,H,NA,5090
+NA,79366,"2,3,7,8-tcdd (dioxin)",5.1e-8,ug/L,Concentration,NA,H,NA,class SB waters,NA,03556,H,NA,5088
+NA,79366,"2,3,7,8-tcdd (dioxin)",5.1e-8,ug/L,Concentration,NA,H,NA,class SB waters,NA,34675,H,NA,5088
+NA,79366,"2,3,7,8-tcdd (dioxin)",5.1e-8,ug/L,Concentration,NA,H,NA,class SB waters,NA,34750,H,NA,5088
+NA,79367,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,Concentration,NA,H,NA,class SD waters,NA,03556,H,NA,5089
+NA,79367,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,Concentration,NA,H,NA,class SD waters,NA,34675,H,NA,5089
+NA,79367,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,Concentration,NA,H,NA,class SD waters,NA,34750,H,NA,5089
+NA,79368,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,Concentration,NA,H,NA,class SG waters,NA,03556,H,NA,5090
+NA,79368,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,Concentration,NA,H,NA,class SG waters,NA,34675,H,NA,5090
+NA,79368,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,Concentration,NA,H,NA,class SG waters,NA,34750,H,NA,5090
+NA,79329,"2,4,5-tp (silvex)",400,ug/L,Concentration,NA,H,NA,class SB waters,NA,39760,H,NA,5088
+NA,79330,"2,4,5-tp (silvex)",50,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,NA,39760,NA,NA,5092
+NA,79331,"2,4,5-tp (silvex)",50,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,NA,39760,NA,NA,5093
+NA,79369,"2,4,5-trichlorophenol",600,ug/L,Concentration,NA,H,NA,class SB waters,NA,61023,H,NA,5088
+NA,79369,"2,4,5-trichlorophenol",600,ug/L,Concentration,NA,H,NA,class SB waters,NA,77687,H,NA,5088
+NA,79370,"2,4,5-trichlorophenol",300,ug/L,Concentration,NA,H,NA,class SD waters,NA,61023,H,NA,5089
+NA,79370,"2,4,5-trichlorophenol",300,ug/L,Concentration,NA,H,NA,class SD waters,NA,77687,H,NA,5089
+NA,79371,"2,4,5-trichlorophenol",300,ug/L,Concentration,NA,H,NA,class SG waters,NA,61023,H,NA,5090
+NA,79371,"2,4,5-trichlorophenol",300,ug/L,Concentration,NA,H,NA,class SG waters,NA,77687,H,NA,5090
+NA,79372,"2,4,6-trichlorophenol",28,ug/L,Concentration,NA,H,NA,class SB waters,NA,34621,H,NA,5088
+NA,79373,"2,4,6-trichlorophenol",15,ug/L,Concentration,NA,H,NA,class SD waters,NA,34621,H,NA,5089
+NA,79374,"2,4,6-trichlorophenol",15,ug/L,Concentration,NA,H,NA,class SG waters,NA,34621,H,NA,5090
+NA,79332,"2,4-d",12000,ug/L,Concentration,NA,H,NA,class SB waters,NA,39730,H,NA,5088
+NA,79333,"2,4-d",70,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,NA,39730,NA,NA,5092
+NA,79334,"2,4-d",70,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,NA,39730,NA,NA,5093
+NA,79293,alpha-endosulfan,20,ug/L,Concentration,NA,H,NA,class SG waters,NA,34361,H,NA,5090
+NA,79293,alpha-endosulfan,20,ug/L,Concentration,NA,H,NA,class SG waters,NA,78428,H,NA,5090
+NA,79220,aluminum,87,ug/L,Concentration,NA,A,NA,class SD waters,NA,01251,A,NA,5089
+NA,79220,aluminum,87,ug/L,Concentration,NA,A,NA,class SD waters,NA,1105A,A,NA,5089
+NA,79219,asbestos,7,million fibers/l,Concentration,NA,NA,NA,surface waters,NA,00948,NA,NA,5087
+NA,79335,azinophos,0.01,ug/L,Concentration,NA,A,NA,class SB waters,NA,82616,A,NA,5088
+NA,79336,azinophos,0.01,ug/L,Concentration,NA,A,NA,class SD waters,NA,82616,A,NA,5089
+NA,79296,beta-endosulfan,20,ug/L,Concentration,NA,H,NA,class SG waters,NA,34356,H,NA,5090
+NA,79509,bis(2-chloro-1-methylethyl) ether,4000,ug/L,Concentration,NA,H,NA,class SB waters,NA,34275,H,NA,5088
+NA,79510,bis(2-chloro-1-methylethyl) ether,200,ug/L,Concentration,NA,H,NA,class SD waters,NA,34275,H,NA,5089
+NA,79511,bis(2-chloro-1-methylethyl) ether,200,ug/L,Concentration,NA,H,NA,class SG waters,NA,34275,H,NA,5090
+NA,79515,bis(chloromethyl) ether,0.17,ug/L,Concentration,NA,H,NA,class SB waters,NA,34268,H,NA,5088
+NA,79516,bis(chloromethyl) ether,0.0015,ug/L,Concentration,NA,H,NA,class SD waters,NA,34268,H,NA,5089
+NA,79517,bis(chloromethyl) ether,0.0015,ug/L,Concentration,NA,H,NA,class SG waters,NA,34268,H,NA,5090
+NA,79274,carbaryl,1.6,ug/L,Concentration,NA,A,NA,class SB waters,NA,77700,A,NA,5088
+NA,79275,carbaryl,2.1,ug/L,Concentration,NA,A,NA,class SD waters,NA,77700,A,NA,5089
+NA,79612,chlorides,230,mg/l,Concentration,NA,NA,NA,class SD waters,NA,00940,NA,NA,5089
+NA,79612,chlorides,230,mg/l,Concentration,NA,NA,NA,class SD waters,NA,46225,NA,NA,5089
+"Chlorine (total residual, TRC)",79230,chlorine,7.5,ug/L,Concentration,NA,A,NA,class SB waters,NA,50060,A,NA,5088
+"Chlorine (total residual, TRC)",79231,chlorine,11,ug/L,Concentration,NA,A,NA,class SD waters,NA,50060,A,NA,5089
+NA,79337,chlorpyrifos,0.0056,ug/L,Concentration,NA,A,NA,class SB waters,NA,38933,A,NA,5088
+NA,79337,chlorpyrifos,0.0056,ug/L,Concentration,NA,A,NA,class SB waters,NA,77969,A,NA,5088
+NA,79337,chlorpyrifos,0.0056,ug/L,Concentration,NA,A,NA,class SB waters,NA,81403,A,NA,5088
+NA,79338,chlorpyrifos,0.041,ug/L,Concentration,NA,A,NA,class SD waters,NA,38933,A,NA,5089
+NA,79338,chlorpyrifos,0.041,ug/L,Concentration,NA,A,NA,class SD waters,NA,77969,A,NA,5089
+NA,79338,chlorpyrifos,0.041,ug/L,Concentration,NA,A,NA,class SD waters,NA,81403,A,NA,5089
+NA,79238,chromium iii,NA,ug/L,Special,e^(0.8190*(ln(Hardness)-0.6848,A,NA,class SD waters,NA,51058,A,NA,5089
+NA,79239,chromium vi (hex),50.4,ug/L,Concentration,NA,A,NA,class SB waters,NA,01032,A,NA,5088
+NA,79240,chromium vi (hex),11.4,ug/L,Concentration,NA,A,NA,class SD waters,NA,01032,A,NA,5089
+NA,79339,demeton,0.1,ug/L,Concentration,NA,A,NA,class SB waters,NA,39560,A,NA,5088
+NA,79340,demeton,0.1,ug/L,Concentration,NA,A,NA,class SD waters,NA,39560,A,NA,5089
+NA,79341,diazinon,0.82,ug/L,Concentration,NA,A,NA,class SB waters,NA,39570,A,NA,5088
+NA,79342,diazinon,0.17,ug/L,Concentration,NA,A,NA,class SD waters,NA,39570,A,NA,5089
+NA,79590,dissolved oxygen,5,mg/l,Concentration,NA,NA,NA,class SB waters,NA,00300,NA,NA,5088
+NA,79601,dissolved oxygen,5,mg/l,Concentration,NA,NA,NA,class SD waters,NA,00300,NA,NA,5089
+NA,79242,fluoride,4000,ug/L,Concentration,NA,NA,NA,class SD waters- drinking water,NA,NA,NA,NA,5092
+NA,79243,fluoride,4000,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,NA,NA,NA,NA,5093
+NA,79312,hexachlorocyclohexane (hch)-technical,0.1,ug/L,Concentration,NA,H,NA,class SB waters,NA,NA,H,NA,5088
+NA,79313,hexachlorocyclohexane (hch)-technical,0.066,ug/L,Concentration,NA,H,NA,class SD waters,NA,NA,H,NA,5089
+NA,79314,hexachlorocyclohexane (hch)-technical,0.066,ug/L,Concentration,NA,H,NA,class SG waters,NA,NA,H,NA,5090
+NA,79343,malathion,0.1,ug/L,Concentration,NA,A,NA,class SB waters,NA,39530,A,NA,5088
+NA,79344,malathion,0.1,ug/L,Concentration,NA,A,NA,class SD waters,NA,39530,A,NA,5089
+NA,79318,methoxychlor,0.02,ug/L,Concentration,NA,H,NA,class SB waters,NA,39480,H,NA,5088
+NA,79319,methoxychlor,0.02,ug/L,Concentration,NA,H,NA,class SD waters,NA,39480,H,NA,5089
+NA,79320,methoxychlor,0.02,ug/L,Concentration,NA,H,NA,class SG waters,NA,39480,H,NA,5090
+NA,79321,mirex,0.001,ug/L,Concentration,NA,A,NA,class SB waters,NA,39755,A,NA,5088
+NA,79322,mirex,0.001,ug/L,Concentration,NA,A,NA,class SD waters,NA,39755,A,NA,5089
+NA,79620,nitrite (expressed as n),1000,ug/L,Concentration,NA,NA,NA,class SG waters,NA,00613,NA,NA,5090
+NA,79560,nitrosamines,12.4,ug/L,Concentration,NA,H,NA,class SB waters,NA,NA,H,NA,5088
+NA,79561,nitrosamines,0.008,ug/L,Concentration,NA,H,NA,class SD waters,NA,NA,H,NA,5089
+NA,79562,nitrosamines,0.008,ug/L,Concentration,NA,H,NA,class SG waters,NA,NA,H,NA,5090
+NA,79563,nitrosodibutylamine,2.2,ug/L,Concentration,NA,H,NA,class SB waters,NA,78207,H,NA,5088
+NA,79564,nitrosodibutylamine,0.063,ug/L,Concentration,NA,H,NA,class SD waters,NA,78207,H,NA,5089
+NA,79565,nitrosodibutylamine,0.063,ug/L,Concentration,NA,H,NA,class SG waters,NA,78207,H,NA,5090
+NA,79566,nitrosodiethylamine,12.4,ug/L,Concentration,NA,H,NA,class SB waters,NA,78200,H,NA,5088
+NA,79567,nitrosodiethylamine,0.008,ug/L,Concentration,NA,H,NA,class SD waters,NA,78200,H,NA,5089
+NA,79568,nitrosodiethylamine,0.008,ug/L,Concentration,NA,H,NA,class SG waters,NA,78200,H,NA,5090
+NA,79569,nitrosopyrrolidine,340,ug/L,Concentration,NA,H,NA,class SB waters,NA,78206,H,NA,5088
+NA,79570,nitrosopyrrolidine,0.16,ug/L,Concentration,NA,H,NA,class SD waters,NA,78206,H,NA,5089
+NA,79571,nitrosopyrrolidine,0.16,ug/L,Concentration,NA,H,NA,class SG waters,NA,78206,H,NA,5090
+NA,79396,nonylphenol,1.7,ug/L,Concentration,NA,A,NA,class SB waters,NA,NA,A,NA,5088
+NA,79397,nonylphenol,6.6,ug/L,Concentration,NA,A,NA,class SD waters,NA,NA,A,NA,5089
+NA,79345,parathion,0.013,ug/L,Concentration,NA,A,NA,class SD waters,NA,39540,A,NA,5089
+NA,79466,pentachlorobenzene,0.1,ug/L,Concentration,NA,H,NA,class SB waters,NA,77793,H,NA,5088
+NA,79467,pentachlorobenzene,0.1,ug/L,Concentration,NA,H,NA,class SD waters,NA,77793,H,NA,5089
+NA,79468,pentachlorobenzene,0.1,ug/L,Concentration,NA,H,NA,class SG waters,NA,77793,H,NA,5090
+NA,79401,polychlorinated biphenyls (pcbs),6.4e-4,ug/L,Concentration,NA,H,NA,class SB waters,NA,39516,H,NA,5088
+NA,79402,polychlorinated biphenyls (pcbs),6.4e-4,ug/L,Concentration,NA,H,NA,class SD waters,NA,39516,H,NA,5089
+NA,79403,polychlorinated biphenyls (pcbs),6.4e-4,ug/L,Concentration,NA,H,NA,class SG waters,NA,39516,H,NA,5090
+NA,79215,radium 226,3,pci/l,Concentration,NA,NA,NA,surface waters,NA,NA,NA,NA,5087
+NA,79597,sulfates,2800,mg/l,Concentration,NA,NA,B,class SB waters,NA,00945,NA,B,5088
+NA,79611,sulfates,250,mg/l,Concentration,NA,NA,NA,class SD waters,NA,00945,NA,NA,5089
+NA,79346,tributyltin (tbt),0.0074,ug/L,Concentration,NA,A,NA,class SB waters,NA,03824,A,NA,5088
+NA,79347,tributyltin (tbt),0.072,ug/L,Concentration,NA,A,NA,class SD waters,NA,03824,A,NA,5089
+NA,79607,color,15,color units,Max,NA,NA,NA,class SD waters,NA,00080,NA,NA,5089
+NA,79217,gross beta,1000,pci/l,Concentration,NA,NA,NA,surface waters,NA,03501,NA,NA,5087
+NA,79598,methylene blue active substances,500,ug/L,Concentration,NA,NA,NA,class SB waters,NA,47021,NA,NA,5088
+NA,79610,methylene blue active substances,100,ug/L,Concentration,NA,NA,NA,class SD waters,NA,47021,NA,NA,5089
+NA,79216,strontium-90,10,pci/l,Concentration,NA,NA,NA,surface waters,NA,13501,NA,NA,5087
+NA,79258,sulfide,2,ug/L,Concentration,NA,A,NA,class SB waters,NA,51202,A,NA,5088
+NA,79259,sulfide,2,ug/L,Concentration,NA,A,NA,class SD waters,NA,51202,A,NA,5089
+NA,79596,turbidity,10,ntu,Max,NA,NA,NA,class SB waters,NA,00070,NA,NA,5088
+NA,79608,turbidity,50,ntu,Max,NA,NA,NA,class SD waters,NA,00070,NA,NA,5089
+Naphthalene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Nickel,79247,nickel,8.28,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01067,A,NA,5088
+Nickel,79248,nickel,NA,ug/L,Special,e^(0.8460*(ln(Hardness)-0.0584,A,NA,class SD waters,CAS,01067,A,NA,5089
+Nickel,79249,nickel,610,ug/L,Concentration,NA,H,NA,class SG waters,CAS,01067,H,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,79619,nitrate and nitrite (expressed as n),10000,ug/L,Concentration,NA,NA,NA,class SG waters,Manual,00630,NA,NA,5090
+Nitrate/nitrite,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Nitrobenzene,79581,nitrobenzene,600,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34447,H,NA,5088
+Nitrobenzene,79582,nitrobenzene,10,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34447,H,NA,5089
+Nitrobenzene,79583,nitrobenzene,10,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34447,H,NA,5090
+N-nitrosodimethylamine,79572,n-nitrosodimethylamine,30,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34438,H,NA,5088
+N-nitrosodimethylamine,79573,n-nitrosodimethylamine,0.0069,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34438,H,NA,5089
+N-nitrosodimethylamine,79574,n-nitrosodimethylamine,0.0069,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34438,H,NA,5090
+N-nitrosodi-n-propylamine,79575,n-nitrosodi-n-propylamine,5.1,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34428,H,NA,5088
+N-nitrosodi-n-propylamine,79576,n-nitrosodi-n-propylamine,0.05,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34428,H,NA,5089
+N-nitrosodi-n-propylamine,79577,n-nitrosodi-n-propylamine,0.05,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34428,H,NA,5090
+N-nitrosodiphenylamine,79578,n-nitrosodiphenylamine,60,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34433,H,NA,5088
+N-nitrosodiphenylamine,79579,n-nitrosodiphenylamine,33,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34433,H,NA,5089
+N-nitrosodiphenylamine,79580,n-nitrosodiphenylamine,33,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34433,H,NA,5090
+Oil and grease,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+PCB-1016,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+PCB-1221,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+PCB-1232,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+PCB-1242,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+PCB-1248,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+PCB-1254,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+PCB-1260,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+p-chloro-m-cresol,79387,3-methyl-4-chlorophenol,2000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,70012,H,NA,5088
+p-chloro-m-cresol,79388,3-methyl-4-chlorophenol,500,ug/L,Concentration,NA,H,NA,class SD waters,CAS,70012,H,NA,5089
+p-chloro-m-cresol,79389,3-methyl-4-chlorophenol,500,ug/L,Concentration,NA,H,NA,class SG waters,CAS,70012,H,NA,5090
+Pentachlorophenol,79323,pentachlorophenol,0.4,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39032,H,NA,5088
+Pentachlorophenol,79324,pentachlorophenol,0.3,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39032,H,NA,5089
+Pentachlorophenol,79325,pentachlorophenol,0.3,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39032,H,NA,5090
+pH (maximum),79595,pH (acidity/alkalinity),8.5,SU,Max,NA,NA,NA,class SB waters,Manual,00400,NA,NA,5088
+pH (maximum),79606,pH (acidity/alkalinity),9,SU,Max,NA,NA,NA,class SD waters,Manual,00400,NA,NA,5089
+pH (minimum),79595,pH (acidity/alkalinity),7.3,SU,Min,NA,NA,NA,class SB waters,Manual,00400,NA,NA,5088
+pH (minimum),79606,pH (acidity/alkalinity),6,SU,Min,NA,NA,NA,class SD waters,Manual,00400,NA,NA,5089
+pH (report as range),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Phenanthrene,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Phenol,79398,phenol,300000,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34694,H,NA,5088
+Phenol,79399,phenol,4000,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34694,H,NA,5089
+Phenol,79400,phenol,4000,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34694,H,NA,5090
+"Phenols, total",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Phosphorus,79599,total phosphorus,1000,ug/L,Concentration,NA,NA,B,class SB waters,Manual,00665,NA,B,5088
+Phosphorus,79616,total phosphorus,160,ug/L,Concentration,NA,NA,NA,class SD waters,Manual,00665,NA,NA,5089
+Phosphorus,79617,total phosphorus,26,ug/L,Concentration,NA,NA,NA,class SD waters,Manual,00665,NA,NA,5089
+Pyrene,79584,pyrene,30,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34469,H,NA,5088
+Pyrene,79585,pyrene,20,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34469,H,NA,5089
+Pyrene,79586,pyrene,20,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34469,H,NA,5090
+Selenium,79255,selenium,71.14,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01147,A,NA,5088
+Selenium,79256,selenium,3.1,ug/L,Concentration,NA,A,NA,class SD waters,CAS,01147,A,NA,5089
+Selenium,79257,selenium,50,ug/L,Concentration,NA,NA,NA,class SG waters- drinking water,CAS,01147,NA,NA,5093
+Selenium,83712,selenium,1.5,ug/L,Concentration,NA,A,NA,class SD waters,CAS,01147,A,NA,5089
+Silver,79250,silver,2.24,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01077,A,NA,5088
+Silver,79251,silver,NA,ug/L,Special,e^(1.72*(ln(Hardness)-6.59,A,NA,class SD waters,CAS,01077,A,NA,5089
+Temperature (summer),79218,temperature,30,deg C,Max,NA,NA,NA,surface waters,Manual,00010,NA,NA,5087
+Temperature (summer),79218,temperature,30,deg C,Max,NA,NA,NA,surface waters,Manual,00010,NA,NA,5087
+Temperature (winter),79218,temperature,30,deg C,Max,NA,NA,NA,surface waters,Manual,00010,NA,NA,5087
+Temperature (winter),79218,temperature,30,deg C,Max,NA,NA,NA,surface waters,Manual,00010,NA,NA,5087
+Tetrachloroethylene,79404,tetrachloroethylene,290,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34475,H,NA,5088
+Tetrachloroethylene,79404,tetrachloroethylene,290,ug/L,Concentration,NA,H,NA,class SB waters,CAS,85814,H,NA,5088
+Tetrachloroethylene,79405,tetrachloroethylene,5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34475,H,NA,5089
+Tetrachloroethylene,79405,tetrachloroethylene,5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,85814,H,NA,5089
+Tetrachloroethylene,79406,tetrachloroethylene,5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34475,H,NA,5090
+Tetrachloroethylene,79406,tetrachloroethylene,5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,85814,H,NA,5090
+Thallium,79260,thallium,0.47,ug/L,Concentration,NA,H,NA,class SB waters,CAS,01059,H,NA,5088
+Thallium,79261,thallium,0.24,ug/L,Concentration,NA,H,NA,class SD waters,CAS,01059,H,NA,5089
+Thallium,79262,thallium,0.24,ug/L,Concentration,NA,H,NA,class SG waters,CAS,01059,H,NA,5090
+Toluene,79587,toluene,520,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34010,H,NA,5088
+Toluene,79587,toluene,520,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34481,H,NA,5088
+Toluene,79588,toluene,57,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34010,H,NA,5089
+Toluene,79588,toluene,57,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34481,H,NA,5089
+Toluene,79589,toluene,57,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34010,H,NA,5090
+Toluene,79589,toluene,57,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34481,H,NA,5090
+Total dissolved solids,79609,total dissolved solids,500,mg/l,Concentration,NA,NA,NA,class SD waters,Name,70295,NA,NA,5089
+Total Kjeldahl nitrogen (TKN),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Total nitrogen (as N),79600,total nitrogen,5000,ug/L,Concentration,NA,NA,NA,class SB waters,Manual,00600,NA,NA,5088
+Total nitrogen (as N),79614,total nitrogen,1700,ug/L,Concentration,NA,NA,NA,class SD waters,Manual,00600,NA,NA,5089
+Total nitrogen (as N),79615,total nitrogen,400,ug/L,Concentration,NA,NA,NA,class SD waters,Manual,00600,NA,NA,5089
+Total organic carbon (TOC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Total phenolic compounds,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Total phosphorus,79599,total phosphorus,1000,ug/L,Concentration,NA,NA,B,class SB waters,Name,00665,NA,B,5088
+Total phosphorus,79616,total phosphorus,160,ug/L,Concentration,NA,NA,NA,class SD waters,Name,00665,NA,NA,5089
+Total phosphorus,79617,total phosphorus,26,ug/L,Concentration,NA,NA,NA,class SD waters,Name,00665,NA,NA,5089
+Total suspended solids (TSS),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Toxaphene,79326,toxaphene,2e-4,ug/L,Concentration,NA,A,NA,class SB waters,CAS,39400,A,NA,5088
+Toxaphene,79327,toxaphene,2e-4,ug/L,Concentration,NA,A,NA,class SD waters,CAS,39400,A,NA,5089
+Toxaphene,79328,toxaphene,0.007,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39400,H,NA,5090
+"trans-1,2-dichloroethylene",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Trichloroethylene,79407,trichloroethylene,70,ug/L,Concentration,NA,H,NA,class SB waters,CAS,34485,H,NA,5088
+Trichloroethylene,79407,trichloroethylene,70,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39180,H,NA,5088
+Trichloroethylene,79408,trichloroethylene,5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,34485,H,NA,5089
+Trichloroethylene,79408,trichloroethylene,5,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39180,H,NA,5089
+Trichloroethylene,79409,trichloroethylene,5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,34485,H,NA,5090
+Trichloroethylene,79409,trichloroethylene,5,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39180,H,NA,5090
+Vinyl chloride,79410,vinyl chloride,16,ug/L,Concentration,NA,H,NA,class SB waters,CAS,39175,H,NA,5088
+Vinyl chloride,79411,vinyl chloride,0.22,ug/L,Concentration,NA,H,NA,class SD waters,CAS,39175,H,NA,5089
+Vinyl chloride,79412,vinyl chloride,0.22,ug/L,Concentration,NA,H,NA,class SG waters,CAS,39175,H,NA,5090
+Zinc,79263,zinc,85.62,ug/L,Concentration,NA,A,NA,class SB waters,CAS,01092,A,NA,5088
+Zinc,79264,zinc,NA,ug/L,Special,e^(0.8473*(ln(Hardness)-0.884,A,NA,class SD waters,CAS,01092,A,NA,5089

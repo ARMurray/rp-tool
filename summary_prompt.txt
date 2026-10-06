@@ -1,0 +1,78 @@
+Here’s a concise handoff you can paste into a new chat to pick up where we left off:
+
+Project summary and current state
+- Goal: Shiny app to compute Reasonable Potential (RP) for NPDES permits in PR/VI, compare Receiving Water Concentration (RWC) to WQS and show a PDF report.
+- Flow:
+  - Landing → Select (permit/date/forms) → Summary (data overview, optional hardness) → RP (results + report download).
+  - DMR fetched from ECHO, filtered by selected NPDES forms and basic filters.
+- Key files and schemas:
+  - data/full_join.csv (crosswalk; character parameter_code zero‑padded to width 5)
+    - Columns: NPDES_Pollutant, CRITERION_ID, POLLUTANT_NAME, CRITERION_VALUE, UNIT_NAME, Method, Formula, CRITERIATYPEAQUAHUMHLTH, CRITERIATYPEFRESHSALTWATER, USE_CLASS_NAME_LOCATION_ETC, NPDES_WQS_Join, parameter_code
+  - data/NPDES_Forms_Pollutants_1.csv (forms)
+    - Columns: Pollutant, Form, Table, SubTable, CAS
+- DMR table (rv$dmr) – required columns (types/notes):
+  - parameter_code (char, 5 digits), parameter_desc (char)
+  - dmr_value_nmbr (numeric; NODI B/Q set to 0), dmr_unit_desc (char)
+  - monitoring_period_end_date (Date)
+  - statistical_base_type_code (char; “MAX”; allow “MIN” for pH only)
+  - value_type_desc (char; “Concentration3” for MAX; “Concentration1” for pH MIN if present)
+  - perm_feature_type_code (char; filter “EXO”)
+  - nodi_code (char; B/Q treated as 0)
+- Unit policy:
+  - Use WQS UNIT_NAME as the comparison unit. Minimal standardization has already been applied in crosswalk (e.g., “µg/l”→“ug/L”, “°C”→“deg C”, “standard units”→“SU”, “ntu”→“NTU”, etc.).
+  - For manual appended DMR, users are responsible for supplying values in the correct units (the template includes Expected_Unit as a hint).
+- Non‑concentration parameters (excluded from MF path):
+  - pH (00400): compare observed max/min against upper/lower criteria (no MF/dilution).
+  - Temperature (00010): screen vs observed max (no MF/dilution).
+  - Turbidity (00070) and Color (00080) currently excluded from MF; can be added as special cases later.
+
+Calculations implemented
+- RWC (concentration-based parameters):
+  - compute_rwc(dmr, dilution_ratio, confidence_level, target_percentile) returns one row per parameter with:
+    - n_used, max_val, mean_val, sd_val, cv (policy: n<10 -> cv=0.6; else sd/mean), sigma_g, p, z_p, z_target, MF, RWC_rs = (max_val × MF) ÷ dilution_ratio.
+  - CL vs target_percentile are distinct: CL controls p = (1−CL)^(1/n); target selects the effluent distribution tail (e.g., 0.95 for chronic, 0.99 for acute).
+- Metals limits:
+  - metals_limit(wqs_id, hardness): limit = exp(LC*ln(hardness) − RC). Hardness setting comes from UI:
+    - hardness_mode radio: “range” (default) or “set” with numeric hardness_value (mg/L as CaCO3).
+- TAN limits:
+  - calc_tan_limits(df) expects df with columns pH (numeric), tempC (°C), monitoring_period_end_date; returns criterion_value (mg N/L) and CRITERION_ID “79613”.
+  - pH/temp summarized per monitoring date (currently using mean; can switch to max for conservative policy).
+
+UI specifics
+- Summary page:
+  - Shows coverage_summary table (filter = "top"). Metric joins:
+    - npdes_status: unique (NPDES_Pollutant, Form, parameter_code) for selected forms.
+    - params_by_code: rv$dmr grouped by parameter_code → # Samples.
+  - Hardness Setting UI: radioButtons("hardness_mode", c(range,set)) + conditional numericInput("hardness_value").
+  - “Append DMR Data”:
+    - download template: columns [parameter_code, parameter_desc, dmr_value_nmbr(blank), dmr_unit_desc(prefilled with Expected_Unit), monitoring_period_end_date].
+    - fileInput appends rows to rv$dmr after light validation and padding parameter_code to 5 digits.
+
+RP page (findings)
+- rp_concentration data frame (rv$rp_concentration):
+  - Columns expected by the report/table: CRITERION_ID, NPDES_Pollutant, USE_CLASS_NAME_LOCATION_ETC, CRITERION_VALUE, RWC_rs, RP (“YES”/“NO”).
+  - Built by joining rwc (from compute_rwc) to crosswalk criteria; pH and Temp findings computed separately and bound.
+- Download buttons:
+  - “Download RP Data (CSV)” saves rv$rp_concentration.
+  - “Generate Report (PDF)” renders Quarto report.
+
+Report (Quarto PDF)
+- report.qmd expects params and CSVs:
+  - Params: permit_id, facility_name, date_start, date_end, forms, dilution_ratio, confidence_level, target_percentile, hardness_mode, hardness_value, rp_path, coverage_path.
+  - rp_path must point to a CSV with columns: CRITERION_ID, NPDES_Pollutant, USE_CLASS_NAME_LOCATION_ETC, CRITERION_VALUE, RWC_rs, RP.
+  - coverage_path optional; if passed, table columns: Pollutant, Form, Ref Param, # Samples.
+- Rendering in Shiny (Windows path constraint fix):
+  - Copy report.qmd into a temp directory and render that file so Quarto writes output next to input.
+  - quarto::quarto_render(input = file.path(tmp_dir,"report.qmd"), output_format = "pdf", output_file = "report.pdf", execute_params = list(...)); then file.copy to the download path.
+  - Requires Quarto + LaTeX (TinyTeX/TeX Live) on the host.
+
+Open items / next steps (to discuss)
+- Confirm pH/temp aggregation policy for TAN (mean vs max per date).
+- Decide whether to include unit conversions for special cases (kg/d→ug/L via flow; DO%→mg/L via DO_sat) or keep current “user supplies correct units” policy for appended data.
+- Add metals/TAN WQS comparisons into rv$rp_concentration so limits for those CRITERION_IDs are reported alongside fixed criteria.
+- Optionally add a status indicator on Summary (percent of pollutants with DMR data by selected forms).
+
+With this context, please help me:
+1) Verify the RWC/limits logic in app vs local (differences may be due to CL/percentile, pH/temp policy, or date scoping).
+2) Extend rp_concentration to include metals (hardness) and TAN findings, using the hardness_mode/value and calc_tan_limits output.
+3) (If needed) Add a small conversion for special cases (kg/d→ug/L using user-supplied flow) while keeping the template simple.

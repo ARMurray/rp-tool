@@ -1,0 +1,546 @@
+ENTITY_ABBR,CRITERION_ID,POLLUTANT_NAME,CRITERION_VALUE,UNIT_NAME,parameter_code,parameter_desc
+PR,79351,"1,1,1-trichloroethane",200000,ug/L,34506,"1,1,1-Trichloroethane"
+PR,79352,"1,1,1-trichloroethane",200,ug/L,34506,"1,1,1-Trichloroethane"
+PR,79353,"1,1,1-trichloroethane",200,ug/L,34506,"1,1,1-Trichloroethane"
+PR,79416,"1,1,2,2-tetrachloroethane",30,ug/L,34516,"1,1,2,2-Tetrachloroethane"
+PR,79417,"1,1,2,2-tetrachloroethane",2,ug/L,34516,"1,1,2,2-Tetrachloroethane"
+PR,79418,"1,1,2,2-tetrachloroethane",2,ug/L,34516,"1,1,2,2-Tetrachloroethane"
+PR,79413,"1,1,2-trichloroethane",89,ug/L,34511,"1,1,2-Trichloroethane"
+PR,79414,"1,1,2-trichloroethane",5,ug/L,34511,"1,1,2-Trichloroethane"
+PR,79415,"1,1,2-trichloroethane",5,ug/L,34511,"1,1,2-Trichloroethane"
+PR,NA,NA,NA,NA,NA,NA
+PR,79348,"1,1-dichloroethylene",20000,ug/L,34501,"1,1-Dichloroethylene"
+PR,79349,"1,1-dichloroethylene",7,ug/L,34501,"1,1-Dichloroethylene"
+PR,79350,"1,1-dichloroethylene",7,ug/L,34501,"1,1-Dichloroethylene"
+PR,79419,"1,2,4-trichlorobenzene",0.76,ug/L,34551,"1,2,4-Trichlorobenzene"
+PR,79420,"1,2,4-trichlorobenzene",0.71,ug/L,34551,"1,2,4-Trichlorobenzene"
+PR,79421,"1,2,4-trichlorobenzene",0.71,ug/L,34551,"1,2,4-Trichlorobenzene"
+PR,79354,"1,2-dichlorobenzene",3000,ug/L,34536,"1,2-Dichlorobenzene"
+PR,79355,"1,2-dichlorobenzene",600,ug/L,34536,"1,2-Dichlorobenzene"
+PR,79356,"1,2-dichlorobenzene",600,ug/L,34536,"1,2-Dichlorobenzene"
+PR,79357,"1,2-dichloroethane",6500,ug/L,32103,"1,2-Dichloroethane"
+PR,79358,"1,2-dichloroethane",5,ug/L,32103,"1,2-Dichloroethane"
+PR,79359,"1,2-dichloroethane",5,ug/L,32103,"1,2-Dichloroethane"
+PR,79425,"1,2-dichloropropane",310,ug/L,34541,"1,2-Dichloropropane"
+PR,79426,"1,2-dichloropropane",5,ug/L,34541,"1,2-Dichloropropane"
+PR,79427,"1,2-dichloropropane",5,ug/L,34541,"1,2-Dichloropropane"
+PR,79469,"1,2-diphenylhydrazine",2,ug/L,34346,"1,2-Diphenylhydrazine"
+PR,79470,"1,2-diphenylhydrazine",0.3,ug/L,34346,"1,2-Diphenylhydrazine"
+PR,79471,"1,2-diphenylhydrazine",0.3,ug/L,34346,"1,2-Diphenylhydrazine"
+PR,79472,"trans-1,2-dichloroethylene",4000,ug/L,34546,"trans-1,2-Dichloroethylene"
+PR,79472,"trans-1,2-dichloroethylene",4000,ug/L,85810,"trans-1,2-Dichloroethylene"
+PR,79473,"trans-1,2-dichloroethylene",100,ug/L,34546,"trans-1,2-Dichloroethylene"
+PR,79473,"trans-1,2-dichloroethylene",100,ug/L,85810,"trans-1,2-Dichloroethylene"
+PR,79474,"trans-1,2-dichloroethylene",100,ug/L,34546,"trans-1,2-Dichloroethylene"
+PR,79474,"trans-1,2-dichloroethylene",100,ug/L,85810,"trans-1,2-Dichloroethylene"
+PR,79475,"trans-1,2-dichloroethylene",100,ug/L,34546,"trans-1,2-Dichloroethylene"
+PR,79475,"trans-1,2-dichloroethylene",100,ug/L,85810,"trans-1,2-Dichloroethylene"
+PR,79360,"1,3-dichlorobenzene",10,ug/L,34566,"1,3-Dichlorobenzene"
+PR,79361,"1,3-dichlorobenzene",7,ug/L,34566,"1,3-Dichlorobenzene"
+PR,79362,"1,3-dichlorobenzene",7,ug/L,34566,"1,3-Dichlorobenzene"
+PR,79428,"1,3-dichloropropene",120,ug/L,77163,"1,3-Dichloropropene"
+PR,79429,"1,3-dichloropropene",2.7,ug/L,77163,"1,3-Dichloropropene"
+PR,79430,"1,3-dichloropropene",2.7,ug/L,77163,"1,3-Dichloropropene"
+PR,79363,"1,4-dichlorobenzene",900,ug/L,34571,"1,4-Dichlorobenzene"
+PR,79364,"1,4-dichlorobenzene",75,ug/L,34571,"1,4-Dichlorobenzene"
+PR,79365,"1,4-dichlorobenzene",75,ug/L,34571,"1,4-Dichlorobenzene"
+PR,NA,NA,NA,NA,NA,NA
+PR,79375,"2,4-dichlorophenol",60,ug/L,34601,"2,4-Dichlorophenol"
+PR,79376,"2,4-dichlorophenol",10,ug/L,34601,"2,4-Dichlorophenol"
+PR,79377,"2,4-dichlorophenol",10,ug/L,34601,"2,4-Dichlorophenol"
+PR,79378,"2,4-dimethylphenol",3000,ug/L,34606,"2,4-Dimethylphenol"
+PR,79379,"2,4-dimethylphenol",100,ug/L,34606,"2,4-Dimethylphenol"
+PR,79380,"2,4-dimethylphenol",100,ug/L,34606,"2,4-Dimethylphenol"
+PR,79390,"2,4-dinitrophenol",300,ug/L,34616,"2,4-Dinitrophenol"
+PR,79391,"2,4-dinitrophenol",10,ug/L,34616,"2,4-Dinitrophenol"
+PR,79392,"2,4-dinitrophenol",10,ug/L,34616,"2,4-Dinitrophenol"
+PR,79479,"2,4-dinitrotoluene",17,ug/L,34611,"2,4-Dinitrotoluene"
+PR,79480,"2,4-dinitrotoluene",0.49,ug/L,34611,"2,4-Dinitrotoluene"
+PR,79481,"2,4-dinitrotoluene",0.49,ug/L,34611,"2,4-Dinitrotoluene"
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,79476,2-chloronaphthalene,1000,ug/L,34581,2-Chloronaphthalene
+PR,79477,2-chloronaphthalene,800,ug/L,34581,2-Chloronaphthalene
+PR,79478,2-chloronaphthalene,800,ug/L,34581,2-Chloronaphthalene
+PR,79381,2-chlorophenol,800,ug/L,34586,2-Chlorophenol
+PR,79382,2-chlorophenol,30,ug/L,34586,2-Chlorophenol
+PR,79383,2-chlorophenol,30,ug/L,34586,2-Chlorophenol
+PR,NA,NA,NA,NA,NA,NA
+PR,79482,"3,3'-dichlorobenzidine",1.5,ug/L,34631,"3,3'-Dichlorobenzidine"
+PR,79483,"3,3'-dichlorobenzidine",0.49,ug/L,34631,"3,3'-Dichlorobenzidine"
+PR,79484,"3,3'-dichlorobenzidine",0.49,ug/L,34631,"3,3'-Dichlorobenzidine"
+PR,79500,benzo(b) fluoranthene,0.013,ug/L,34230,Benzo[b]fluoranthene
+PR,79501,benzo(b) fluoranthene,0.012,ug/L,34230,Benzo[b]fluoranthene
+PR,79502,benzo(b) fluoranthene,0.012,ug/L,34230,Benzo[b]fluoranthene
+PR,79279,"4,4'-ddd",0.0012,ug/L,39310,"4,4'-DDD"
+PR,79280,"4,4'-ddd",0.0012,ug/L,39310,"4,4'-DDD"
+PR,79281,"4,4'-ddd",0.0012,ug/L,39310,"4,4'-DDD"
+PR,79282,"4,4'-dde",1.8e-4,ug/L,39320,"4,4'-DDE"
+PR,79283,"4,4'-dde",1.8e-4,ug/L,39320,"4,4'-DDE"
+PR,79284,"4,4'-dde",1.8e-4,ug/L,39320,"4,4'-DDE"
+PR,79285,"4,4'-ddt",3e-4,ug/L,39300,"4,4'-DDT"
+PR,79286,"4,4'-ddt",3e-4,ug/L,39300,"4,4'-DDT"
+PR,79287,"4,4'-ddt",3e-4,ug/L,39300,"4,4'-DDT"
+PR,79384,"2-methyl-4,6-dinitrophenol",30,ug/L,03615,"2-Methyl-4,6-dinitrophenol"
+PR,79385,"2-methyl-4,6-dinitrophenol",2,ug/L,03615,"2-Methyl-4,6-dinitrophenol"
+PR,79386,"2-methyl-4,6-dinitrophenol",2,ug/L,03615,"2-Methyl-4,6-dinitrophenol"
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,79485,acenaphthene,90,ug/L,34205,Acenaphthene
+PR,79486,acenaphthene,70,ug/L,34205,Acenaphthene
+PR,79487,acenaphthene,70,ug/L,34205,Acenaphthene
+PR,NA,NA,NA,NA,NA,NA
+PR,79434,acrolein,400,ug/L,34210,Acrolein
+PR,79435,acrolein,3,ug/L,34210,Acrolein
+PR,79436,acrolein,3,ug/L,34210,Acrolein
+PR,79437,acrolein,3,ug/L,34210,Acrolein
+PR,79431,acrylonitrile,70,ug/L,34215,Acrylonitrile
+PR,79432,acrylonitrile,0.61,ug/L,34215,Acrylonitrile
+PR,79433,acrylonitrile,0.61,ug/L,34215,Acrylonitrile
+PR,79265,aldrin,7.7e-6,ug/L,39330,Aldrin
+PR,79266,aldrin,7.7e-6,ug/L,39330,Aldrin
+PR,79267,aldrin,7.7e-6,ug/L,39330,Aldrin
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79613,total ammonia nitrogen,NA,[no units],00610,"Nitrogen, ammonia total [as N]"
+PR,79488,anthracene,400,ug/L,34220,Anthracene
+PR,79489,anthracene,300,ug/L,34220,Anthracene
+PR,79490,anthracene,300,ug/L,34220,Anthracene
+PR,79221,antimony,640,ug/L,01095,"Antimony, dissolved [as Sb]"
+PR,79221,antimony,640,ug/L,01097,"Antimony, total [as Sb]"
+PR,79221,antimony,640,ug/L,01268,"Antimony, total recoverable"
+PR,79222,antimony,5.6,ug/L,01095,"Antimony, dissolved [as Sb]"
+PR,79222,antimony,5.6,ug/L,01097,"Antimony, total [as Sb]"
+PR,79222,antimony,5.6,ug/L,01268,"Antimony, total recoverable"
+PR,79223,antimony,5.6,ug/L,01095,"Antimony, dissolved [as Sb]"
+PR,79223,antimony,5.6,ug/L,01097,"Antimony, total [as Sb]"
+PR,79223,antimony,5.6,ug/L,01268,"Antimony, total recoverable"
+PR,NA,NA,NA,NA,NA,NA
+PR,79224,arsenic,36,ug/L,01002,"Arsenic, total [as As]"
+PR,79225,arsenic,10,ug/L,01002,"Arsenic, total [as As]"
+PR,79226,arsenic,10,ug/L,01002,"Arsenic, total [as As]"
+PR,NA,NA,NA,NA,NA,NA
+PR,79438,benzene,160,ug/L,34030,Benzene
+PR,79439,benzene,5,ug/L,34030,Benzene
+PR,79440,benzene,5,ug/L,34030,Benzene
+PR,79491,benzidine,0.11,ug/L,39120,Benzidine
+PR,79492,benzidine,0.0014,ug/L,39120,Benzidine
+PR,79493,benzidine,0.0014,ug/L,39120,Benzidine
+PR,79494,benzo(a) anthracene,0.013,ug/L,34526,Benzo[a]anthracene
+PR,79495,benzo(a) anthracene,0.012,ug/L,34526,Benzo[a]anthracene
+PR,79496,benzo(a) anthracene,0.012,ug/L,34526,Benzo[a]anthracene
+PR,79497,benzo(a) pyrene,0.0013,ug/L,34247,Benzo[a]pyrene
+PR,79498,benzo(a) pyrene,0.0012,ug/L,34247,Benzo[a]pyrene
+PR,79499,benzo(a) pyrene,0.0012,ug/L,34247,Benzo[a]pyrene
+PR,NA,NA,NA,NA,NA,NA
+PR,79503,benzo(k) fluoranthene,0.13,ug/L,34242,Benzo[k]fluoranthene
+PR,79504,benzo(k) fluoranthene,0.12,ug/L,34242,Benzo[k]fluoranthene
+PR,79505,benzo(k) fluoranthene,0.12,ug/L,34242,Benzo[k]fluoranthene
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,79506,bis(2-chloroethyl) ether,22,ug/L,34273,Bis[2-chloroethyl] ether
+PR,79507,bis(2-chloroethyl) ether,0.3,ug/L,34273,Bis[2-chloroethyl] ether
+PR,79508,bis(2-chloroethyl) ether,0.3,ug/L,34273,Bis[2-chloroethyl] ether
+PR,NA,NA,NA,NA,NA,NA
+PR,79512,bis(2-ethylhexyl) phthalate,3.7,ug/L,39100,Di[2-ethylhexyl] phthalate [DEHP]
+PR,79513,bis(2-ethylhexyl) phthalate,3.2,ug/L,39100,Di[2-ethylhexyl] phthalate [DEHP]
+PR,79514,bis(2-ethylhexyl) phthalate,3.2,ug/L,39100,Di[2-ethylhexyl] phthalate [DEHP]
+PR,79441,bromoform,1200,ug/L,32104,Bromoform
+PR,79442,bromoform,70,ug/L,32104,Bromoform
+PR,79443,bromoform,70,ug/L,32104,Bromoform
+PR,79518,butylbenzyl phthalate,1,ug/L,34292,Butyl benzyl phthalate
+PR,79519,butylbenzyl phthalate,1,ug/L,34292,Butyl benzyl phthalate
+PR,79520,butylbenzyl phthalate,1,ug/L,34292,Butyl benzyl phthalate
+PR,79227,cadmium,7.95,ug/L,01027,"Cadmium, total [as Cd]"
+PR,79228,cadmium,NA,ug/L,01027,"Cadmium, total [as Cd]"
+PR,79229,cadmium,5,ug/L,01027,"Cadmium, total [as Cd]"
+PR,79393,carbon tetrachloride,50,ug/L,32102,Carbon tetrachloride
+PR,79394,carbon tetrachloride,4,ug/L,32102,Carbon tetrachloride
+PR,79395,carbon tetrachloride,4,ug/L,32102,Carbon tetrachloride
+PR,NA,NA,NA,NA,NA,NA
+PR,79276,chlordane,0.0032,ug/L,51032,Chlordane
+PR,79277,chlordane,0.0031,ug/L,51032,Chlordane
+PR,79278,chlordane,0.0031,ug/L,51032,Chlordane
+PR,NA,NA,NA,NA,NA,NA
+PR,79444,chlorobenzene,800,ug/L,34301,Chlorobenzene
+PR,79445,chlorobenzene,100,ug/L,34301,Chlorobenzene
+PR,79446,chlorobenzene,100,ug/L,34301,Chlorobenzene
+PR,79447,chlorobenzene,100,ug/L,34301,Chlorobenzene
+PR,79448,chlorodibromomethane,210,ug/L,34306,Chlorodibromomethane
+PR,79449,chlorodibromomethane,8,ug/L,34306,Chlorodibromomethane
+PR,79450,chlorodibromomethane,8,ug/L,34306,Chlorodibromomethane
+PR,NA,NA,NA,NA,NA,NA
+PR,79451,chloroform,2000,ug/L,32106,Chloroform
+PR,79452,chloroform,60,ug/L,32106,Chloroform
+PR,79453,chloroform,60,ug/L,32106,Chloroform
+PR,79241,chromium,100,ug/L,01034,"Chromium, total [as Cr]"
+PR,79521,chrysene,1.3,ug/L,34320,Chrysene
+PR,79522,chrysene,1.2,ug/L,34320,Chrysene
+PR,79523,chrysene,1.2,ug/L,34320,Chrysene
+PR,79235,copper,3.73,ug/L,01042,"Copper, total [as Cu]"
+PR,79236,copper,NA,ug/L,01042,"Copper, total [as Cu]"
+PR,79237,copper,1300,ug/L,01042,"Copper, total [as Cu]"
+PR,79233,cyanide,4,ug/L,00720,"Cyanide, total [as CN]"
+PR,79234,cyanide,4,ug/L,00720,"Cyanide, total [as CN]"
+PR,79232,cyanide (free),1,ug/L,51173,"Cyanide, free available"
+PR,NA,NA,NA,NA,NA,NA
+PR,79524,"dibenz(a,h)anthracene",0.0013,ug/L,34556,"Dibenz[a,h]anthracene"
+PR,79525,"dibenz(a,h)anthracene",0.0012,ug/L,34556,"Dibenz[a,h]anthracene"
+PR,79526,"dibenz(a,h)anthracene",0.0012,ug/L,34556,"Dibenz[a,h]anthracene"
+PR,NA,NA,NA,NA,NA,NA
+PR,79454,dichlorobromomethane,270,ug/L,32101,Dichlorobromomethane
+PR,79455,dichlorobromomethane,9.5,ug/L,32101,Dichlorobromomethane
+PR,79456,dichlorobromomethane,9.5,ug/L,32101,Dichlorobromomethane
+PR,79288,dieldrin,1.2e-5,ug/L,39380,Dieldrin
+PR,79289,dieldrin,1.2e-5,ug/L,39380,Dieldrin
+PR,79290,dieldrin,1.2e-5,ug/L,39380,Dieldrin
+PR,79527,diethyl phthalate,600,ug/L,34336,Diethyl phthalate
+PR,79528,diethyl phthalate,600,ug/L,34336,Diethyl phthalate
+PR,79529,diethyl phthalate,600,ug/L,34336,Diethyl phthalate
+PR,79530,dimethyl phthalate,2000,ug/L,34341,Dimethyl phthalate
+PR,79530,dimethyl phthalate,2000,ug/L,34342,Dimethyl phthalate
+PR,79531,dimethyl phthalate,2000,ug/L,34341,Dimethyl phthalate
+PR,79531,dimethyl phthalate,2000,ug/L,34342,Dimethyl phthalate
+PR,79532,dimethyl phthalate,2000,ug/L,34341,Dimethyl phthalate
+PR,79532,dimethyl phthalate,2000,ug/L,34342,Dimethyl phthalate
+PR,79533,di-n-butyl phthalate,30,ug/L,51011,Dibutyl phthalate
+PR,79534,di-n-butyl phthalate,20,ug/L,51011,Dibutyl phthalate
+PR,79535,di-n-butyl phthalate,20,ug/L,51011,Dibutyl phthalate
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,79297,endosulfan sulfate,40,ug/L,34351,Endosulfan sulfate
+PR,79298,endosulfan sulfate,20,ug/L,34351,Endosulfan sulfate
+PR,79299,endosulfan sulfate,20,ug/L,34351,Endosulfan sulfate
+PR,79300,endrin,0.0023,ug/L,39390,Endrin
+PR,79301,endrin,0.03,ug/L,39390,Endrin
+PR,79302,endrin,0.03,ug/L,39390,Endrin
+PR,79303,endrin aldehyde,1,ug/L,34366,Endrin aldehyde
+PR,79304,endrin aldehyde,1,ug/L,34366,Endrin aldehyde
+PR,79305,endrin aldehyde,1,ug/L,34366,Endrin aldehyde
+PR,79593,enterococci,35,#/100mL,61211,Enterococci
+PR,79594,enterococci,130,#/100mL,61211,Enterococci
+PR,79604,enterococci,35,#/100mL,61211,Enterococci
+PR,79605,enterococci,130,#/100mL,61211,Enterococci
+PR,79457,ethylbenzene,130,ug/L,34371,Ethylbenzene
+PR,79457,ethylbenzene,130,ug/L,37371,Ethylbenzene
+PR,79457,ethylbenzene,130,ug/L,78113,Ethylbenzene
+PR,79458,ethylbenzene,68,ug/L,34371,Ethylbenzene
+PR,79458,ethylbenzene,68,ug/L,37371,Ethylbenzene
+PR,79458,ethylbenzene,68,ug/L,78113,Ethylbenzene
+PR,79459,ethylbenzene,68,ug/L,34371,Ethylbenzene
+PR,79459,ethylbenzene,68,ug/L,37371,Ethylbenzene
+PR,79459,ethylbenzene,68,ug/L,78113,Ethylbenzene
+PR,79591,fecal coliform,14,#/100mL,74055,"Coliform, fecal general"
+PR,79592,fecal coliform,43,#/100mL,74055,"Coliform, fecal general"
+PR,79602,fecal coliform,14,#/100mL,74055,"Coliform, fecal general"
+PR,79603,fecal coliform,43,#/100mL,74055,"Coliform, fecal general"
+PR,79618,fecal coliform,0,#/100mL,74055,"Coliform, fecal general"
+PR,NA,NA,NA,NA,NA,NA
+PR,79536,fluoranthene,20,ug/L,34376,Fluoranthene
+PR,79537,fluoranthene,20,ug/L,34376,Fluoranthene
+PR,79538,fluoranthene,20,ug/L,34376,Fluoranthene
+PR,79539,fluorene,70,ug/L,34381,Fluorene
+PR,79540,fluorene,50,ug/L,34381,Fluorene
+PR,79541,fluorene,50,ug/L,34381,Fluorene
+PR,NA,NA,NA,NA,NA,NA
+PR,79306,heptachlor,5.9e-5,ug/L,39410,Heptachlor
+PR,79307,heptachlor,5.9e-5,ug/L,39410,Heptachlor
+PR,79308,heptachlor,5.9e-5,ug/L,39410,Heptachlor
+PR,79309,heptachlor epoxide,3.2e-4,ug/L,39420,Heptachlor epoxide
+PR,79310,heptachlor epoxide,3.2e-4,ug/L,39420,Heptachlor epoxide
+PR,79311,heptachlor epoxide,3.2e-4,ug/L,39420,Heptachlor epoxide
+PR,79542,hexachlorobenzene,7.9e-4,ug/L,39700,Hexachlorobenzene
+PR,79543,hexachlorobenzene,7.9e-4,ug/L,39700,Hexachlorobenzene
+PR,79544,hexachlorobenzene,7.9e-4,ug/L,39700,Hexachlorobenzene
+PR,79545,hexachlorobutadiene,0.1,ug/L,34391,Hexachlorobutadiene
+PR,79545,hexachlorobutadiene,0.1,ug/L,39702,Hexachlorobutadiene
+PR,79546,hexachlorobutadiene,0.1,ug/L,34391,Hexachlorobutadiene
+PR,79546,hexachlorobutadiene,0.1,ug/L,39702,Hexachlorobutadiene
+PR,79547,hexachlorobutadiene,0.1,ug/L,34391,Hexachlorobutadiene
+PR,79547,hexachlorobutadiene,0.1,ug/L,39702,Hexachlorobutadiene
+PR,79548,hexachlorocyclopentadiene,4,ug/L,34386,Hexachlorocyclopentadiene
+PR,79549,hexachlorocyclopentadiene,4,ug/L,34386,Hexachlorocyclopentadiene
+PR,79550,hexachlorocyclopentadiene,4,ug/L,34386,Hexachlorocyclopentadiene
+PR,NA,NA,NA,NA,NA,NA
+PR,79551,hexachloroethane,1,ug/L,34396,Hexachloroethane
+PR,79552,hexachloroethane,1,ug/L,34396,Hexachloroethane
+PR,79553,hexachloroethane,1,ug/L,34396,Hexachloroethane
+PR,79268,alpha-bhc,0.0039,ug/L,39336,.alpha.-BHC
+PR,79268,alpha-bhc,0.0039,ug/L,39337,.alpha.-BHC
+PR,79269,alpha-bhc,0.0036,ug/L,39336,.alpha.-BHC
+PR,79269,alpha-bhc,0.0036,ug/L,39337,.alpha.-BHC
+PR,79270,alpha-bhc,0.0036,ug/L,39336,.alpha.-BHC
+PR,79270,alpha-bhc,0.0036,ug/L,39337,.alpha.-BHC
+PR,83713,endosulfan (alpha & beta),0.0087,ug/L,39388,"Endosulfan, total"
+PR,83714,endosulfan (alpha & beta),0.056,ug/L,39388,"Endosulfan, total"
+PR,79271,beta-bhc,0.14,ug/L,34255,".beta.-BHC, dissolved"
+PR,79271,beta-bhc,0.14,ug/L,39338,.beta.-BHC
+PR,79271,beta-bhc,0.14,ug/L,51007,.beta.-BHC
+PR,79272,beta-bhc,0.08,ug/L,34255,".beta.-BHC, dissolved"
+PR,79272,beta-bhc,0.08,ug/L,39338,.beta.-BHC
+PR,79272,beta-bhc,0.08,ug/L,51007,.beta.-BHC
+PR,79273,beta-bhc,0.08,ug/L,34255,".beta.-BHC, dissolved"
+PR,79273,beta-bhc,0.08,ug/L,39338,.beta.-BHC
+PR,79273,beta-bhc,0.08,ug/L,51007,.beta.-BHC
+PR,83713,endosulfan (alpha & beta),0.0087,ug/L,39388,"Endosulfan, total"
+PR,83714,endosulfan (alpha & beta),0.056,ug/L,39388,"Endosulfan, total"
+PR,79315,lindane,0.16,ug/L,39782,Lindane
+PR,79316,lindane,0.2,ug/L,39782,Lindane
+PR,79317,lindane,0.2,ug/L,39782,Lindane
+PR,79554,"indeno (1,2,3-cd) pyrene",0.013,ug/L,34403,"Indeno[1,2,3-cd]pyrene"
+PR,79555,"indeno (1,2,3-cd) pyrene",0.012,ug/L,34403,"Indeno[1,2,3-cd]pyrene"
+PR,79556,"indeno (1,2,3-cd) pyrene",0.012,ug/L,34403,"Indeno[1,2,3-cd]pyrene"
+PR,NA,NA,NA,NA,NA,NA
+PR,79557,isophorone,18000,ug/L,34408,Isophorone
+PR,79558,isophorone,340,ug/L,34408,Isophorone
+PR,79559,isophorone,340,ug/L,34408,Isophorone
+PR,NA,NA,NA,NA,NA,NA
+PR,79252,lead,8.52,ug/L,01051,"Lead, total [as Pb]"
+PR,79253,lead,NA,ug/L,01051,"Lead, total [as Pb]"
+PR,79254,lead,15,ug/L,01051,"Lead, total [as Pb]"
+PR,79244,mercury,0.051,ug/L,71900,"Mercury, total [as Hg]"
+PR,79245,mercury,0.05,ug/L,71900,"Mercury, total [as Hg]"
+PR,79246,mercury,0.05,ug/L,71900,"Mercury, total [as Hg]"
+PR,79460,methyl bromide,10000,ug/L,34413,Methyl bromide [Bromomethane]
+PR,79461,methyl bromide,100,ug/L,34413,Methyl bromide [Bromomethane]
+PR,79462,methyl bromide,100,ug/L,34413,Methyl bromide [Bromomethane]
+PR,NA,NA,NA,NA,NA,NA
+PR,79463,methylene chloride,10000,ug/L,34423,Methylene chloride
+PR,79464,methylene chloride,200,ug/L,34423,Methylene chloride
+PR,79465,methylene chloride,200,ug/L,34423,Methylene chloride
+PR,79422,"1,2,4,5-tetrachlorobenzene",0.03,ug/L,77734,"1,2,4,5-Tetrachlorobenzene"
+PR,79423,"1,2,4,5-tetrachlorobenzene",0.03,ug/L,77734,"1,2,4,5-Tetrachlorobenzene"
+PR,79424,"1,2,4,5-tetrachlorobenzene",0.03,ug/L,77734,"1,2,4,5-Tetrachlorobenzene"
+PR,79366,"2,3,7,8-tcdd (dioxin)",5.1e-8,ug/L,03556,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79366,"2,3,7,8-tcdd (dioxin)",5.1e-8,ug/L,34675,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79366,"2,3,7,8-tcdd (dioxin)",5.1e-8,ug/L,34750,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79367,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,03556,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79367,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,34675,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79367,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,34750,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79368,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,03556,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79368,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,34675,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79368,"2,3,7,8-tcdd (dioxin)",5e-8,ug/L,34750,"2,3,7,8-Tetrachlorodibenzo-p-dioxin"
+PR,79329,"2,4,5-tp (silvex)",400,ug/L,39760,Silvex
+PR,79330,"2,4,5-tp (silvex)",50,ug/L,39760,Silvex
+PR,79331,"2,4,5-tp (silvex)",50,ug/L,39760,Silvex
+PR,79369,"2,4,5-trichlorophenol",600,ug/L,61023,"2,4,5-Trichlorophenol"
+PR,79369,"2,4,5-trichlorophenol",600,ug/L,77687,"2,4,5-Trichlorophenol"
+PR,79370,"2,4,5-trichlorophenol",300,ug/L,61023,"2,4,5-Trichlorophenol"
+PR,79370,"2,4,5-trichlorophenol",300,ug/L,77687,"2,4,5-Trichlorophenol"
+PR,79371,"2,4,5-trichlorophenol",300,ug/L,61023,"2,4,5-Trichlorophenol"
+PR,79371,"2,4,5-trichlorophenol",300,ug/L,77687,"2,4,5-Trichlorophenol"
+PR,79372,"2,4,6-trichlorophenol",28,ug/L,34621,"2,4,6-Trichlorophenol"
+PR,79373,"2,4,6-trichlorophenol",15,ug/L,34621,"2,4,6-Trichlorophenol"
+PR,79374,"2,4,6-trichlorophenol",15,ug/L,34621,"2,4,6-Trichlorophenol"
+PR,79332,"2,4-d",12000,ug/L,39730,"2,4-Dichlorophenoxyacetic acid"
+PR,79333,"2,4-d",70,ug/L,39730,"2,4-Dichlorophenoxyacetic acid"
+PR,79334,"2,4-d",70,ug/L,39730,"2,4-Dichlorophenoxyacetic acid"
+PR,79293,alpha-endosulfan,20,ug/L,34361,.alpha.-Endosulfan
+PR,79293,alpha-endosulfan,20,ug/L,78428,.alpha.-Endosulfan
+PR,79220,aluminum,87,ug/L,01251,Aluminum
+PR,79220,aluminum,87,ug/L,1105A,Aluminum
+PR,79219,asbestos,7,million fibers/l,00948,Asbestos
+PR,79335,azinophos,0.01,ug/L,82616,Azinphos-methyl
+PR,79336,azinophos,0.01,ug/L,82616,Azinphos-methyl
+PR,79296,beta-endosulfan,20,ug/L,34356,.beta.-Endosulfan
+PR,79509,bis(2-chloro-1-methylethyl) ether,4000,ug/L,34275,Bis[2-chloro-1-methylethyl] ether
+PR,79510,bis(2-chloro-1-methylethyl) ether,200,ug/L,34275,Bis[2-chloro-1-methylethyl] ether
+PR,79511,bis(2-chloro-1-methylethyl) ether,200,ug/L,34275,Bis[2-chloro-1-methylethyl] ether
+PR,79515,bis(chloromethyl) ether,0.17,ug/L,34268,Bis[chloromethyl] ether
+PR,79516,bis(chloromethyl) ether,0.0015,ug/L,34268,Bis[chloromethyl] ether
+PR,79517,bis(chloromethyl) ether,0.0015,ug/L,34268,Bis[chloromethyl] ether
+PR,79274,carbaryl,1.6,ug/L,77700,"Carbaryl, total"
+PR,79275,carbaryl,2.1,ug/L,77700,"Carbaryl, total"
+PR,79612,chlorides,230,mg/l,00940,Chloride [as Cl]
+PR,79612,chlorides,230,mg/l,46225,Chloride
+PR,79230,chlorine,7.5,ug/L,50060,"Chlorine, total residual"
+PR,79231,chlorine,11,ug/L,50060,"Chlorine, total residual"
+PR,79337,chlorpyrifos,0.0056,ug/L,38933,Chlorpyrifos
+PR,79337,chlorpyrifos,0.0056,ug/L,77969,Chlorpyrifos
+PR,79337,chlorpyrifos,0.0056,ug/L,81403,Chlorpyrifos
+PR,79338,chlorpyrifos,0.041,ug/L,38933,Chlorpyrifos
+PR,79338,chlorpyrifos,0.041,ug/L,77969,Chlorpyrifos
+PR,79338,chlorpyrifos,0.041,ug/L,81403,Chlorpyrifos
+PR,79238,chromium iii,NA,ug/L,51058,Chromium III
+PR,79239,chromium vi (hex),50.4,ug/L,01032,"Chromium, hexavalent [as Cr]"
+PR,79240,chromium vi (hex),11.4,ug/L,01032,"Chromium, hexavalent [as Cr]"
+PR,79339,demeton,0.1,ug/L,39560,Demeton
+PR,79340,demeton,0.1,ug/L,39560,Demeton
+PR,79341,diazinon,0.82,ug/L,39570,Diazinon
+PR,79342,diazinon,0.17,ug/L,39570,Diazinon
+PR,79590,dissolved oxygen,5,mg/l,00300,"Oxygen, dissolved [DO]"
+PR,79601,dissolved oxygen,5,mg/l,00300,"Oxygen, dissolved [DO]"
+PR,79242,fluoride,4000,ug/L,NA,NA
+PR,79243,fluoride,4000,ug/L,NA,NA
+PR,79312,hexachlorocyclohexane (hch)-technical,0.1,ug/L,NA,NA
+PR,79313,hexachlorocyclohexane (hch)-technical,0.066,ug/L,NA,NA
+PR,79314,hexachlorocyclohexane (hch)-technical,0.066,ug/L,NA,NA
+PR,79343,malathion,0.1,ug/L,39530,Malathion
+PR,79344,malathion,0.1,ug/L,39530,Malathion
+PR,79318,methoxychlor,0.02,ug/L,39480,Methoxychlor
+PR,79319,methoxychlor,0.02,ug/L,39480,Methoxychlor
+PR,79320,methoxychlor,0.02,ug/L,39480,Methoxychlor
+PR,79321,mirex,0.001,ug/L,39755,Mirex
+PR,79322,mirex,0.001,ug/L,39755,Mirex
+PR,79620,nitrite (expressed as n),1000,ug/L,00613,"Nitrite nitrogen, dissolved [as N]"
+PR,79560,nitrosamines,12.4,ug/L,NA,NA
+PR,79561,nitrosamines,0.008,ug/L,NA,NA
+PR,79562,nitrosamines,0.008,ug/L,NA,NA
+PR,79563,nitrosodibutylamine,2.2,ug/L,78207,N-Nitrosodibutylamine
+PR,79564,nitrosodibutylamine,0.063,ug/L,78207,N-Nitrosodibutylamine
+PR,79565,nitrosodibutylamine,0.063,ug/L,78207,N-Nitrosodibutylamine
+PR,79566,nitrosodiethylamine,12.4,ug/L,78200,N-Nitrosodiethylamine
+PR,79567,nitrosodiethylamine,0.008,ug/L,78200,N-Nitrosodiethylamine
+PR,79568,nitrosodiethylamine,0.008,ug/L,78200,N-Nitrosodiethylamine
+PR,79569,nitrosopyrrolidine,340,ug/L,78206,N-Nitrosopyrrolidine
+PR,79570,nitrosopyrrolidine,0.16,ug/L,78206,N-Nitrosopyrrolidine
+PR,79571,nitrosopyrrolidine,0.16,ug/L,78206,N-Nitrosopyrrolidine
+PR,79396,nonylphenol,1.7,ug/L,NA,NA
+PR,79397,nonylphenol,6.6,ug/L,NA,NA
+PR,79345,parathion,0.013,ug/L,39540,Parathion
+PR,79466,pentachlorobenzene,0.1,ug/L,77793,Pentachlorobenzene
+PR,79467,pentachlorobenzene,0.1,ug/L,77793,Pentachlorobenzene
+PR,79468,pentachlorobenzene,0.1,ug/L,77793,Pentachlorobenzene
+PR,79401,polychlorinated biphenyls (pcbs),6.4e-4,ug/L,39516,Polychlorinated biphenyls [PCBs]
+PR,79402,polychlorinated biphenyls (pcbs),6.4e-4,ug/L,39516,Polychlorinated biphenyls [PCBs]
+PR,79403,polychlorinated biphenyls (pcbs),6.4e-4,ug/L,39516,Polychlorinated biphenyls [PCBs]
+PR,79215,radium 226,3,pci/l,NA,NA
+PR,79597,sulfates,2800,mg/l,00945,"Sulfate, total [as SO4]"
+PR,79611,sulfates,250,mg/l,00945,"Sulfate, total [as SO4]"
+PR,79346,tributyltin (tbt),0.0074,ug/L,03824,Tributyltin
+PR,79347,tributyltin (tbt),0.072,ug/L,03824,Tributyltin
+PR,79607,color,15,color units,00080,Color [PT-CO units]
+PR,79217,gross beta,1000,pci/l,03501,"Beta, total"
+PR,79598,methylene blue active substances,500,ug/L,47021,Methylene blue active substances
+PR,79610,methylene blue active substances,100,ug/L,47021,Methylene blue active substances
+PR,79216,strontium-90,10,pci/l,13501,"Strontium 90, total"
+PR,79258,sulfide,2,ug/L,51202,Sulfide-hydrogen sulfide [undissociated]
+PR,79259,sulfide,2,ug/L,51202,Sulfide-hydrogen sulfide [undissociated]
+PR,79596,turbidity,10,ntu,00070,Turbidity
+PR,79608,turbidity,50,ntu,00070,Turbidity
+PR,NA,NA,NA,NA,NA,NA
+PR,79247,nickel,8.28,ug/L,01067,"Nickel, total [as Ni]"
+PR,79248,nickel,NA,ug/L,01067,"Nickel, total [as Ni]"
+PR,79249,nickel,610,ug/L,01067,"Nickel, total [as Ni]"
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,79619,nitrate and nitrite (expressed as n),10000,ug/L,00630,Nitrite + Nitrate total [as N]
+PR,NA,NA,NA,NA,NA,NA
+PR,79581,nitrobenzene,600,ug/L,34447,Nitrobenzene
+PR,79582,nitrobenzene,10,ug/L,34447,Nitrobenzene
+PR,79583,nitrobenzene,10,ug/L,34447,Nitrobenzene
+PR,79572,n-nitrosodimethylamine,30,ug/L,34438,N-Nitrosodimethylamine [NDMA]
+PR,79573,n-nitrosodimethylamine,0.0069,ug/L,34438,N-Nitrosodimethylamine [NDMA]
+PR,79574,n-nitrosodimethylamine,0.0069,ug/L,34438,N-Nitrosodimethylamine [NDMA]
+PR,79575,n-nitrosodi-n-propylamine,5.1,ug/L,34428,N-Nitrosodi-N-propylamine
+PR,79576,n-nitrosodi-n-propylamine,0.05,ug/L,34428,N-Nitrosodi-N-propylamine
+PR,79577,n-nitrosodi-n-propylamine,0.05,ug/L,34428,N-Nitrosodi-N-propylamine
+PR,79578,n-nitrosodiphenylamine,60,ug/L,34433,N-Nitrosodiphenylamine
+PR,79579,n-nitrosodiphenylamine,33,ug/L,34433,N-Nitrosodiphenylamine
+PR,79580,n-nitrosodiphenylamine,33,ug/L,34433,N-Nitrosodiphenylamine
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,79387,3-methyl-4-chlorophenol,2000,ug/L,70012,4-Chloro-3-methylphenol
+PR,79388,3-methyl-4-chlorophenol,500,ug/L,70012,4-Chloro-3-methylphenol
+PR,79389,3-methyl-4-chlorophenol,500,ug/L,70012,4-Chloro-3-methylphenol
+PR,79323,pentachlorophenol,0.4,ug/L,39032,Pentachlorophenol
+PR,79324,pentachlorophenol,0.3,ug/L,39032,Pentachlorophenol
+PR,79325,pentachlorophenol,0.3,ug/L,39032,Pentachlorophenol
+PR,79595,pH (acidity/alkalinity),8.5,SU,00400,pH
+PR,79606,pH (acidity/alkalinity),9,SU,00400,pH
+PR,79595,pH (acidity/alkalinity),7.3,SU,00400,pH
+PR,79606,pH (acidity/alkalinity),6,SU,00400,pH
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,79398,phenol,300000,ug/L,34694,Phenol
+PR,79399,phenol,4000,ug/L,34694,Phenol
+PR,79400,phenol,4000,ug/L,34694,Phenol
+PR,NA,NA,NA,NA,NA,NA
+PR,79599,total phosphorus,1000,ug/L,00665,"Phosphorus, total [as P]"
+PR,79616,total phosphorus,160,ug/L,00665,"Phosphorus, total [as P]"
+PR,79617,total phosphorus,26,ug/L,00665,"Phosphorus, total [as P]"
+PR,79584,pyrene,30,ug/L,34469,Pyrene
+PR,79585,pyrene,20,ug/L,34469,Pyrene
+PR,79586,pyrene,20,ug/L,34469,Pyrene
+PR,79255,selenium,71.14,ug/L,01147,"Selenium, total [as Se]"
+PR,79256,selenium,3.1,ug/L,01147,"Selenium, total [as Se]"
+PR,79257,selenium,50,ug/L,01147,"Selenium, total [as Se]"
+PR,83712,selenium,1.5,ug/L,01147,"Selenium, total [as Se]"
+PR,79250,silver,2.24,ug/L,01077,"Silver, total [as Ag]"
+PR,79251,silver,NA,ug/L,01077,"Silver, total [as Ag]"
+PR,79218,temperature,30,deg C,00010,"Temperature, water deg. centigrade"
+PR,79218,temperature,30,deg C,00010,"Temperature, water deg. centigrade"
+PR,79218,temperature,30,deg C,00010,"Temperature, water deg. centigrade"
+PR,79218,temperature,30,deg C,00010,"Temperature, water deg. centigrade"
+PR,79404,tetrachloroethylene,290,ug/L,34475,Tetrachloroethylene
+PR,79404,tetrachloroethylene,290,ug/L,85814,Tetrachloroethylene
+PR,79405,tetrachloroethylene,5,ug/L,34475,Tetrachloroethylene
+PR,79405,tetrachloroethylene,5,ug/L,85814,Tetrachloroethylene
+PR,79406,tetrachloroethylene,5,ug/L,34475,Tetrachloroethylene
+PR,79406,tetrachloroethylene,5,ug/L,85814,Tetrachloroethylene
+PR,79260,thallium,0.47,ug/L,01059,"Thallium, total [as Tl]"
+PR,79261,thallium,0.24,ug/L,01059,"Thallium, total [as Tl]"
+PR,79262,thallium,0.24,ug/L,01059,"Thallium, total [as Tl]"
+PR,79587,toluene,520,ug/L,34010,Toluene
+PR,79587,toluene,520,ug/L,34481,"Toluene, dissolved"
+PR,79588,toluene,57,ug/L,34010,Toluene
+PR,79588,toluene,57,ug/L,34481,"Toluene, dissolved"
+PR,79589,toluene,57,ug/L,34010,Toluene
+PR,79589,toluene,57,ug/L,34481,"Toluene, dissolved"
+PR,79609,total dissolved solids,500,mg/l,70295,"Solids, total dissolved"
+PR,NA,NA,NA,NA,NA,NA
+PR,79600,total nitrogen,5000,ug/L,00600,"Nitrogen, total [as N]"
+PR,79614,total nitrogen,1700,ug/L,00600,"Nitrogen, total [as N]"
+PR,79615,total nitrogen,400,ug/L,00600,"Nitrogen, total [as N]"
+PR,NA,NA,NA,NA,NA,NA
+PR,NA,NA,NA,NA,NA,NA
+PR,79599,total phosphorus,1000,ug/L,00665,"Phosphorus, total [as P]"
+PR,79616,total phosphorus,160,ug/L,00665,"Phosphorus, total [as P]"
+PR,79617,total phosphorus,26,ug/L,00665,"Phosphorus, total [as P]"
+PR,NA,NA,NA,NA,NA,NA
+PR,79326,toxaphene,2e-4,ug/L,39400,Toxaphene
+PR,79327,toxaphene,2e-4,ug/L,39400,Toxaphene
+PR,79328,toxaphene,0.007,ug/L,39400,Toxaphene
+PR,NA,NA,NA,NA,NA,NA
+PR,79407,trichloroethylene,70,ug/L,34485,"Trichloroethylene, dissolved"
+PR,79407,trichloroethylene,70,ug/L,39180,Trichloroethylene
+PR,79408,trichloroethylene,5,ug/L,34485,"Trichloroethylene, dissolved"
+PR,79408,trichloroethylene,5,ug/L,39180,Trichloroethylene
+PR,79409,trichloroethylene,5,ug/L,34485,"Trichloroethylene, dissolved"
+PR,79409,trichloroethylene,5,ug/L,39180,Trichloroethylene
+PR,79410,vinyl chloride,16,ug/L,39175,Vinyl chloride
+PR,79411,vinyl chloride,0.22,ug/L,39175,Vinyl chloride
+PR,79412,vinyl chloride,0.22,ug/L,39175,Vinyl chloride
+PR,79263,zinc,85.62,ug/L,01092,"Zinc, total [as Zn]"
+PR,79264,zinc,NA,ug/L,01092,"Zinc, total [as Zn]"

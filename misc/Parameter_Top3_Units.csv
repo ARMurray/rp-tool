@@ -1,0 +1,418 @@
+parameter_code,Unit,Percent,PARAMETER_DESC,label,rank
+00010,deg C,99.7,"Temperature, water deg. centigrade","'00010'-Temperature, wa...",First
+00010,NA,0.3,"Temperature, water deg. centigrade","'00010'-Temperature, wa...",Second
+00010,NA,NA,"Temperature, water deg. centigrade","'00010'-Temperature, wa...",Third
+00011,deg F,100,"Temperature, water deg. fahrenheit","'00011'-Temperature, wa...",First
+00011,NA,NA,"Temperature, water deg. fahrenheit","'00011'-Temperature, wa...",Second
+00011,NA,NA,"Temperature, water deg. fahrenheit","'00011'-Temperature, wa...",Third
+00070,NTU,99.7,Turbidity,'00070'-Turbidity,First
+00070,NA,0.3,Turbidity,'00070'-Turbidity,Second
+00070,NA,NA,Turbidity,'00070'-Turbidity,Third
+00080,col unit (pc),99.7,Color [PT-CO units],'00080'-Color [PT-CO un...,First
+00080,NA,0.3,Color [PT-CO units],'00080'-Color [PT-CO un...,Second
+00080,NA,NA,Color [PT-CO units],'00080'-Color [PT-CO un...,Third
+00300,mg/L,97,"Oxygen, dissolved [DO]","'00300'-Oxygen, dissolv...",First
+00300,ug/L,3,"Oxygen, dissolved [DO]","'00300'-Oxygen, dissolv...",Second
+00300,NA,NA,"Oxygen, dissolved [DO]","'00300'-Oxygen, dissolv...",Third
+00301,%,100,"Oxygen, dissolved percent saturation","'00301'-Oxygen, dissolv...",First
+00301,NA,NA,"Oxygen, dissolved percent saturation","'00301'-Oxygen, dissolv...",Second
+00301,NA,NA,"Oxygen, dissolved percent saturation","'00301'-Oxygen, dissolv...",Third
+00310,mg/L,98.7,"BOD, 5-day, 20 deg. C","'00310'-BOD, 5-day, 20 ...",First
+00310,ug/L,0.8,"BOD, 5-day, 20 deg. C","'00310'-BOD, 5-day, 20 ...",Second
+00310,NA,0.4,"BOD, 5-day, 20 deg. C","'00310'-BOD, 5-day, 20 ...",Third
+00340,mg/L,100,"Oxygen demand, chem. [high level] [COD]","'00340'-Oxygen demand, ...",First
+00340,NA,NA,"Oxygen demand, chem. [high level] [COD]","'00340'-Oxygen demand, ...",Second
+00340,NA,NA,"Oxygen demand, chem. [high level] [COD]","'00340'-Oxygen demand, ...",Third
+00400,SU,99.7,pH,'00400'-pH,First
+00400,NA,0.3,pH,'00400'-pH,Second
+00400,NA,NA,pH,'00400'-pH,Third
+00442,mg/L,100,"Phosphorous, total elemental","'00442'-Phosphorous, to...",First
+00442,NA,NA,"Phosphorous, total elemental","'00442'-Phosphorous, to...",Second
+00442,NA,NA,"Phosphorous, total elemental","'00442'-Phosphorous, to...",Third
+00480,mg/L,88.1,Salinity,'00480'-Salinity,First
+00480,ppk,7.1,Salinity,'00480'-Salinity,Second
+00480,ppt,2.4,Salinity,'00480'-Salinity,Third
+00530,mg/L,99.6,"Solids, total suspended","'00530'-Solids, total s...",First
+00530,NA,0.2,"Solids, total suspended","'00530'-Solids, total s...",Second
+00530,ug/L,0.1,"Solids, total suspended","'00530'-Solids, total s...",Third
+00545,mL/L,99.2,"Solids, settleable","'00545'-Solids, settlea...",First
+00545,NA,0.4,"Solids, settleable","'00545'-Solids, settlea...",Second
+00545,mg/L,0.2,"Solids, settleable","'00545'-Solids, settlea...",Third
+00556,mg/L,98.1,Oil & Grease,'00556'-Oil & Grease,First
+00556,ug/L,1.7,Oil & Grease,'00556'-Oil & Grease,Second
+00556,NA,0.2,Oil & Grease,'00556'-Oil & Grease,Third
+00600,ug/L,89.1,"Nitrogen, total [as N]","'00600'-Nitrogen, total...",First
+00600,mg/L,10.9,"Nitrogen, total [as N]","'00600'-Nitrogen, total...",Second
+00600,NA,0.1,"Nitrogen, total [as N]","'00600'-Nitrogen, total...",Third
+00609,mg/L,96.8,"Ammonia nitrogen, total, [as N] 30 day",'00609'-Ammonia nitroge...,First
+00609,ug/L,3.1,"Ammonia nitrogen, total, [as N] 30 day",'00609'-Ammonia nitroge...,Second
+00609,NA,0,"Ammonia nitrogen, total, [as N] 30 day",'00609'-Ammonia nitroge...,Third
+00610,mg/L,89.5,"Nitrogen, ammonia total [as N]","'00610'-Nitrogen, ammon...",First
+00610,ug/L,10.2,"Nitrogen, ammonia total [as N]","'00610'-Nitrogen, ammon...",Second
+00610,NA,0.3,"Nitrogen, ammonia total [as N]","'00610'-Nitrogen, ammon...",Third
+00619,mg/L,100,"Ammonia, unionized","'00619'-Ammonia, unioni...",First
+00619,NA,NA,"Ammonia, unionized","'00619'-Ammonia, unioni...",Second
+00619,NA,NA,"Ammonia, unionized","'00619'-Ammonia, unioni...",Third
+00620,mg/L,100,"Nitrogen, nitrate total [as N]","'00620'-Nitrogen, nitra...",First
+00620,NA,NA,"Nitrogen, nitrate total [as N]","'00620'-Nitrogen, nitra...",Second
+00620,NA,NA,"Nitrogen, nitrate total [as N]","'00620'-Nitrogen, nitra...",Third
+00625,ug/L,89.4,"Nitrogen, Kjeldahl, total [as N]","'00625'-Nitrogen, Kjeld...",First
+00625,mg/L,10.2,"Nitrogen, Kjeldahl, total [as N]","'00625'-Nitrogen, Kjeld...",Second
+00625,NA,0.3,"Nitrogen, Kjeldahl, total [as N]","'00625'-Nitrogen, Kjeld...",Third
+00630,ug/L,89.1,Nitrite + Nitrate total [as N],'00630'-Nitrite + Nitra...,First
+00630,mg/L,10.5,Nitrite + Nitrate total [as N],'00630'-Nitrite + Nitra...,Second
+00630,NA,0.3,Nitrite + Nitrate total [as N],'00630'-Nitrite + Nitra...,Third
+00640,ug/L,86.5,"Nitrogen, inorganic total","'00640'-Nitrogen, inorg...",First
+00640,mg/L,13.5,"Nitrogen, inorganic total","'00640'-Nitrogen, inorg...",Second
+00640,NA,NA,"Nitrogen, inorganic total","'00640'-Nitrogen, inorg...",Third
+00650,mg/L,100,"Phosphate, total [as PO4]","'00650'-Phosphate, tota...",First
+00650,NA,NA,"Phosphate, total [as PO4]","'00650'-Phosphate, tota...",Second
+00650,NA,NA,"Phosphate, total [as PO4]","'00650'-Phosphate, tota...",Third
+00662,mg/L,100,"Phosphorous, total recoverable","'00662'-Phosphorous, to...",First
+00662,NA,NA,"Phosphorous, total recoverable","'00662'-Phosphorous, to...",Second
+00662,NA,NA,"Phosphorous, total recoverable","'00662'-Phosphorous, to...",Third
+00665,mg/L,57.2,"Phosphorus, total [as P]","'00665'-Phosphorus, tot...",First
+00665,ug/L,42.5,"Phosphorus, total [as P]","'00665'-Phosphorus, tot...",Second
+00665,NA,0.2,"Phosphorus, total [as P]","'00665'-Phosphorus, tot...",Third
+00670,ug/L,100,"Phosphorous, total organic [as P]","'00670'-Phosphorous, to...",First
+00670,NA,NA,"Phosphorous, total organic [as P]","'00670'-Phosphorous, to...",Second
+00670,NA,NA,"Phosphorous, total organic [as P]","'00670'-Phosphorous, to...",Third
+00680,mg/L,100,"Carbon, tot organic [TOC]","'00680'-Carbon, tot org...",First
+00680,NA,NA,"Carbon, tot organic [TOC]","'00680'-Carbon, tot org...",Second
+00680,NA,NA,"Carbon, tot organic [TOC]","'00680'-Carbon, tot org...",Third
+00719,ug/L,100,"Cyanide, free-water plus wastewaters","'00719'-Cyanide, free-w...",First
+00719,NA,NA,"Cyanide, free-water plus wastewaters","'00719'-Cyanide, free-w...",Second
+00719,NA,NA,"Cyanide, free-water plus wastewaters","'00719'-Cyanide, free-w...",Third
+00720,ug/L,94.8,"Cyanide, total [as CN]","'00720'-Cyanide, total ...",First
+00720,mg/L,4.9,"Cyanide, total [as CN]","'00720'-Cyanide, total ...",Second
+00720,NA,0.3,"Cyanide, total [as CN]","'00720'-Cyanide, total ...",Third
+00722,ug/L,100,"Cyanide, free [amenable to chlorination]","'00722'-Cyanide, free [...",First
+00722,NA,NA,"Cyanide, free [amenable to chlorination]","'00722'-Cyanide, free [...",Second
+00722,NA,NA,"Cyanide, free [amenable to chlorination]","'00722'-Cyanide, free [...",Third
+00745,ug/L,98.6,"Sulfide, total [as S]","'00745'-Sulfide, total ...",First
+00745,mg/L,1.2,"Sulfide, total [as S]","'00745'-Sulfide, total ...",Second
+00745,NA,0.2,"Sulfide, total [as S]","'00745'-Sulfide, total ...",Third
+00746,ug/L,100,"Sulfide, dissolved, [as S]","'00746'-Sulfide, dissol...",First
+00746,NA,NA,"Sulfide, dissolved, [as S]","'00746'-Sulfide, dissol...",Second
+00746,NA,NA,"Sulfide, dissolved, [as S]","'00746'-Sulfide, dissol...",Third
+00900,mg/L,100,"Hardness, total [as CaCO3]","'00900'-Hardness, total...",First
+00900,NA,NA,"Hardness, total [as CaCO3]","'00900'-Hardness, total...",Second
+00900,NA,NA,"Hardness, total [as CaCO3]","'00900'-Hardness, total...",Third
+00927,ug/L,100,"Magnesium, total [as Mg]","'00927'-Magnesium, tota...",First
+00927,NA,NA,"Magnesium, total [as Mg]","'00927'-Magnesium, tota...",Second
+00927,NA,NA,"Magnesium, total [as Mg]","'00927'-Magnesium, tota...",Third
+00940,mg/L,98.1,Chloride [as Cl],'00940'-Chloride [as Cl],First
+00940,NA,1.9,Chloride [as Cl],'00940'-Chloride [as Cl],Second
+00940,NA,NA,Chloride [as Cl],'00940'-Chloride [as Cl],Third
+00945,mg/L,83.7,"Sulfate, total [as SO4]","'00945'-Sulfate, total ...",First
+00945,ug/L,16.1,"Sulfate, total [as SO4]","'00945'-Sulfate, total ...",Second
+00945,NA,0.1,"Sulfate, total [as SO4]","'00945'-Sulfate, total ...",Third
+00951,ug/L,98.1,"Fluoride, total [as F]","'00951'-Fluoride, total...",First
+00951,mg/L,1.3,"Fluoride, total [as F]","'00951'-Fluoride, total...",Second
+00951,NA,0.5,"Fluoride, total [as F]","'00951'-Fluoride, total...",Third
+00978,ug/L,66.7,"Arsenic, total recoverable","'00978'-Arsenic, total ...",First
+00978,mg/L,33.3,"Arsenic, total recoverable","'00978'-Arsenic, total ...",Second
+00978,NA,NA,"Arsenic, total recoverable","'00978'-Arsenic, total ...",Third
+00980,mg/L,100,"Iron, total recoverable","'00980'-Iron, total rec...",First
+00980,NA,NA,"Iron, total recoverable","'00980'-Iron, total rec...",Second
+00980,NA,NA,"Iron, total recoverable","'00980'-Iron, total rec...",Third
+01002,ug/L,97,"Arsenic, total [as As]","'01002'-Arsenic, total ...",First
+01002,mg/L,2.6,"Arsenic, total [as As]","'01002'-Arsenic, total ...",Second
+01002,NA,0.3,"Arsenic, total [as As]","'01002'-Arsenic, total ...",Third
+01007,ug/L,100,"Barium, total [as Ba]","'01007'-Barium, total [...",First
+01007,NA,NA,"Barium, total [as Ba]","'01007'-Barium, total [...",Second
+01007,NA,NA,"Barium, total [as Ba]","'01007'-Barium, total [...",Third
+01022,ug/L,100,"Boron, total [as B]","'01022'-Boron, total [a...",First
+01022,NA,NA,"Boron, total [as B]","'01022'-Boron, total [a...",Second
+01022,NA,NA,"Boron, total [as B]","'01022'-Boron, total [a...",Third
+01027,ug/L,99.2,"Cadmium, total [as Cd]","'01027'-Cadmium, total ...",First
+01027,NA,0.4,"Cadmium, total [as Cd]","'01027'-Cadmium, total ...",Second
+01027,mg/L,0.4,"Cadmium, total [as Cd]","'01027'-Cadmium, total ...",Third
+01032,ug/L,92.1,"Chromium, hexavalent [as Cr]","'01032'-Chromium, hexav...",First
+01032,mg/L,7.2,"Chromium, hexavalent [as Cr]","'01032'-Chromium, hexav...",Second
+01032,NA,0.4,"Chromium, hexavalent [as Cr]","'01032'-Chromium, hexav...",Third
+01033,ug/L,100,"Chromium, trivalent [as Cr]","'01033'-Chromium, triva...",First
+01033,NA,NA,"Chromium, trivalent [as Cr]","'01033'-Chromium, triva...",Second
+01033,NA,NA,"Chromium, trivalent [as Cr]","'01033'-Chromium, triva...",Third
+01034,mg/L,67.4,"Chromium, total [as Cr]","'01034'-Chromium, total...",First
+01034,ug/L,32.4,"Chromium, total [as Cr]","'01034'-Chromium, total...",Second
+01034,NA,0.2,"Chromium, total [as Cr]","'01034'-Chromium, total...",Third
+01040,ug/L,100,"Copper, dissolved [as Cu]","'01040'-Copper, dissolv...",First
+01040,NA,NA,"Copper, dissolved [as Cu]","'01040'-Copper, dissolv...",Second
+01040,NA,NA,"Copper, dissolved [as Cu]","'01040'-Copper, dissolv...",Third
+01042,ug/L,98.8,"Copper, total [as Cu]","'01042'-Copper, total [...",First
+01042,mg/L,0.9,"Copper, total [as Cu]","'01042'-Copper, total [...",Second
+01042,NA,0.3,"Copper, total [as Cu]","'01042'-Copper, total [...",Third
+01045,mg/L,85.4,"Iron, total [as Fe]","'01045'-Iron, total [as...",First
+01045,ug/L,14.6,"Iron, total [as Fe]","'01045'-Iron, total [as...",Second
+01045,NA,NA,"Iron, total [as Fe]","'01045'-Iron, total [as...",Third
+01051,ug/L,98.5,"Lead, total [as Pb]","'01051'-Lead, total [as...",First
+01051,mg/L,1.2,"Lead, total [as Pb]","'01051'-Lead, total [as...",Second
+01051,NA,0.2,"Lead, total [as Pb]","'01051'-Lead, total [as...",Third
+01055,ug/L,98.1,"Manganese, total [as Mn]","'01055'-Manganese, tota...",First
+01055,mg/L,1.9,"Manganese, total [as Mn]","'01055'-Manganese, tota...",Second
+01055,NA,NA,"Manganese, total [as Mn]","'01055'-Manganese, tota...",Third
+01059,ug/L,99.4,"Thallium, total [as Tl]","'01059'-Thallium, total...",First
+01059,NA,0.6,"Thallium, total [as Tl]","'01059'-Thallium, total...",Second
+01059,NA,NA,"Thallium, total [as Tl]","'01059'-Thallium, total...",Third
+01067,ug/L,99,"Nickel, total [as Ni]","'01067'-Nickel, total [...",First
+01067,NA,0.7,"Nickel, total [as Ni]","'01067'-Nickel, total [...",Second
+01067,mg/L,0.3,"Nickel, total [as Ni]","'01067'-Nickel, total [...",Third
+01077,ug/L,99.4,"Silver, total [as Ag]","'01077'-Silver, total [...",First
+01077,NA,0.3,"Silver, total [as Ag]","'01077'-Silver, total [...",Second
+01077,mg/L,0.3,"Silver, total [as Ag]","'01077'-Silver, total [...",Third
+01079,ug/L,100,Silver total recoverable,'01079'-Silver total re...,First
+01079,NA,NA,Silver total recoverable,'01079'-Silver total re...,Second
+01079,NA,NA,Silver total recoverable,'01079'-Silver total re...,Third
+01092,ug/L,93.5,"Zinc, total [as Zn]","'01092'-Zinc, total [as...",First
+01092,mg/L,6,"Zinc, total [as Zn]","'01092'-Zinc, total [as...",Second
+01092,NA,0.4,"Zinc, total [as Zn]","'01092'-Zinc, total [as...",Third
+01094,ug/L,92.5,"Zinc, total recoverable","'01094'-Zinc, total rec...",First
+01094,mg/L,7.5,"Zinc, total recoverable","'01094'-Zinc, total rec...",Second
+01094,NA,NA,"Zinc, total recoverable","'01094'-Zinc, total rec...",Third
+01097,ug/L,100,"Antimony, total [as Sb]","'01097'-Antimony, total...",First
+01097,NA,NA,"Antimony, total [as Sb]","'01097'-Antimony, total...",Second
+01097,NA,NA,"Antimony, total [as Sb]","'01097'-Antimony, total...",Third
+01104,ug/L,70.6,"Aluminum, total recoverable","'01104'-Aluminum, total...",First
+01104,mg/L,29.4,"Aluminum, total recoverable","'01104'-Aluminum, total...",Second
+01104,NA,NA,"Aluminum, total recoverable","'01104'-Aluminum, total...",Third
+01105,mg/L,100,"Aluminum, total [as Al]","'01105'-Aluminum, total...",First
+01105,NA,NA,"Aluminum, total [as Al]","'01105'-Aluminum, total...",Second
+01105,NA,NA,"Aluminum, total [as Al]","'01105'-Aluminum, total...",Third
+01113,ug/L,100,"Cadmium, total recoverable","'01113'-Cadmium, total ...",First
+01113,NA,NA,"Cadmium, total recoverable","'01113'-Cadmium, total ...",Second
+01113,NA,NA,"Cadmium, total recoverable","'01113'-Cadmium, total ...",Third
+01114,ug/L,100,"Lead, total recoverable","'01114'-Lead, total rec...",First
+01114,NA,NA,"Lead, total recoverable","'01114'-Lead, total rec...",Second
+01114,NA,NA,"Lead, total recoverable","'01114'-Lead, total rec...",Third
+01119,ug/L,98.3,"Copper, total recoverable","'01119'-Copper, total r...",First
+01119,mg/L,1.7,"Copper, total recoverable","'01119'-Copper, total r...",Second
+01119,NA,NA,"Copper, total recoverable","'01119'-Copper, total r...",Third
+01147,ug/L,96.4,"Selenium, total [as Se]","'01147'-Selenium, total...",First
+01147,mg/L,2.1,"Selenium, total [as Se]","'01147'-Selenium, total...",Second
+01147,%,0.8,"Selenium, total [as Se]","'01147'-Selenium, total...",Third
+01288,mg/L,100,Foaming agents,'01288'-Foaming agents,First
+01288,NA,NA,Foaming agents,'01288'-Foaming agents,Second
+01288,NA,NA,Foaming agents,'01288'-Foaming agents,Third
+03501,pCi/L,100,"Beta, total","'03501'-Beta, total",First
+03501,NA,NA,"Beta, total","'03501'-Beta, total",Second
+03501,NA,NA,"Beta, total","'03501'-Beta, total",Third
+03615,ug/L,99,"2-Methyl-4,6-dinitrophenol","'03615'-2-Methyl-4,6-di...",First
+03615,NA,0.7,"2-Methyl-4,6-dinitrophenol","'03615'-2-Methyl-4,6-di...",Second
+03615,%,0.3,"2-Methyl-4,6-dinitrophenol","'03615'-2-Methyl-4,6-di...",Third
+09501,pCi/L,100,"Radium 226, total","'09501'-Radium 226, total",First
+09501,NA,NA,"Radium 226, total","'09501'-Radium 226, total",Second
+09501,NA,NA,"Radium 226, total","'09501'-Radium 226, total",Third
+11503,pCi/L,85.7,"Radium 226 + radium 228, total",'11503'-Radium 226 + ra...,First
+11503,NA,14.3,"Radium 226 + radium 228, total",'11503'-Radium 226 + ra...,Second
+11503,NA,NA,"Radium 226 + radium 228, total",'11503'-Radium 226 + ra...,Third
+13501,pCi/L,100,"Strontium 90, total","'13501'-Strontium 90, t...",First
+13501,NA,NA,"Strontium 90, total","'13501'-Strontium 90, t...",Second
+13501,NA,NA,"Strontium 90, total","'13501'-Strontium 90, t...",Third
+30500,%,98.6,"Coliform, fecal - % samples exceeding limit","'30500'-Coliform, fecal...",First
+30500,NA,1.4,"Coliform, fecal - % samples exceeding limit","'30500'-Coliform, fecal...",Second
+30500,NA,NA,"Coliform, fecal - % samples exceeding limit","'30500'-Coliform, fecal...",Third
+31639,#/100mL,100,"Enterococci: group D, MF trans, M-E, EIA",'31639'-Enterococci: gr...,First
+31639,NA,NA,"Enterococci: group D, MF trans, M-E, EIA",'31639'-Enterococci: gr...,Second
+31639,NA,NA,"Enterococci: group D, MF trans, M-E, EIA",'31639'-Enterococci: gr...,Third
+32106,ug/L,100,Chloroform,'32106'-Chloroform,First
+32106,NA,NA,Chloroform,'32106'-Chloroform,Second
+32106,NA,NA,Chloroform,'32106'-Chloroform,Third
+32730,ug/L,97.8,"Phenolics, total recoverable","'32730'-Phenolics, tota...",First
+32730,mg/L,1.2,"Phenolics, total recoverable","'32730'-Phenolics, tota...",Second
+32730,NA,0.7,"Phenolics, total recoverable","'32730'-Phenolics, tota...",Third
+34010,ug/L,100,Toluene,'34010'-Toluene,First
+34010,NA,NA,Toluene,'34010'-Toluene,Second
+34010,NA,NA,Toluene,'34010'-Toluene,Third
+34030,ug/L,100,Benzene,'34030'-Benzene,First
+34030,NA,NA,Benzene,'34030'-Benzene,Second
+34030,NA,NA,Benzene,'34030'-Benzene,Third
+34200,ug/L,100,Acenaphthylene,'34200'-Acenaphthylene,First
+34200,NA,NA,Acenaphthylene,'34200'-Acenaphthylene,Second
+34200,NA,NA,Acenaphthylene,'34200'-Acenaphthylene,Third
+34205,ug/L,100,Acenaphthene,'34205'-Acenaphthene,First
+34205,NA,NA,Acenaphthene,'34205'-Acenaphthene,Second
+34205,NA,NA,Acenaphthene,'34205'-Acenaphthene,Third
+34220,ug/L,100,Anthracene,'34220'-Anthracene,First
+34220,NA,NA,Anthracene,'34220'-Anthracene,Second
+34220,NA,NA,Anthracene,'34220'-Anthracene,Third
+34230,ug/L,100,Benzo[b]fluoranthene,'34230'-Benzo[b]fluoran...,First
+34230,NA,NA,Benzo[b]fluoranthene,'34230'-Benzo[b]fluoran...,Second
+34230,NA,NA,Benzo[b]fluoranthene,'34230'-Benzo[b]fluoran...,Third
+34242,ug/L,100,Benzo[k]fluoranthene,'34242'-Benzo[k]fluoran...,First
+34242,NA,NA,Benzo[k]fluoranthene,'34242'-Benzo[k]fluoran...,Second
+34242,NA,NA,Benzo[k]fluoranthene,'34242'-Benzo[k]fluoran...,Third
+34247,ug/L,100,Benzo[a]pyrene,'34247'-Benzo[a]pyrene,First
+34247,NA,NA,Benzo[a]pyrene,'34247'-Benzo[a]pyrene,Second
+34247,NA,NA,Benzo[a]pyrene,'34247'-Benzo[a]pyrene,Third
+34320,ug/L,100,Chrysene,'34320'-Chrysene,First
+34320,NA,NA,Chrysene,'34320'-Chrysene,Second
+34320,NA,NA,Chrysene,'34320'-Chrysene,Third
+34336,ug/L,100,Diethyl phthalate,'34336'-Diethyl phthalate,First
+34336,NA,NA,Diethyl phthalate,'34336'-Diethyl phthalate,Second
+34336,NA,NA,Diethyl phthalate,'34336'-Diethyl phthalate,Third
+34376,ug/L,98,Fluoranthene,'34376'-Fluoranthene,First
+34376,mL/L,2,Fluoranthene,'34376'-Fluoranthene,Second
+34376,NA,NA,Fluoranthene,'34376'-Fluoranthene,Third
+34381,ug/L,100,Fluorene,'34381'-Fluorene,First
+34381,NA,NA,Fluorene,'34381'-Fluorene,Second
+34381,NA,NA,Fluorene,'34381'-Fluorene,Third
+34403,ug/L,100,"Indeno[1,2,3-cd]pyrene","'34403'-Indeno[1,2,3-cd...",First
+34403,NA,NA,"Indeno[1,2,3-cd]pyrene","'34403'-Indeno[1,2,3-cd...",Second
+34403,NA,NA,"Indeno[1,2,3-cd]pyrene","'34403'-Indeno[1,2,3-cd...",Third
+34423,ug/L,100,Methylene chloride,'34423'-Methylene chlor...,First
+34423,NA,NA,Methylene chloride,'34423'-Methylene chlor...,Second
+34423,NA,NA,Methylene chloride,'34423'-Methylene chlor...,Third
+34461,ug/L,100,Phenanthrene,'34461'-Phenanthrene,First
+34461,NA,NA,Phenanthrene,'34461'-Phenanthrene,Second
+34461,NA,NA,Phenanthrene,'34461'-Phenanthrene,Third
+34469,ug/L,100,Pyrene,'34469'-Pyrene,First
+34469,NA,NA,Pyrene,'34469'-Pyrene,Second
+34469,NA,NA,Pyrene,'34469'-Pyrene,Third
+34521,ug/L,100,Benzo[ghi]perylene,'34521'-Benzo[ghi]peryl...,First
+34521,NA,NA,Benzo[ghi]perylene,'34521'-Benzo[ghi]peryl...,Second
+34521,NA,NA,Benzo[ghi]perylene,'34521'-Benzo[ghi]peryl...,Third
+34526,ug/L,100,Benzo[a]anthracene,'34526'-Benzo[a]anthrac...,First
+34526,NA,NA,Benzo[a]anthracene,'34526'-Benzo[a]anthrac...,Second
+34526,NA,NA,Benzo[a]anthracene,'34526'-Benzo[a]anthrac...,Third
+34556,ug/L,100,"Dibenz[a,h]anthracene","'34556'-Dibenz[a,h]anth...",First
+34556,NA,NA,"Dibenz[a,h]anthracene","'34556'-Dibenz[a,h]anth...",Second
+34556,NA,NA,"Dibenz[a,h]anthracene","'34556'-Dibenz[a,h]anth...",Third
+34586,ug/L,99.6,2-Chlorophenol,'34586'-2-Chlorophenol,First
+34586,NA,0.3,2-Chlorophenol,'34586'-2-Chlorophenol,Second
+34586,%,0.1,2-Chlorophenol,'34586'-2-Chlorophenol,Third
+34601,ug/L,99.3,"2,4-Dichlorophenol","'34601'-2,4-Dichlorophe...",First
+34601,ug/kg,0.4,"2,4-Dichlorophenol","'34601'-2,4-Dichlorophe...",Second
+34601,NA,0.3,"2,4-Dichlorophenol","'34601'-2,4-Dichlorophe...",Third
+34606,ug/L,99.6,"2,4-Dimethylphenol","'34606'-2,4-Dimethylphe...",First
+34606,NA,0.4,"2,4-Dimethylphenol","'34606'-2,4-Dimethylphe...",Second
+34606,NA,NA,"2,4-Dimethylphenol","'34606'-2,4-Dimethylphe...",Third
+34611,ug/L,96.7,"2,4-Dinitrotoluene","'34611'-2,4-Dinitrotolu...",First
+34611,NA,3.3,"2,4-Dinitrotoluene","'34611'-2,4-Dinitrotolu...",Second
+34611,NA,NA,"2,4-Dinitrotoluene","'34611'-2,4-Dinitrotolu...",Third
+34616,ug/L,99,"2,4-Dinitrophenol","'34616'-2,4-Dinitrophenol",First
+34616,mg/L,0.7,"2,4-Dinitrophenol","'34616'-2,4-Dinitrophenol",Second
+34616,NA,0.3,"2,4-Dinitrophenol","'34616'-2,4-Dinitrophenol",Third
+34621,ug/L,99.5,"2,4,6-Trichlorophenol","'34621'-2,4,6-Trichloro...",First
+34621,NA,0.4,"2,4,6-Trichlorophenol","'34621'-2,4,6-Trichloro...",Second
+34621,mg/L,0.1,"2,4,6-Trichlorophenol","'34621'-2,4,6-Trichloro...",Third
+34694,ug/L,94.9,Phenol,'34694'-Phenol,First
+34694,mg/L,4.3,Phenol,'34694'-Phenol,Second
+34694,NA,0.8,Phenol,'34694'-Phenol,Third
+34696,ug/L,98,Naphthalene,'34696'-Naphthalene,First
+34696,NA,2,Naphthalene,'34696'-Naphthalene,Second
+34696,NA,NA,Naphthalene,'34696'-Naphthalene,Third
+34726,mg/L,96.8,"Nitrogen, ammonia, total [as NH3]","'34726'-Nitrogen, ammon...",First
+34726,ug/L,2.4,"Nitrogen, ammonia, total [as NH3]","'34726'-Nitrogen, ammon...",Second
+34726,NA,0.6,"Nitrogen, ammonia, total [as NH3]","'34726'-Nitrogen, ammon...",Third
+37371,ug/L,96.7,Ethylbenzene,'37371'-Ethylbenzene,First
+37371,NA,3.3,Ethylbenzene,'37371'-Ethylbenzene,Second
+37371,NA,NA,Ethylbenzene,'37371'-Ethylbenzene,Third
+38260,ug/L,98.1,Surfactants [MBAS],'38260'-Surfactants [MB...,First
+38260,mg/L,1.3,Surfactants [MBAS],'38260'-Surfactants [MB...,Second
+38260,NA,0.5,Surfactants [MBAS],'38260'-Surfactants [MB...,Third
+39032,ug/L,99.5,Pentachlorophenol,'39032'-Pentachlorophenol,First
+39032,NA,0.5,Pentachlorophenol,'39032'-Pentachlorophenol,Second
+39032,NA,NA,Pentachlorophenol,'39032'-Pentachlorophenol,Third
+39100,ug/L,100,Di[2-ethylhexyl] phthalate [DEHP],'39100'-Di[2-ethylhexyl...,First
+39100,NA,NA,Di[2-ethylhexyl] phthalate [DEHP],'39100'-Di[2-ethylhexyl...,Second
+39100,NA,NA,Di[2-ethylhexyl] phthalate [DEHP],'39100'-Di[2-ethylhexyl...,Third
+39110,ug/L,100,Di-n-butyl phthalate,'39110'-Di-n-butyl phth...,First
+39110,NA,NA,Di-n-butyl phthalate,'39110'-Di-n-butyl phth...,Second
+39110,NA,NA,Di-n-butyl phthalate,'39110'-Di-n-butyl phth...,Third
+39516,ug/L,100,Polychlorinated biphenyls [PCBs],'39516'-Polychlorinated...,First
+39516,NA,NA,Polychlorinated biphenyls [PCBs],'39516'-Polychlorinated...,Second
+39516,NA,NA,Polychlorinated biphenyls [PCBs],'39516'-Polychlorinated...,Third
+39782,ug/L,100,Lindane,'39782'-Lindane,First
+39782,NA,NA,Lindane,'39782'-Lindane,Second
+39782,NA,NA,Lindane,'39782'-Lindane,Third
+46000,ug/L,100,Phenols,'46000'-Phenols,First
+46000,NA,NA,Phenols,'46000'-Phenols,Second
+46000,NA,NA,Phenols,'46000'-Phenols,Third
+50050,MGD,99.6,"Flow, in conduit or thru treatment plant","'50050'-Flow, in condui...",First
+50050,NA,0.3,"Flow, in conduit or thru treatment plant","'50050'-Flow, in condui...",Second
+50050,gal/d,0.1,"Flow, in conduit or thru treatment plant","'50050'-Flow, in condui...",Third
+50060,mg/L,77.9,"Chlorine, total residual","'50060'-Chlorine, total...",First
+50060,ug/L,17.9,"Chlorine, total residual","'50060'-Chlorine, total...",Second
+50060,ppm,3.5,"Chlorine, total residual","'50060'-Chlorine, total...",Third
+50064,mg/L,99.1,"Chlorine, free available","'50064'-Chlorine, free ...",First
+50064,NA,0.9,"Chlorine, free available","'50064'-Chlorine, free ...",Second
+50064,NA,NA,"Chlorine, free available","'50064'-Chlorine, free ...",Third
+51058,ug/L,100,Chromium III,'51058'-Chromium III,First
+51058,NA,NA,Chromium III,'51058'-Chromium III,Second
+51058,NA,NA,Chromium III,'51058'-Chromium III,Third
+51085,mg/L,100,"Nitrogen, ammonia [NH3-N]","'51085'-Nitrogen, ammon...",First
+51085,NA,NA,"Nitrogen, ammonia [NH3-N]","'51085'-Nitrogen, ammon...",Second
+51085,NA,NA,"Nitrogen, ammonia [NH3-N]","'51085'-Nitrogen, ammon...",Third
+51173,ug/L,98.6,"Cyanide, free available","'51173'-Cyanide, free a...",First
+51173,mg/L,1,"Cyanide, free available","'51173'-Cyanide, free a...",Second
+51173,NA,0.4,"Cyanide, free available","'51173'-Cyanide, free a...",Third
+51202,ug/L,96.7,Sulfide-hydrogen sulfide [undissociated],'51202'-Sulfide-hydroge...,First
+51202,mg/L,2.1,Sulfide-hydrogen sulfide [undissociated],'51202'-Sulfide-hydroge...,Second
+51202,ug/kg,1,Sulfide-hydrogen sulfide [undissociated],'51202'-Sulfide-hydroge...,Third
+51450,mg/L,99.4,Nitrite Plus Nitrate Total,'51450'-Nitrite Plus Ni...,First
+51450,ug/L,0.6,Nitrite Plus Nitrate Total,'51450'-Nitrite Plus Ni...,Second
+51450,NA,NA,Nitrite Plus Nitrate Total,'51450'-Nitrite Plus Ni...,Third
+51489,mg/L,98.1,"Nitrogen, Total as NO3 + NH3","'51489'-Nitrogen, Total...",First
+51489,ug/L,1.9,"Nitrogen, Total as NO3 + NH3","'51489'-Nitrogen, Total...",Second
+51489,NA,NA,"Nitrogen, Total as NO3 + NH3","'51489'-Nitrogen, Total...",Third
+61211,#/100mL,95.6,Enterococci,'61211'-Enterococci,First
+61211,MPN/100mL,3.3,Enterococci,'61211'-Enterococci,Second
+61211,CFU/100mL,0.9,Enterococci,'61211'-Enterococci,Third
+70295,mg/L,97.5,"Solids, total dissolved","'70295'-Solids, total d...",First
+70295,ug/L,1.7,"Solids, total dissolved","'70295'-Solids, total d...",Second
+70295,mL/L,0.5,"Solids, total dissolved","'70295'-Solids, total d...",Third
+70300,mg/L,99.2,"Solids, total dissolved- 180 deg. C","'70300'-Solids, total d...",First
+70300,ug/L,0.7,"Solids, total dissolved- 180 deg. C","'70300'-Solids, total d...",Second
+70300,ppt,0.1,"Solids, total dissolved- 180 deg. C","'70300'-Solids, total d...",Third
+71845,mg/L,100,"Nitrogen, ammonia total [as NH4]","'71845'-Nitrogen, ammon...",First
+71845,NA,NA,"Nitrogen, ammonia total [as NH4]","'71845'-Nitrogen, ammon...",Second
+71845,NA,NA,"Nitrogen, ammonia total [as NH4]","'71845'-Nitrogen, ammon...",Third
+71900,ug/L,98.9,"Mercury, total [as Hg]","'71900'-Mercury, total ...",First
+71900,mg/L,0.8,"Mercury, total [as Hg]","'71900'-Mercury, total ...",Second
+71900,NA,0.3,"Mercury, total [as Hg]","'71900'-Mercury, total ...",Third
+71901,ug/L,100,"Mercury, total recoverable","'71901'-Mercury, total ...",First
+71901,NA,NA,"Mercury, total recoverable","'71901'-Mercury, total ...",Second
+71901,NA,NA,"Mercury, total recoverable","'71901'-Mercury, total ...",Third
+74053,mg/L,100,"Pesticides, general","'74053'-Pesticides, gen...",First
+74053,NA,NA,"Pesticides, general","'74053'-Pesticides, gen...",Second
+74053,NA,NA,"Pesticides, general","'74053'-Pesticides, gen...",Third
+74055,#/100mL,91.8,"Coliform, fecal general","'74055'-Coliform, fecal...",First
+74055,MPN/100mL,3.2,"Coliform, fecal general","'74055'-Coliform, fecal...",Second
+74055,#/100L,2.5,"Coliform, fecal general","'74055'-Coliform, fecal...",Third
+74056,#/100mL,94.1,"Coliform, total general","'74056'-Coliform, total...",First
+74056,MPN/100mL,5,"Coliform, total general","'74056'-Coliform, total...",Second
+74056,CFU/100mL,0.6,"Coliform, total general","'74056'-Coliform, total...",Third
+74057,CFU/100mL,100,"Coliform, fecal, colony forming units","'74057'-Coliform, fecal...",First
+74057,NA,NA,"Coliform, fecal, colony forming units","'74057'-Coliform, fecal...",Second
+74057,NA,NA,"Coliform, fecal, colony forming units","'74057'-Coliform, fecal...",Third
+77146,ug/L,80,p-Cresol,'77146'-p-Cresol,First
+77146,mg/L,20,p-Cresol,'77146'-p-Cresol,Second
+77146,NA,NA,p-Cresol,'77146'-p-Cresol,Third
+77247,ug/L,80,"Benzoic acids, total","'77247'-Benzoic acids, ...",First
+77247,mg/L,20,"Benzoic acids, total","'77247'-Benzoic acids, ...",Second
+77247,NA,NA,"Benzoic acids, total","'77247'-Benzoic acids, ...",Third
+77493,ug/L,78.6,.alpha.-Terpineol,'77493'-.alpha.-Terpineol,First
+77493,mg/L,21.4,.alpha.-Terpineol,'77493'-.alpha.-Terpineol,Second
+77493,NA,NA,.alpha.-Terpineol,'77493'-.alpha.-Terpineol,Third
+78248,ug/L,100,"Cyanide, total recoverable","'78248'-Cyanide, total ...",First
+78248,NA,NA,"Cyanide, total recoverable","'78248'-Cyanide, total ...",Second
+78248,NA,NA,"Cyanide, total recoverable","'78248'-Cyanide, total ...",Third
+80108,mg/L,100,Chemical oxygen demand [COD],'80108'-Chemical oxygen...,First
+80108,NA,NA,Chemical oxygen demand [COD],'80108'-Chemical oxygen...,Second
+80108,NA,NA,Chemical oxygen demand [COD],'80108'-Chemical oxygen...,Third
+81010,%,95.3,"BOD, 5-day, percent removal","'81010'-BOD, 5-day, per...",First
+81010,NA,4.7,"BOD, 5-day, percent removal","'81010'-BOD, 5-day, per...",Second
+81010,NA,NA,"BOD, 5-day, percent removal","'81010'-BOD, 5-day, per...",Third
+81011,%,100,"Solids, suspended percent removal","'81011'-Solids, suspend...",First
+81011,NA,NA,"Solids, suspended percent removal","'81011'-Solids, suspend...",Second
+81011,NA,NA,"Solids, suspended percent removal","'81011'-Solids, suspend...",Third
+81017,mg/L,100,Chemical Oxygen Demand [COD],'81017'-Chemical Oxygen...,First
+81017,NA,NA,Chemical Oxygen Demand [COD],'81017'-Chemical Oxygen...,Second
+81017,NA,NA,Chemical Oxygen Demand [COD],'81017'-Chemical Oxygen...,Third
+81551,ug/L,100,Xylene [mix of m+o+p],'81551'-Xylene [mix of ...,First
+81551,NA,NA,Xylene [mix of m+o+p],'81551'-Xylene [mix of ...,Second
+81551,NA,NA,Xylene [mix of m+o+p],'81551'-Xylene [mix of ...,Third
+82230,ug/L,78.6,Ammonia & ammonium- total,'82230'-Ammonia & ammon...,First
+82230,mg/L,21.4,Ammonia & ammonium- total,'82230'-Ammonia & ammon...,Second
+82230,NA,NA,Ammonia & ammonium- total,'82230'-Ammonia & ammon...,Third

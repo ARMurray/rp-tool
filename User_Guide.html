@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.9.38" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+<title>Puerto Rico Reasonable Potential (RP) Calculator</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+<style>
+  body { font-size: 15px; line-height: 1.7; }
+  h1 { color: #07648d; border-bottom: 2px solid #07648d; padding-bottom: 6px; }
+  h2 { color: #07648d; }
+  h3 { color: #1a1a1a; }
+  .callout { border-radius: 6px; }
+  code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
+  .formula-box {
+    background: #f0f6fb;
+    border-left: 4px solid #07648d;
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95em;
+  }
+  table { font-size: 0.9em; }
+  .screenshot-placeholder {
+    background: #fff8ec;
+    border: 1.5px dashed #e8a000;
+    border-radius: 6px;
+    padding: 18px;
+    color: #8a6d00;
+    margin: 16px 0;
+  }
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <div id="quarto-toc-target"></div>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Puerto Rico Reasonable Potential (RP) Calculator</h1>
+<p class="subtitle lead">User Guide</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-overview" id="toc-sec-overview">Overview</a>
+  <ul>
+  <li><a href="#sec-what-it-does" id="toc-sec-what-it-does">What the App Does</a></li>
+  <li><a href="#sec-limitations" id="toc-sec-limitations">What the App Does Not Replace</a></li>
+  </ul></li>
+  <li><a href="#sec-background" id="toc-sec-background">Regulatory Background</a>
+  <ul>
+  <li><a href="#sec-rp-background" id="toc-sec-rp-background">Reasonable Potential Under the Clean Water Act</a></li>
+  <li><a href="#sec-prwqs" id="toc-sec-prwqs">The Puerto Rico Water Quality Standards Regulation</a></li>
+  <li><a href="#sec-classifications" id="toc-sec-classifications">Water Classifications Relevant to NPDES Permitting</a></li>
+  </ul></li>
+  <li><a href="#sec-getting-started" id="toc-sec-getting-started">Getting Started</a>
+  <ul>
+  <li><a href="#sec-workflows" id="toc-sec-workflows">Two Workflows at a Glance</a></li>
+  <li><a href="#sec-navigation" id="toc-sec-navigation">Navigating the App</a></li>
+  </ul></li>
+  <li><a href="#sec-npdes-workflow" id="toc-sec-npdes-workflow">NPDES Workflow</a>
+  <ul>
+  <li><a href="#sec-select-facility" id="toc-sec-select-facility">Step 1: Search and Select a Facility</a></li>
+  <li><a href="#sec-configure-filters" id="toc-sec-configure-filters">Step 2: Configure Filters</a>
+  <ul>
+  <li><a href="#sec-npdes-forms" id="toc-sec-npdes-forms">NPDES Forms</a></li>
+  <li><a href="#sec-water-type-filter" id="toc-sec-water-type-filter">Water Classifications</a></li>
+  </ul></li>
+  <li><a href="#sec-fetch-dmr" id="toc-sec-fetch-dmr">Step 3: Fetch DMR Data</a></li>
+  <li><a href="#sec-data-overview" id="toc-sec-data-overview">Step 4: Review the Data Overview</a></li>
+  <li><a href="#sec-needs-attention" id="toc-sec-needs-attention">Step 4b: Resolve Parameters Needing Attention</a></li>
+  <li><a href="#sec-analysis-settings" id="toc-sec-analysis-settings">Step 5: Configure Analysis Settings</a>
+  <ul>
+  <li><a href="#sec-dilution-ratio" id="toc-sec-dilution-ratio">Dilution Ratio</a></li>
+  <li><a href="#sec-cl-percentile" id="toc-sec-cl-percentile">Confidence Level and Target Percentile</a></li>
+  <li><a href="#sec-hardness-settings" id="toc-sec-hardness-settings">Hardness Settings (Class SD only)</a></li>
+  <li><a href="#sec-ph-temp-settings" id="toc-sec-ph-temp-settings">pH and Temperature (for TAN, Class SD only)</a></li>
+  </ul></li>
+  <li><a href="#sec-append-dmr" id="toc-sec-append-dmr">Step 6: Append Local DMR Data (Optional)</a></li>
+  <li><a href="#sec-run-rp" id="toc-sec-run-rp">Step 7: Run the RP Analysis</a></li>
+  </ul></li>
+  <li><a href="#sec-standalone-workflow" id="toc-sec-standalone-workflow">Standalone Workflow</a></li>
+  <li><a href="#sec-findings" id="toc-sec-findings">The Findings Page</a>
+  <ul>
+  <li><a href="#sec-quick-stats" id="toc-sec-quick-stats">Quick Stats</a></li>
+  <li><a href="#sec-inspector-plot" id="toc-sec-inspector-plot">The Interactive Inspector Plot</a></li>
+  <li><a href="#sec-summary-table" id="toc-sec-summary-table">The RP Summary Table</a></li>
+  <li><a href="#sec-do-plot" id="toc-sec-do-plot">Direct-Comparison Plots and the Dissolved-Oxygen Case</a></li>
+  <li><a href="#sec-log-axis" id="toc-sec-log-axis">Log Axis and Non-Detects</a></li>
+  </ul></li>
+  <li><a href="#sec-report" id="toc-sec-report">Report Generation</a>
+  <ul>
+  <li><a href="#sec-download-options" id="toc-sec-download-options">Download Options</a></li>
+  <li><a href="#sec-report-contents" id="toc-sec-report-contents">Report Contents</a></li>
+  </ul></li>
+  <li><a href="#sec-methodology" id="toc-sec-methodology">Methodology</a>
+  <ul>
+  <li><a href="#sec-statistical-approach" id="toc-sec-statistical-approach">The Statistical Projection Approach (TSD Section 3.3.2)</a>
+  <ul>
+  <li><a href="#sec-mf" id="toc-sec-mf">The Multiplying Factor</a></li>
+  <li><a href="#sec-rwc" id="toc-sec-rwc">The Receiving Water Concentration</a></li>
+  <li><a href="#sec-mf-example" id="toc-sec-mf-example">Worked Example</a></li>
+  </ul></li>
+  <li><a href="#sec-direct" id="toc-sec-direct">Direct-Comparison Parameters</a>
+  <ul>
+  <li><a href="#sec-ph" id="toc-sec-ph">pH</a></li>
+  <li><a href="#sec-temperature" id="toc-sec-temperature">Temperature</a></li>
+  <li><a href="#sec-do" id="toc-sec-do">Dissolved Oxygen</a></li>
+  <li><a href="#sec-color-turbidity" id="toc-sec-color-turbidity">Color and Turbidity</a></li>
+  <li><a href="#sec-entero" id="toc-sec-entero">Enterococci</a></li>
+  <li><a href="#sec-oil" id="toc-sec-oil">Oil &amp; Grease</a></li>
+  <li><a href="#sec-surfactants" id="toc-sec-surfactants">Surfactants (MBAS)</a></li>
+  </ul></li>
+  <li><a href="#sec-metals" id="toc-sec-metals">Hardness-Dependent Metal Criteria</a></li>
+  <li><a href="#sec-tan" id="toc-sec-tan">Total Ammonia Nitrogen (TAN)</a></li>
+  </ul></li>
+  <li><a href="#sec-interpretation" id="toc-sec-interpretation">Interpreting Results and Common Cases</a>
+  <ul>
+  <li><a href="#sec-multi-class" id="toc-sec-multi-class">Multiple Water Classes Selected</a></li>
+  <li><a href="#sec-interpret-depends" id="toc-sec-interpret-depends">Metals with Hardness = Range (Class SD)</a></li>
+  <li><a href="#sec-interpret-direct-depends" id="toc-sec-interpret-direct-depends">Direct-Comparison Parameters Returning DEPENDS</a></li>
+  <li><a href="#sec-interpret-units" id="toc-sec-interpret-units">Unit Conversion Issues</a></li>
+  <li><a href="#sec-interpret-unit-sanity" id="toc-sec-interpret-unit-sanity">Reading a Log-Scale Plot</a></li>
+  <li><a href="#sec-interpret-nodata" id="toc-sec-interpret-nodata">No Data for a Parameter</a></li>
+  <li><a href="#sec-prior-limits" id="toc-sec-prior-limits">Prior Limits in the Quick Stats Panel</a></li>
+  </ul></li>
+  <li><a href="#sec-appendix-npdes" id="toc-sec-appendix-npdes">Appendix A: NPDES Application Forms and Pollutants</a></li>
+  <li><a href="#sec-appendix-refs" id="toc-sec-appendix-refs">Appendix B: Technical References</a></li>
+  <li><a href="#sec-appendix-glossary" id="toc-sec-appendix-glossary">Appendix C: Glossary</a></li>
+  </ul>
+</nav>
+<section id="sec-overview" class="level1">
+<h1>Overview</h1>
+<p>The <strong>Puerto Rico Reasonable Potential (RP) Calculator</strong> is a web-based application designed to support EPA Region 2 permit writers in determining whether reasonable potential (RP) exists for an NPDES-permitted discharge to cause or contribute to an exceedance of Puerto Rico’s water quality standards (WQS). The application automates the most data-intensive steps of the RP analysis: retrieving effluent monitoring data from a local copy of EPA’s ICIS-NPDES database, aligning those data with the applicable Puerto Rico WQS, performing the statistical projection described in the EPA Technical Support Document for Water Quality-Based Toxics Control (TSD, 1991) where appropriate, and generating a documented, reproducible PDF report.</p>
+<p>The application is scoped to <strong>Puerto Rico NPDES permits</strong> and references the <strong>Puerto Rico Water Quality Standards Regulation (PRWQSR), as amended April 2025</strong> (DNER Resolution R-25-006). All numeric criteria, water classifications, and hardness-dependent metal limits applied by the app are drawn directly from that regulation.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Where the data come from.</strong> The app does not call a live web service at analysis time. A companion script (<code>refresh_db.R</code>) pulls PR/VI facility and DMR records from the ICIS-NPDES Oracle database on a weekly schedule and writes them to a local SQLite file (<code>data/pr_rp.sqlite</code>) that the app reads. This makes the app fast and reproducible: two analyses run against the same weekly snapshot return the same result. The refresh date therefore bounds how current the data can be.</p>
+</div>
+</div>
+<section id="sec-what-it-does" class="level2">
+<h2>What the App Does</h2>
+<p>For each pollutant and outfall combination at a selected facility, the app:</p>
+<ol type="1">
+<li>Retrieves the DMR values whose <strong>reporting statistic</strong> matches what each criterion is written against — the maximum for most ceiling criteria, the minimum for floor criteria such as dissolved oxygen and pH, and the geometric mean or 90th percentile for interval-based bacteria criteria — or accepts locally supplied data</li>
+<li>Checks reported units against the WQS unit and converts where a conversion is defined</li>
+<li>For criteria evaluated by statistical projection, calculates a <strong>Receiving Water Concentration (RWC)</strong> using the multiplying factor (MF) method from TSD Section 3.3.2</li>
+<li>For criteria evaluated by direct comparison, compares the appropriate observed statistic to the criterion with no multiplying factor and no dilution</li>
+<li>Compares the result to the applicable criterion from the PRWQSR for each selected water classification and returns a <strong>YES / NO / DEPENDS</strong> RP determination for each pollutant × outfall × water class combination</li>
+<li>Generates a PDF report — and optionally a ZIP package with supporting data — that documents all inputs, settings, and findings</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Not every criterion is a ceiling.</strong> Earlier versions of the app treated every criterion as a maximum-concentration ceiling to be projected through the TSD multiplying factor. That is correct for most pollutants but wrong for several important ones — dissolved oxygen (a floor), Enterococci (interval statistics), color and turbidity (direct comparison), oil &amp; grease (narrative), and pH and temperature. Each crosswalk row now declares its own evaluation semantics, so the app applies the right test to each parameter. <a href="#sec-direct" class="quarto-xref">Section 8.2</a> describes the parameters that are evaluated by direct comparison rather than projection.</p>
+</div>
+</div>
+</section>
+<section id="sec-limitations" class="level2">
+<h2>What the App Does Not Replace</h2>
+<p>The app is an analytical aid, not a substitute for permit writer judgment. It does not:</p>
+<ul>
+<li>Perform whole effluent toxicity (WET) analysis</li>
+<li>Calculate waste load allocations (WLAs) or mixing zone analyses</li>
+<li>Account for background receiving water concentrations</li>
+<li>Evaluate narrative water quality criteria beyond a simple detection screen</li>
+<li>Perform a Streeter-Phelps dissolved-oxygen analysis (see <a href="#sec-do" class="quarto-xref">Section 8.2.3</a>)</li>
+<li>Replace the fact sheet or other permit development documentation requirements</li>
+</ul>
+<p>When the app returns a YES RP finding, the permit writer must still determine the appropriate effluent limitation based on the applicable water quality standard, the dilution ratio, and any mixing zone authorization. When it returns NO, that finding is based on the statistical projection or direct comparison alone and should be considered alongside other factors described in 40 CFR 122.44(d)(1). A <strong>DEPENDS</strong> finding means an excursion was not observed but the absence of one cannot, by itself, rule out reasonable potential for that parameter (see <a href="#sec-interpret-depends" class="quarto-xref">Section 9.2</a> and <a href="#sec-direct" class="quarto-xref">Section 8.2</a>).</p>
+<hr />
+</section>
+</section>
+<section id="sec-background" class="level1">
+<h1>Regulatory Background</h1>
+<section id="sec-rp-background" class="level2">
+<h2>Reasonable Potential Under the Clean Water Act</h2>
+<p>Under 40 CFR 122.44(d)(1)(i), NPDES permits must include effluent limits for pollutants that are or may be discharged at levels that will cause, have the reasonable potential to cause, or contribute to an excursion above any applicable water quality standard. Determining whether a discharge has “reasonable potential” is therefore a required step in permit development for any parameter that is monitored at an outfall.</p>
+<p>EPA’s 1991 Technical Support Document for Water Quality-Based Toxics Control (TSD) provides the recommended methodology for making this determination using effluent monitoring data. The core question is whether the upper bound of the expected effluent concentration distribution, projected into the receiving water accounting for dilution, could exceed the applicable criterion. The statistical approach in the TSD uses the coefficient of variation (CV) of the effluent data and the number of samples to construct this projection, with the lognormal distribution used as the basis for the multiplying factors.</p>
+</section>
+<section id="sec-prwqs" class="level2">
+<h2>The Puerto Rico Water Quality Standards Regulation</h2>
+<p>The PRWQSR, administered by Puerto Rico’s Department of Natural and Environmental Resources (DNER), establishes the water quality standards that NPDES permits in Puerto Rico must protect. The regulation classifies Puerto Rico’s waters by designated use and sets numeric criteria for a wide range of pollutants. The 2025 amendment (Resolution R-25-006, effective June 27, 2025) is the currently applicable version.</p>
+<p>The standards that drive RP determinations fall into several categories as implemented in the app:</p>
+<ul>
+<li><strong>Fixed numeric criteria</strong> — a single concentration limit for a given pollutant and water classification (e.g., arsenic in Class SB at 36 µg/L)</li>
+<li><strong>Hardness-dependent criteria</strong> — applicable to seven metals in Class SD waters; the criterion is computed from the receiving water hardness using regression equations specified in Rule 1303.1(J)(1) (see <a href="#sec-metals" class="quarto-xref">Section 8.3</a>)</li>
+<li><strong>Condition-dependent criteria</strong> — applicable to Total Ammonia Nitrogen (TAN) in Class SD waters; the criterion varies with receiving water pH and temperature as specified in Rule 1303.2(C)(2)(l) (see <a href="#sec-tan" class="quarto-xref">Section 8.4</a>)</li>
+<li><strong>Range and floor criteria</strong> — pH must stay within a range, and dissolved oxygen must stay above a floor. These are evaluated by direct comparison, not projection (see <a href="#sec-direct" class="quarto-xref">Section 8.2</a>)</li>
+<li><strong>Interval and narrative criteria</strong> — Enterococci criteria are frequency- and interval-based statistics, and oil &amp; grease is a narrative “substantially free from” standard (see <a href="#sec-entero" class="quarto-xref">Section 8.2.5</a> and <a href="#sec-oil" class="quarto-xref">Section 8.2.6</a>)</li>
+</ul>
+<p>Three Class SD parameters — total nitrogen, total phosphorus, and selenium — carry <strong>separate criteria depending on whether the receiving water is a stream or a reservoir/lake</strong>. The app reports these as distinct water-class lines (e.g., <em>class SD waters — stream</em> vs <em>class SD waters — reservoir/lake</em>) so the permit writer can see which receiving-water type drives a finding.</p>
+</section>
+<section id="sec-classifications" class="level2">
+<h2>Water Classifications Relevant to NPDES Permitting</h2>
+<p>The PRWQSR classifies Puerto Rico’s waters into several categories. The app includes the four classifications most relevant to NPDES point source discharges. Understanding these classifications is important because the applicable criterion — and therefore the RP determination — differs by classification.</p>
+<p><strong>Class SB — Coastal and Estuarine Waters</strong> Class SB encompasses all coastal and estuarine waters of Puerto Rico not designated as the more protective Class SA (which includes the bioluminescent lagoons and other waters of exceptional ecological value where point source discharges are not permitted). Class SB extends from mean sea level to a maximum of approximately 10.35 miles offshore and includes associated wetlands. Designated uses include primary and secondary contact recreation, and propagation and maintenance of desirable species including threatened and endangered species. Most NPDES-permitted facilities discharging to coastal waters in Puerto Rico discharge to Class SB receiving waters.</p>
+<p><strong>Class SD — Surface Waters</strong> Class SD covers all surface waters of Puerto Rico — streams, rivers, lakes, reservoirs, and inland water bodies — except those designated as the more protective Class SE (Laguna Tortuguero and Laguna Cartagena). Designated uses include use as a raw source of public water supply, propagation and maintenance of desirable species, and primary and secondary contact recreation. Class SD criteria are generally more stringent than Class SB for most parameters because of the drinking water supply designation. Several criteria under Class SD depend on receiving water hardness (for metals) or on pH and temperature (for TAN), and a few distinguish stream from reservoir/lake receiving waters.</p>
+<p><strong>Class SG — Ground Waters</strong> Class SG includes all ground waters of Puerto Rico, including those that discharge into coastal, surface, and estuarine waters. Designated uses are drinking water supply and agricultural use including irrigation. Ground water criteria are typically the drinking water (DW) or human health (HH) values, whichever is more stringent given the receiving water body into which the ground water flows.</p>
+<p><strong>Surface Waters (general)</strong> In the app’s water type filter, “Surface Waters” maps to the PRWQSR’s general surface water standards (Rule 1303.1) that apply across all surface water classifications, as distinct from the class-specific criteria under Rule 1303.2. The general standards include temperature, asbestos, radium-226, strontium-90, gross beta, and oil &amp; grease.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Selecting water classifications in the app:</strong> The water classification selection determines which WQS rows from the crosswalk are active for both data filtering and RP comparison. Selecting multiple classifications produces RP determinations for each class independently — the app reports a “worst-case” RP across all selected classes, as well as the per-class breakdown. The general-standard parameters (temperature, oil &amp; grease, and the others listed above) appear <strong>only</strong> when “Surface Waters” or “All” is selected — narrowing to a single specific class will not pull them in. When in doubt about which classification applies to a receiving water body, consult the PRWQSR classification maps (Rule 1302) or contact the DNER Water Quality Program.</p>
+</div>
+</div>
+<hr />
+</section>
+</section>
+<section id="sec-getting-started" class="level1">
+<h1>Getting Started</h1>
+<section id="sec-workflows" class="level2">
+<h2>Two Workflows at a Glance</h2>
+<p>The app offers two entry points depending on whether the facility appears in the local ICIS-NPDES database.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>NPDES Workflow</strong></th>
+<th><strong>Standalone Workflow</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Best for</strong></td>
+<td>Existing permitted facilities</td>
+<td>New permits, reissuances with no prior ID, or supplementing the database with local measurements</td>
+</tr>
+<tr class="even">
+<td><strong>Data source</strong></td>
+<td>Local ICIS-NPDES database (weekly refresh)</td>
+<td>User-supplied CSV using the app’s template</td>
+</tr>
+<tr class="odd">
+<td><strong>Requires</strong></td>
+<td>NPDES permit ID</td>
+<td>Completed DMR template</td>
+</tr>
+<tr class="even">
+<td><strong>Can supplement with local data</strong></td>
+<td>Yes — via the Append DMR function</td>
+<td>N/A — local data is the primary source</td>
+</tr>
+</tbody>
+</table>
+<p>Both workflows share the same Analysis Settings, Findings, and Report pages. The only difference is how effluent data are loaded.</p>
+</section>
+<section id="sec-navigation" class="level2">
+<h2>Navigating the App</h2>
+<p>The app uses a single-page layout with page routing. A persistent top bar appears on every page with a <strong>← Back to Start</strong> button (returns to the landing page) and a <strong>User Guide</strong> button (opens this document in a modal window). Within each page you also move using contextual buttons (e.g., “← Back to Search,” “← Back to Settings,” “Return Home”).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/landing.png" class="img-fluid" /></p>
+<figcaption>Landing page with “Connect to ICIS-NPDES” and “Standalone Calculator” workflow cards, and User Guide button in top right</figcaption>
+</figure>
+</div>
+<hr />
+</section>
+</section>
+<section id="sec-npdes-workflow" class="level1">
+<h1>NPDES Workflow</h1>
+<p>Use this workflow when the facility has an active NPDES permit and effluent monitoring data available in the local ICIS-NPDES database.</p>
+<section id="sec-select-facility" class="level2">
+<h2>Step 1: Search and Select a Facility</h2>
+<p>Click <strong>Connect to ICIS-NPDES</strong> on the landing page. This opens the facility selection page, which loads the list of NPDES permits for Puerto Rico from the local ICIS-NPDES database at application startup.</p>
+<p>Use the <strong>Search Permit ID or Facility Name</strong> box to find the facility of interest. You can type either the NPDES ID (e.g., <code>PR0001031</code>) or any part of the facility name — the search is case-insensitive and matches partial strings. Select the facility from the dropdown.</p>
+<p>Once a facility is selected:</p>
+<ul>
+<li>The <strong>map</strong> displays a marker at the facility’s reported latitude/longitude from the facility record in the local database</li>
+<li>The <strong>Facility Details</strong> table displays key permit attributes from that facility record</li>
+<li>The <strong>Settings</strong> panel and <strong>Fetch DMR Data</strong> button become visible</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/select_permit.png" class="img-fluid" /></p>
+<figcaption>Facility selection page showing the search box, map with marker, and Facility Details table</figcaption>
+</figure>
+</div>
+<p>Set the <strong>date range</strong> for DMR retrieval using the Start Date and End Date inputs. The default range is the five years prior to today’s date, which is appropriate for most permit reissuances. The date range controls which DMR records are pulled from the database — it does not filter the facility list.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Selections persist within your session:</strong> If you navigate away from the search page and return — for example, to revise a search — your permit ID, date range, NPDES forms, and water classification are retained. These reset only when the app is restarted. Analysis Settings on the Summary page (hardness, pH, temperature, dilution ratio, confidence level) are not persisted, because they re-select naturally when a different permit is fetched.</p>
+</div>
+</div>
+</section>
+<section id="sec-configure-filters" class="level2">
+<h2>Step 2: Configure Filters</h2>
+<p>Before fetching data, configure the two filters that control which parameters are highlighted and which WQS criteria are in scope.</p>
+<section id="sec-npdes-forms" class="level3">
+<h3>NPDES Forms</h3>
+<p>Select one or more <strong>NPDES application forms</strong> from the multi-select dropdown. NPDES applications require permittees to report specific pollutants depending on the type of facility and the nature of the discharge. The forms available in the app correspond to the standard EPA application forms:</p>
+<ul>
+<li><strong>Form 2A</strong> — New and existing publicly owned treatment works (POTWs)</li>
+<li><strong>Form 2B</strong> — Concentrated Animal Feeding Operations (CAFOs)</li>
+<li><strong>Form 2C</strong> — Existing manufacturing, commercial, mining, and silviculture facilities</li>
+<li><strong>Form 2D</strong> — New manufacturing, commercial, mining, and silviculture facilities</li>
+<li><strong>Form 2E</strong> — Facilities that do not discharge process wastewater</li>
+</ul>
+<p>The form selection defines the <strong>universe of pollutants</strong> expected to be reported for the facility — this determines which pollutants are highlighted in the Data Overview (Coverage Summary) table, and it drives the <em>Reason Included</em> line in the report.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Form selection is a display filter, not an analysis filter.</strong> Form selection no longer removes parameters from the calculation. Any parameter that has DMR data and an applicable WQS criterion is evaluated for RP regardless of its form association. Parameters not associated with a selected form are labeled <em>Not in selected forms</em> in the Coverage Summary’s Form column but are still included in the analysis. This change prevents the old failure mode where a parameter with a real criterion silently dropped out because it was not tied to the selected form.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Selecting the right form:</strong> If you are unsure which form applies, refer to the facility’s permit application or its permit record. Most municipal wastewater treatment plants use Form 2A. Most industrial and manufacturing dischargers use Form 2C or 2D. When multiple forms apply (e.g., a POTW receiving industrial pretreatment discharges), select all applicable forms.</p>
+</div>
+</div>
+</section>
+<section id="sec-water-type-filter" class="level3">
+<h3>Water Classifications</h3>
+<p>Select one or more <strong>water classifications</strong> from the multi-select dropdown. The choices correspond to Puerto Rico’s PRWQSR classifications described in <a href="#sec-classifications" class="quarto-xref">Section 2.3</a>:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Selection</th>
+<th>Maps to PRWQSR Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All</td>
+<td>All classes in the crosswalk</td>
+</tr>
+<tr class="even">
+<td>Class SB</td>
+<td>Class SB coastal and estuarine waters</td>
+</tr>
+<tr class="odd">
+<td>Class SD</td>
+<td>Class SD surface waters (including drinking water subclass)</td>
+</tr>
+<tr class="even">
+<td>Class SG</td>
+<td>Class SG ground waters</td>
+</tr>
+<tr class="odd">
+<td>Surface Waters</td>
+<td>General surface water standards (Rule 1303.1)</td>
+</tr>
+</tbody>
+</table>
+<p>These selections determine which WQS criteria rows are active for comparison. When multiple classifications are selected, the app performs the RP comparison independently for each class and reports the worst-case result. Select <strong>All</strong> to evaluate against every applicable standard in the crosswalk — appropriate when the receiving water classification is uncertain or when you want to be comprehensive.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Class SD and conditional criteria:</strong> If <strong>Class SD</strong> is selected, the conditional receiving water inputs panel appears (see <a href="#sec-hardness-settings" class="quarto-xref">Section 4.6.3</a>). You will need to provide a hardness value or choose the range analysis option, and pH and temperature for TAN, before running RP. This panel is only shown for Class SD because the hardness-dependent metal criteria and the TAN criterion are specific to Class SD surface waters under the PRWQSR.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-fetch-dmr" class="level2">
+<h2>Step 3: Fetch DMR Data</h2>
+<p>Click <strong>Fetch DMR Data</strong>. The app queries the local ICIS-NPDES database for effluent monitoring records matching the selected permit ID and date range, then applies the following processing steps automatically:</p>
+<p><strong>Statistic tagging:</strong> Each DMR record is tagged with a semantic statistic token (daily maximum, daily minimum, geometric mean, 90th percentile, or average) derived from its ICIS statistical-base code. This is what lets the app keep the right records for each criterion — the minimum for a floor parameter, the geometric mean for a bacteria criterion — instead of keeping only maximums. A parameter with data but no matching criterion is retained rather than discarded, so it can be surfaced on the Needs Attention tab (see <a href="#sec-needs-attention" class="quarto-xref">Section 4.5</a>) rather than vanishing silently.</p>
+<p><strong>NODI code handling:</strong> Records with NODI codes B (“no discharge”) or Q (“no discharge this period”) are set to a value of zero. This is consistent with the approach in the TSD — a period of no discharge represents a zero concentration and should be included in the sample set. Records with other NODI codes that prevent a numeric value from being reported are excluded.</p>
+<p><strong>Unit detection and filling:</strong> DMR reports occasionally omit unit labels for individual records, particularly for NODI-coded rows. The app fills missing units by using the most frequently reported unit for that parameter across the permit’s records, falling back to the WQS unit hint from the crosswalk if all records for the parameter have missing units.</p>
+<p><strong>Unit conversion:</strong> Each reported value is checked against the WQS unit for its parameter. The converter handles concentration conversions (µg/L ↔︎ mg/L, ng/L → µg/L or mg/L, ppm → mg/L or µg/L), recognizes several units that are written differently but mean the same thing (e.g., ICIS long-form bacteria and color units), and converts Fahrenheit to Celsius for temperature. Mass-load and flow units (e.g., kg/day, MGD) are <strong>excluded</strong> from the WQS comparison by design rather than treated as errors, because a load cannot be compared to a concentration criterion. When a parameter has no WQS criterion for the selected water class, its records are flagged <strong>NO WQS</strong>. A genuinely unrecognized unit is flagged <strong>FAIL</strong> and the value is retained at face value. Every status is shown in the Coverage Summary and carried into the report (see <a href="#sec-data-overview" class="quarto-xref">Section 4.4</a>).</p>
+<p>After a successful fetch, the app navigates to the <strong>Summary (Data Overview) page</strong>.</p>
+</section>
+<section id="sec-data-overview" class="level2">
+<h2>Step 4: Review the Data Overview</h2>
+<p>The Data Overview page displays the <strong>Coverage Summary</strong> table, which lists the pollutants relevant to this analysis — those associated with the selected NPDES forms plus any additional parameters that have DMR data — alongside a count of available DMR samples and a unit conversion status indicator. Parameters not associated with a selected form are marked <em>Not in selected forms</em> in the Form column.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/review.png" class="img-fluid" /></p>
+<figcaption>Summary page showing the Coverage Summary table with unit status column</figcaption>
+</figure>
+</div>
+<p><strong>Understanding the Coverage Summary columns:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pollutant</td>
+<td>NPDES pollutant name from the form crosswalk</td>
+</tr>
+<tr class="even">
+<td>Form</td>
+<td>The NPDES application form(s) that require this pollutant, or <em>Not in selected forms</em></td>
+</tr>
+<tr class="odd">
+<td>Ref Param</td>
+<td>The DMR parameter code(s) matched to this pollutant in the crosswalk</td>
+</tr>
+<tr class="even">
+<td># Samples</td>
+<td>Count of qualifying DMR records retrieved for this permit and date range</td>
+</tr>
+<tr class="odd">
+<td>Unit Status</td>
+<td>Result of the unit conversion check (see below)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Unit Status values:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Status</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MATCH</td>
+<td>Reported units already match the WQS unit (including recognized aliases) — no conversion needed</td>
+<td>None required</td>
+</tr>
+<tr class="even">
+<td>PASS</td>
+<td>Units differed but a multiplicative or temperature conversion was successfully applied</td>
+<td>Conversion is shown in the report</td>
+</tr>
+<tr class="odd">
+<td>FAIL (Partial)</td>
+<td>Some eligible records converted successfully but others could not</td>
+<td>Proceed with caution; non-convertible records are dropped from the RP calculation</td>
+</tr>
+<tr class="even">
+<td>FAIL</td>
+<td>No eligible record could be converted to the WQS unit (unrecognized unit)</td>
+<td>Investigate the DMR data; values are retained at face value but dropped from RP</td>
+</tr>
+<tr class="odd">
+<td>EXCLUDED</td>
+<td>Every record is a mass-load or flow unit (e.g., kg/day, MGD)</td>
+<td>Informational — these cannot be compared to a concentration criterion and are excluded by design</td>
+</tr>
+<tr class="even">
+<td>NO WQS</td>
+<td>No WQS criterion exists for this parameter in the selected water class</td>
+<td>Informational — see the <strong>Needs Attention</strong> tab to add a manual criterion if appropriate</td>
+</tr>
+<tr class="odd">
+<td>NO DATA</td>
+<td>Parameter is in the crosswalk but had no DMR records</td>
+<td>Informational — nothing to evaluate</td>
+</tr>
+</tbody>
+</table>
+<p>EXCLUDED, NO WQS, and NO DATA are informational, not errors, and are color-coded distinctly (grey / blue-grey / light-grey) from the FAIL states (red / orange). A FAIL or FAIL (Partial) status does not prevent the analysis from running, but it means that some or all values for that parameter may be in the wrong units. Before proceeding, verify the DMR data in the source ICIS-NPDES record for any parameters showing a FAIL status — the issue is often a data entry error in the original submission.</p>
+</section>
+<section id="sec-needs-attention" class="level2">
+<h2>Step 4b: Resolve Parameters Needing Attention</h2>
+<p>The Summary page has three tabs: <strong>Data Overview</strong> (the Coverage Summary described above), <strong>⚠ Needs Attention</strong>, and <strong>WQS Reference</strong>.</p>
+<p>The <strong>Needs Attention</strong> tab lists any parameter that has DMR data but no usable WQS criterion for the selected water class. Each flagged parameter is shown in an orange-bordered card with the reason it was flagged:</p>
+<ul>
+<li><strong>Wrong water class</strong> — a WQS criterion exists for this parameter, but not for the class(es) you selected.</li>
+<li><strong>No crosswalk entry</strong> — the parameter code has no WQS entry at all.</li>
+<li><strong>Missing criterion value</strong> — a crosswalk entry exists but its value is blank.</li>
+<li><strong>Reported statistic does not match criterion</strong> — the parameter matches a criterion, but its DMR data reports only a statistic the criterion is not written against (for example, a daily maximum reported against a geometric-mean criterion). This is a matched code, so it is added to the flagged set rather than dropped.</li>
+</ul>
+<p>For each flagged parameter you choose <strong>Include with manual WQS</strong> or <strong>Exclude from analysis</strong> using the radio buttons. To include a parameter, fill in the manual-entry fields: a <strong>Criterion Value</strong>, a <strong>Unit</strong> (limited to units the converter can handle), a <strong>Criterion Type</strong> (e.g., <em>Aquatic Life – Acute</em>), a <strong>Criterion Direction</strong>, the <strong>Water Class(es)</strong> it applies to, and a required <strong>Basis / Notes</strong> field. To exclude a parameter, provide a required reason. Included parameters are injected as manual criteria when you run the analysis; excluded parameters are recorded in the report’s <em>Excluded Parameters</em> section for the permanent record.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Criterion Direction — ceiling vs floor.</strong> The direction selector offers <em>Ceiling — shall not exceed (&gt;)</em> and <em>Floor — shall not fall below (&lt;)</em>. This matters because a hand-entered floor standard (a dissolved-oxygen-style minimum) would otherwise be treated as a ceiling and projected incorrectly. A floor entry is evaluated by direct comparison against the observed <strong>minimum</strong>, and a value exactly on the criterion is treated as compliant (the comparison is a strict inequality). Known parameters re-added by hand inherit their built-in profile — a direct parameter stays direct — so the direction selector governs genuinely new parameters.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Green alias hints.</strong> Some cards show a green <strong>Hint</strong> pointing to the code and value that applies — for example, when the criterion for an analyte lives under a synonym parameter code that differs from the one the permittee reported. The hint tells you which criterion ID and value to enter rather than making you hunt for it. Use the <strong>WQS Reference</strong> tab — a read-only, searchable view of the full crosswalk — to confirm criterion IDs and values before entering a manual criterion.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Run RP is gated on resolution.</strong> The <strong>Run RP Analysis</strong> button stays disabled until every flagged parameter has an Include/Exclude decision. If you need to proceed without resolving them, use the red <strong>⚡ Quick Run (Drop Unresolved)</strong> button — it auto-excludes all unresolved parameters and stamps a prominent “preliminary report” warning on the generated report so the omission is on the permanent record.</p>
+</div>
+</div>
+<p>Parameters that don’t require resolution are never flagged: hardness-dependent metals and TAN (whose criteria are computed at run time from your hardness, pH, and temperature inputs) are treated as matched, and parameters reported only in mass-load or flow units are dropped from the flag pass because they can never be compared to a concentration criterion.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/needs_attention.png" class="img-fluid" /></p>
+<figcaption>The Needs Attention tab with a flagged parameter expanded, showing the Include/Exclude radio, Criterion Direction dropdown, manual-entry fields, and a green code-alias Hint</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-analysis-settings" class="level2">
+<h2>Step 5: Configure Analysis Settings</h2>
+<p>The left panel of the Summary page contains the Analysis Settings. These control the statistical and receiving water parameters used in the RWC and RP calculations. A full description of the methodology behind each setting is provided in <a href="#sec-methodology" class="quarto-xref">Section 8</a>.</p>
+<section id="sec-dilution-ratio" class="level3">
+<h3>Dilution Ratio</h3>
+<p>The <strong>Dilution Ratio</strong> (DR) is the ratio of the total flow at the edge of the mixing zone (effluent plus receiving water) to the effluent flow alone. It represents the degree to which the discharge is diluted by the receiving water at the point of compliance. The default value is 1, which means no dilution is assumed — the effluent concentration itself is compared to the WQS criterion. This is the conservative default and is appropriate when:</p>
+<ul>
+<li>No mixing zone has been authorized</li>
+<li>Dilution data are unavailable</li>
+<li>The receiving water is intermittent or has negligible flow relative to the discharge</li>
+</ul>
+<p>If a mixing zone authorization exists or a dilution analysis has been performed, enter the appropriate dilution ratio here. Values greater than 1 reduce the RWC and make an RP finding less likely. The dilution ratio applies only to projected criteria; direct-comparison parameters (<a href="#sec-direct" class="quarto-xref">Section 8.2</a>) do not use it. The dilution ratio is captured in the report.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Dilution ratio and mixing zones:</strong> A dilution ratio greater than 1 implies that a mixing zone exists. Ensure that any mixing zone used here is either already authorized by DNER under Rule 1305 of the PRWQSR, or that you have an appropriate basis for the dilution value. Using an unsupported dilution ratio in the RP analysis may underestimate RP and result in a permit that does not adequately protect water quality.</p>
+</div>
+</div>
+</section>
+<section id="sec-cl-percentile" class="level3">
+<h3>Confidence Level and Target Percentile</h3>
+<p>These two parameters control the statistical projection used to compute the Multiplying Factor (MF) — see <a href="#sec-mf" class="quarto-xref">Section 8.1.1</a> for a full explanation.</p>
+<p><strong>Confidence Level (CL):</strong> The probability (a proportion between 0 and 1) that the highest observed value in the sample set exceeds the stated percentile of the underlying effluent distribution. The default is 0.95 (95%). EPA’s TSD presents lookup tables at both 95% and 99% confidence levels; the 95% level is the default used in most regional RP guidance.</p>
+<p><strong>Target Percentile:</strong> The upper bound of the effluent distribution that the projected RWC is designed to represent, expressed as a proportion. The default is 0.95 (95th percentile). Together with the confidence level, this defines how conservatively the projection treats variability in the effluent — a higher target percentile produces a larger MF and a more conservative RP determination.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Default settings:</strong> The defaults of 95% confidence level and 95th percentile target are consistent with EPA Region 2 guidance for RP determinations using existing DMR data. If regional or program-specific guidance specifies different values (e.g., 99%/99% for certain pollutant categories), adjust these settings accordingly. The values used are documented in the report.</p>
+</div>
+</div>
+</section>
+<section id="sec-hardness-settings" class="level3">
+<h3>Hardness Settings (Class SD only)</h3>
+<p>This panel appears only when <strong>Class SD</strong> is selected as a water classification. It controls how the app handles the seven hardness-dependent metal criteria in the PRWQSR (see <a href="#sec-metals" class="quarto-xref">Section 8.3</a>).</p>
+<p><strong>Hardness value (mg/L as CaCO₃):</strong> Enter a numeric hardness value for the receiving water if a measured or estimated value is available. The app uses this value to compute the metal criterion from the hardness regression equations in Rule 1303.1(J)(1) and uses it directly in the RP comparison. The default is 100 mg/L as CaCO₃, a reasonable midrange value for Puerto Rico surface waters in the absence of site-specific data; use a measured value whenever possible. If no single hardness is appropriate, the range analysis option reports the criterion as a <strong>DEPENDS</strong> result with a critical-hardness annotation (see <a href="#sec-interpret-depends" class="quarto-xref">Section 9.2</a>).</p>
+</section>
+<section id="sec-ph-temp-settings" class="level3">
+<h3>pH and Temperature (for TAN, Class SD only)</h3>
+<p>These inputs appear within the Class SD conditional panel and are used for the Total Ammonia Nitrogen (TAN) RP evaluation (see <a href="#sec-tan" class="quarto-xref">Section 8.4</a>). The TAN criterion under Rule 1303.2(C)(2)(l) is a function of receiving water pH and temperature.</p>
+<p><strong>Use DMR data:</strong> If pH (parameter code 00400) and temperature (parameter code 00010) data are available in the DMR records, the app uses those values to compute a time-varying TAN limit — one for each monitoring period that has both a pH and temperature record. The RP determination for TAN is YES if the TAN RWC exceeds the criterion at any point in the monitoring record (the “ever crossed” rule). The mean TAN limit is shown in summary tables and plots for display purposes.</p>
+<p><strong>Override with fixed values:</strong> If the DMR does not include pH or temperature, or if you prefer to use design receiving water conditions, enter fixed pH and temperature values. The app uses these constant values to compute a single TAN limit for comparison against the TAN RWC.</p>
+<p><strong>Receiving Water pH (SU):</strong> Valid range 0–14. Default is 6.0 SU, which represents a slightly acidic condition and produces a more conservative (lower) TAN criterion. For context, Class SD waters have a pH standard of 6.0–9.0 SU (Rule 1303.2(C)(2)(d)).</p>
+<p><strong>Receiving Water Temperature (°C):</strong> Valid range 0–50 °C. Default is 30 °C, consistent with Puerto Rico’s thermal discharge standard of 30 °C (Rule 1303.1(D)(1)).</p>
+</section>
+</section>
+<section id="sec-append-dmr" class="level2">
+<h2>Step 6: Append Local DMR Data (Optional)</h2>
+<p>If you have effluent monitoring data that are not in the database — for example, data from a recent sampling event not yet submitted to EPA, or data from a non-standard monitoring program — you can append those records to the retrieved dataset before running the RP analysis.</p>
+<p><strong>Download the DMR Template:</strong> Click <strong>Download DMR Template</strong> to download a CSV file pre-populated with the parameter codes and expected WQS units for the selected facility and forms. The template includes one row per parameter code with blank value fields.</p>
+<p><strong>Complete the template:</strong> Fill in the following columns for each record you want to add:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>parameter_code</code></td>
+<td>5-digit DMR parameter code (pre-filled from crosswalk)</td>
+</tr>
+<tr class="even">
+<td><code>parameter_desc</code></td>
+<td>Parameter description (informational only)</td>
+</tr>
+<tr class="odd">
+<td><code>dmr_value_nmbr</code></td>
+<td>Observed concentration (numeric)</td>
+</tr>
+<tr class="even">
+<td><code>dmr_unit_desc</code></td>
+<td>Units for the reported value</td>
+</tr>
+<tr class="odd">
+<td><code>monitoring_period_end_date</code></td>
+<td>End date of the monitoring period (<code>YYYY-MM-DD</code> or <code>MM/DD/YYYY</code>)</td>
+</tr>
+<tr class="even">
+<td><code>perm_feature_nmbr</code></td>
+<td>Outfall identifier (e.g., <code>001</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Multiple rows can be added for a single parameter code — add one row per monitoring period per outfall. Save the file as a CSV.</p>
+<p><strong>Upload the completed template:</strong> Click <strong>Upload CSV to Append</strong> and select your completed file. The app validates the required columns, attempts unit conversion, and appends the records to the existing DMR dataset. A notification confirms the number of rows added.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Unit responsibility:</strong> When appending local data, you are responsible for ensuring that the units in <code>dmr_unit_desc</code> match what was actually measured. The app will attempt to convert to WQS units, but if the reported unit is not recognized, the value is retained at face value and flagged with a FAIL conversion status. Unit mismatches in appended data appear in the Coverage Summary table.</p>
+</div>
+</div>
+</section>
+<section id="sec-run-rp" class="level2">
+<h2>Step 7: Run the RP Analysis</h2>
+<p>Click <strong>Run RP Analysis</strong>. (This button is enabled once every flagged parameter has been resolved — see <a href="#sec-needs-attention" class="quarto-xref">Section 4.5</a>.) The app computes the RP determination for every parameter × outfall combination in the dataset using the settings configured in Step 5: projected criteria run through the RWC calculation, and direct-comparison criteria are tested against the appropriate observed statistic. When the calculation is complete, the app navigates to the <strong>Findings page</strong>.</p>
+<hr />
+</section>
+</section>
+<section id="sec-standalone-workflow" class="level1">
+<h1>Standalone Workflow</h1>
+<p>Use the Standalone Calculator when no NPDES ID exists (e.g., for a new permit application) or when you have local monitoring data and prefer not to retrieve data from the database.</p>
+<p>Click <strong>Standalone Calculator</strong> on the landing page. Download the DMR template, complete it with your monitoring data (the same columns described in <a href="#sec-append-dmr" class="quarto-xref">Section 4.7</a>), and upload it. Because standalone uploads have no ICIS statistical-base codes, every uploaded record is treated as a daily maximum unless the criterion it matches requires a different statistic; where a criterion needs a statistic your upload does not carry, the parameter is surfaced on the Needs Attention tab. From the upload onward, the Standalone workflow uses the same Analysis Settings, Findings, and Report pages as the NPDES workflow.</p>
+<hr />
+</section>
+<section id="sec-findings" class="level1">
+<h1>The Findings Page</h1>
+<p>After running the analysis, the Findings page presents the results. The left sidebar lets you select an <strong>Outfall</strong> and a <strong>Parameter/Pollutant</strong>, shows the <strong>Quick Stats</strong> panel for the current selection, and provides the <strong>Download Report</strong> button and <strong>Include Data in Download</strong> checkbox. Internal outfalls are shown in bold red in the selector and throughout the page so they are not mistaken for external outfalls.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/findings.png" class="img-fluid" /></p>
+<figcaption>Findings page overview showing sidebar with outfall/pollutant selectors and Quick Stats panel, and main tabbed plot area</figcaption>
+</figure>
+</div>
+<p>The main panel has two tabs: the <strong>Interactive Inspector</strong> (a plot plus a math inspector that shows the step-by-step calculation) and the <strong>RP Summary Table</strong>.</p>
+<section id="sec-quick-stats" class="level2">
+<h2>Quick Stats</h2>
+<p>The Quick Stats panel summarizes the selected outfall × pollutant. It shows the outfall, the sample count, the assessed value, any prior permit limit, the worst-case RP, and — when present — a criterion-specific note carried from the crosswalk.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/quick_stats.png" class="img-fluid" style="width:50.0%" /></p>
+<figcaption>Quick Stats panel showing Worst-case RP highlighted in red (YES), with per-class breakdown</figcaption>
+</figure>
+</div>
+<p>A few fields adapt to the type of criterion:</p>
+<ul>
+<li><strong>Max Value / Min Value.</strong> For ceiling criteria the panel shows the observed maximum; for floor criteria (dissolved oxygen, pH minimum) it shows the observed minimum, because the minimum is the compliance-relevant statistic.</li>
+<li><strong>RWC vs. Observed value.</strong> For projected criteria the panel shows the calculated <strong>RWC</strong>. For direct-comparison criteria it instead shows <em>Observed maximum</em> or <em>Observed minimum</em> with the note “(no RWC calculated),” so an observed value is never misread as dilution-adjusted.</li>
+<li><strong>Worst-case RP.</strong> Colored by result — YES (red), DEPENDS (amber), NO (green) — with a per-class breakdown listed below when more than one water class is selected.</li>
+<li><strong>Criterion note.</strong> When the crosswalk carries an <code>rp_note</code> for the parameter, it appears as a small cream-colored callout with a goldenrod left border (for example, the dissolved-oxygen Streeter-Phelps note or the Enterococci interval note).</li>
+</ul>
+<p><strong>Prior Limit</strong> shows the most recent numeric effluent limit from the DMR record for the selected parameter and outfall, sourced directly from the DMR’s limit fields — it reflects the limit as recorded in the prior permit, not a limit calculated by this app. It is provided as a reference point for comparing the current RP analysis to existing permit conditions.</p>
+</section>
+<section id="sec-inspector-plot" class="level2">
+<h2>The Interactive Inspector Plot</h2>
+<p>The Inspector plots the observed effluent values over time against the applicable criterion line(s). For projected parameters, a solid <strong>Calculated RWC</strong> line is also drawn. For direct-comparison parameters, no RWC line is drawn — the observations are compared directly to the dashed criterion line(s). Each water class selected draws its own dashed criterion line, and points are colored by reported unit.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/plot_inspector.png" class="img-fluid" /></p>
+<figcaption>Observed vs. WQS/RWC plot with WQS dashed lines, solid RWC line, and sample points colored by unit</figcaption>
+</figure>
+</div>
+<p>For hardness-dependent metals in Class SD with the range analysis active, the plot area gains a second tab, <strong>Hardness vs Limit</strong>, showing how the criterion varies with hardness and where the critical hardness falls.</p>
+</section>
+<section id="sec-summary-table" class="level2">
+<h2>The RP Summary Table</h2>
+<p>The <strong>RP Summary Table</strong> tab shows the full RP results for the selected outfall, with one row per pollutant × WQS criterion × water class combination. Columns include the outfall, WQS criterion ID, pollutant name, criterion value, unit, water class, the assessed value (RWC or observed extreme), and the RP determination. Rows are ordered by RP result — YES first, then DEPENDS, then NO — to surface the most critical findings.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/summary_table.png" class="img-fluid" /></p>
+<figcaption>RP Summary Table with YES rows highlighted at top, showing all columns</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-do-plot" class="level2">
+<h2>Direct-Comparison Plots and the Dissolved-Oxygen Case</h2>
+<p>Because a floor criterion reads “backwards” from a ceiling, the dissolved-oxygen plot is the clearest illustration of direct comparison: the criterion is a <strong>floor</strong> (a value below the line is the violation), and the observed minimum is what matters. The plot shows the DO observations against the 5.0 mg/L floor line, with the DO criterion note visible, and no Calculated RWC line (a DO analysis needs Streeter-Phelps inputs the app does not carry — see <a href="#sec-do" class="quarto-xref">Section 8.2.3</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/direct_do_plot.png" class="img-fluid" /></p>
+<figcaption>A dissolved-oxygen Inspector plot showing the criterion as a floor with observations near or below it, and the DO criterion note</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-log-axis" class="level2">
+<h2>Log Axis and Non-Detects</h2>
+<p>When the observed values sit far above a very small criterion, a linear axis collapses the criterion line onto zero and the plot looks blank. The app guards against this:</p>
+<ul>
+<li>When the observed maximum is <strong>100× the criterion or more</strong>, the y-axis switches to a log scale and the axis label gains “(log scale).” This is common and expected rather than a warning about the data. Bacteria counts span five or six orders of magnitude by nature, and human-health criteria for carcinogens are set far below any achievable laboratory quantitation limit — criteria in the crosswalk run down to <span class="math inline">\(5.1\times10^{-8}\)</span> µg/L for 2,3,7,8-TCDD, so any reported detection clears the threshold. A log axis simply keeps the criterion line and the observations visible in the same frame.</li>
+<li>Non-detects (NODI codes <strong>B</strong> and <strong>Q</strong>) are stored as a value of zero, and a log axis cannot display zero. On a log plot they are drawn as <strong>open downward triangles</strong> at a floor equal to the smallest positive value in the series, and the plot discloses that floor — in the axis label in the app, and in the figure caption in the PDF report. A triangle marks a value known only to be <em>below</em> the reporting limit; never read it as a measurement.</li>
+<li>If every observation is a non-detect, no positive value exists to compare against the criterion, so the plot stays on a linear axis and the points render normally at zero.</li>
+</ul>
+<p>Note that this ratio is <strong>not</strong> a units check. Reported units are reconciled against the criterion’s units before plotting (see <a href="#sec-interpret-units" class="quarto-xref">Section 9.4</a>), so a wide gap on the plot is not by itself evidence of a reporting error. The parameters that trigger the log axis most often — Enterococci, fecal coliform, sulfide, sulfate — are wide-range by nature, and the same log axis and non-detect markers are mirrored in the PDF report.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/log_axis_flag.png" class="img-fluid" /></p>
+<figcaption>A fecal coliform plot showing the log-scale y-axis and non-detects drawn as open downward triangles at the plotting floor</figcaption>
+</figure>
+</div>
+<hr />
+</section>
+</section>
+<section id="sec-report" class="level1">
+<h1>Report Generation</h1>
+<section id="sec-download-options" class="level2">
+<h2>Download Options</h2>
+<p>Click <strong>Download Report</strong> in the left sidebar of the Findings page. Two download formats are available:</p>
+<p><strong>PDF only (default):</strong> A single PDF report rendered from a Quarto template. The report documents all analysis inputs, settings, and findings in a format suitable for inclusion in a permit record.</p>
+<p><strong>PDF + Data (ZIP):</strong> Check the <strong>Include Data in Download</strong> checkbox before clicking Download Report. The app bundles the PDF together with:</p>
+<ul>
+<li><code>data.xlsx</code> — an Excel workbook with sheets for the summary findings, the full RP results table, the DMR records used in the analysis, and the NPDES forms coverage table</li>
+<li><code>README.txt</code> — a plain-text summary of the analysis settings and permit ID</li>
+</ul>
+<p>Use the ZIP option when you want to archive the underlying data alongside the report, or when the findings will be reviewed by others who need the raw numbers.</p>
+</section>
+<section id="sec-report-contents" class="level2">
+<h2>Report Contents</h2>
+<p>The PDF report includes:</p>
+<p><strong>Summary section:</strong> Permit ID, facility name, date range, NPDES forms, water classifications, dilution ratio, confidence level, target percentile, hardness setting, and the number of outfalls analyzed. If the report was produced by Quick Run with unresolved parameters, a prominent preliminary-report warning appears here.</p>
+<p><strong>RP Findings table:</strong> All results, ordered by severity (YES, then DEPENDS, then NO). A <strong>Basis</strong> column distinguishes “Calculated” (a projected RWC) from “Observed max/min” (a direct comparison), so an observed dissolved-oxygen minimum can’t be misread as dilution-adjusted.</p>
+<p><strong>Per-pollutant sections:</strong> One section per pollutant per outfall. Each section may include:</p>
+<ul>
+<li>An orange <strong>criterion note</strong> callout at the top of the section, carrying the criterion-specific guidance from the crosswalk (the DO Streeter-Phelps note, the Enterococci 90-day interval note, the temperature in-stream note, or the oil &amp; grease narrative note)</li>
+<li>A <em>Reason Included</em> line and, where applicable, a <em>Manual WQS Applied</em> callout</li>
+<li>For projected parameters, the step-by-step <strong>RWC Calculation</strong> (<span class="math inline">\(CV\)</span>, <span class="math inline">\(\sigma_g\)</span>, <span class="math inline">\(p_n\)</span>, <span class="math inline">\(z_p\)</span>, <span class="math inline">\(z_{target}\)</span>, MF, RWC)</li>
+<li>For direct-comparison parameters, an <strong>Assessed Value</strong> note stating that the observed maximum or minimum was compared to the criterion directly, with no multiplying factor and no dilution ratio</li>
+<li>The observed vs. WQS/RWC plot (with the same log axis and non-detect markers as the app when the values warrant it)</li>
+<li>A limit history table when prior permit limits were present in the DMR record</li>
+</ul>
+<p><strong>Manual WQS Overrides and Excluded Parameters:</strong> Sections documenting any hand-entered criteria and any parameters excluded on the Needs Attention tab, for the permanent record.</p>
+<p><strong>Coverage table:</strong> The NPDES forms coverage summary showing which expected pollutants had data and the unit conversion status for each.</p>
+<div class="screenshot-placeholder">
+<p><strong>Screenshot pending — <code>img/report_criterion_note.png</code></strong></p>
+<p>An excerpt from a generated PDF report showing an orange criterion-note callout (the DO Streeter-Phelps note, or the Enterococci interval note) sitting above the “Assessed Value” text in a per-pollutant section.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="img/report_criterion_note.png" class="img-fluid" /></p>
+<figcaption>A per-pollutant report section showing the orange criterion-note callout above the Assessed Value text</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Report generation time:</strong> Rendering the PDF runs a Quarto document with embedded plots for every pollutant × outfall combination. For facilities with many parameters and multiple outfalls, this can take 30–90 seconds. A progress indicator is displayed during rendering. Do not close the browser tab while the report is generating.</p>
+</div>
+</div>
+<hr />
+</section>
+</section>
+<section id="sec-methodology" class="level1">
+<h1>Methodology</h1>
+<p>This section describes the statistical and regulatory methods used by the app to evaluate reasonable potential. It covers the projection approach used for most parameters, the direct-comparison parameters that bypass it, the hardness-dependent metals, and Total Ammonia Nitrogen.</p>
+<section id="sec-statistical-approach" class="level2">
+<h2>The Statistical Projection Approach (TSD Section 3.3.2)</h2>
+<p>The fundamental question in an RP determination is whether the effluent, after accounting for dilution, could cause an exceedance of the applicable criterion in the receiving water. The challenge is that effluent concentrations are variable — a single measured maximum may not represent the true upper bound of what the discharge is capable of producing.</p>
+<p>EPA’s TSD addresses this by treating the effluent concentration data as a sample from an underlying lognormal distribution and projecting the upper bound of that distribution at a specified confidence level. This approach simultaneously accounts for <strong>data uncertainty</strong> (a small number of samples represents the highest value less reliably than a large number does) and estimates the <strong>statistical upper bound</strong> of the effluent distribution at a user-specified probability level (the target percentile). The result is a Multiplying Factor (MF) applied to the observed maximum concentration before comparing to the criterion.</p>
+<section id="sec-mf" class="level3">
+<h3>The Multiplying Factor</h3>
+<p>The MF is derived in two steps following Box 3-2 of the TSD.</p>
+<p><strong>Step 1 — Percentile represented by the maximum observation.</strong> For a dataset of <span class="math inline">\(n\)</span> samples at confidence level CL, the highest observed value exceeds the <span class="math inline">\(p_n\)</span>-th percentile of the underlying distribution with probability CL, where:</p>
+<p><span class="math display">\[p_n = (1 - CL)^{1/n}\]</span></p>
+<p>For example, with <span class="math inline">\(n = 10\)</span> samples and CL = 0.95, the maximum value exceeds approximately the 74th percentile of the distribution with 95% confidence.</p>
+<p><strong>Step 2 — Project from the observed percentile to the target percentile.</strong> Assuming a lognormal distribution for the effluent:</p>
+<p><span class="math display">\[MF = \exp\left[(z_{target} - z_p) \cdot \sigma_g\right]\]</span></p>
+<p>where <span class="math inline">\(z_{target}\)</span> is the standard normal variate corresponding to the target percentile, <span class="math inline">\(z_p\)</span> is the standard normal variate corresponding to <span class="math inline">\(p_n\)</span>, and <span class="math inline">\(\sigma_g = \sqrt{\ln(CV^2 + 1)}\)</span> is the geometric standard deviation of the lognormal distribution expressed via the coefficient of variation (CV).</p>
+<p>The <strong>coefficient of variation</strong> is estimated as <span class="math inline">\(CV = s / \bar{x}\)</span>, where <span class="math inline">\(s\)</span> is the sample standard deviation and <span class="math inline">\(\bar{x}\)</span> is the sample mean. For datasets with fewer than 10 samples, the CV cannot be estimated reliably from the data alone, and the app assigns a default CV of <strong>0.6</strong>, consistent with the TSD recommendation and EPA’s national characterization of effluent variability.</p>
+<p>The MF is bounded to be no less than 1. An MF below 1 would imply the maximum observed value already exceeds the target percentile — in which case no upward projection is needed and the maximum value itself is used.</p>
+</section>
+<section id="sec-rwc" class="level3">
+<h3>The Receiving Water Concentration</h3>
+<p>For projected criteria, the RWC is:</p>
+<p><span class="math display">\[RWC = \frac{C_{max} \times MF}{DR}\]</span></p>
+<p>where <span class="math inline">\(C_{max}\)</span> is the maximum observed effluent concentration (in WQS units), MF is the multiplying factor, and DR is the dilution ratio. The RP finding is YES if RWC &gt; criterion for any applicable water class.</p>
+</section>
+<section id="sec-mf-example" class="level3">
+<h3>Worked Example</h3>
+<p>Consider a facility with 8 observations of a pollutant at an outfall, with a maximum of 45 µg/L, a mean of 18 µg/L, and a standard deviation of 12 µg/L. Analysis settings are CL = 0.95, target percentile = 0.95, and DR = 1. Assume the criterion is 36 µg/L.</p>
+<p><span class="math display">\[CV = 12 / 18 = 0.667\]</span> <span class="math display">\[\sigma_g = \sqrt{\ln(0.667^2 + 1)} = \sqrt{\ln(1.444)} = 0.603\]</span> <span class="math display">\[p_n = (1 - 0.95)^{1/8} = 0.05^{0.125} = 0.693\]</span> <span class="math display">\[z_p = \Phi^{-1}(0.693) = 0.503\]</span> <span class="math display">\[z_{target} = \Phi^{-1}(0.95) = 1.645\]</span> <span class="math display">\[MF = \exp\left[(1.645 - 0.503) \times 0.603\right] = \exp(0.689) = 1.99\]</span> <span class="math display">\[RWC = (45 \times 1.99) / 1 = 89.5 \ \mu\text{g/L}\]</span></p>
+<p>Since RWC (89.5 µg/L) &gt; criterion (36 µg/L), the RP determination is <strong>YES</strong>. The app displays each intermediate value — CV, <span class="math inline">\(\sigma_g\)</span>, <span class="math inline">\(p_n\)</span>, <span class="math inline">\(z_p\)</span>, <span class="math inline">\(z_{target}\)</span>, MF, and RWC — in the math inspector on the Interactive Inspector tab.</p>
+</section>
+</section>
+<section id="sec-direct" class="level2">
+<h2>Direct-Comparison Parameters</h2>
+<p>Some criteria are not maximum-concentration ceilings and are not meaningfully projected through the multiplying factor. For these, the app compares the appropriate observed statistic to the criterion directly: <strong>no MF is applied and the dilution ratio is not used.</strong> Each crosswalk row declares whether it is a ceiling (RP if the value exceeds the criterion) or a floor (RP if the value falls below it). The comparison is a <strong>strict inequality</strong> — a value exactly on the criterion is treated as compliant, matching the regulatory wording (“shall not exceed,” “shall not contain less than,” “outside the range of”). A small relative tolerance guards the comparison against floating-point and unit-conversion noise at the boundary.</p>
+<p>Several of these parameters return <strong>DEPENDS</strong> rather than <strong>NO</strong> when no excursion is observed, because a screening-level end-of-pipe comparison cannot, by itself, rule out reasonable potential.</p>
+<section id="sec-ph" class="level3">
+<h3>pH</h3>
+<p>The PRWQSR establishes pH ranges rather than absolute concentration limits. For Class SD the standard is 6.0–9.0 SU (Rule 1303.2(C)(2)(d)); for Class SB it is 7.3–8.5 SU (Rule 1303.2(B)(2)(d)). pH is evaluated like any other direct parameter: when the selected water class has a pH criterion, the app compares the observed pH range to the standard and reports the result as separate <strong><em>pH (maximum)</em></strong> and <strong><em>pH (minimum)</em></strong> rows. An observed maximum at or above the upper bound, or an observed minimum at or below the lower bound, yields a <strong>YES</strong>. This is a direct comparison of observed pH to the standard, not a statistical RWC projection. pH values are also still used to compute the TAN criterion (see <a href="#sec-tan" class="quarto-xref">Section 8.4</a>). If the selected class has no pH criterion, pH instead surfaces on the Needs Attention tab like any other unmatched parameter.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Strict inequality changed some pH results.</strong> Because the comparison is strict, a pH value sitting exactly on 6.0 or 9.0 is now treated as compliant. This flips some findings that were previously YES. This is intended, not a regression — it reflects the regulatory language.</p>
+</div>
+</div>
+</section>
+<section id="sec-temperature" class="level3">
+<h3>Temperature</h3>
+<p>The PRWQSR’s thermal standard states that no heat shall be added that would cause the temperature of <strong>any site</strong> to exceed 30 °C / 86 °F (Rule 1303.1(D)(1)). Temperature (00010) is evaluated as a direct ceiling: <strong>YES</strong> if the observed maximum exceeds 30 °C, <strong>DEPENDS</strong> otherwise. The DEPENDS outcome reflects that this is an <strong>in-stream</strong> standard, not an end-of-pipe limit — an end-of-pipe comparison is screening only, so the absence of an exceedance at the pipe does not rule out RP in the receiving water. A note to this effect is carried into Quick Stats and the report. Temperature appears only when “Surface Waters” or “All” is selected (see <a href="#sec-classifications" class="quarto-xref">Section 2.3</a>).</p>
+</section>
+<section id="sec-do" class="level3">
+<h3>Dissolved Oxygen</h3>
+<p>Dissolved oxygen (00300) is a <strong>floor</strong>: the receiving water must not fall below 5.0 mg/L, so the compliance-relevant statistic is the observed <strong>minimum</strong>, not the maximum. DO is evaluated by direct comparison — <strong>YES</strong> if the observed minimum is below 5.0 mg/L, <strong>DEPENDS</strong> otherwise — and no RWC is calculated.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Why DO is not projected.</strong> Applying the TSD multiplying factor to DO is wrong in three ways: it projects an <em>upper</em> bound when DO needs a <em>lower</em> bound; the MF is derived for an upper percentile; and dilution does not attenuate a dissolved-oxygen deficit the way it attenuates a pollutant. A defensible DO analysis requires the Streeter-Phelps equation, whose inputs (reaeration and deoxygenation rates, travel time, upstream deficit) are not present in ICIS-NPDES. The app therefore screens the observed minimum against the floor and returns DEPENDS when no excursion is seen, with a note pointing to the Streeter-Phelps data gap.</p>
+</div>
+</div>
+</section>
+<section id="sec-color-turbidity" class="level3">
+<h3>Color and Turbidity</h3>
+<p>Color (00080) and turbidity (00070) are direct <strong>ceilings</strong>: color at 15 color units (Class SD); turbidity at 50 NTU (Class SD) and 10 NTU (Class SB). Both are compared directly to the observed maximum. These parameters previously dropped out of the results entirely because they were caught in a hardcoded exclusion vector with no downstream handler; they now flow through the generic direct-comparison path.</p>
+</section>
+<section id="sec-entero" class="level3">
+<h3>Enterococci</h3>
+<p>The PRWQS Enterococci criterion for SB/SD waters is <strong>interval-based</strong>: a geometric mean of 35 per 100 mL over any 90-day interval, plus a 90th-percentile criterion of 130 per 100 mL. These are frequency- and interval-based statistics, not maximum concentrations, so the multiplying-factor projection is not a meaningful operation on them. The app splits Enterococci into two direct rows (geometric mean and 90th percentile) evaluated against their own DMR statistics, returns <strong>DEPENDS</strong> when no excursion is observed, and carries a note instructing the permit writer to evaluate the geometric mean and 90th percentile over the applicable 90-day intervals independently. Alternate DMR codes for Enterococci are recognized so the criterion matches regardless of which code the permittee reported.</p>
+</section>
+<section id="sec-oil" class="level3">
+<h3>Oil &amp; Grease</h3>
+<p>Oil &amp; grease is governed by a <strong>narrative</strong> standard (Rule 1303.1.H): waters shall be substantially free from oils and greases. There is no numeric value, so the app treats it as a <strong>binary detection</strong> test — any positive reported value triggers RP. Four oil &amp; grease method codes are recognized, each carrying its own display label so they don’t collapse into a single confusing entry. As a general surface-water standard, oil &amp; grease appears only when “Surface Waters” or “All” is selected.</p>
+</section>
+<section id="sec-surfactants" class="level3">
+<h3>Surfactants (MBAS)</h3>
+<p>Surfactants as MBAS carry a numeric standard (SB 500, SD 100 µg/L) and, for Class SG, a “shall not be present” detection standard. The criterion is recognized under both the methylene-blue-active-substances code and the surfactants code the permittee may report under, so the same analyte matches regardless of which code appears in the DMR.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Synonym parameter codes.</strong> A recurring data issue is the same analyte reported under a DMR code different from the one the criterion is stored under, which causes a silent non-match. Confirmed cases (ammonia, Enterococci, surfactants, sulfate) are aligned so the criterion applies to either code. Other candidates that carry a regulatory judgment — e.g., dissolved vs. total metal fractions, hexavalent vs. total chromium — are deliberately routed to the Needs Attention tab with a green hint rather than auto-matched, so the permit writer resolves the distinction.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-metals" class="level2">
+<h2>Hardness-Dependent Metal Criteria</h2>
+<p>Seven metals in Class SD waters have criteria that depend on receiving water hardness under Rule 1303.1(J)(1) of the PRWQSR. The criterion is a function of the natural logarithm of hardness expressed in mg/L as CaCO₃:</p>
+<p><span class="math display">\[\text{Criterion} = e^{(LC \cdot \ln(H) - RC)}\]</span></p>
+<p>where <span class="math inline">\(H\)</span> is the receiving water hardness and <span class="math inline">\(LC\)</span> and <span class="math inline">\(RC\)</span> are regression constants specific to each metal, taken directly from the PRWQSR footnotes to Table 1 in Rule 1303.1(J)(1):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Metal</th>
+<th>CRITERION_ID</th>
+<th>LC</th>
+<th>RC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cadmium</td>
+<td>79228</td>
+<td>0.7977</td>
+<td>3.909</td>
+</tr>
+<tr class="even">
+<td>Chromium III</td>
+<td>79238</td>
+<td>0.8190</td>
+<td>0.6848</td>
+</tr>
+<tr class="odd">
+<td>Copper</td>
+<td>79236</td>
+<td>0.8545</td>
+<td>1.702</td>
+</tr>
+<tr class="even">
+<td>Lead</td>
+<td>79253</td>
+<td>1.273</td>
+<td>4.705</td>
+</tr>
+<tr class="odd">
+<td>Nickel</td>
+<td>79248</td>
+<td>0.8460</td>
+<td>0.0584</td>
+</tr>
+<tr class="even">
+<td>Silver</td>
+<td>79251</td>
+<td>1.72</td>
+<td>6.59</td>
+</tr>
+<tr class="odd">
+<td>Zinc</td>
+<td>79264</td>
+<td>0.8473</td>
+<td>0.884</td>
+</tr>
+</tbody>
+</table>
+<p>When a specific hardness value is entered, the app computes the criterion at that hardness and uses it directly in the RP comparison. When the range analysis option is active, the app computes the <strong>critical hardness</strong> — the hardness at which the criterion would equal the RWC — by inverting the formula:</p>
+<p><span class="math display">\[H_{critical} = e^{\left(\ln(RWC) + RC\right) / LC}\]</span></p>
+<p>If <span class="math inline">\(H_{critical}\)</span> is below the plausible range for the receiving water (e.g., below 25 mg/L as CaCO₃), reasonable potential is unlikely regardless of hardness. If it is within or above the plausible range, the permit writer should use a site-specific hardness value to resolve the determination (see <a href="#sec-interpret-depends" class="quarto-xref">Section 9.2</a>).</p>
+</section>
+<section id="sec-tan" class="level2">
+<h2>Total Ammonia Nitrogen (TAN)</h2>
+<p>Total Ammonia Nitrogen in <strong>Class SD</strong> surface waters is subject to a criterion that varies with the pH and temperature of the receiving water, as specified in Rule 1303.2(C)(2)(l) of the PRWQSR. (TAN is Class SD only — there is no Class SB TAN criterion.)</p>
+<p><span class="math display">\[TAN = 0.8876 \times \left(\frac{0.0278}{1 + 10^{7.688 - pH}} + \frac{1.1994}{1 + 10^{pH - 7.688}}\right) \times \left(2.126 \times 10^{0.028 \times (20 - T)}\right)\]</span></p>
+<p>where <span class="math inline">\(T\)</span> is the receiving water temperature in °C and the result is expressed as mg/L as N. The formula reflects the toxicity of un-ionized ammonia (NH₃) to aquatic life, which increases as pH and temperature rise.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Re-run historical TAN determinations.</strong> The leading <code>0.8876</code> coefficient is required. An earlier inline copy of this formula in the Run RP handler had dropped it, which inflated every computed TAN criterion by roughly 12.7% and made the standard artificially lenient. The coefficient has been restored. Any TAN determinations made before this fix should be re-run.</p>
+</div>
+</div>
+<p><strong>Parameter codes included.</strong> The app coalesces three interchangeable ammonia codes into a single total-ammonia-as-N series before evaluation:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Parameter Code</th>
+<th>Description</th>
+<th>Handling</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>00610</td>
+<td>Nitrogen, ammonia total [as N]</td>
+<td>Canonical code</td>
+</tr>
+<tr class="even">
+<td>82230</td>
+<td>Ammonia &amp; ammonium — total</td>
+<td>Coalesced to 00610</td>
+</tr>
+<tr class="odd">
+<td>00609</td>
+<td>Ammonia nitrogen, total [as N]</td>
+<td>Coalesced to 00610</td>
+</tr>
+</tbody>
+</table>
+<p>Coalescing 00609 matters in practice: a permit reporting only 00609 previously produced no TAN evaluation at all.</p>
+<p><strong>Time-varying vs. fixed limits.</strong> When the app uses pH and temperature from the DMR (codes 00400 and 00010), the TAN criterion is computed separately for each monitoring period that has co-occurring pH and temperature observations, producing a time series of limits. The RP determination is <strong>YES</strong> if the TAN RWC exceeds the criterion in <em>any</em> monitoring period (the “ever crossed” rule). Summary tables display the <strong>mean</strong> TAN limit for readability. When fixed pH and temperature overrides are used, a single constant TAN limit is computed. Because the TAN criterion is computed at run time from pH and temperature rather than stored as a fixed value, TAN is never flagged on the Needs Attention tab.</p>
+<hr />
+</section>
+</section>
+<section id="sec-interpretation" class="level1">
+<h1>Interpreting Results and Common Cases</h1>
+<section id="sec-multi-class" class="level2">
+<h2>Multiple Water Classes Selected</h2>
+<p>When more than one water classification is selected, the Observed vs. WQS/RWC plot shows a separate dashed criterion line for each class. The Quick Stats panel shows both the worst-case RP across all classes and a per-class breakdown. The RP Summary Table lists each class as a separate row for each pollutant, making it easy to see which classes drive a YES finding.</p>
+<p>A common scenario is selecting both Class SB and Class SD when a facility may discharge to either coastal or surface receiving waters depending on the outfall. The more protective of the two criteria drives the worst-case RP result.</p>
+</section>
+<section id="sec-interpret-depends" class="level2">
+<h2>Metals with Hardness = Range (Class SD)</h2>
+<p>When the hardness range analysis is active for a hardness-dependent metal, the Quick Stats panel shows <strong>Worst-case RP: DEPENDS</strong>. To resolve this to a YES or NO, you have two options:</p>
+<ol type="1">
+<li><strong>Use a site-specific hardness value:</strong> Obtain a measured or representative hardness value for the receiving water (from ambient monitoring, the permit record, or DNER), enter it in the Hardness setting, and re-run.</li>
+<li><strong>Use the critical hardness threshold:</strong> Read the critical hardness annotation from the plot or math inspector. If the critical hardness is well above the expected range for the receiving water, a NO determination is defensible. Document the basis for the hardness assumption in the permit record.</li>
+</ol>
+</section>
+<section id="sec-interpret-direct-depends" class="level2">
+<h2>Direct-Comparison Parameters Returning DEPENDS</h2>
+<p>Dissolved oxygen, temperature, and Enterococci return <strong>DEPENDS</strong> rather than <strong>NO</strong> when no excursion is observed. This is deliberate: for these parameters an end-of-pipe screen cannot rule out reasonable potential on its own (DO needs a Streeter-Phelps analysis, temperature is an in-stream standard, and the bacteria criteria are interval statistics). Treat a DEPENDS here as “not shown to be a problem by this screen, but not cleared” and resolve it with the additional analysis the criterion note describes.</p>
+</section>
+<section id="sec-interpret-units" class="level2">
+<h2>Unit Conversion Issues</h2>
+<p>A FAIL or FAIL (Partial) unit status means the app could not convert some or all reported values to the WQS unit. This does not stop the analysis — non-convertible records are dropped from the RP calculation and values are retained at face value elsewhere — but the result for that parameter should be interpreted with caution. Common causes:</p>
+<ul>
+<li><strong>Unusual units in the DMR:</strong> Some submissions use non-standard unit abbreviations the app does not recognize. If you can confirm the unit is equivalent, the face value is correct.</li>
+<li><strong>Genuine unit mismatch:</strong> The permittee reported a value in a genuinely different unit (e.g., a mass load where a concentration was expected). In that case the face value is meaningless and the parameter should be flagged for investigation.</li>
+</ul>
+<p>Note that not every non-PASS status is a data problem. <strong>EXCLUDED</strong> means the parameter was reported in a mass-load or flow unit that cannot be compared to a concentration criterion — expected for load-based parameters. <strong>NO WQS</strong> means there is simply no criterion for the parameter in the selected class; use the Needs Attention tab to add one if appropriate. Only <strong>FAIL</strong> and <strong>FAIL (Partial)</strong> indicate an unrecognized unit that warrants investigation.</p>
+</section>
+<section id="sec-interpret-unit-sanity" class="level2">
+<h2>Reading a Log-Scale Plot</h2>
+<p>A log axis means the observations and the criterion are separated by two or more orders of magnitude. That is usually real. Bacteria, sulfide, and sulfate routinely run thousands of times their criteria, and criteria for PCBs, dioxin, and the chlorinated pesticides sit below what any laboratory can quantify, so any reported detection clears the threshold.</p>
+<p>Reporting-unit errors do occur, but the app reconciles reported units against the criterion’s units before plotting (see <a href="#sec-interpret-units" class="quarto-xref">Section 9.4</a>), so a wide gap is not by itself evidence of one. Verify units when a result is surprising for other reasons — not because the axis is logarithmic.</p>
+<p>Read the open downward triangles with care. They mark non-detects, which carry no measured value; they are drawn at a plotting floor purely so they remain visible on a log axis, and the stated floor is the smallest positive value in that series, not a detection limit reported by the laboratory. A non-detect is a valid <strong>NO</strong> finding and the permit writer needs to see it, but its position on the y-axis carries no information.</p>
+</section>
+<section id="sec-interpret-nodata" class="level2">
+<h2>No Data for a Parameter</h2>
+<p>If the selected pollutant has no observations for the selected outfall, the Inspector shows a “no data” message and no row appears in the RP Summary Table for that combination. This can occur when the parameter was not monitored at that outfall in the date range, the parameter code in the crosswalk does not match the code used in the DMR (a synonym-code issue — check the Coverage Summary and the Needs Attention hint), or the data were submitted under a different outfall identifier. A parameter required by the selected form but with no data appears in the Coverage Summary with a <strong>NO DATA</strong> status and a sample count of 0.</p>
+</section>
+<section id="sec-prior-limits" class="level2">
+<h2>Prior Limits in the Quick Stats Panel</h2>
+<p>The <strong>Prior Limit</strong> field shows the most recent numeric effluent limit from the DMR record for the selected parameter and outfall, sourced directly from the DMR’s limit fields — it reflects the limit as recorded in the prior permit, not a limit calculated by this app. It is provided as a reference point for comparing the current RP analysis to existing permit conditions.</p>
+<hr />
+</section>
+</section>
+<section id="sec-appendix-npdes" class="level1 appendix">
+<h1 class="appendix">Appendix A: NPDES Application Forms and Pollutants</h1>
+<p>The following table lists the pollutants included in the app’s crosswalk by NPDES application form. These are the pollutants for which WQS criteria exist in the PRWQSR and for which DMR parameter code matches have been established. Pollutants required by NPDES forms that do not have a corresponding WQS criterion are tracked in the Coverage Summary; they are not evaluated for RP automatically, but a criterion can be supplied for them through the Needs Attention tab (see <a href="#sec-needs-attention" class="quarto-xref">Section 4.5</a>).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The full crosswalk table is populated from the <code>npdes_forms</code> and <code>crosswalk</code> objects loaded at application startup. It carries a <code>sub_class</code> column distinguishing stream vs. reservoir/lake criteria under Class SD.</p>
+</div>
+</div>
+<!-- Placeholder for gt(npdes_pollutants) table when rendered with data -->
+<hr />
+</section>
+<section id="sec-appendix-refs" class="level1 appendix">
+<h1 class="appendix">Appendix B: Technical References</h1>
+<p>The following documents provide the regulatory and methodological basis for the RP Calculator.</p>
+<p><strong>EPA (1991).</strong> <em>Technical Support Document for Water Quality-Based Toxics Control.</em> EPA/505/2-90-001. Office of Water, U.S. Environmental Protection Agency, Washington, D.C. Section 3.3.2 — Statistical Projection of Upper-Bound Effluent Concentrations.</p>
+<p><strong>DNER (2025).</strong> <em>Puerto Rico Water Quality Standards Regulation, as Amended April 2025.</em> Resolution R-25-006. Puerto Rico Department of Natural and Environmental Resources, San Juan, PR. Filed with the Puerto Rico Department of State June 27, 2025 (Number 9677).</p>
+<p><strong>40 CFR 122.44(d)(1).</strong> <em>Conditions applicable to all permits — Technology-based and water quality-based effluent limitations.</em> Code of Federal Regulations, Title 40, Part 122.</p>
+<p><strong>40 CFR 131.</strong> <em>Water Quality Standards.</em> Code of Federal Regulations, Title 40, Part 131.</p>
+<hr />
+</section>
+<section id="sec-appendix-glossary" class="level1 appendix">
+<h1 class="appendix">Appendix C: Glossary</h1>
+<p><strong>Ceiling criterion:</strong> A criterion the discharge must not exceed. Reasonable potential exists if the assessed value is above the criterion (a strict “greater than” test).</p>
+<p><strong>Coefficient of Variation (CV):</strong> The ratio of the standard deviation to the mean for a dataset, used in the MF calculation as a measure of relative effluent variability. When <span class="math inline">\(n &lt; 10\)</span>, the app assigns a default CV of 0.6 per TSD guidance.</p>
+<p><strong>Confidence Level (CL):</strong> The probability that the highest observed value in a sample of <span class="math inline">\(n\)</span> exceeds a given percentile of the underlying distribution. Defaults to 0.95 (95%).</p>
+<p><strong>DEPENDS:</strong> An RP determination returned when no excursion was observed but the absence of one cannot, by itself, rule out reasonable potential — used for hardness-range metals and for direct parameters such as dissolved oxygen, temperature, and Enterococci.</p>
+<p><strong>Direct comparison:</strong> Evaluation of a criterion by comparing the appropriate observed statistic to the criterion value with no multiplying factor and no dilution ratio. Used for pH, temperature, dissolved oxygen, color, turbidity, Enterococci, oil &amp; grease, and surfactants.</p>
+<p><strong>DMR (Discharge Monitoring Report):</strong> The periodic report submitted by NPDES permittees documenting effluent monitoring results. Sourced by the app from the local ICIS-NPDES database.</p>
+<p><strong>Dilution Ratio (DR):</strong> The ratio of the total receiving water flow (including the effluent) to the effluent flow alone at the point of compliance. Applied only to projected criteria.</p>
+<p><strong>Floor criterion:</strong> A criterion the receiving water must not fall below (e.g., dissolved oxygen). Reasonable potential exists if the assessed value is below the criterion (a strict “less than” test); the compliance-relevant statistic is the observed minimum.</p>
+<p><strong>ICIS-NPDES:</strong> EPA’s Integrated Compliance Information System for NPDES, the system of record for permit and DMR data. The app reads a weekly SQLite snapshot of the PR/VI portion of this database, built by <code>refresh_db.R</code>.</p>
+<p><strong>MF (Multiplying Factor):</strong> The statistical factor applied to the maximum observed effluent concentration to project the upper bound of the effluent distribution at the target percentile and confidence level. Bounded to be ≥ 1.</p>
+<p><strong>NODI Code:</strong> A code in the DMR indicating a reason why no numeric value was reported for a monitoring period. NODI B and Q (no discharge) are treated as zero by the app; other NODI codes are excluded.</p>
+<p><strong>NPDES (National Pollutant Discharge Elimination System):</strong> The federal permitting program under the Clean Water Act that regulates point source discharges to waters of the United States.</p>
+<p><strong>PRWQSR (Puerto Rico Water Quality Standards Regulation):</strong> The water quality standards regulation administered by DNER. The 2025 amendment is the applicable version in this app.</p>
+<p><strong>Reasonable Potential (RP):</strong> Under 40 CFR 122.44(d)(1), the determination that a discharge causes, has the reasonable potential to cause, or contributes to an excursion above an applicable water quality standard. A YES RP finding triggers the requirement for a water quality-based effluent limitation.</p>
+<p><strong>RWC (Receiving Water Concentration):</strong> For projected criteria, the projected concentration in the receiving water after accounting for the statistical upper bound of the effluent distribution and the available dilution: RWC = (C_max × MF) ÷ DR. Not calculated for direct-comparison criteria.</p>
+<p><strong>Statistic token:</strong> A semantic label (daily maximum, daily minimum, geometric mean, 90th percentile, average) that governs both which DMR records are extracted and which value a criterion is compared against. Raw ICIS statistical-base codes are mapped to these tokens through a lookup table.</p>
+<p><strong>TAN (Total Ammonia Nitrogen):</strong> The sum of ammonium ion (NH₄⁺) and un-ionized ammonia (NH₃). Subject to a pH- and temperature-dependent criterion in Class SD waters under Rule 1303.2(C)(2)(l).</p>
+<p><strong>Target Percentile:</strong> The upper bound of the lognormal effluent distribution that the projected RWC is designed to represent. Defaults to 0.95 (95th percentile).</p>
+<p><strong>TSD (Technical Support Document for Water Quality-Based Toxics Control):</strong> EPA’s 1991 guidance document providing the statistical methodology for RP determinations using effluent monitoring data (EPA/505/2-90-001).</p>
+<p><strong>WQS (Water Quality Standards):</strong> A designated use or uses for a water body, the water quality criteria necessary to protect those uses, and an antidegradation policy. In this app, WQS refers specifically to the criteria established in the PRWQSR.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id = "quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+</body>
+
+</html>
