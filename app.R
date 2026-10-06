@@ -4407,6 +4407,9 @@ server <- function(input, output, session) {
           file.path(tmp_dir, "report.qmd"),
           overwrite = TRUE
         )
+        # Logo for the report's title block and page header. The report
+        # skips it if missing, so a failed copy doesn't break rendering.
+        file.copy("www/epa_logo.png", file.path(tmp_dir, "epa_logo.png"), overwrite = TRUE)
 
         readr::write_csv(
           rv$rp_concentration,

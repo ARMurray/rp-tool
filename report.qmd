@@ -1,18 +1,52 @@
 ---
-title: "NPDES Reasonable Potential (RP) Report"
-subtitle: "`r paste('Report Generated:', format(Sys.Date(), '%B %d, %Y'))`"
+# No title/toc here: the title block and table of contents are typeset by the
+# title-block chunk below so the first page can carry the logo and permit.
 format:
   pdf:
-    toc: true
+    toc: false
     toc-depth: 1
     number-sections: true
-    geometry: margin=1in
+    geometry:
+      - margin=1in
+      - headheight=30pt
+      - headsep=16pt
     documentclass: article
     keep-tex: false
     include-in-header:
       text: |
         \usepackage{float}
         \usepackage{needspace}
+        \usepackage{graphicx}
+        \usepackage{fancyhdr}
+        \usepackage{lastpage}
+        \usepackage{sectsty}
+        % Colours from www/epa_logo.png. Text only ever uses epablue (or white
+        % on epablue): it prints as dark grey in black and white. epagreen is
+        % used for thin decorative rules only, never behind or as text.
+        \definecolor{epablue}{HTML}{0D6CB6}
+        \definecolor{epagreen}{HTML}{46AA42}
+        \definecolor{inkgray}{HTML}{333333}
+        % Darker orange for the "Note" / "Manual WQS Applied" labels: xcolor's
+        % default orange turns pale grey in black-and-white print.
+        \definecolor{orange}{HTML}{B35900}
+        \allsectionsfont{\sffamily\color{epablue}}
+        \AtBeginDocument{\hypersetup{colorlinks=true, linkcolor=epablue, urlcolor=epablue}}
+        % Set by the title-block chunk; used by the running header/footer.
+        \providecommand{\rppermit}{}
+        \providecommand{\rpgenerated}{}
+        \newcommand{\rplogo}[1]{\IfFileExists{epa_logo.png}{\includegraphics[height=#1]{epa_logo.png}}{}}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[L]{\raisebox{-0.35\height}{\rplogo{0.34in}}\hspace{6pt}\textcolor{inkgray}{\sffamily\small NPDES Reasonable Potential Report}}
+        \fancyhead[R]{\textcolor{inkgray}{\sffamily\small\bfseries \rppermit}}
+        \fancyfoot[L]{\textcolor{inkgray}{\sffamily\footnotesize Generated \rpgenerated}}
+        \fancyfoot[R]{\textcolor{inkgray}{\sffamily\footnotesize Page \thepage\ of \pageref*{LastPage}}}
+        \renewcommand{\headrulewidth}{1pt}
+        \renewcommand{\headrule}{\hbox to\headwidth{\color{epablue}\leaders\hrule height \headrulewidth\hfill}}
+        \renewcommand{\footrulewidth}{0.6pt}
+        \renewcommand{\footrule}{\hbox to\headwidth{\color{epagreen}\leaders\hrule height \footrulewidth\hfill}\vskip 4pt}
+        % First page: the title block carries the logo, so footer only.
+        \fancypagestyle{rptitle}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\headrule}{}\fancyfoot[R]{\textcolor{inkgray}{\sffamily\footnotesize Page \thepage\ of \pageref*{LastPage}}}}
 execute:
   echo: false
 params:
@@ -486,6 +520,54 @@ plot_direct <- function(obs, rows, title) {
 }
 ```
 
+```{r}
+#| label: title-block
+#| results: asis
+
+# Escape LaTeX specials in user/ECHO-supplied text (facility names can carry
+# "&", "#", "%").
+tex_escape <- function(x) {
+  x <- gsub("\\", "\\textbackslash{}", x, fixed = TRUE)
+  x <- gsub("([&%$#_{}])", "\\\\\\1", x)
+  x <- gsub("~", "\\textasciitilde{}", x, fixed = TRUE)
+  gsub("^", "\\textasciicircum{}", x, fixed = TRUE)
+}
+permit_tex   <- tex_escape(params$permit_id %||% "")
+facility_tex <- tex_escape(params$facility_name %||% "")
+generated    <- format(Sys.Date(), "%B %d, %Y")
+
+detail_row <- function(label, value) {
+  if (!nzchar(value)) return("")
+  sprintf("\\textsf{\\textbf{\\textcolor{epablue}{%s}}} & %s \\\\[3pt]\n", label, value)
+}
+
+cat("```{=latex}\n")
+cat(sprintf("\\gdef\\rppermit{%s}\n\\gdef\\rpgenerated{%s}\n",
+            if (nzchar(permit_tex)) paste("Permit", permit_tex) else "", generated))
+cat("\\thispagestyle{rptitle}\n")
+# Logo beside the title, on white (the logo's own white disc would merge
+# into a coloured band).
+cat("\\noindent\\begin{minipage}[c]{1.25in}\\rplogo{1.1in}\\end{minipage}%\n")
+cat("\\begin{minipage}[c]{\\dimexpr\\linewidth-1.25in\\relax}\\sffamily\n")
+cat("{\\small\\color{inkgray}National Pollutant Discharge Elimination System}\\\\[4pt]\n")
+cat("{\\color{epablue}\\LARGE\\bfseries Reasonable Potential Analysis Report}\n")
+cat("\\end{minipage}\n\n\\vspace{16pt}\n")
+# Permit band: white on EPA blue, which prints as white on dark grey.
+cat("\\noindent\\colorbox{epablue}{\\parbox{\\dimexpr\\linewidth-2\\fboxsep\\relax}{\\vspace{7pt}\\sffamily\\color{white}\\hspace{6pt}")
+cat(sprintf("{\\Large\\bfseries %s}", if (nzchar(permit_tex)) paste("Permit", permit_tex) else "NPDES Permit"))
+if (nzchar(facility_tex)) cat(sprintf("\\\\[3pt]\\hspace*{6pt}{\\large %s}", facility_tex))
+cat("\\vspace{7pt}}}\n\n")
+cat("\\noindent{\\color{epagreen}\\rule{\\linewidth}{2.5pt}}\n\n\\vspace{10pt}\n")
+cat("\\noindent\\begin{tabular}{@{}l l@{}}\n")
+cat(detail_row("Monitoring period",
+               if (nzchar(params$date_start)) paste(params$date_start, "to", params$date_end) else ""))
+cat(detail_row("Application forms", tex_escape(params$forms %||% "")))
+cat(detail_row("Report generated", generated))
+cat("\\end{tabular}\n\n\\vspace{18pt}\n")
+cat("\\setcounter{tocdepth}{1}\n{\\hypersetup{linkcolor=inkgray}\\tableofcontents}\n")
+cat("```\n")
+```
+
 <!-- Each top-level section starts on a new page. -->
 ```{=latex}
 \clearpage
@@ -673,6 +755,8 @@ rp_df %>%
   arrange(desc(factor(RP, levels = c("NO", "DEPENDS", "YES"), ordered = TRUE)),
           NPDES_Pollutant) %>%
   distinct() %>%
+  # \mbox stops LaTeX hyphenating "DEPENDS" in the narrow RP column.
+  mutate(RP = ifelse(is.na(RP), RP, paste0("\\mbox{", RP, "}"))) %>%
   kable(
     col.names = c("WQS ID","Pollutant","Outfall","Water Class","WQS Criterion","Value","Basis","RP"),
     format    = "latex",
@@ -682,16 +766,18 @@ rp_df %>%
   ) %>%
   kable_styling(latex_options = c("striped", "repeat_header"),
                 font_size = 9) %>%
-  # Explicit widths so all 7 columns fit within the 6.5in text block.
-  # Sum ≈ 13.6cm (5.4in), leaving margin for inter-column padding.
-  column_spec(1, width = "1.1cm") %>%   # WQS ID
-  column_spec(2, width = "3.2cm") %>%   # Pollutant
-  column_spec(3, width = "2.0cm") %>%   # Outfall (wraps for plain + coloured labels)
-  column_spec(4, width = "2.6cm") %>%   # Water Class
-  column_spec(5, width = "1.5cm") %>%   # WQS Criterion
+  # Explicit widths so all 8 columns fit within the 6.5in text block.
+  # Sum = 14.3cm, leaving room for inter-column padding. WQS ID is wide
+  # enough for manual IDs ("MANUAL-00010"), Basis for "Calculated" and RP
+  # for "DEPENDS" without hyphenation.
+  column_spec(1, width = "1.9cm") %>%   # WQS ID
+  column_spec(2, width = "2.5cm") %>%   # Pollutant
+  column_spec(3, width = "1.9cm") %>%   # Outfall (wraps for plain + coloured labels)
+  column_spec(4, width = "2.1cm") %>%   # Water Class
+  column_spec(5, width = "1.4cm") %>%   # WQS Criterion
   column_spec(6, width = "1.3cm") %>%   # Value (calculated RWC or observed)
   column_spec(7, width = "1.7cm") %>%   # Basis
-  column_spec(8, width = "1.4cm")       # RP
+  column_spec(8, width = "1.5cm")       # RP
 ```
 
 ```{=latex}
@@ -803,7 +889,9 @@ if (nrow(direct_rp) == 0) {
         summ, format = "latex", booktabs = TRUE,
         col.names = c("WQS ID", "Water Class", if (two_bound) "Bound",
                       "Samples", "Units Converted", "WQS Criterion", obs_hdr, "RP")
-      ) %>% kableExtra::kable_styling(latex_options = c("HOLD_position")))
+      # scale_down only shrinks a table wider than the text block (e.g. long
+      # manual WQS IDs with three water classes); others print unchanged.
+      ) %>% kableExtra::kable_styling(latex_options = c("HOLD_position", "scale_down")))
       cat("\n\n")
 
       if (nrow(obs) > 0) {
@@ -936,7 +1024,7 @@ if (is.null(dmr_df) || nrow(dmr_df) == 0) {
               booktabs  = TRUE,
               col.names = c("WQS ID", "Water Class", "Samples", "Units Converted",
                             "WQS Criterion", "RWC", "RP")) %>%
-          kable_styling(latex_options = c("HOLD_position")) %>%
+          kable_styling(latex_options = c("HOLD_position", "scale_down")) %>%
           print()
         cat("\n\n")
       } else {

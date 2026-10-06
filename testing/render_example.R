@@ -94,6 +94,7 @@ hardness <- suppressWarnings(as.numeric(sub(".*:\\s*", "", grep("Hardness", read
 if (is.na(hardness)) hardness <- 100
 
 file.copy("report.qmd", file.path(tmp_dir, "report.qmd"), overwrite = TRUE)
+file.copy("www/epa_logo.png", file.path(tmp_dir, "epa_logo.png"), overwrite = TRUE)
 
 quarto::quarto_render(
   input = file.path(tmp_dir, "report.qmd"),
