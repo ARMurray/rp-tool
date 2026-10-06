@@ -120,7 +120,8 @@ quarto::quarto_render(
     wqs_info_path = "wqs_info.csv",
     overrides_path = "",
     quick_run = FALSE,
-    quick_run_params = ""
+    quick_run_params = "",
+    app_version = trimws(readLines("VERSION", warn = FALSE)[1])
   ),
   quiet = FALSE
 )

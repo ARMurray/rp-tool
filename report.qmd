@@ -39,7 +39,8 @@ format:
         \fancyhf{}
         \fancyhead[L]{\raisebox{-0.35\height}{\rplogo{0.34in}}\hspace{6pt}\textcolor{inkgray}{\sffamily\small U.S. EPA Region 2 \textbar{} NPDES Reasonable Potential Report}}
         \fancyhead[R]{\textcolor{inkgray}{\sffamily\small\bfseries \rppermit}}
-        \fancyfoot[L]{\textcolor{inkgray}{\sffamily\footnotesize Generated \rpgenerated}}
+        \providecommand{\rpversion}{}
+        \fancyfoot[L]{\textcolor{inkgray}{\sffamily\footnotesize Generated \rpgenerated\rpversion}}
         \fancyfoot[R]{\textcolor{inkgray}{\sffamily\footnotesize Page \thepage\ of \pageref*{LastPage}}}
         \renewcommand{\headrulewidth}{1pt}
         \renewcommand{\headrule}{\hbox to\headwidth{\color{epablue}\leaders\hrule height \headrulewidth\hfill}}
@@ -60,6 +61,7 @@ params:
   target_percentile: 0.95
   hardness_mode: "range"
   hardness_value: NA
+  app_version: ""          # tool version (VERSION file), stamped in the footer
   rp_path: ""
   coverage_path: ""
   dmr_path: ""
@@ -542,8 +544,10 @@ detail_row <- function(label, value) {
 }
 
 cat("```{=latex}\n")
-cat(sprintf("\\gdef\\rppermit{%s}\n\\gdef\\rpgenerated{%s}\n",
-            if (nzchar(permit_tex)) paste("Permit", permit_tex) else "", generated))
+version_tex <- tex_escape(params$app_version %||% "")
+cat(sprintf("\\gdef\\rppermit{%s}\n\\gdef\\rpgenerated{%s}\n\\gdef\\rpversion{%s}\n",
+            if (nzchar(permit_tex)) paste("Permit", permit_tex) else "", generated,
+            if (nzchar(version_tex)) paste0(" \\textbar{} RP Calculator v", version_tex) else ""))
 cat("\\thispagestyle{rptitle}\n")
 # Logo beside the title, on white (the logo's own white disc would merge
 # into a coloured band).
@@ -564,6 +568,7 @@ cat(detail_row("Monitoring period",
                if (nzchar(params$date_start)) paste(params$date_start, "to", params$date_end) else ""))
 cat(detail_row("Application forms", tex_escape(params$forms %||% "")))
 cat(detail_row("Report generated", generated))
+cat(detail_row("Tool version", if (nzchar(version_tex)) paste("RP Calculator", version_tex) else ""))
 cat("\\end{tabular}\n\n\\vspace{18pt}\n")
 cat("\\setcounter{tocdepth}{1}\n{\\hypersetup{linkcolor=inkgray}\\tableofcontents}\n")
 cat("```\n")

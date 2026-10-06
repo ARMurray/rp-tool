@@ -226,6 +226,16 @@ dmr_parameters_lookup <- read_csv(
   dplyr::distinct(parameter_code, parameter_desc)
 
 
+# ── Tool version ──────────────────────────────────────────────────────────────
+# Single source: the VERSION file at the repo root (also read by the user
+# guide). Shown in the title bar and landing page, and stamped on every
+# report and data package so a finding can be traced to the tool version
+# that produced it. "dev" if the file is missing (e.g. not deployed).
+APP_VERSION <- tryCatch(
+  trimws(readLines("VERSION", warn = FALSE)[1]),
+  error = function(e) "dev"
+)
+
 # ── SQLite database path ──────────────────────────────────────────────────────
 # Set PR_RP_SQLITE env var on Connect, or falls back to data/pr_rp.sqlite
 SQLITE_PATH <- Sys.getenv("PR_RP_SQLITE", unset = "data/pr_rp.sqlite")
@@ -317,8 +327,14 @@ ui <- fluidPage(
     titlePanel(
       title = span(
         img(src = "epa_logo.png", height = 75, style = "margin-right: 15px;"),
-        "Puerto Rico Reasonable Potential (RP) Calculator"
-      )
+        "Puerto Rico Reasonable Potential (RP) Calculator",
+        tags$small(
+          class = "text-muted",
+          style = "font-size: 45%; margin-left: 10px;",
+          paste0("v", APP_VERSION)
+        )
+      ),
+      windowTitle = "Puerto Rico RP Calculator"
     ),
     div(
       style = "display: flex; gap: 8px; margin-top: 20px; margin-right: 20px;",
@@ -613,7 +629,10 @@ server <- function(input, output, session) {
         "download_user_guide",
         "Download User Guide PDF",
         icon = icon("file-pdf")
-      )
+      ),
+      br(),
+      br(),
+      tags$small(class = "text-muted", paste("Version", APP_VERSION))
     )
   }
 
@@ -1149,6 +1168,14 @@ server <- function(input, output, session) {
       return()
     }
 
+    # Clear Needs Attention state left over from an earlier NPDES fetch in
+    # this session. The standalone page has no Needs Attention tab, so stale
+    # flags would block Run RP with nothing the user could do to resolve them.
+    rv$flagged_params <- NULL
+    rv$wqs_overrides <- NULL
+    rv$quick_run_flag <- FALSE
+    rv$quick_run_params <- character(0)
+
     # Standardize and coerce
     df <- df %>%
       dplyr::mutate(
@@ -1158,9 +1185,7 @@ server <- function(input, output, session) {
           pad = "0"
         ),
         dmr_value_nmbr = suppressWarnings(as.numeric(dmr_value_nmbr)),
-        monitoring_period_end_date = suppressWarnings(lubridate::mdy(
-          monitoring_period_end_date
-        )),
+        monitoring_period_end_date = parse_dmr_date(monitoring_period_end_date),
         perm_feature_nmbr = as.character(perm_feature_nmbr)
       )
 
@@ -1780,7 +1805,7 @@ server <- function(input, output, session) {
   )
 
   output$download_user_guide <- downloadHandler(
-    filename = function() "RP_Calculator_User_Guide.pdf",
+    filename = function() paste0("RP_Calculator_User_Guide_v", APP_VERSION, ".pdf"),
     content = function(file) {
       file.copy("www/RPA_User_Guide.pdf", file)
     },
@@ -1809,7 +1834,11 @@ server <- function(input, output, session) {
         dplyr::mutate(
           dmr_value_nmbr = NA_real_,
           dmr_unit_desc = Expected_Unit,
-          monitoring_period_end_date = "MM-DD-YYYY" # user fills (YYYY-MM-DD)
+          # User fills: YYYY-MM-DD or MM/DD/YYYY (see parse_dmr_date()).
+          monitoring_period_end_date = NA_character_,
+          # Outfall is required by the standalone upload and needed for the
+          # per-outfall analysis in both workflows.
+          perm_feature_nmbr = NA_character_
         ) %>%
         dplyr::select(
           parameter_code,
@@ -1817,6 +1846,7 @@ server <- function(input, output, session) {
           dmr_value_nmbr,
           dmr_unit_desc,
           monitoring_period_end_date,
+          perm_feature_nmbr,
           Expected_Unit
         )
 
@@ -1856,10 +1886,7 @@ server <- function(input, output, session) {
         ),
         # keep units as given; users are responsible for correctness
         dmr_value_nmbr = suppressWarnings(as.numeric(dmr_value_nmbr)),
-        # try ISO parse; if it fails, keep as character
-        monitoring_period_end_date = suppressWarnings(lubridate::mdy(
-          monitoring_period_end_date
-        ))
+        monitoring_period_end_date = parse_dmr_date(monitoring_period_end_date)
       )
 
     # Optional: warn if units don’t match expected UNIT_NAME
@@ -1887,7 +1914,19 @@ server <- function(input, output, session) {
       }
     }
 
-    # Minimal columns your app expects elsewhere (fill if missing)
+    # Minimal columns the app expects elsewhere, filled only if the upload
+    # lacks them. (A `col %||% default` inside mutate() errors when the column
+    # is absent, which crashed uploads of the app's own template.)
+    optional_defaults <- list(
+      perm_feature_nmbr = NA_character_,
+      perm_feature_type_code = "EXO",
+      statistical_base_type_code = "MAX",
+      value_type_desc = "Concentration3",
+      parameter_desc = NA_character_
+    )
+    for (col in names(optional_defaults)) {
+      if (!col %in% names(add_df)) add_df[[col]] <- optional_defaults[[col]]
+    }
     add_df <- add_df %>%
       dplyr::mutate(
         # Source tag: lets coverage_tbl_data() and the report distinguish
@@ -1895,15 +1934,7 @@ server <- function(input, output, session) {
         # Inclusion" column + \u2021 footnote in the Included Pollutants table).
         dataset_source = "Manually Added",
         npdes_id = input$permit_id %||% NA_character_,
-        perm_feature_nmbr = perm_feature_nmbr %||% NA_character_,
-        perm_feature_type_code = perm_feature_type_code %||% "EXO",
-        statistical_base_type_code = statistical_base_type_code %||% "MAX",
-        value_type_desc = value_type_desc %||% "Concentration3",
-        parameter_desc = if (!"parameter_desc" %in% names(add_df)) {
-          NA_character_
-        } else {
-          parameter_desc
-        }
+        perm_feature_nmbr = as.character(perm_feature_nmbr)
       )
 
     # Append
@@ -2025,8 +2056,8 @@ server <- function(input, output, session) {
   # Coverage summary header — static description + last monitoring period date
   output$coverage_summary_header <- renderUI({
     base_text <- "All parameters for which DMR data was retrieved. Parameters not associated
-                  with the selected NPDES forms are included if DMR data exists; the Form
-                  column indicates their association."
+                  with the selected NPDES forms are included if DMR data exists; the report's
+                  Included Pollutants table records why each one is included."
 
     # Query the full database for this permit's latest monitoring period —
     # independent of the user's selected date range — so the date reflects
@@ -4291,7 +4322,8 @@ server <- function(input, output, session) {
 
   output$metal_hardness_plotly <- renderPlotly({
     req(selected_finding(), rv$rp_concentration) # [CHG]
-    req(identical(input$hardness_mode, "range"))
+    # The toggle that shows this plot is only offered in range mode.
+    req(isTRUE(input$hardness_show_range))
     req(!is.null(metal_limits_cache) && nrow(metal_limits_cache) > 0)
 
     metals_ids <- c(
@@ -4477,8 +4509,13 @@ server <- function(input, output, session) {
             dilution_ratio = input$rp_dr %||% 1,
             confidence_level = input$confidence_level %||% 0.95,
             target_percentile = input$target_percentile %||% 0.95,
-            hardness_mode = input$hardness_mode %||% "range",
+            # There is no hardness_mode input: the RP always uses the entered
+            # hardness, and the range view is the plots-only checkbox. The old
+            # `input$hardness_mode %||% "range"` was therefore always "range",
+            # so every report said "Hardness setting: Range".
+            hardness_mode = if (isTRUE(input$hardness_show_range)) "range" else "set",
             hardness_value = input$hardness_value %||% NA_real_,
+            app_version = APP_VERSION,
             rp_path = "rp_concentration.csv",
             coverage_path = if (
               file.exists(file.path(tmp_dir, "coverage.csv"))
@@ -4556,6 +4593,9 @@ server <- function(input, output, session) {
               "NPDES Permit ID: ",
               input$permit_id,
               "\n",
+              "Tool version: ",
+              APP_VERSION,
+              "\n",
               "----------------------------------\n",
               "REPORT SETTINGS:\n ",
               "Dates Queried: ",
@@ -4564,7 +4604,7 @@ server <- function(input, output, session) {
               input$date_end,
               "\n",
               "Hardness: ",
-              rv$hardness
+              if (is.null(rv$hardness)) "n/a" else paste(rv$hardness, "mg/L as CaCO3")
             ),
             file = file.path(tmp_dir, readme_name)
           )

@@ -356,6 +356,19 @@ format_outfall_label <- function(
   )
 }
 
+# Parse monitoring dates from user-supplied CSVs (standalone and append
+# uploads). Accepts YYYY-MM-DD or MM/DD/YYYY. read_csv() already turns ISO
+# dates into Date, which lubridate::mdy() alone would turn into NA and the
+# rows would be silently dropped.
+parse_dmr_date <- function(x) {
+  if (inherits(x, "Date")) return(x)
+  x <- as.character(x)
+  dplyr::coalesce(
+    suppressWarnings(lubridate::ymd(x, quiet = TRUE)),
+    suppressWarnings(lubridate::mdy(x, quiet = TRUE))
+  )
+}
+
 # ── crosswalk_v2 semantics helpers ───────────────────────────────────────────
 
 #' Map ICIS statistical base codes to semantic statistic tokens.

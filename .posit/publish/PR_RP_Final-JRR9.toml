@@ -13,6 +13,7 @@ files = [
     "/data",
     "/www",
     "/report.qmd",
+    "/VERSION",
 ]
 validate = true
 product_type = "connect"
