@@ -7,7 +7,7 @@
 # WQS Overrides sections will be empty in the rebuilt report.
 #
 # Usage (from the repo root):
-#   Rscript testing/render_example.R <zip> [out.pdf] [facility] [forms]
+#   Rscript testing/render_example.R <zip or folder> [out.pdf] [facility] [forms]
 
 suppressPackageStartupMessages(library(dplyr))
 
@@ -27,7 +27,12 @@ if (!nzchar(Sys.getenv("QUARTO_PATH"))) {
 
 tmp_dir <- tempfile("rp_render_")
 dir.create(tmp_dir)
-utils::unzip(zip_path, exdir = tmp_dir)
+# Accept the zip as downloaded or an already-extracted package folder.
+if (dir.exists(zip_path)) {
+  file.copy(list.files(zip_path, full.names = TRUE), tmp_dir)
+} else {
+  utils::unzip(zip_path, exdir = tmp_dir)
+}
 xlsx <- file.path(tmp_dir, "data.xlsx")
 
 # Read every sheet as text so parameter codes keep their leading zeros, then
@@ -83,7 +88,10 @@ readme <- readLines(file.path(tmp_dir, "README.txt"), warn = FALSE)
 permit <- sub(".*:\\s*", "", grep("Permit ID", readme, value = TRUE)[1])
 dates  <- regmatches(readme, regexpr("\\d{4}-\\d{2}-\\d{2} to \\d{4}-\\d{2}-\\d{2}", readme))
 dates  <- strsplit(dates, " to ")[[1]]
-hardness <- as.numeric(sub(".*:\\s*", "", grep("Hardness", readme, value = TRUE)[1]))
+hardness <- suppressWarnings(as.numeric(sub(".*:\\s*", "", grep("Hardness", readme, value = TRUE)[1])))
+# Blank in range-mode packages; the report only reads it in "set" mode, but
+# Quarto rejects an NA parameter.
+if (is.na(hardness)) hardness <- 100
 
 file.copy("report.qmd", file.path(tmp_dir, "report.qmd"), overwrite = TRUE)
 

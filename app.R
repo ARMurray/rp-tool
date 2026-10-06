@@ -2950,7 +2950,16 @@ server <- function(input, output, session) {
         dplyr::rowwise() %>%
         dplyr::mutate(
           conv_data = list(get_unit_conversion(dmr_unit_desc, UNIT_NAME)),
-          Conv_Flag = conv_data$flag,
+          # Rows already converted at load time (e.g. 00011 deg F -> deg C)
+          # now match the manual unit exactly, which returns no flag; keep
+          # their PASS so the report still shows "Units Converted: Yes".
+          # Only PASS is kept: an earlier NO_WQS must be cleared here or the
+          # RP stage would drop the rows.
+          Conv_Flag = if (is.na(conv_data$flag) && identical(Conv_Flag, "PASS")) {
+            "PASS"
+          } else {
+            conv_data$flag
+          },
           # Same branches as the standalone / SQLite conversion mutates: any
           # non-convertible flag (EXCLUDED, NO_WQS, FAIL) retains the value
           # as-is for later filtering by the RP stage.
