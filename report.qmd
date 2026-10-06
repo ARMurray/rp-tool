@@ -346,18 +346,52 @@ class_linetypes <- function(classes) {
   setNames(dplyr::coalesce(unname(wqs_linetypes[classes]), "dashed"), classes)
 }
 
+# Temperature reported under 00011 (deg F) is converted to deg C upstream
+# without checking the values. A permittee that enters Celsius numbers under
+# the Fahrenheit code ends up with sub-zero results. The values are left as
+# converted; a reading below freezing is flagged for the permit writer.
+negative_temp_flag <- function(obs) {
+  t_obs <- obs %>% dplyr::filter(parameter_code == "00010")
+  n_neg <- sum(t_obs$dmr_value_nmbr < 0, na.rm = TRUE)
+  if (n_neg == 0) return(invisible())
+  from_f <- "orig_parameter_code" %in% names(t_obs) &&
+    any(t_obs$orig_parameter_code[t_obs$dmr_value_nmbr < 0] == "00011", na.rm = TRUE)
+  cat(sprintf(paste0(
+    "> **\\textcolor{red}{Check data}** — %d of %d temperature values at this ",
+    "outfall are below 0 °C%s. Verify against the DMR before relying on this result.\n\n"),
+    n_neg, nrow(t_obs),
+    if (from_f) paste0(
+      ". They were reported under parameter 00011 (°F) and converted to °C; ",
+      "values below freezing suggest they were actually reported in °C"
+    ) else ""
+  ))
+}
+
 obs_point_color <- "#1b9e77"
+
+# Plot title naming the parameter and outfall, so a plot still identifies
+# itself when its section runs over several pages. Internal Outfalls in red.
+plot_title <- function(param, of) {
+  type <- outfall_type(of)
+  lbl <- format_outfall_label(of, type)
+  if (!is.na(type) && type == "INO") lbl <- paste0("<span style='color:red'>", lbl, "</span>")
+  paste0(param, " — ", lbl)
+}
+
+# Start each parameter on a new page unless its heading, note and first
+# table+plot block fit, so a heading is never stranded at a page bottom.
+# Skipped for a section's first parameter, which follows the section's own
+# \clearpage and short intro: requiring the space there pushed it to the next
+# page and left the intro alone on a page.
+start_parameter_section <- function(first = FALSE) {
+  if (first) return(invisible())
+  cat("\n\n```{=latex}\n\\needspace{0.7\\textheight}\n```\n\n")
+}
 
 # A parameter's summary table and plot go in one minipage, which LaTeX cannot
 # split: if the pair doesn't fit, it moves to the next page whole. The former
 # samepage groups did not hold a table and figure together, so the plot moved
 # alone and left the table stranded above a large blank gap.
-# Start each parameter on a new page unless its heading, note and first
-# table+plot block fit, so a heading is never stranded at a page bottom.
-start_parameter_section <- function() {
-  cat("\n\n```{=latex}\n\\needspace{0.7\\textheight}\n```\n\n")
-}
-
 keep_together_begin <- function() {
   cat("\n\n```{=latex}\n\\noindent\\begin{minipage}{\\linewidth}\n```\n\n")
 }
@@ -371,6 +405,7 @@ report_plot_theme <- ggplot2::theme_minimal() +
   ggplot2::theme(
     plot.background = ggplot2::element_rect(colour = "grey40", fill = NA, linewidth = 0.6),
     plot.margin     = ggplot2::margin(8, 10, 8, 8),
+    plot.title      = ggtext::element_markdown(size = 10, face = "bold"),
     legend.position = "bottom",
     legend.box      = "vertical",
     legend.text     = ggplot2::element_text(size = 7),
@@ -381,7 +416,7 @@ report_plot_theme <- ggplot2::theme_minimal() +
 # Observations against criterion lines for a direct-comparison parameter.
 # Floors (pH minimum) are drawn thicker and first so the ceiling line on top
 # stays visible when the two coincide.
-plot_direct <- function(obs, rows) {
+plot_direct <- function(obs, rows, title) {
   wqs <- rows %>%
     dplyr::mutate(
       line_key = format_water_class(
@@ -401,7 +436,9 @@ plot_direct <- function(obs, rows) {
 
   # Non-detects arrive as NODI B/Q rewritten to 0; log10 would drop them, so
   # they are plotted at the smallest positive value as open down-triangles.
-  obs$is_nd <- is.finite(obs$dmr_value_nmbr) & obs$dmr_value_nmbr <= 0
+  # Only exact zeros: a negative here is a real (if suspect) temperature and
+  # must plot as a measurement.
+  obs$is_nd <- is.finite(obs$dmr_value_nmbr) & obs$dmr_value_nmbr == 0
   nd_floor <- if (length(pos) > 0) min(pos) else NA_real_
   nd_at_floor <- use_log && any(obs$is_nd) && is.finite(nd_floor)
   obs$y_plot <- ifelse(obs$is_nd & nd_at_floor, nd_floor, obs$dmr_value_nmbr)
@@ -440,12 +477,18 @@ plot_direct <- function(obs, rows) {
   p +
     (if (use_log) ggplot2::scale_y_log10() else ggplot2::scale_y_continuous()) +
     ggplot2::labs(
+      title = title,
       x = "Monitoring date",
       y = paste0(if (is.na(unit)) "" else unit, if (use_log) " (log scale)" else ""),
       caption = nd_cap
     ) +
     report_plot_theme
 }
+```
+
+<!-- Each top-level section starts on a new page. -->
+```{=latex}
+\clearpage
 ```
 
 # Summary
@@ -576,6 +619,10 @@ if (!is.null(coverage_df) && nrow(coverage_df) > 0) {
 }
 ```
 
+```{=latex}
+\clearpage
+```
+
 # RP Findings
 
 RP column: **YES** indicates the assessed value exceeds the criterion.
@@ -647,6 +694,10 @@ rp_df %>%
   column_spec(8, width = "1.4cm")       # RP
 ```
 
+```{=latex}
+\clearpage
+```
+
 # Non-Concentration Based Measures
 
 Parameters in this section are assessed by direct comparison: the observed
@@ -691,7 +742,7 @@ if (nrow(direct_rp) == 0) {
     sec_rows <- direct_rp %>% dplyr::filter(section == sec)
     sec_codes <- unique(sec_rows$parameter_code)
 
-    start_parameter_section()
+    start_parameter_section(first = sec == sort(unique(direct_rp$section))[1])
     cat(sprintf("\n\n## %s\n\n", latex_escape(sec)))
 
     # Criterion note (Streeter-Phelps, Enterococci interval, temperature basis)
@@ -724,6 +775,7 @@ if (nrow(direct_rp) == 0) {
       obs <- dmr_obs(sec_codes, of, unique(of_rows$statistic))
 
       cat(sprintf("### %s\n\n", format_outfall_label_latex(of, outfall_type(of))))
+      negative_temp_flag(obs)
       keep_together_begin()
 
       summ <- of_rows %>%
@@ -755,7 +807,7 @@ if (nrow(direct_rp) == 0) {
       cat("\n\n")
 
       if (nrow(obs) > 0) {
-        print(plot_direct(obs, of_rows))
+        print(plot_direct(obs, of_rows, plot_title(sec, of)))
         cat("\n\n")
       } else {
         cat("No dated observations to plot.\n\n")
@@ -768,6 +820,10 @@ if (nrow(direct_rp) == 0) {
 
 
 
+
+```{=latex}
+\clearpage
+```
 
 # Concentration Based Measures
 
@@ -810,7 +866,7 @@ if (is.null(dmr_df) || nrow(dmr_df) == 0) {
     param_codes <- sub_all %>% dplyr::distinct(parameter_code) %>% dplyr::pull()
     param_code <- if (length(param_codes) > 0) param_codes[1] else NA_character_
 
-    start_parameter_section()
+    start_parameter_section(first = poll == pollutants[1])
     cat(sprintf("\n\n## %s\n\n", latex_escape(poll)))
 
     # ── Criterion note (rp_note) ──────────────────────────────────────────
@@ -855,6 +911,7 @@ if (is.null(dmr_df) || nrow(dmr_df) == 0) {
         dplyr::distinct(RWC_rs) %>% dplyr::pull(RWC_rs) %>% .[is.finite(.)]
       rwc_val <- if (length(rwc_val) > 0) rwc_val[1] else NA_real_
 
+      negative_temp_flag(obs)
       keep_together_begin()
 
       # ── Summary table ─────────────────────────────────────────────────────
@@ -940,7 +997,10 @@ if (is.null(dmr_df) || nrow(dmr_df) == 0) {
         # y-axis bounds: include obs values, WQS lines, and RWC
         all_y_vals <- c(obs$dmr_value_nmbr, wqs_lines$CRITERION_VALUE,
                         if (is.finite(rwc_val)) rwc_val else numeric(0))
-        y_min <- max(0, min(all_y_vals, na.rm = TRUE) * 0.95)
+        # Floor at 0 unless the data go negative (a suspect temperature
+        # conversion); clipping would hide exactly the values being flagged.
+        y_lo  <- min(all_y_vals, na.rm = TRUE)
+        y_min <- if (y_lo < 0) y_lo * 1.05 else y_lo * 0.95
 
         # Mirror the app: many CWA criteria sit far below any achievable
         # quantitation limit, and bacteria counts span five or six decades by
@@ -968,7 +1028,8 @@ if (is.null(dmr_df) || nrow(dmr_df) == 0) {
         # dropped silently by log10. Plot them at a floor equal to the smallest
         # positive value in the series, marked with open down-triangles, and
         # disclose the substitution in the caption.
-        obs$is_nd_r <- is.finite(obs$dmr_value_nmbr) & obs$dmr_value_nmbr <= 0
+        # Exact zeros only: a negative is a real (if suspect) temperature.
+        obs$is_nd_r <- is.finite(obs$dmr_value_nmbr) & obs$dmr_value_nmbr == 0
         nd_floor_r <- if (length(pos_obs_r) > 0) min(pos_obs_r) else NA_real_
         nd_at_floor_r <- use_log_r && any(obs$is_nd_r) && is.finite(nd_floor_r)
         obs$y_plot_r <- ifelse(
@@ -1050,6 +1111,7 @@ if (is.null(dmr_df) || nrow(dmr_df) == 0) {
             }
           } +
           ggplot2::labs(
+            title = plot_title(poll, of),
             x = "Monitoring date",
             y = ylab_txt,
             caption = if (!is.na(nd_cap_r)) nd_cap_r else NULL
@@ -1242,6 +1304,10 @@ if (is.null(dmr_df) || nrow(dmr_df) == 0) {
 ```
 
 
+```{=latex}
+\clearpage
+```
+
 # Parameters from Applications without DMR Data {#sec-unavailable}
 
 ```{r}
@@ -1275,6 +1341,10 @@ if (!is.null(bottom_unavail) && nrow(bottom_unavail) > 0) {
 
 
 
+
+```{=latex}
+\clearpage
+```
 
 # Excluded Parameters {#sec-excluded}
 
@@ -1316,6 +1386,10 @@ if (!is.null(excl_df) && nrow(excl_df) > 0) {
 }
 ```
 
+
+```{=latex}
+\clearpage
+```
 
 # Manual WQS Overrides {#sec-manual-wqs}
 
