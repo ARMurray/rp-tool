@@ -36,7 +36,7 @@ suppressPackageStartupMessages({
 # hardcoding. In Task Scheduler, set them in the script environment or via
 # a .Renviron file in your home directory.
 ORACLE_USER <- Sys.getenv("ICIS_USER", unset = "amurra02")
-ORACLE_PW <- Sys.getenv("ICIS_PW", unset = "Summer_2027!")
+ORACLE_PW <- Sys.getenv("ICIS_PW", unset = "Fall_2026!")
 ORACLE_DSN <- Sys.getenv("ICIS_DSN", unset = "ICISCOPY_SID")
 ORACLE_DRIVER <- Sys.getenv(
   "ICIS_DRIVER",
