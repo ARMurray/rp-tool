@@ -1,14 +1,15 @@
 ---
 title: "Puerto Rico Reasonable Potential (RP) Calculator"
-subtitle: "User Guide"
+subtitle: "User Guide"   # build_user_guide.R adds " — Version x.y.z" from VERSION
 # ---------------------------------------------------------------------------
 # SINGLE-SOURCE USER GUIDE
 #
 # One document renders both the HTML guide (shown in the app's User Guide
-# modal) and the companion PDF. Run:
-#     quarto render User_Guide.qmd            # both formats
-#     quarto render User_Guide.qmd --to html
-#     quarto render User_Guide.qmd --to pdf
+# modal) and the companion PDF. The version comes from the VERSION file.
+# Build both and copy them to where the app serves them:
+#     Rscript build_user_guide.R
+# (which runs quarto render User_Guide.qmd and copies the outputs to
+# www/RPA_User_Guide.html and www/RPA_User_Guide.pdf).
 #
 # Format-specific scaffolding lives in the two format keys below; the body is
 # plain Markdown + Quarto callouts + math, all of which render in both formats.
@@ -120,7 +121,11 @@ The **Puerto Rico Reasonable Potential (RP) Calculator** is a web-based applicat
 The application is scoped to **Puerto Rico NPDES permits** and references the **Puerto Rico Water Quality Standards Regulation (PRWQSR), as amended April 2025** (DNER Resolution R-25-006). All numeric criteria, water classifications, and hardness-dependent metal limits applied by the app are drawn directly from that regulation.
 
 ::: {.callout-note}
-**Where the data come from.** The app does not call a live web service at analysis time. A companion script (`refresh_db.R`) pulls PR/VI facility and DMR records from the ICIS-NPDES Oracle database on a weekly schedule and writes them to a local SQLite file (`data/pr_rp.sqlite`) that the app reads. This makes the app fast and reproducible: two analyses run against the same weekly snapshot return the same result. The refresh date therefore bounds how current the data can be.
+**Where the data come from.** The app does not call a live web service at analysis time. A companion script (`refresh_db.R`) pulls PR/VI facility and DMR records from the ICIS-NPDES Oracle database on a weekly schedule and writes them to a local SQLite file (`data/pr_rp.sqlite`) that the app reads. This makes the app fast and reproducible: two analyses run against the same weekly snapshot return the same result. The refresh date therefore bounds how current the data can be; the landing page shows when the snapshot was last updated and how many facilities and DMR records it holds.
+:::
+
+::: {.callout-note}
+**Versions.** This guide describes version `r trimws(readLines('VERSION', warn = FALSE)[1])` of the app. The version is shown next to the app title and on the landing page, and it is printed on every report and in the README of every data package, so a finding can always be traced to the version that produced it. Changes between versions are listed in @sec-appendix-versions.
 :::
 
 ## What the App Does {#sec-what-it-does}
@@ -135,7 +140,7 @@ For each pollutant and outfall combination at a selected facility, the app:
 6. Generates a PDF report — and optionally a ZIP package with supporting data — that documents all inputs, settings, and findings
 
 ::: {.callout-note}
-**Not every criterion is a ceiling.** Earlier versions of the app treated every criterion as a maximum-concentration ceiling to be projected through the TSD multiplying factor. That is correct for most pollutants but wrong for several important ones — dissolved oxygen (a floor), Enterococci (interval statistics), color and turbidity (direct comparison), oil & grease (narrative), and pH and temperature. Each crosswalk row now declares its own evaluation semantics, so the app applies the right test to each parameter. @sec-direct describes the parameters that are evaluated by direct comparison rather than projection.
+**Not every criterion is a ceiling.** Projecting a maximum concentration through the TSD multiplying factor is correct for most pollutants but wrong for several important ones — dissolved oxygen (a floor), Enterococci (interval statistics), color and turbidity (direct comparison), oil & grease (narrative), and pH and temperature. Each crosswalk row declares its own evaluation semantics, so the app applies the right test to each parameter. @sec-direct describes the parameters that are evaluated by direct comparison rather than projection.
 :::
 
 ## What the App Does Not Replace {#sec-limitations}
@@ -149,7 +154,7 @@ The app is an analytical aid, not a substitute for permit writer judgment. It do
 - Perform a Streeter-Phelps dissolved-oxygen analysis (see @sec-do)
 - Replace the fact sheet or other permit development documentation requirements
 
-When the app returns a YES RP finding, the permit writer must still determine the appropriate effluent limitation based on the applicable water quality standard, the dilution ratio, and any mixing zone authorization. When it returns NO, that finding is based on the statistical projection or direct comparison alone and should be considered alongside other factors described in 40 CFR 122.44(d)(1). A **DEPENDS** finding means an excursion was not observed but the absence of one cannot, by itself, rule out reasonable potential for that parameter (see @sec-interpret-depends and @sec-direct).
+When the app returns a YES RP finding, the permit writer must still determine the appropriate effluent limitation based on the applicable water quality standard, the dilution ratio, and any mixing zone authorization. When it returns NO, that finding is based on the statistical projection or direct comparison alone and should be considered alongside other factors described in 40 CFR 122.44(d)(1). A **DEPENDS** finding means an excursion was not observed but the absence of one cannot, by itself, rule out reasonable potential for that parameter (see @sec-interpret-direct-depends and @sec-direct).
 
 ---
 
@@ -192,7 +197,7 @@ Class SG includes all ground waters of Puerto Rico, including those that dischar
 In the app's water type filter, "Surface Waters" maps to the PRWQSR's general surface water standards (Rule 1303.1) that apply across all surface water classifications, as distinct from the class-specific criteria under Rule 1303.2. The general standards include temperature, asbestos, radium-226, strontium-90, gross beta, and oil & grease.
 
 ::: {.callout-note}
-**Selecting water classifications in the app:** The water classification selection determines which WQS rows from the crosswalk are active for both data filtering and RP comparison. Selecting multiple classifications produces RP determinations for each class independently — the app reports a "worst-case" RP across all selected classes, as well as the per-class breakdown. The general-standard parameters (temperature, oil & grease, and the others listed above) appear **only** when "Surface Waters" or "All" is selected — narrowing to a single specific class will not pull them in. When in doubt about which classification applies to a receiving water body, consult the PRWQSR classification maps (Rule 1302) or contact the DNER Water Quality Program.
+**Selecting water classifications in the app:** The water classification selection determines which WQS rows from the crosswalk are active for both data filtering and RP comparison. Selecting multiple classifications produces an RP determination for each class independently — one row per class in the Findings table and the report — and the Findings plot summarizes the worst case across them. The general-standard parameters (temperature, oil & grease, and the others listed above) appear **only** when "Surface Waters" or "All" is selected — narrowing to a single specific class will not pull them in. When in doubt about which classification applies to a receiving water body, consult the PRWQSR classification maps (Rule 1302) or contact the DNER Water Quality Program.
 :::
 
 ---
@@ -214,9 +219,9 @@ Both workflows share the same Analysis Settings, Findings, and Report pages. The
 
 ## Navigating the App {#sec-navigation}
 
-The app uses a single-page layout with page routing. A persistent top bar appears on every page with a **← Back to Start** button (returns to the landing page) and a **User Guide** button (opens this document in a modal window). Within each page you also move using contextual buttons (e.g., "← Back to Search," "← Back to Settings," "Return Home").
+The app uses a single-page layout with page routing. A persistent top bar appears on every page with the app title and version, a **← Back to Start** button (returns to the landing page), and a **User Guide** button (opens this document in a modal window). Within each page you also move using contextual buttons (e.g., "Return Home," "← Back to Search," "← Back to Settings").
 
-![Landing page with "Connect to ICIS-NPDES" and "Standalone Calculator" workflow cards, and User Guide button in top right](img/landing.png)
+The landing page offers the two workflows, shows when the ICIS-NPDES snapshot was last updated, and has a **Download User Guide PDF** button for a printable copy of this guide.
 
 ---
 
@@ -228,7 +233,7 @@ Use this workflow when the facility has an active NPDES permit and effluent moni
 
 Click **Connect to ICIS-NPDES** on the landing page. This opens the facility selection page, which loads the list of NPDES permits for Puerto Rico from the local ICIS-NPDES database at application startup.
 
-Use the **Search Permit ID or Facility Name** box to find the facility of interest. You can type either the NPDES ID (e.g., `PR0001031`) or any part of the facility name — the search is case-insensitive and matches partial strings. Select the facility from the dropdown.
+Use the **Search Permit ID or Facility Name** box to find the facility of interest. You can type either the NPDES ID (e.g., `PR0001031`) or any part of the facility name — the search is case-insensitive and matches partial strings. Select the facility from the dropdown. If the facility list cannot be loaded (for example, the database file is missing), a warning with a **↺ Retry** button appears above the search box.
 
 Once a facility is selected:
 
@@ -250,22 +255,20 @@ Before fetching data, configure the two filters that control which parameters ar
 
 ### NPDES Forms {#sec-npdes-forms}
 
-Select one or more **NPDES application forms** from the multi-select dropdown. NPDES applications require permittees to report specific pollutants depending on the type of facility and the nature of the discharge. The forms available in the app correspond to the standard EPA application forms:
+Select one or more **NPDES application forms** from the multi-select dropdown. At least one form must be selected — the Coverage Summary is built from the selected forms. NPDES applications require permittees to report specific pollutants depending on the type of facility and the nature of the discharge. The dropdown lists the EPA application forms covered by the app's pollutant table, for example:
 
-- **Form 2A** — New and existing publicly owned treatment works (POTWs)
-- **Form 2B** — Concentrated Animal Feeding Operations (CAFOs)
 - **Form 2C** — Existing manufacturing, commercial, mining, and silviculture facilities
 - **Form 2D** — New manufacturing, commercial, mining, and silviculture facilities
-- **Form 2E** — Facilities that do not discharge process wastewater
+- **Form 2F** — Stormwater discharges associated with industrial activity
 
-The form selection defines the **universe of pollutants** expected to be reported for the facility — this determines which pollutants are highlighted in the Data Overview (Coverage Summary) table, and it drives the *Reason Included* line in the report.
+The form selection defines the **universe of pollutants** expected to be reported for the facility. It determines which pollutants appear in the Data Overview (Coverage Summary) table and the *Basis for Inclusion* column of the report's Included Pollutants table.
 
 ::: {.callout-important}
-**Form selection is a display filter, not an analysis filter.** Form selection no longer removes parameters from the calculation. Any parameter that has DMR data and an applicable WQS criterion is evaluated for RP regardless of its form association. Parameters not associated with a selected form are labeled *Not in selected forms* in the Coverage Summary's Form column but are still included in the analysis. This change prevents the old failure mode where a parameter with a real criterion silently dropped out because it was not tied to the selected form.
+**Form selection is a display filter, not an analysis filter.** Any parameter that has DMR data and an applicable WQS criterion is evaluated for RP regardless of its form association. Parameters not associated with a selected form still appear in the Coverage Summary and are still analyzed; the report records them as included because prior DMR data exist (*Existing DMR*).
 :::
 
 ::: {.callout-tip}
-**Selecting the right form:** If you are unsure which form applies, refer to the facility's permit application or its permit record. Most municipal wastewater treatment plants use Form 2A. Most industrial and manufacturing dischargers use Form 2C or 2D. When multiple forms apply (e.g., a POTW receiving industrial pretreatment discharges), select all applicable forms.
+**Selecting the right form:** If you are unsure which form applies, refer to the facility's permit application or its permit record. Most industrial and manufacturing dischargers use Form 2C or 2D, plus Form 2F for stormwater associated with industrial activity. When multiple forms apply, select all of them.
 :::
 
 ### Water Classifications {#sec-water-type-filter}
@@ -280,10 +283,10 @@ Select one or more **water classifications** from the multi-select dropdown. The
 | Class SG | Class SG ground waters |
 | Surface Waters | General surface water standards (Rule 1303.1) |
 
-These selections determine which WQS criteria rows are active for comparison. When multiple classifications are selected, the app performs the RP comparison independently for each class and reports the worst-case result. Select **All** to evaluate against every applicable standard in the crosswalk — appropriate when the receiving water classification is uncertain or when you want to be comprehensive.
+These selections determine which WQS criteria rows are active for comparison. The default is **Class SB**. When multiple classifications are selected, the app performs the RP comparison independently for each class. Select **All** to evaluate against every applicable standard in the crosswalk — appropriate when the receiving water classification is uncertain or when you want to be comprehensive.
 
 ::: {.callout-important}
-**Class SD and conditional criteria:** If **Class SD** is selected, the conditional receiving water inputs panel appears (see @sec-hardness-settings). You will need to provide a hardness value or choose the range analysis option, and pH and temperature for TAN, before running RP. This panel is only shown for Class SD because the hardness-dependent metal criteria and the TAN criterion are specific to Class SD surface waters under the PRWQSR.
+**Class SD and conditional criteria:** If **Class SD** is selected, the *Receiving Water Inputs (Class SD)* panel appears in the Analysis Settings (see @sec-hardness-settings). It holds the hardness used for the hardness-dependent metals and the pH and temperature used for the TAN criterion. This panel is only shown for Class SD because those criteria are specific to Class SD surface waters under the PRWQSR.
 :::
 
 ## Step 3: Fetch DMR Data {#sec-fetch-dmr}
@@ -294,15 +297,21 @@ Click **Fetch DMR Data**. The app queries the local ICIS-NPDES database for effl
 
 **NODI code handling:** Records with NODI codes B ("no discharge") or Q ("no discharge this period") are set to a value of zero. This is consistent with the approach in the TSD — a period of no discharge represents a zero concentration and should be included in the sample set. Records with other NODI codes that prevent a numeric value from being reported are excluded.
 
-**Unit detection and filling:** DMR reports occasionally omit unit labels for individual records, particularly for NODI-coded rows. The app fills missing units by using the most frequently reported unit for that parameter across the permit's records, falling back to the WQS unit hint from the crosswalk if all records for the parameter have missing units.
+**Unit filling:** DMR reports occasionally omit unit labels, particularly on no-discharge (NODI B/Q) rows. A no-discharge row with a blank unit takes the most frequently reported unit for that parameter in the permit's records. If every record for a parameter is missing its unit, the WQS unit from the crosswalk is used.
 
-**Unit conversion:** Each reported value is checked against the WQS unit for its parameter. The converter handles concentration conversions (µg/L ↔ mg/L, ng/L → µg/L or mg/L, ppm → mg/L or µg/L), recognizes several units that are written differently but mean the same thing (e.g., ICIS long-form bacteria and color units), and converts Fahrenheit to Celsius for temperature. Mass-load and flow units (e.g., kg/day, MGD) are **excluded** from the WQS comparison by design rather than treated as errors, because a load cannot be compared to a concentration criterion. When a parameter has no WQS criterion for the selected water class, its records are flagged **NO WQS**. A genuinely unrecognized unit is flagged **FAIL** and the value is retained at face value. Every status is shown in the Coverage Summary and carried into the report (see @sec-data-overview).
+**Unit conversion:** Each reported value is checked against the WQS unit for its parameter. The converter handles concentration conversions (µg/L ↔ mg/L, ng/L → µg/L or mg/L, ppm → mg/L or µg/L) and recognizes several units that are written differently but mean the same thing (e.g., ICIS long-form bacteria and color units). Mass-load and flow units (e.g., kg/day, MGD) are **excluded** from the WQS comparison by design rather than treated as errors, because a load cannot be compared to a concentration criterion. When a parameter has no WQS criterion for the selected water class, its records are flagged **NO WQS**. A genuinely unrecognized unit is flagged **FAIL** and the value is retained at face value. Every status is shown in the Coverage Summary (see @sec-data-overview).
+
+**Code merging:** Some analytes are reported under more than one DMR code. Temperature reported in °F (code 00011) is converted to °C and merged into code 00010; when a permittee reports both °F and °C for the same outfall and period, the converted °F record is kept and the °C record dropped. The ammonia codes 82230 and 00609 are merged into 00610 (see @sec-tan). The original code is kept with each record and appears in the DMR sheet of the data package.
+
+::: {.callout-warning}
+**Fahrenheit conversion is not checked against the values.** The °F → °C conversion trusts the parameter code. If a permittee entered Celsius numbers under the Fahrenheit code, the converted values come out far too low — often below freezing. The app does not try to correct this; instead the report flags any outfall with temperatures below 0 °C (see @sec-report-contents). Verify such records against the DMR before relying on the temperature result.
+:::
 
 After a successful fetch, the app navigates to the **Summary (Data Overview) page**.
 
 ## Step 4: Review the Data Overview {#sec-data-overview}
 
-The Data Overview page displays the **Coverage Summary** table, which lists the pollutants relevant to this analysis — those associated with the selected NPDES forms plus any additional parameters that have DMR data — alongside a count of available DMR samples and a unit conversion status indicator. Parameters not associated with a selected form are marked *Not in selected forms* in the Form column.
+The Data Overview page displays the **Coverage Summary** table, which lists the pollutants relevant to this analysis — those associated with the selected NPDES forms plus any additional parameters that have DMR data — alongside a count of available DMR samples and a unit conversion status indicator. Above the table, the app shows the most recent monitoring period available in the database for this permit, independent of the date range you selected.
 
 ![Summary page showing the Coverage Summary table with unit status column](img/review.png)
 
@@ -311,9 +320,8 @@ The Data Overview page displays the **Coverage Summary** table, which lists the 
 | Column | Description |
 |---|---|
 | Pollutant | NPDES pollutant name from the form crosswalk |
-| Form | The NPDES application form(s) that require this pollutant, or *Not in selected forms* |
 | Ref Param | The DMR parameter code(s) matched to this pollutant in the crosswalk |
-| # Samples | Count of qualifying DMR records retrieved for this permit and date range |
+| # Samples | Count of qualifying DMR records retrieved for this permit and date range, across all outfalls |
 | Unit Status | Result of the unit conversion check (see below) |
 
 **Unit Status values:**
@@ -393,44 +401,49 @@ These two parameters control the statistical projection used to compute the Mult
 
 This panel appears only when **Class SD** is selected as a water classification. It controls how the app handles the seven hardness-dependent metal criteria in the PRWQSR (see @sec-metals).
 
-**Hardness value (mg/L as CaCO₃):** Enter a numeric hardness value for the receiving water if a measured or estimated value is available. The app uses this value to compute the metal criterion from the hardness regression equations in Rule 1303.1(J)(1) and uses it directly in the RP comparison. The default is 100 mg/L as CaCO₃, a reasonable midrange value for Puerto Rico surface waters in the absence of site-specific data; use a measured value whenever possible. If no single hardness is appropriate, the range analysis option reports the criterion as a **DEPENDS** result with a critical-hardness annotation (see @sec-interpret-depends).
+**Hardness (mg/L as CaCO₃):** The receiving water hardness. The app computes each metal criterion from the hardness regression equations in Rule 1303.1(J)(1) at this value and uses it in the RP comparison. The default is 100 mg/L as CaCO₃, a reasonable midrange value for Puerto Rico surface waters in the absence of site-specific data; use a measured value whenever possible. An invalid entry falls back to 100 with a warning.
+
+**Show hardness range analysis (plots only):** Tick this box to see how a metal's criterion varies with hardness. For Class SD metals the Findings page gains a *Hardness vs Limit* view and the plot is annotated with the hardness below which the RWC would exceed the criterion; the report adds a hardness-vs-criterion curve for each metal. As the label says, this affects the plots only — the RP determination always uses the hardness value above (see @sec-interpret-hardness).
 
 ### pH and Temperature (for TAN, Class SD only) {#sec-ph-temp-settings}
 
-These inputs appear within the Class SD conditional panel and are used for the Total Ammonia Nitrogen (TAN) RP evaluation (see @sec-tan). The TAN criterion under Rule 1303.2(C)(2)(l) is a function of receiving water pH and temperature.
-
-**Use DMR data:** If pH (parameter code 00400) and temperature (parameter code 00010) data are available in the DMR records, the app uses those values to compute a time-varying TAN limit — one for each monitoring period that has both a pH and temperature record. The RP determination for TAN is YES if the TAN RWC exceeds the criterion at any point in the monitoring record (the "ever crossed" rule). The mean TAN limit is shown in summary tables and plots for display purposes.
-
-**Override with fixed values:** If the DMR does not include pH or temperature, or if you prefer to use design receiving water conditions, enter fixed pH and temperature values. The app uses these constant values to compute a single TAN limit for comparison against the TAN RWC.
+These inputs appear within the Class SD conditional panel and are used for the Total Ammonia Nitrogen (TAN) RP evaluation (see @sec-tan). The TAN criterion under Rule 1303.2(C)(2)(l) is a function of receiving water pH and temperature. The app computes a single TAN criterion from the two values entered here; DMR pH and temperature records are not used for this. If either value is missing or not numeric, the TAN criterion is not updated and a warning is shown.
 
 **Receiving Water pH (SU):** Valid range 0–14. Default is 6.0 SU, which represents a slightly acidic condition and produces a more conservative (lower) TAN criterion. For context, Class SD waters have a pH standard of 6.0–9.0 SU (Rule 1303.2(C)(2)(d)).
 
 **Receiving Water Temperature (°C):** Valid range 0–50 °C. Default is 30 °C, consistent with Puerto Rico's thermal discharge standard of 30 °C (Rule 1303.1(D)(1)).
 
+### Download Raw DMR {#sec-download-raw}
+
+The **Download Raw DMR** link below the settings downloads the retrieved DMR records as a CSV, after unit conversion and code merging — useful for checking a surprising value against the source record.
+
 ## Step 6: Append Local DMR Data (Optional) {#sec-append-dmr}
 
 If you have effluent monitoring data that are not in the database — for example, data from a recent sampling event not yet submitted to EPA, or data from a non-standard monitoring program — you can append those records to the retrieved dataset before running the RP analysis.
 
-**Download the DMR Template:** Click **Download DMR Template** to download a CSV file pre-populated with the parameter codes and expected WQS units for the selected facility and forms. The template includes one row per parameter code with blank value fields.
+**Download the DMR Template:** Click **Download DMR Template** to download a CSV file pre-populated with the parameter codes and expected WQS units for the selected forms and water classes. The template includes one row per parameter code with blank value fields.
 
 **Complete the template:** Fill in the following columns for each record you want to add:
 
 | Column | Description |
 |---|---|
-| `parameter_code` | 5-digit DMR parameter code (pre-filled from crosswalk) |
+| `parameter_code` | 5-digit DMR parameter code (pre-filled from the crosswalk) |
 | `parameter_desc` | Parameter description (informational only) |
-| `dmr_value_nmbr` | Observed concentration (numeric) |
-| `dmr_unit_desc` | Units for the reported value |
-| `monitoring_period_end_date` | End date of the monitoring period (`YYYY-MM-DD` or `MM/DD/YYYY`) |
+| `dmr_value_nmbr` | Observed value (numeric) |
+| `dmr_unit_desc` | Units of the reported value (pre-filled with the WQS unit; change it if you measured in a different unit) |
+| `monitoring_period_end_date` | End date of the monitoring period, `YYYY-MM-DD` or `MM/DD/YYYY` |
 | `perm_feature_nmbr` | Outfall identifier (e.g., `001`) |
+| `Expected_Unit` | The WQS unit for reference (not read on upload) |
 
-Multiple rows can be added for a single parameter code — add one row per monitoring period per outfall. Save the file as a CSV.
+Multiple rows can be added for a single parameter code — add one row per monitoring period per outfall, and delete rows you don't need. Save the file as a CSV. Appended records are treated as daily maximum values.
 
-**Upload the completed template:** Click **Upload CSV to Append** and select your completed file. The app validates the required columns, attempts unit conversion, and appends the records to the existing DMR dataset. A notification confirms the number of rows added.
+**Upload the completed template:** Click **Upload CSV to Append** and select your completed file. `parameter_code`, `dmr_value_nmbr`, `dmr_unit_desc` and `monitoring_period_end_date` are required; fill in `perm_feature_nmbr` as well, since the analysis is per outfall and records without an outfall are not assigned to one. The app appends the records to the existing DMR dataset and a notification confirms the number of rows added. If a unit differs from the expected WQS unit, a warning lists the affected parameter codes. Make sure every row you keep has a value and a date in one of the two accepted formats; a date in any other format cannot be read.
 
 ::: {.callout-warning}
 **Unit responsibility:** When appending local data, you are responsible for ensuring that the units in `dmr_unit_desc` match what was actually measured. The app will attempt to convert to WQS units, but if the reported unit is not recognized, the value is retained at face value and flagged with a FAIL conversion status. Unit mismatches in appended data appear in the Coverage Summary table.
 :::
+
+The report's Included Pollutants table records appended data: a pollutant whose only data are appended is listed as *Manually Added*, and one whose database record was supplemented carries a ‡ marker, so the permanent record shows which results depend on user-supplied data.
 
 ## Step 7: Run the RP Analysis {#sec-run-rp}
 
@@ -442,53 +455,56 @@ Click **Run RP Analysis**. (This button is enabled once every flagged parameter 
 
 Use the Standalone Calculator when no NPDES ID exists (e.g., for a new permit application) or when you have local monitoring data and prefer not to retrieve data from the database.
 
-Click **Standalone Calculator** on the landing page. Download the DMR template, complete it with your monitoring data (the same columns described in @sec-append-dmr), and upload it. Because standalone uploads have no ICIS statistical-base codes, every uploaded record is treated as a daily maximum unless the criterion it matches requires a different statistic; where a criterion needs a statistic your upload does not carry, the parameter is surfaced on the Needs Attention tab. From the upload onward, the Standalone workflow uses the same Analysis Settings, Findings, and Report pages as the NPDES workflow.
+Click **Standalone Calculator** on the landing page. The Standalone page has a single sidebar with everything needed:
+
+1. Select the **NPDES Forms** and **Water Type** (classification), as in @sec-configure-filters.
+2. Click **Download DMR Template**, complete it with your monitoring data (the same columns described in @sec-append-dmr), and upload it with **Upload Completed DMR Template**. For a standalone upload `perm_feature_nmbr` (outfall) is required along with the four columns listed there.
+3. Set the Dilution Ratio, Confidence Level, Target Percentile, and — for Class SD — the receiving water inputs (@sec-analysis-settings).
+4. Review the **Data Overview** table, then click **Run RP Analysis**.
+
+Because standalone uploads have no ICIS statistical-base codes, every uploaded record is treated as a daily maximum. The Standalone page has no Needs Attention tab: a parameter with no criterion for the selected class shows **NO WQS** in the Data Overview and is not evaluated, and a criterion that needs a different statistic (for example, the Enterococci geometric mean) cannot be matched by daily-maximum data. Manual criteria can only be entered on the NPDES workflow's Needs Attention tab; if the facility has an NPDES ID, you can use that workflow and add your data with **Append DMR Data** instead. From the Run onward, the Standalone workflow uses the same Findings and Report pages as the NPDES workflow.
 
 ---
 
 # The Findings Page {#sec-findings}
 
-After running the analysis, the Findings page presents the results. The left sidebar lets you select an **Outfall** and a **Parameter/Pollutant**, shows the **Quick Stats** panel for the current selection, and provides the **Download Report** button and **Include Data in Download** checkbox. Internal outfalls are shown in bold red in the selector and throughout the page so they are not mistaken for external outfalls.
+After running the analysis, the Findings page presents the results. The page has three parts:
 
-![Findings page overview showing sidebar with outfall/pollutant selectors and Quick Stats panel, and main tabbed plot area](img/findings.png)
+- **Results table** (left) — every finding, one row per outfall × pollutant × water class
+- **Inspector plot** (right) — the observations and criteria for the row selected in the table, with a criterion note below it when one applies
+- **Bottom bar** — **← Back to Settings**, an overall banner (*Exceedances Detected* or *No Exceedances Found*), and the **Download Report** button with its **Include Data in Download** checkbox
 
-The main panel has two tabs: the **Interactive Inspector** (a plot plus a math inspector that shows the step-by-step calculation) and the **RP Summary Table**.
+Internal outfalls are shown in bold red throughout the page so they are not mistaken for external outfalls.
 
-## Quick Stats {#sec-quick-stats}
+## The Results Table {#sec-summary-table}
 
-The Quick Stats panel summarizes the selected outfall × pollutant. It shows the outfall, the sample count, the assessed value, any prior permit limit, the worst-case RP, and — when present — a criterion-specific note carried from the crosswalk.
+The table lists every result with the columns **Outfall**, **Pollutant**, **WQS** (the criterion value), **Water Class**, **RWC** (the calculated RWC, or the observed maximum or minimum for direct-comparison parameters), and **RP**. The RP cell is colored — YES red, DEPENDS amber, NO green. Rows are ordered by RP result, YES first, then DEPENDS, then NO, so the most critical findings are at the top.
 
-![Quick Stats panel showing Worst-case RP highlighted in red (YES), with per-class breakdown](img/quick_stats.png){width=50%}
+Each column has a filter box in its header; type in it to narrow the table (for example, to one outfall or one pollutant). The table scrolls rather than paging.
 
-A few fields adapt to the type of criterion:
+**Click a row to inspect it.** The page opens with the first row — the worst-case finding — selected. Clicking a different row redraws the plot for that row's pollutant and outfall. Filtering or sorting never changes which row is selected; if you filter the selected row out of view, the plot keeps showing it.
 
-- **Max Value / Min Value.** For ceiling criteria the panel shows the observed maximum; for floor criteria (dissolved oxygen, pH minimum) it shows the observed minimum, because the minimum is the compliance-relevant statistic.
-- **RWC vs. Observed value.** For projected criteria the panel shows the calculated **RWC**. For direct-comparison criteria it instead shows *Observed maximum* or *Observed minimum* with the note "(no RWC calculated)," so an observed value is never misread as dilution-adjusted.
-- **Worst-case RP.** Colored by result — YES (red), DEPENDS (amber), NO (green) — with a per-class breakdown listed below when more than one water class is selected.
-- **Criterion note.** When the crosswalk carries an `rp_note` for the parameter, it appears as a small cream-colored callout with a goldenrod left border (for example, the dissolved-oxygen Streeter-Phelps note or the Enterococci interval note).
+## The Inspector Plot {#sec-inspector-plot}
 
-**Prior Limit** shows the most recent numeric effluent limit from the DMR record for the selected parameter and outfall, sourced directly from the DMR's limit fields — it reflects the limit as recorded in the prior permit, not a limit calculated by this app. It is provided as a reference point for comparing the current RP analysis to existing permit conditions.
+The Inspector plots the observed effluent values over time against the applicable criterion line(s):
 
-## The Interactive Inspector Plot {#sec-inspector-plot}
-
-The Inspector plots the observed effluent values over time against the applicable criterion line(s). For projected parameters, a solid **Calculated RWC** line is also drawn. For direct-comparison parameters, no RWC line is drawn — the observations are compared directly to the dashed criterion line(s). Each water class selected draws its own dashed criterion line, and points are colored by reported unit.
+- **Title** — the pollutant and outfall, followed by a summary line: the number of samples, the observed maximum (or minimum, for floor criteria), the RWC — or, for direct-comparison parameters, *Observed maximum/minimum … (no RWC calculated)* so an observed value is never misread as dilution-adjusted — and the worst-case RP across the selected water classes, colored by result.
+- **Criterion lines** — one dashed line per water class. The line for the criterion in the selected table row is drawn thicker, so clicking between the classes of the same pollutant shows which criterion that row refers to.
+- **Calculated RWC** — a solid line for projected parameters. Direct-comparison parameters have no RWC line; the observations are compared directly to the criterion lines.
+- **Prior permit limit** — when the DMR records carry a numeric effluent limit for the parameter and outfall, it is drawn as a brown dot-dash line, converted to the WQS unit. It reflects the limit in the prior permit, not a limit calculated by this app, and is shown as a reference point.
+- **Points** — observations colored by reported unit; hover over a point to see its date, value, and limit.
 
 ![Observed vs. WQS/RWC plot with WQS dashed lines, solid RWC line, and sample points colored by unit](img/plot_inspector.png)
 
-For hardness-dependent metals in Class SD with the range analysis active, the plot area gains a second tab, **Hardness vs Limit**, showing how the criterion varies with hardness and where the critical hardness falls.
+When the crosswalk carries a criterion-specific note for the parameter — for example, the dissolved-oxygen Streeter-Phelps note or the Enterococci interval note — it appears below the plot in a cream-colored box with a goldenrod left border.
 
-## The RP Summary Table {#sec-summary-table}
-
-The **RP Summary Table** tab shows the full RP results for the selected outfall, with one row per pollutant × WQS criterion × water class combination. Columns include the outfall, WQS criterion ID, pollutant name, criterion value, unit, water class, the assessed value (RWC or observed extreme), and the RP determination. Rows are ordered by RP result — YES first, then DEPENDS, then NO — to surface the most critical findings.
-
-![RP Summary Table with YES rows highlighted at top, showing all columns](img/summary_table.png)
+For hardness-dependent metals in Class SD with **Show hardness range analysis** ticked (@sec-hardness-settings), a toggle above the plot switches between *Observed vs WQS/RWC* and *Hardness vs Limit*, and the observations view is annotated with the hardness below which the RWC would exceed the criterion.
 
 ## Direct-Comparison Plots and the Dissolved-Oxygen Case {#sec-do-plot}
 
-Because a floor criterion reads "backwards" from a ceiling, the dissolved-oxygen plot is the clearest illustration of direct comparison: the criterion is a **floor** (a value below the line is the violation), and the observed minimum is what matters. The plot shows the DO observations against the 5.0 mg/L floor line, with the DO criterion note visible, and no Calculated RWC line (a DO analysis needs Streeter-Phelps inputs the app does not carry — see @sec-do).
+Because a floor criterion reads "backwards" from a ceiling, the dissolved-oxygen plot is the clearest illustration of direct comparison: the criterion is a **floor** (a value below the line is the violation), and the observed minimum is what matters. The plot shows the DO observations against the 5.0 mg/L floor line, with the DO criterion note below it, and no Calculated RWC line (a DO analysis needs Streeter-Phelps inputs the app does not carry — see @sec-do).
 
-
-![A dissolved-oxygen Inspector plot showing the criterion as a floor with observations near or below it, and the DO criterion note](img/direct_do_plot.png)
+![A dissolved-oxygen Inspector plot: the 5.0 mg/L criterion is a floor, observations below the line are the violation, and there is no RWC line](img/direct_do_plot.png)
 
 ## Log Axis and Non-Detects {#sec-log-axis}
 
@@ -501,7 +517,7 @@ When the observed values sit far above a very small criterion, a linear axis col
 Note that this ratio is **not** a units check. Reported units are reconciled against the criterion's units before plotting (see @sec-interpret-units), so a wide gap on the plot is not by itself evidence of a reporting error. The parameters that trigger the log axis most often — Enterococci, fecal coliform, sulfide, sulfate — are wide-range by nature, and the same log axis and non-detect markers are mirrored in the PDF report.
 
 
-![A fecal coliform plot showing the log-scale y-axis and non-detects drawn as open downward triangles at the plotting floor](img/log_axis_flag.png)
+![An Enterococci plot on a log-scale y-axis, keeping the criterion line and observations spanning several orders of magnitude in the same frame](img/log_axis_flag.png)
 
 ---
 
@@ -509,49 +525,52 @@ Note that this ratio is **not** a units check. Reported units are reconciled aga
 
 ## Download Options {#sec-download-options}
 
-Click **Download Report** in the left sidebar of the Findings page. Two download formats are available:
+Click **Download Report** in the bottom bar of the Findings page. Two download formats are available:
 
-**PDF only (default):** A single PDF report rendered from a Quarto template. The report documents all analysis inputs, settings, and findings in a format suitable for inclusion in a permit record.
+**PDF only (default):** A single PDF report, `RP_Report_<permit>_<date>.pdf`, that documents all analysis inputs, settings, and findings in a format suitable for inclusion in a permit record.
 
-**PDF + Data (ZIP):** Check the **Include Data in Download** checkbox before clicking Download Report. The app bundles the PDF together with:
+**PDF + Data (ZIP):** Tick **Include Data in Download** before clicking Download Report. The app bundles the PDF together with:
 
-- `data.xlsx` — an Excel workbook with sheets for the summary findings, the full RP results table, the DMR records used in the analysis, and the NPDES forms coverage table
-- `README.txt` — a plain-text summary of the analysis settings and permit ID
+- `data.xlsx` — an Excel workbook with five sheets: *Summary_Findings* (one row per finding), *RP_Concentration* (the full RP results with every intermediate value), *DMR* (the DMR records used, after unit conversion and code merging, with the original parameter code), *Coverage* (the NPDES forms coverage table), and *WQS_Info* (the criteria in effect for the run, including any manual entries)
+- `README.txt` — the permit ID, tool version, date range, and hardness used
 
 Use the ZIP option when you want to archive the underlying data alongside the report, or when the findings will be reviewed by others who need the raw numbers.
 
+::: {.callout-note}
+**Report generation time:** Rendering the PDF runs a Quarto document with a plot for every pollutant × outfall combination. For facilities with many parameters and multiple outfalls, this can take 30–90 seconds. A progress indicator is displayed during rendering. Do not close the browser tab while the report is generating.
+:::
+
 ## Report Contents {#sec-report-contents}
 
-The PDF report includes:
+The report opens with a title page and every section starts on a new page. Every page after the first carries a header (EPA Region 2, the report name, and the permit number) and a footer (the date generated, the tool version, and *Page X of Y*). The report is designed to remain readable when printed in black and white.
 
-**Summary section:** Permit ID, facility name, date range, NPDES forms, water classifications, dilution ratio, confidence level, target percentile, hardness setting, and the number of outfalls analyzed. If the report was produced by Quick Run with unresolved parameters, a prominent preliminary-report warning appears here.
+![The report title page: logo and title, permit and facility band, monitoring period, application forms, generation date, and tool version](img/report_title.png)
 
-**RP Findings table:** All results, ordered by severity (YES, then DEPENDS, then NO). A **Basis** column distinguishes "Calculated" (a projected RWC) from "Observed max/min" (a direct comparison), so an observed dissolved-oxygen minimum can't be misread as dilution-adjusted.
+**Title page:** The permit number and facility name, the monitoring period, the application forms selected, the date generated, the tool version, and the table of contents.
 
-**Per-pollutant sections:** One section per pollutant per outfall. Each section may include:
+**1 Summary:** Permit, facility, date range, water classes, forms, dilution ratio, confidence level, target percentile, and hardness setting. If the report was produced by Quick Run with unresolved parameters, a prominent preliminary-report warning appears here. The *Included Pollutants* table lists each pollutant with data and its *Basis for Inclusion*: required by a selected form, *Existing DMR* (prior data but not required by a selected form), or *Manually Added* (user-supplied data only). A † marks a manually entered WQS criterion and a ‡ marks a record supplemented with user-appended data.
 
-- An orange **criterion note** callout at the top of the section, carrying the criterion-specific guidance from the crosswalk (the DO Streeter-Phelps note, the Enterococci 90-day interval note, the temperature in-stream note, or the oil & grease narrative note)
-- A *Reason Included* line and, where applicable, a *Manual WQS Applied* callout
-- For projected parameters, the step-by-step **RWC Calculation** ($CV$, $\sigma_g$, $p_n$, $z_p$, $z_{target}$, MF, RWC)
-- For direct-comparison parameters, an **Assessed Value** note stating that the observed maximum or minimum was compared to the criterion directly, with no multiplying factor and no dilution ratio
-- The observed vs. WQS/RWC plot (with the same log axis and non-detect markers as the app when the values warrant it)
-- A limit history table when prior permit limits were present in the DMR record
+**2 RP Findings:** All results in one table, ordered YES, then DEPENDS, then NO. A **Basis** column distinguishes *Calculated* (a projected RWC) from *Observed max/min* (a direct comparison), so an observed dissolved-oxygen minimum can't be misread as dilution-adjusted.
 
-**Manual WQS Overrides and Excluded Parameters:** Sections documenting any hand-entered criteria and any parameters excluded on the Needs Attention tab, for the permanent record.
+**3 Non-Concentration Based Measures:** Every parameter assessed by direct comparison — pH, temperature, dissolved oxygen, Enterococci, color, turbidity, oil & grease (@sec-direct). Organized by parameter, then outfall.
 
-**Coverage table:** The NPDES forms coverage summary showing which expected pollutants had data and the unit conversion status for each.
+**4 Concentration Based Measures:** Every parameter assessed by statistical projection, starting with the RP equations. Organized by parameter, then outfall.
 
-::: {.screenshot-placeholder}
-**Screenshot pending — `img/report_criterion_note.png`**
+Sections 3 and 4 share one layout. Each parameter starts with any criterion note from the crosswalk (an orange **Note**) and, where applicable, a *Manual WQS Applied* callout; section 3 parameters also state how the observed value is compared. Then, for each outfall:
 
-An excerpt from a generated PDF report showing an orange criterion-note callout (the DO Streeter-Phelps note, or the Enterococci interval note) sitting above the "Assessed Value" text in a per-pollutant section.
-:::
+- A **summary table** with one row per water class: WQS ID, water class, number of samples, whether units were converted, the WQS criterion, the RWC (section 4) or the observed minimum/maximum (section 3), and the RP result. pH has a row for each bound (Min and Max).
+- A **plot** titled with the parameter and outfall, showing the observations against each class's criterion line and, in section 4, the calculated RWC line. The log axis and non-detect markers follow the same rules as the app (@sec-log-axis).
+- In section 4 only: the step-by-step **RWC Calculation** ($\sigma_g$, $p_n$, $z_p$, $z_{target}$, MF, RWC), the **Hardness vs WQS Criterion** curve for Class SD metals when the hardness range analysis is ticked, and the **Permit Effluent Limit History** for that outfall when the DMR records carry limits (mass-load limits are listed separately as not used in the WQS analysis).
 
-![A per-pollutant report section showing the orange criterion-note callout above the Assessed Value text](img/report_criterion_note.png)
+A red **Check data** callout appears above the table when an outfall's temperature values fall below 0 °C, which usually means Celsius values were reported under the Fahrenheit code (see @sec-fetch-dmr). The values are shown as converted; verify them against the DMR.
 
-::: {.callout-note}
-**Report generation time:** Rendering the PDF runs a Quarto document with embedded plots for every pollutant × outfall combination. For facilities with many parameters and multiple outfalls, this can take 30–90 seconds. A progress indicator is displayed during rendering. Do not close the browser tab while the report is generating.
-:::
+![A parameter section of the report: criterion note, summary table, and titled plot](img/report_parameter.png)
+
+**5 Parameters from Applications without DMR Data:** Pollutants required by the selected application forms for which no DMR data were found.
+
+**6 Excluded Parameters:** Parameters excluded on the Needs Attention tab, with the flag reason and the reason given for exclusion (including those auto-excluded by Quick Run).
+
+**7 Manual WQS Overrides:** Every manually entered criterion — value, unit, water classes, criterion type, and the basis/notes — for the permanent record.
 
 ---
 
@@ -605,7 +624,7 @@ $$z_{target} = \Phi^{-1}(0.95) = 1.645$$
 $$MF = \exp\left[(1.645 - 0.503) \times 0.603\right] = \exp(0.689) = 1.99$$
 $$RWC = (45 \times 1.99) / 1 = 89.5 \ \mu\text{g/L}$$
 
-Since RWC (89.5 µg/L) > criterion (36 µg/L), the RP determination is **YES**. The app displays each intermediate value — CV, $\sigma_g$, $p_n$, $z_p$, $z_{target}$, MF, and RWC — in the math inspector on the Interactive Inspector tab.
+Since RWC (89.5 µg/L) > criterion (36 µg/L), the RP determination is **YES**. The report's RWC Calculation for each pollutant and outfall shows each intermediate value — $\sigma_g$, $p_n$, $z_p$, $z_{target}$, MF, and RWC — and the *RP_Concentration* sheet of the data package carries all of them, including the CV.
 
 ## Direct-Comparison Parameters {#sec-direct}
 
@@ -615,15 +634,13 @@ Several of these parameters return **DEPENDS** rather than **NO** when no excurs
 
 ### pH {#sec-ph}
 
-The PRWQSR establishes pH ranges rather than absolute concentration limits. For Class SD the standard is 6.0–9.0 SU (Rule 1303.2(C)(2)(d)); for Class SB it is 7.3–8.5 SU (Rule 1303.2(B)(2)(d)). pH is evaluated like any other direct parameter: when the selected water class has a pH criterion, the app compares the observed pH range to the standard and reports the result as separate ***pH (maximum)*** and ***pH (minimum)*** rows. An observed maximum at or above the upper bound, or an observed minimum at or below the lower bound, yields a **YES**. This is a direct comparison of observed pH to the standard, not a statistical RWC projection. pH values are also still used to compute the TAN criterion (see @sec-tan). If the selected class has no pH criterion, pH instead surfaces on the Needs Attention tab like any other unmatched parameter.
-
-::: {.callout-note}
-**Strict inequality changed some pH results.** Because the comparison is strict, a pH value sitting exactly on 6.0 or 9.0 is now treated as compliant. This flips some findings that were previously YES. This is intended, not a regression — it reflects the regulatory language.
-:::
+The PRWQSR establishes pH ranges rather than absolute concentration limits. For Class SD the standard is 6.0–9.0 SU (Rule 1303.2(C)(2)(d)); for Class SB it is 7.3–8.5 SU (Rule 1303.2(B)(2)(d)). pH is evaluated like any other direct parameter: when the selected water class has a pH criterion, the app compares the observed pH range to the standard and reports the result as separate ***pH (maximum)*** and ***pH (minimum)*** rows. An observed maximum above the upper bound, or an observed minimum below the lower bound, yields a **YES**; a value exactly on a bound is compliant. This is a direct comparison of observed pH to the standard, not a statistical RWC projection. pH values are also still used to compute the TAN criterion (see @sec-tan). If the selected class has no pH criterion, pH instead surfaces on the Needs Attention tab like any other unmatched parameter.
 
 ### Temperature {#sec-temperature}
 
-The PRWQSR's thermal standard states that no heat shall be added that would cause the temperature of **any site** to exceed 30 °C / 86 °F (Rule 1303.1(D)(1)). Temperature (00010) is evaluated as a direct ceiling: **YES** if the observed maximum exceeds 30 °C, **DEPENDS** otherwise. The DEPENDS outcome reflects that this is an **in-stream** standard, not an end-of-pipe limit — an end-of-pipe comparison is screening only, so the absence of an exceedance at the pipe does not rule out RP in the receiving water. A note to this effect is carried into Quick Stats and the report. Temperature appears only when "Surface Waters" or "All" is selected (see @sec-classifications).
+The PRWQSR's thermal standard states that no heat shall be added that would cause the temperature of **any site** to exceed 30 °C / 86 °F (Rule 1303.1(D)(1)). Temperature (00010) is evaluated as a direct ceiling: **YES** if the observed maximum exceeds 30 °C, **DEPENDS** otherwise. The DEPENDS outcome reflects that this is an **in-stream** standard, not an end-of-pipe limit — an end-of-pipe comparison is screening only, so the absence of an exceedance at the pipe does not rule out RP in the receiving water. A note to this effect appears on the Findings page and in the report. The temperature criterion is a general surface-water standard, so it applies only when "Surface Waters" or "All" is selected (see @sec-classifications); for other classes, temperature is flagged on the Needs Attention tab, where a manual criterion entered for it is still evaluated by direct comparison.
+
+Temperature reported in °F (code 00011) is converted to °C before comparison (see @sec-fetch-dmr). If the converted values fall below 0 °C, the report flags the outfall for a data check.
 
 ### Dissolved Oxygen {#sec-do}
 
@@ -635,7 +652,7 @@ Dissolved oxygen (00300) is a **floor**: the receiving water must not fall below
 
 ### Color and Turbidity {#sec-color-turbidity}
 
-Color (00080) and turbidity (00070) are direct **ceilings**: color at 15 color units (Class SD); turbidity at 50 NTU (Class SD) and 10 NTU (Class SB). Both are compared directly to the observed maximum. These parameters previously dropped out of the results entirely because they were caught in a hardcoded exclusion vector with no downstream handler; they now flow through the generic direct-comparison path.
+Color (00080) and turbidity (00070) are direct **ceilings**: color at 15 color units (Class SD); turbidity at 50 NTU (Class SD) and 10 NTU (Class SB). Both are compared directly to the observed maximum.
 
 ### Enterococci {#sec-entero}
 
@@ -647,7 +664,7 @@ Oil & grease is governed by a **narrative** standard (Rule 1303.1.H): waters sha
 
 ### Surfactants (MBAS) {#sec-surfactants}
 
-Surfactants as MBAS carry a numeric standard (SB 500, SD 100 µg/L) and, for Class SG, a "shall not be present" detection standard. The criterion is recognized under both the methylene-blue-active-substances code and the surfactants code the permittee may report under, so the same analyte matches regardless of which code appears in the DMR.
+Surfactants as MBAS carry a numeric standard in Class SB (500 µg/L) and Class SD (100 µg/L), which is evaluated by statistical projection like any other concentration criterion. Only the Class SG "shall not be present" standard is a direct comparison: like oil & grease, it is a detection test, so any positive reported value triggers RP. The criterion is recognized under both the methylene-blue-active-substances code and the surfactants code the permittee may report under, so the same analyte matches regardless of which code appears in the DMR.
 
 ::: {.callout-note}
 **Synonym parameter codes.** A recurring data issue is the same analyte reported under a DMR code different from the one the criterion is stored under, which causes a silent non-match. Confirmed cases (ammonia, Enterococci, surfactants, sulfate) are aligned so the criterion applies to either code. Other candidates that carry a regulatory judgment — e.g., dissolved vs. total metal fractions, hexavalent vs. total chromium — are deliberately routed to the Needs Attention tab with a green hint rather than auto-matched, so the permit writer resolves the distinction.
@@ -671,11 +688,11 @@ where $H$ is the receiving water hardness and $LC$ and $RC$ are regression const
 | Silver | 79251 | 1.72 | 6.59 |
 | Zinc | 79264 | 0.8473 | 0.884 |
 
-When a specific hardness value is entered, the app computes the criterion at that hardness and uses it directly in the RP comparison. When the range analysis option is active, the app computes the **critical hardness** — the hardness at which the criterion would equal the RWC — by inverting the formula:
+The app computes the criterion at the hardness entered in the Analysis Settings and uses it in the RP comparison. When the hardness range analysis is ticked, the plots also show the **critical hardness** — the hardness at which the criterion would equal the RWC — by inverting the formula:
 
 $$H_{critical} = e^{\left(\ln(RWC) + RC\right) / LC}$$
 
-If $H_{critical}$ is below the plausible range for the receiving water (e.g., below 25 mg/L as CaCO₃), reasonable potential is unlikely regardless of hardness. If it is within or above the plausible range, the permit writer should use a site-specific hardness value to resolve the determination (see @sec-interpret-depends).
+If $H_{critical}$ is below the plausible range for the receiving water (e.g., below 25 mg/L as CaCO₃), reasonable potential is unlikely regardless of hardness. If it is within or above the plausible range, the result depends on the actual hardness, and the permit writer should use a site-specific hardness value (see @sec-interpret-hardness).
 
 ## Total Ammonia Nitrogen (TAN) {#sec-tan}
 
@@ -685,10 +702,6 @@ $$TAN = 0.8876 \times \left(\frac{0.0278}{1 + 10^{7.688 - pH}} + \frac{1.1994}{1
 
 where $T$ is the receiving water temperature in °C and the result is expressed as mg/L as N. The formula reflects the toxicity of un-ionized ammonia (NH₃) to aquatic life, which increases as pH and temperature rise.
 
-::: {.callout-warning}
-**Re-run historical TAN determinations.** The leading `0.8876` coefficient is required. An earlier inline copy of this formula in the Run RP handler had dropped it, which inflated every computed TAN criterion by roughly 12.7% and made the standard artificially lenient. The coefficient has been restored. Any TAN determinations made before this fix should be re-run.
-:::
-
 **Parameter codes included.** The app coalesces three interchangeable ammonia codes into a single total-ammonia-as-N series before evaluation:
 
 | Parameter Code | Description | Handling |
@@ -697,9 +710,7 @@ where $T$ is the receiving water temperature in °C and the result is expressed 
 | 82230 | Ammonia & ammonium — total | Coalesced to 00610 |
 | 00609 | Ammonia nitrogen, total [as N] | Coalesced to 00610 |
 
-Coalescing 00609 matters in practice: a permit reporting only 00609 previously produced no TAN evaluation at all.
-
-**Time-varying vs. fixed limits.** When the app uses pH and temperature from the DMR (codes 00400 and 00010), the TAN criterion is computed separately for each monitoring period that has co-occurring pH and temperature observations, producing a time series of limits. The RP determination is **YES** if the TAN RWC exceeds the criterion in *any* monitoring period (the "ever crossed" rule). Summary tables display the **mean** TAN limit for readability. When fixed pH and temperature overrides are used, a single constant TAN limit is computed. Because the TAN criterion is computed at run time from pH and temperature rather than stored as a fixed value, TAN is never flagged on the Needs Attention tab.
+**Single fixed limit.** The TAN criterion is computed once, from the receiving water pH and temperature entered in the Analysis Settings (@sec-ph-temp-settings), and compared with the TAN RWC. DMR pH and temperature records are not used for this. Because the TAN criterion is computed at run time rather than stored as a fixed value, TAN is never flagged on the Needs Attention tab.
 
 ---
 
@@ -707,16 +718,16 @@ Coalescing 00609 matters in practice: a permit reporting only 00609 previously p
 
 ## Multiple Water Classes Selected {#sec-multi-class}
 
-When more than one water classification is selected, the Observed vs. WQS/RWC plot shows a separate dashed criterion line for each class. The Quick Stats panel shows both the worst-case RP across all classes and a per-class breakdown. The RP Summary Table lists each class as a separate row for each pollutant, making it easy to see which classes drive a YES finding.
+When more than one water classification is selected, the Findings table and the report list each class as a separate row for each pollutant and outfall, making it easy to see which classes drive a YES finding. The Inspector plot shows a separate dashed criterion line for each class, drawing the selected row's criterion thicker, and its title gives the worst-case RP across the classes.
 
 A common scenario is selecting both Class SB and Class SD when a facility may discharge to either coastal or surface receiving waters depending on the outfall. The more protective of the two criteria drives the worst-case RP result.
 
-## Metals with Hardness = Range (Class SD) {#sec-interpret-depends}
+## Using the Hardness Range Analysis (Class SD Metals) {#sec-interpret-hardness}
 
-When the hardness range analysis is active for a hardness-dependent metal, the Quick Stats panel shows **Worst-case RP: DEPENDS**. To resolve this to a YES or NO, you have two options:
+The RP result for a hardness-dependent metal is always computed at the hardness entered in the Analysis Settings, so it is only as good as that value. When no site-specific hardness is available, tick **Show hardness range analysis** to see how sensitive the result is:
 
-1. **Use a site-specific hardness value:** Obtain a measured or representative hardness value for the receiving water (from ambient monitoring, the permit record, or DNER), enter it in the Hardness setting, and re-run.
-2. **Use the critical hardness threshold:** Read the critical hardness annotation from the plot or math inspector. If the critical hardness is well above the expected range for the receiving water, a NO determination is defensible. Document the basis for the hardness assumption in the permit record.
+1. **Use a site-specific hardness value where you can:** Obtain a measured or representative hardness for the receiving water (from ambient monitoring, the permit record, or DNER), enter it in the Hardness setting, and re-run.
+2. **Use the critical hardness:** Read the annotation on the Findings plot (or the caption in the report): it gives the hardness below which the RWC would exceed the criterion. If that hardness is well below the plausible range for the receiving water, the result is not sensitive to the hardness assumption. If it is within the plausible range, the finding depends on the actual hardness. Document the basis for the hardness assumption in the permit record.
 
 ## Direct-Comparison Parameters Returning DEPENDS {#sec-interpret-direct-depends}
 
@@ -741,23 +752,23 @@ Read the open downward triangles with care. They mark non-detects, which carry n
 
 ## No Data for a Parameter {#sec-interpret-nodata}
 
-If the selected pollutant has no observations for the selected outfall, the Inspector shows a "no data" message and no row appears in the RP Summary Table for that combination. This can occur when the parameter was not monitored at that outfall in the date range, the parameter code in the crosswalk does not match the code used in the DMR (a synonym-code issue — check the Coverage Summary and the Needs Attention hint), or the data were submitted under a different outfall identifier. A parameter required by the selected form but with no data appears in the Coverage Summary with a **NO DATA** status and a sample count of 0.
+If a pollutant has no observations at an outfall, no row appears in the Findings table for that combination. This can occur when the parameter was not monitored at that outfall in the date range, the parameter code in the crosswalk does not match the code used in the DMR (a synonym-code issue — check the Coverage Summary and the Needs Attention hint), or the data were submitted under a different outfall identifier. A parameter required by the selected form but with no data appears in the Coverage Summary with a **NO DATA** status and a sample count of 0.
 
-## Prior Limits in the Quick Stats Panel {#sec-prior-limits}
+## Prior Permit Limits {#sec-prior-limits}
 
-The **Prior Limit** field shows the most recent numeric effluent limit from the DMR record for the selected parameter and outfall, sourced directly from the DMR's limit fields — it reflects the limit as recorded in the prior permit, not a limit calculated by this app. It is provided as a reference point for comparing the current RP analysis to existing permit conditions.
+The brown dot-dash line on the Findings plot, and the Permit Effluent Limit History table in the report, show the numeric effluent limits recorded in the DMR records for the parameter and outfall. They reflect the limits in the prior permit, not limits calculated by this app, and are provided as a reference point for comparing the current RP analysis to existing permit conditions.
 
 ---
 
-# Appendix A: NPDES Application Forms and Pollutants {#sec-appendix-npdes .appendix}
+# Appendix A: Where to Find the Criteria {#sec-appendix-npdes .appendix}
 
-The following table lists the pollutants included in the app's crosswalk by NPDES application form. These are the pollutants for which WQS criteria exist in the PRWQSR and for which DMR parameter code matches have been established. Pollutants required by NPDES forms that do not have a corresponding WQS criterion are tracked in the Coverage Summary; they are not evaluated for RP automatically, but a criterion can be supplied for them through the Needs Attention tab (see @sec-needs-attention).
+The criteria the app applies come from a crosswalk between DMR parameter codes and the PRWQSR criteria. The pollutants each NPDES application form requires come from a separate form table. Neither is reproduced here, because both are easier to search in the app:
 
-::: {.callout-note}
-The full crosswalk table is populated from the `npdes_forms` and `crosswalk` objects loaded at application startup. It carries a `sub_class` column distinguishing stream vs. reservoir/lake criteria under Class SD.
-:::
+- **WQS Reference tab** (Summary page) — the full crosswalk: every parameter code, criterion ID, criterion value, unit, water class, and the stream vs. reservoir/lake distinction under Class SD. Use it to confirm criterion IDs and values before entering a manual criterion (@sec-needs-attention).
+- **Coverage Summary** (Data Overview tab) — the pollutants the selected forms require, whether each has data, and its unit status (@sec-data-overview).
+- **WQS_Info sheet** of the data package — the criteria actually in effect for a given run, including any manual entries (@sec-download-options).
 
-<!-- Placeholder for gt(npdes_pollutants) table when rendered with data -->
+Pollutants required by a form that have no corresponding WQS criterion are listed in the Coverage Summary; they are not evaluated for RP automatically, but a criterion can be supplied for them on the Needs Attention tab.
 
 ---
 
@@ -783,9 +794,9 @@ The following documents provide the regulatory and methodological basis for the 
 
 **Confidence Level (CL):** The probability that the highest observed value in a sample of $n$ exceeds a given percentile of the underlying distribution. Defaults to 0.95 (95%).
 
-**DEPENDS:** An RP determination returned when no excursion was observed but the absence of one cannot, by itself, rule out reasonable potential — used for hardness-range metals and for direct parameters such as dissolved oxygen, temperature, and Enterococci.
+**DEPENDS:** An RP determination returned when no excursion was observed but the absence of one cannot, by itself, rule out reasonable potential — used for direct parameters such as dissolved oxygen, temperature, and Enterococci.
 
-**Direct comparison:** Evaluation of a criterion by comparing the appropriate observed statistic to the criterion value with no multiplying factor and no dilution ratio. Used for pH, temperature, dissolved oxygen, color, turbidity, Enterococci, oil & grease, and surfactants.
+**Direct comparison:** Evaluation of a criterion by comparing the appropriate observed statistic to the criterion value with no multiplying factor and no dilution ratio. Used for pH, temperature, dissolved oxygen, color, turbidity, Enterococci, oil & grease, and Class SG surfactants.
 
 **DMR (Discharge Monitoring Report):** The periodic report submitted by NPDES permittees documenting effluent monitoring results. Sourced by the app from the local ICIS-NPDES database.
 
@@ -816,3 +827,24 @@ The following documents provide the regulatory and methodological basis for the 
 **TSD (Technical Support Document for Water Quality-Based Toxics Control):** EPA's 1991 guidance document providing the statistical methodology for RP determinations using effluent monitoring data (EPA/505/2-90-001).
 
 **WQS (Water Quality Standards):** A designated use or uses for a water body, the water quality criteria necessary to protect those uses, and an antidegradation policy. In this app, WQS refers specifically to the criteria established in the PRWQSR.
+
+---
+
+# Appendix D: Version History {#sec-appendix-versions .appendix}
+
+The version is shown next to the app title, on the landing page, and on every report. It follows the pattern *major.minor.patch*: a patch release fixes errors without changing results that were correct, a minor release adds features, and a major release may change how determinations are made.
+
+## Version 1.0.0 {#sec-v1-0-0}
+
+The first versioned release. Analyses run before version 1.0.0 carry no version number on the report. If you are relying on such a report, note the following changes in how results are determined, which were made before this release:
+
+- **TAN criterion coefficient.** An earlier copy of the TAN formula omitted the leading 0.8876 coefficient, which inflated every computed TAN criterion by about 12.7% and made the standard more lenient than the regulation. Re-run any TAN determination made with an unversioned copy of the app.
+- **Strict inequality.** Criteria are compared with a strict inequality, matching the regulatory wording: a value exactly on the criterion is compliant. This changed some pH results that were previously YES.
+- **Direct-comparison parameters.** Dissolved oxygen, Enterococci, color, turbidity, oil & grease, pH, and temperature are evaluated by direct comparison rather than projected. Color and turbidity were previously missing from results altogether, and a permit reporting ammonia only under code 00609 previously produced no TAN evaluation.
+- **Manually entered temperature criteria.** A temperature criterion entered on the Needs Attention tab for a class other than "Surface Waters" was projected through the multiplying factor instead of compared directly. It is now compared directly, like every other temperature criterion.
+
+Also new in 1.0.0:
+
+- A restructured report: a title page, a page header and footer, every section on a new page, direct-comparison parameters only in section 3, one summary table per parameter and outfall, titled plots, and a check-data flag for sub-zero temperatures (@sec-report-contents).
+- The report now records the hardness setting actually used (reports previously always said *Range*), and the Hardness vs Limit view on the Findings page works again.
+- DMR uploads accept dates as `YYYY-MM-DD` as well as `MM/DD/YYYY`, the template includes the outfall column, and appending a CSV without optional columns no longer fails.

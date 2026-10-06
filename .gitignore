@@ -7,3 +7,11 @@
 *.rds
 rsconnect/
 data/
+# Quarto build output (published copies live in www/)
+/User_Guide.html
+/User_Guide.pdf
+/User_Guide_files/
+*.aux
+*.log
+*.toc
+/User_Guide.tex
