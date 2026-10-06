@@ -37,7 +37,7 @@ format:
         \newcommand{\rplogo}[1]{\IfFileExists{epa_logo.png}{\includegraphics[height=#1]{epa_logo.png}}{}}
         \pagestyle{fancy}
         \fancyhf{}
-        \fancyhead[L]{\raisebox{-0.35\height}{\rplogo{0.34in}}\hspace{6pt}\textcolor{inkgray}{\sffamily\small NPDES Reasonable Potential Report}}
+        \fancyhead[L]{\raisebox{-0.35\height}{\rplogo{0.34in}}\hspace{6pt}\textcolor{inkgray}{\sffamily\small U.S. EPA Region 2 \textbar{} NPDES Reasonable Potential Report}}
         \fancyhead[R]{\textcolor{inkgray}{\sffamily\small\bfseries \rppermit}}
         \fancyfoot[L]{\textcolor{inkgray}{\sffamily\footnotesize Generated \rpgenerated}}
         \fancyfoot[R]{\textcolor{inkgray}{\sffamily\footnotesize Page \thepage\ of \pageref*{LastPage}}}
@@ -549,6 +549,7 @@ cat("\\thispagestyle{rptitle}\n")
 # into a coloured band).
 cat("\\noindent\\begin{minipage}[c]{1.25in}\\rplogo{1.1in}\\end{minipage}%\n")
 cat("\\begin{minipage}[c]{\\dimexpr\\linewidth-1.25in\\relax}\\sffamily\n")
+cat("{\\normalsize\\bfseries\\color{inkgray}U.S. Environmental Protection Agency \\textbar{} Region 2}\\\\[2pt]\n")
 cat("{\\small\\color{inkgray}National Pollutant Discharge Elimination System}\\\\[4pt]\n")
 cat("{\\color{epablue}\\LARGE\\bfseries Reasonable Potential Analysis Report}\n")
 cat("\\end{minipage}\n\n\\vspace{16pt}\n")
