@@ -2085,7 +2085,10 @@ server <- function(input, output, session) {
     # dagger flag), mirroring the bind into crosswalk_effective at Run RP time.
     manual_rows_cov <- build_manual_crosswalk_rows(
       rv$wqs_overrides,
-      base_crosswalk = rv$crosswalk_full
+      # Unfiltered crosswalk: a manual entry exists because the parameter has
+      # no criterion in the selected class, so its method profile (e.g.
+      # temperature = direct) is only found outside the class filter.
+      base_crosswalk = crosswalk
     )
     if (!is.null(manual_rows_cov) && nrow(manual_rows_cov) > 0) {
       crosswalk_base <- dplyr::bind_rows(
@@ -2918,7 +2921,10 @@ server <- function(input, output, session) {
 
     manual_rows <- build_manual_crosswalk_rows(
       rv$wqs_overrides,
-      base_crosswalk = rv$crosswalk_full
+      # Unfiltered crosswalk: a manual entry exists because the parameter has
+      # no criterion in the selected class, so its method profile (e.g.
+      # temperature = direct) is only found outside the class filter.
+      base_crosswalk = crosswalk
     )
 
     rv$crosswalk_effective <- rv$crosswalk_full %>%
