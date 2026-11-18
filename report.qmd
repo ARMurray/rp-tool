@@ -323,6 +323,20 @@ unit_colors <- setNames(
 
 latex_escape <- function(x) gsub("_", "\\\\_", x)
 
+# Full LaTeX escape for text dropped into a kable(escape = FALSE) table, where
+# nothing is escaped for us. An unescaped "&" (e.g. the parameter name
+# "Oil & Grease" on a manually-included parameter) is read as a column
+# separator and aborts the PDF build with "Extra alignment tab". Backslash is
+# handled first via a placeholder so the braces it emits are not re-escaped.
+tex_escape <- function(x) {
+  x <- as.character(x)
+  out <- gsub("\\", "\001", x, fixed = TRUE)
+  out <- gsub("([&%$#_{}])", "\\\\\\1", out)
+  out <- gsub("~", "\\textasciitilde{}", out, fixed = TRUE)
+  out <- gsub("^", "\\textasciicircum{}", out, fixed = TRUE)
+  gsub("\001", "\\textbackslash{}", out, fixed = TRUE)
+}
+
 outfall_type <- function(of) {
   if (!"perm_feature_type_code" %in% names(rp_df) || is.na(of)) return(NA_character_)
   rp_df %>%
@@ -734,13 +748,13 @@ rp_df %>%
          ),
          RWC_rs = round(RWC_rs, 2),
          CRITERION_VALUE = round(CRITERION_VALUE,2),
-         CRITERION_ID = gsub("_", "\\\\_", CRITERION_ID),
-         NPDES_Pollutant = gsub("_", "\\\\_", NPDES_Pollutant)) %>%
+         CRITERION_ID = tex_escape(CRITERION_ID),
+         NPDES_Pollutant = tex_escape(NPDES_Pollutant)) %>%
   drop_na(RWC_rs) %>%
-  mutate(USE_CLASS_NAME_LOCATION_ETC = format_water_class(
+  mutate(USE_CLASS_NAME_LOCATION_ETC = tex_escape(format_water_class(
            USE_CLASS_NAME_LOCATION_ETC,
            if ("sub_class" %in% names(.)) sub_class else NA_character_
-         ),
+         )),
          # Internal Outfalls: red bold text via cell_spec so they stay
          # visibly distinct from External Outfalls in the PDF.
          perm_feature_nmbr = {
