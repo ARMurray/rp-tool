@@ -10,10 +10,13 @@ knows the tool. They are ranges because the biggest unknown (ICIS data volume,
 
 - The tool is **Puerto Rico–only today**, not Region 2-wide. `refresh_db.R`
   pulls PR and VI; NJ and NY are not loaded.
-- A national starting point already exists. `other/national_wqs.csv` holds 46,235
-  state, territory and tribal criteria, and `other/wqs_matched.csv` has already
-  matched them to ICIS parameter codes. About 70% matched exactly; the rest
-  needs human review.
+- A national crosswalk is built. `other/national_wqs.csv` holds 46,235 state,
+  territory, tribal and federal-rule criteria, and
+  `other/national_crosswalk/national_crosswalk.csv` ties **38,834 (84.0%)** of
+  them to ICIS parameter codes: 84% for states and DC, 88% for territories,
+  83% for tribes. The remaining 7,401 criteria (635 pollutant names) are left
+  blank for a resolver tool. Tribes are included because they are where EPA
+  regions write many of the permits.
 - The crosswalk is **not** the hardest part. The three bigger items are:
   1. **Equations are missing from the national database.** About 1,300 criteria
      say "See equation" or "See table" instead of giving a number. Hardness
@@ -40,7 +43,7 @@ knows the tool. They are ranges because the biggest unknown (ICIS data volume,
 |---|---|
 | Criteria in `national_wqs.csv` (all entities) | 46,235 |
 | …for 50 states + DC + VI, GU, AS + PR | 25,978 (55 jurisdictions; 25,564 excluding PR) |
-| …for tribes and other entities | 62 entities (not scoped below) |
+| …for tribes and other entities | 20,257 across 65 entities: 52 tribes (18,289), the Northern Mariana Islands (32), 9 California regional board plans and 3 federal rules (1,936). Included in the crosswalk build; the effort estimates below were written for states and territories only |
 | Distinct pollutant names (states) | 914 |
 | Already matched to an ICIS parameter code (exact or normalized) | ~70% of rows |
 | Fuzzy matches needing review | 737 distinct pollutant names (335 high, 208 medium, 194 low confidence) |
