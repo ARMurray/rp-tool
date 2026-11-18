@@ -1,0 +1,1547 @@
+---
+# No title/toc here: the title block and table of contents are typeset by the
+# title-block chunk below so the first page can carry the logo and permit.
+format:
+  pdf:
+    toc: false
+    toc-depth: 1
+    number-sections: true
+    geometry:
+      - margin=1in
+      - headheight=30pt
+      - headsep=16pt
+    documentclass: article
+    keep-tex: false
+    include-in-header:
+      text: |
+        \usepackage{float}
+        \usepackage{needspace}
+        \usepackage{graphicx}
+        \usepackage{fancyhdr}
+        \usepackage{lastpage}
+        \usepackage{sectsty}
+        % Colours from www/epa_logo.png. Text only ever uses epablue (or white
+        % on epablue): it prints as dark grey in black and white. epagreen is
+        % used for thin decorative rules only, never behind or as text.
+        \definecolor{epablue}{HTML}{0D6CB6}
+        \definecolor{epagreen}{HTML}{46AA42}
+        \definecolor{inkgray}{HTML}{333333}
+        % Darker orange for the "Note" / "Manual WQS Applied" labels: xcolor's
+        % default orange turns pale grey in black-and-white print.
+        \definecolor{orange}{HTML}{B35900}
+        \allsectionsfont{\sffamily\color{epablue}}
+        \AtBeginDocument{\hypersetup{colorlinks=true, linkcolor=epablue, urlcolor=epablue}}
+        % Set by the title-block chunk; used by the running header/footer.
+        \providecommand{\rppermit}{}
+        \providecommand{\rpgenerated}{}
+        \newcommand{\rplogo}[1]{\IfFileExists{epa_logo.png}{\includegraphics[height=#1]{epa_logo.png}}{}}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \fancyhead[L]{\raisebox{-0.35\height}{\rplogo{0.34in}}\hspace{6pt}\textcolor{inkgray}{\sffamily\small U.S. EPA Region 2 \textbar{} NPDES Reasonable Potential Report}}
+        \fancyhead[R]{\textcolor{inkgray}{\sffamily\small\bfseries \rppermit}}
+        \providecommand{\rpversion}{}
+        \fancyfoot[L]{\textcolor{inkgray}{\sffamily\footnotesize Generated \rpgenerated\rpversion}}
+        \fancyfoot[R]{\textcolor{inkgray}{\sffamily\footnotesize Page \thepage\ of \pageref*{LastPage}}}
+        \renewcommand{\headrulewidth}{1pt}
+        \renewcommand{\headrule}{\hbox to\headwidth{\color{epablue}\leaders\hrule height \headrulewidth\hfill}}
+        \renewcommand{\footrulewidth}{0.6pt}
+        \renewcommand{\footrule}{\hbox to\headwidth{\color{epagreen}\leaders\hrule height \footrulewidth\hfill}\vskip 4pt}
+        % First page: the title block carries the logo, so footer only.
+        \fancypagestyle{rptitle}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\headrule}{}\fancyfoot[R]{\textcolor{inkgray}{\sffamily\footnotesize Page \thepage\ of \pageref*{LastPage}}}}
+execute:
+  echo: false
+params:
+  permit_id: ""
+  facility_name: ""
+  date_start: ""
+  date_end: ""
+  forms: ""
+  dilution_ratio: 1
+  confidence_level: 0.95
+  target_percentile: 0.95
+  hardness_mode: "range"
+  hardness_value: NA
+  app_version: ""          # tool version (VERSION file), stamped in the footer
+  rp_path: ""
+  coverage_path: ""
+  dmr_path: ""
+  ph_dmr_path: ""
+  temp_dmr_path: ""
+  wqs_info_path: ""
+  overrides_path: ""
+  quick_run: false
+  direct_dmr_path: ""    # observations for all rp_method == "direct" parameters
+  quick_run_params: ""   # comma-separated list of auto-excluded parameter descs
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, warning = FALSE, message = FALSE,
+  fig.align = "center", fig.show = "asis",
+  # fig.width matches the 6.5in usable text width (letter, 1in margins) so
+  # plots render at the correct aspect ratio and never exceed \linewidth.
+  # out.width caps the displayed width; fig.height keeps plots compact.
+  fig.width = 6.5, fig.height = 3.6, out.width = "\\linewidth"
+)
+
+library(readr)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(ggplot2)
+library(ggtext)
+library(lubridate)
+library(ggforce)
+library(ggnewscale)
+library(tidyr)
+
+# Inline copy of format_water_class() — keeps the report self-contained when
+# rendered from tmp_dir (functions.R is not copied there). If the helper in
+# functions.R is updated, mirror the change here.
+format_water_class <- function(class, sub_class = NA, sep = " — ") {
+  has_sub <- !is.na(sub_class) & nzchar(as.character(sub_class))
+  ifelse(has_sub,
+         paste0(as.character(class), sep, as.character(sub_class)),
+         as.character(class))
+}
+
+# Inline copy of format_outfall_label() — same self-containment reason as
+# above. Produces "Internal Outfall NNN" or "External Outfall NNN" so the
+# type is always visible in the report. Mirror functions.R if this changes.
+format_outfall_label <- function(perm_feature_nmbr, perm_feature_type_code = NA_character_) {
+  is_internal <- !is.na(perm_feature_type_code) & perm_feature_type_code == "INO"
+  ifelse(
+    is_internal,
+    paste0("Internal Outfall ", perm_feature_nmbr),
+    paste0("External Outfall ", perm_feature_nmbr)
+  )
+}
+
+# LaTeX version: wraps Internal Outfall labels in \textcolor{red}{...} so
+# they appear in red in PDF section headings and plot titles.
+# External Outfall labels are returned as-is (no colour command needed).
+format_outfall_label_latex <- function(perm_feature_nmbr, perm_feature_type_code = NA_character_) {
+  lbl <- format_outfall_label(perm_feature_nmbr, perm_feature_type_code)
+  is_internal <- !is.na(perm_feature_type_code) & perm_feature_type_code == "INO"
+  ifelse(
+    is_internal,
+    paste0("\\textcolor{red}{", lbl, "}"),
+    lbl
+  )
+}
+
+rp_df       <- readr::read_csv(params$rp_path, show_col_types = FALSE) %>%
+  dplyr::mutate(CRITERION_ID = as.character(CRITERION_ID))
+
+# Backfill the legacy Method column if the upstream app no longer supplies it.
+# The pH section keys its Min/Max criterion lines on Method; rp_operator is
+# the authoritative replacement ("<" = floor = Min bound, ">" = ceiling =
+# Max bound). Deriving it here keeps the report renderable against either
+# vintage of rp_concentration.csv.
+if (!"Method" %in% names(rp_df)) {
+  rp_df <- rp_df %>%
+    dplyr::mutate(
+      Method = if ("rp_operator" %in% names(.)) {
+        dplyr::case_when(
+          is.na(rp_operator) ~ "Concentration",
+          rp_operator == "<" ~ "Min",
+          rp_operator == ">" ~ "Max",
+          TRUE ~ "Concentration"
+        )
+      } else {
+        "Concentration"
+      }
+    )
+}
+coverage_df <- if (nzchar(params$coverage_path)) readr::read_csv(params$coverage_path, show_col_types = FALSE) else NULL
+dmr_df      <- if (nzchar(params$dmr_path))      readr::read_csv(params$dmr_path,      show_col_types = FALSE) else NULL
+# ── crosswalk_v2 helpers (inline; mirror functions.R if changed) ────────────
+# Binary criteria store CRITERION_VALUE = 0 so the >-comparison works. They
+# are operationalised narrative standards (PRWQS 1303.1.H oil & grease,
+# Class SG surfactants), and print as 0 — the narrative basis is carried in
+# rp_note rather than replacing the number.
+fmt_criterion <- function(value, criterion_form = NULL) {
+  ifelse(is.na(value), "--", as.character(value))
+}
+
+# "Calculated" = TSD multiplying-factor projection. "Observed" = the value as
+# reported, with no MF and no dilution ratio applied. Distinguishing these in
+# the report matters: an observed DO minimum must not read as dilution-adjusted.
+basis_label <- function(rp_method, rp_operator = NULL) {
+  m <- ifelse(is.na(rp_method), "projected", rp_method)
+  op <- if (is.null(rp_operator)) rep(NA_character_, length(m)) else rp_operator
+  ifelse(
+    m == "direct",
+    ifelse(!is.na(op) & op == "<", "Observed min", "Observed max"),
+    "Calculated"
+  )
+}
+
+# wqs_info is now the full crosswalk_effective — all columns preserved.
+# Each section that uses it selects the columns it needs locally.
+wqs_info_df <- if (nzchar(params$wqs_info_path)) {
+  readr::read_csv(params$wqs_info_path, show_col_types = FALSE) %>%
+    dplyr::mutate(CRITERION_ID = as.character(CRITERION_ID))
+} else NULL
+
+overrides_df <- if (nzchar(params$overrides_path)) {
+  readr::read_csv(params$overrides_path, show_col_types = FALSE)
+} else NULL
+
+# Water classes the analysis was run against, for the summary header. Taken
+# from the RP results so manually added classes are included.
+water_classes_txt <- rp_df %>%
+  dplyr::filter(!is.na(USE_CLASS_NAME_LOCATION_ETC)) %>%
+  dplyr::mutate(wc = format_water_class(
+    USE_CLASS_NAME_LOCATION_ETC,
+    if ("sub_class" %in% names(.)) sub_class else NA_character_
+  )) %>%
+  dplyr::distinct(wc) %>%
+  dplyr::arrange(wc) %>%
+  dplyr::pull(wc) %>%
+  paste(collapse = ", ")
+
+quick_run       <- isTRUE(params$quick_run)
+quick_run_params_vec <- if (nzchar(params$quick_run_params %||% "")) {
+  trimws(strsplit(params$quick_run_params, ",")[[1]])
+} else character(0)
+
+# Count outfalls (unique perm_feature_nmbr)
+outfall_count <- if (!is.null(dmr_df) && "perm_feature_nmbr" %in% names(dmr_df)) {
+  dplyr::n_distinct(dmr_df$perm_feature_nmbr)
+} else {
+  0L
+}
+
+# Permit limit history — guarded for standalone runs where ECHO limit columns may be absent
+# perm_feature_nmbr is included so the table can be broken down by outfall.
+limits_required_cols <- c("parameter_code", "limit_value_nmbr", "limit_unit_desc",
+                           "limit_begin_date", "limit_end_date")
+# Mass-load unit patterns — these are effluent load (mass/time) measurements that
+# cannot be compared to concentration-based WQS criteria and are reported separately.
+mass_load_units <- c("kg/d", "kg/day", "lbs/d", "lb/d", "lbs/day", "lb/day",
+                     "mg/d", "mg/day", "g/d", "g/day", "ton/d", "ton/day",
+                     "kg/mo", "lbs/mo", "kg/yr", "lbs/yr")
+
+limits <- if (!is.null(dmr_df) && all(limits_required_cols %in% names(dmr_df))) {
+  base <- dmr_df %>%
+    dplyr::select(
+      dplyr::all_of(limits_required_cols),
+      dplyr::any_of("perm_feature_nmbr")   # include outfall if present
+    ) %>%
+    tidyr::drop_na(dplyr::all_of(limits_required_cols)) %>%
+    dplyr::mutate(
+      limit_begin_date = suppressWarnings(dplyr::coalesce(lubridate::ymd(limit_begin_date), lubridate::mdy(limit_begin_date))),
+      limit_end_date   = suppressWarnings(dplyr::coalesce(lubridate::ymd(limit_end_date),   lubridate::mdy(limit_end_date))),
+      is_mass_load     = tolower(trimws(limit_unit_desc)) %in%
+                           tolower(mass_load_units)
+    ) %>%
+    dplyr::distinct()
+  base
+} else {
+  NULL
+}
+
+# Metal criterion IDs and constants (for on-the-fly hardness curves in the report)
+metals_ids <- c("79228","79238","79236","79253","79248","79251","79264")
+
+metal_constants <- data.frame(
+  CRITERION_ID = metals_ids,
+  LC = c(0.7977, 0.8190, 0.8545, 1.273, 0.8460, 1.72, 0.8473),
+  RC = c(3.909, 0.6848, 1.702, 4.705, 0.0584, 6.59, 0.884)
+)
+
+# Build curve of limits for a given CRITERION_ID across hardness 25..400 (step = 1)
+metal_limit_curve <- function(crit_id, h_min = 25, h_max = 400) {
+  row <- metal_constants[metal_constants$CRITERION_ID == crit_id, ]
+  if (nrow(row) == 0) return(NULL)
+  hardness <- seq(h_min, h_max, 1)
+  limit <- exp(row$LC * log(hardness) - row$RC)
+  dplyr::tibble(CRITERION_ID = crit_id, hardness = hardness, limit = limit)
+}
+
+# ── Shared visual palette ────────────────────────────────────────────────────
+# Single source of truth for water class colors and linetypes.
+# Used identically in pH, temperature, and concentration-based plots so the
+# legend is immediately recognisable across all sections of the report.
+#
+# Drawing order rule: WQS lines are drawn thickest → thinnest so no line is
+# buried under a wider one.  Within WQS lines, Min bounds (lwr_lwd) are drawn
+# before Max bounds (upr_lwd); the RWC line is drawn last (on top).
+#
+wqs_colors <- c(
+  "class SB waters"                 = "#1f78b4",  # blue
+  "class SD waters"                 = "#ff7f00",  # orange
+  "class SD waters- drinking water" = "#33a02c",  # green
+  "class SG waters"                 = "#6a3d9a",  # purple
+  "class SG waters- drinking water" = "#e31a1c",  # red
+  "surface waters"                  = "#b15928",  # brown
+  # Sub-class variants (PR class SD: stream vs reservoir/lake). Keyed by the
+  # same combined label format_water_class() produces in the table cells, so
+  # legends across the report stay consistent.
+  "class SD waters \u2014 stream"         = "#cc6600",  # darker orange
+  "class SD waters \u2014 reservoir/lake" = "#ffaa55"   # lighter orange
+)
+
+wqs_linetypes <- c(
+  "class SB waters"                 = "dashed",
+  "class SD waters"                 = "dashed",
+  "class SD waters- drinking water" = "dotdash",
+  "class SG waters"                 = "dashed",
+  "class SG waters- drinking water" = "dotdash",
+  "surface waters"                  = "longdash",
+  "class SD waters \u2014 stream"         = "dashed",
+  "class SD waters \u2014 reservoir/lake" = "dashed"
+)
+
+# Line widths: Max-bound lines are thinner and drawn on top; Min-bound lines
+# are thicker and drawn first so Max is always visible above them.
+wqs_lwd_max <- 0.7   # upper limit lines (Max pH, or WQS criterion for conc.)
+wqs_lwd_min <- 1.3   # lower limit lines (Min pH)
+rwc_color   <- "#2c7fb8"
+rwc_lwd     <- 1.0   # RWC line — drawn last, distinct colour keeps it visible
+limit_color <- "#d61309"  # hardness curve line colour
+
+# Preset point colors by reported unit (dmr_unit_desc) — unchanged from before
+unit_levels <- c(
+  "deg C","mg/L","SU","mL/L","ug/L","MGD","NTU","col unit (pc)",
+  "MF/L","kg/d","#/100mL","%","d","gal/d","MPN/100mL","m3/d"
+)
+unit_colors <- setNames(
+  c(
+    "#1b9e77", "#d95f02", "#7570b3", "#e7298a",
+    "#66a61e", "#e6ab02", "#a6761d", "#1f78b4",
+    "#b2df8a", "#fb9a99", "#e31a1c", "#ff7f00",
+    "#6a3d9a", "#b15928", "#33a02c", "#a6cee3"
+  ),
+  unit_levels
+)
+
+# ── Shared per-parameter helpers ─────────────────────────────────────────────
+# Used by both the Non-Concentration and Concentration sections so the two
+# share one table/plot layout.
+
+latex_escape <- function(x) gsub("_", "\\\\_", x)
+
+outfall_type <- function(of) {
+  if (!"perm_feature_type_code" %in% names(rp_df) || is.na(of)) return(NA_character_)
+  rp_df %>%
+    dplyr::filter(perm_feature_nmbr == of) %>%
+    dplyr::pull(perm_feature_type_code) %>%
+    dplyr::first()
+}
+
+# Dated DMR observations for one parameter at one outfall, optionally limited
+# to the statistics a criterion compares (e.g. pH DAILY_MAX + DAILY_MIN).
+dmr_obs <- function(codes, of, stats = NULL) {
+  if (is.null(dmr_df)) return(data.frame())
+  out <- dmr_df %>% dplyr::filter(parameter_code %in% codes)
+  if (!is.na(of) && "perm_feature_nmbr" %in% names(out)) {
+    out <- out %>% dplyr::filter(perm_feature_nmbr == of)
+  }
+  if (!is.null(stats) && "statistic" %in% names(out)) {
+    out <- out %>% dplyr::filter(statistic %in% stats)
+  }
+  out %>%
+    dplyr::mutate(
+      # Handle both ISO YYYY-MM-DD (SQLite) and MM/DD/YYYY (ECHO legacy)
+      monitoring_period_end_date = suppressWarnings(dplyr::coalesce(
+        lubridate::ymd(monitoring_period_end_date),
+        lubridate::mdy(monitoring_period_end_date)
+      ))
+    ) %>%
+    dplyr::filter(!is.na(monitoring_period_end_date), !is.na(dmr_value_nmbr)) %>%
+    dplyr::arrange(monitoring_period_end_date)
+}
+
+units_converted_label <- function(obs) {
+  if (!"Conv_Flag" %in% names(obs) || nrow(obs) == 0) return("--")
+  if (any(obs$Conv_Flag == "PASS", na.rm = TRUE)) "Yes" else "No"
+}
+
+manual_wqs_callout <- function(codes) {
+  if (is.null(overrides_df) || all(is.na(codes))) return(invisible())
+  ov <- overrides_df %>%
+    dplyr::filter(parameter_code %in% codes, decision == "include")
+  if (nrow(ov) > 0) {
+    cat("> **\\textcolor{orange}{Manual WQS Applied}** — ",
+        "Criterion value manually entered by user. ",
+        "See *Manual WQS Overrides* section for full details.\n\n",
+        sep = "")
+  }
+}
+
+# Palette lookups with a fallback, so a class missing from the palette (e.g.
+# one entered manually) still draws a line instead of being silently dropped.
+class_colors <- function(classes) {
+  classes <- unique(classes)
+  setNames(dplyr::coalesce(unname(wqs_colors[classes]), "grey40"), classes)
+}
+class_linetypes <- function(classes) {
+  classes <- unique(classes)
+  setNames(dplyr::coalesce(unname(wqs_linetypes[classes]), "dashed"), classes)
+}
+
+# Temperature reported under 00011 (deg F) is converted to deg C upstream
+# without checking the values. A permittee that enters Celsius numbers under
+# the Fahrenheit code ends up with sub-zero results. The values are left as
+# converted; a reading below freezing is flagged for the permit writer.
+negative_temp_flag <- function(obs) {
+  t_obs <- obs %>% dplyr::filter(parameter_code == "00010")
+  n_neg <- sum(t_obs$dmr_value_nmbr < 0, na.rm = TRUE)
+  if (n_neg == 0) return(invisible())
+  from_f <- "orig_parameter_code" %in% names(t_obs) &&
+    any(t_obs$orig_parameter_code[t_obs$dmr_value_nmbr < 0] == "00011", na.rm = TRUE)
+  cat(sprintf(paste0(
+    "> **\\textcolor{red}{Check data}** — %d of %d temperature values at this ",
+    "outfall are below 0 °C%s. Verify against the DMR before relying on this result.\n\n"),
+    n_neg, nrow(t_obs),
+    if (from_f) paste0(
+      ". They were reported under parameter 00011 (°F) and converted to °C; ",
+      "values below freezing suggest they were actually reported in °C"
+    ) else ""
+  ))
+}
+
+obs_point_color <- "#1b9e77"
+
+# Plot title naming the parameter and outfall, so a plot still identifies
+# itself when its section runs over several pages. Internal Outfalls in red.
+plot_title <- function(param, of) {
+  type <- outfall_type(of)
+  lbl <- format_outfall_label(of, type)
+  if (!is.na(type) && type == "INO") lbl <- paste0("<span style='color:red'>", lbl, "</span>")
+  paste0(param, " — ", lbl)
+}
+
+# Start each parameter on a new page unless its heading, note and first
+# table+plot block fit, so a heading is never stranded at a page bottom.
+# Skipped for a section's first parameter, which follows the section's own
+# \clearpage and short intro: requiring the space there pushed it to the next
+# page and left the intro alone on a page.
+start_parameter_section <- function(first = FALSE) {
+  if (first) return(invisible())
+  cat("\n\n```{=latex}\n\\needspace{0.7\\textheight}\n```\n\n")
+}
+
+# A parameter's summary table and plot go in one minipage, which LaTeX cannot
+# split: if the pair doesn't fit, it moves to the next page whole. The former
+# samepage groups did not hold a table and figure together, so the plot moved
+# alone and left the table stranded above a large blank gap.
+keep_together_begin <- function() {
+  cat("\n\n```{=latex}\n\\noindent\\begin{minipage}{\\linewidth}\n```\n\n")
+}
+keep_together_end <- function() {
+  cat("\n\n```{=latex}\n\\end{minipage}\n\\par\\medskip\n```\n\n")
+}
+
+# Every plot gets a frame so its legend and caption read as part of the
+# figure rather than running into the surrounding text.
+report_plot_theme <- ggplot2::theme_minimal() +
+  ggplot2::theme(
+    plot.background = ggplot2::element_rect(colour = "grey40", fill = NA, linewidth = 0.6),
+    plot.margin     = ggplot2::margin(8, 10, 8, 8),
+    plot.title      = ggtext::element_markdown(size = 10, face = "bold"),
+    legend.position = "bottom",
+    legend.box      = "vertical",
+    legend.text     = ggplot2::element_text(size = 7),
+    legend.title    = ggplot2::element_text(size = 8),
+    plot.caption    = ggplot2::element_text(hjust = 0, color = "grey30", size = 8)
+  )
+
+# Observations against criterion lines for a direct-comparison parameter.
+# Floors (pH minimum) are drawn thicker and first so the ceiling line on top
+# stays visible when the two coincide.
+plot_direct <- function(obs, rows, title) {
+  wqs <- rows %>%
+    dplyr::mutate(
+      line_key = format_water_class(
+        USE_CLASS_NAME_LOCATION_ETC,
+        if ("sub_class" %in% names(.)) sub_class else NA_character_
+      ),
+      is_floor = !is.na(rp_operator) & rp_operator == "<",
+      lwd = dplyr::if_else(is_floor, wqs_lwd_min, wqs_lwd_max)
+    ) %>%
+    dplyr::distinct(line_key, CRITERION_VALUE, is_floor, lwd) %>%
+    dplyr::filter(is.finite(CRITERION_VALUE)) %>%
+    dplyr::arrange(dplyr::desc(is_floor))
+
+  pos  <- obs$dmr_value_nmbr[is.finite(obs$dmr_value_nmbr) & obs$dmr_value_nmbr > 0]
+  crit <- suppressWarnings(min(wqs$CRITERION_VALUE[wqs$CRITERION_VALUE > 0]))
+  use_log <- length(pos) > 0 && is.finite(crit) && crit > 0 && max(pos) / crit >= 100
+
+  # Non-detects arrive as NODI B/Q rewritten to 0; log10 would drop them, so
+  # they are plotted at the smallest positive value as open down-triangles.
+  # Only exact zeros: a negative here is a real (if suspect) temperature and
+  # must plot as a measurement.
+  obs$is_nd <- is.finite(obs$dmr_value_nmbr) & obs$dmr_value_nmbr == 0
+  nd_floor <- if (length(pos) > 0) min(pos) else NA_real_
+  nd_at_floor <- use_log && any(obs$is_nd) && is.finite(nd_floor)
+  obs$y_plot <- ifelse(obs$is_nd & nd_at_floor, nd_floor, obs$dmr_value_nmbr)
+  nd_cap <- if (nd_at_floor) {
+    paste0("Open triangles are non-detects, plotted at ", signif(nd_floor, 3), ".")
+  } else if (any(obs$is_nd)) {
+    "Open triangles are non-detects."
+  } else {
+    NULL
+  }
+
+  unit <- rows$UNIT_NAME[!is.na(rows$UNIT_NAME)][1]
+  p <- ggplot2::ggplot(obs, ggplot2::aes(x = monitoring_period_end_date, y = y_plot)) +
+    ggplot2::geom_line(color = "lightgrey", linetype = "dotted", linewidth = 0.5)
+
+  if (nrow(wqs) > 0) {
+    p <- p +
+      ggplot2::geom_hline(
+        data = wqs,
+        ggplot2::aes(yintercept = CRITERION_VALUE, color = line_key,
+                     linetype = line_key, linewidth = lwd)
+      ) +
+      ggplot2::scale_linewidth_identity() +
+      ggplot2::scale_color_manual(name = "Water Class", values = class_colors(wqs$line_key)) +
+      ggplot2::scale_linetype_manual(name = "Water Class", values = class_linetypes(wqs$line_key))
+  }
+
+  p <- p +
+    ggplot2::geom_point(data = obs[!obs$is_nd, , drop = FALSE],
+                        color = obs_point_color, alpha = 0.85)
+  if (any(obs$is_nd)) {
+    p <- p + ggplot2::geom_point(data = obs[obs$is_nd, , drop = FALSE],
+                                 shape = 6, color = "grey30", size = 2.2, stroke = 0.9)
+  }
+
+  p +
+    (if (use_log) ggplot2::scale_y_log10() else ggplot2::scale_y_continuous()) +
+    ggplot2::labs(
+      title = title,
+      x = "Monitoring date",
+      y = paste0(if (is.na(unit)) "" else unit, if (use_log) " (log scale)" else ""),
+      caption = nd_cap
+    ) +
+    report_plot_theme
+}
+```
+
+```{r}
+#| label: title-block
+#| results: asis
+
+# Escape LaTeX specials in user/ECHO-supplied text (facility names can carry
+# "&", "#", "%").
+tex_escape <- function(x) {
+  x <- gsub("\\", "\\textbackslash{}", x, fixed = TRUE)
+  x <- gsub("([&%$#_{}])", "\\\\\\1", x)
+  x <- gsub("~", "\\textasciitilde{}", x, fixed = TRUE)
+  gsub("^", "\\textasciicircum{}", x, fixed = TRUE)
+}
+permit_tex   <- tex_escape(params$permit_id %||% "")
+facility_tex <- tex_escape(params$facility_name %||% "")
+generated    <- format(Sys.Date(), "%B %d, %Y")
+
+detail_row <- function(label, value) {
+  if (!nzchar(value)) return("")
+  sprintf("\\textsf{\\textbf{\\textcolor{epablue}{%s}}} & %s \\\\[3pt]\n", label, value)
+}
+
+cat("```{=latex}\n")
+version_tex <- tex_escape(params$app_version %||% "")
+cat(sprintf("\\gdef\\rppermit{%s}\n\\gdef\\rpgenerated{%s}\n\\gdef\\rpversion{%s}\n",
+            if (nzchar(permit_tex)) paste("Permit", permit_tex) else "", generated,
+            if (nzchar(version_tex)) paste0(" \\textbar{} RP Calculator v", version_tex) else ""))
+cat("\\thispagestyle{rptitle}\n")
+# Logo beside the title, on white (the logo's own white disc would merge
+# into a coloured band).
+cat("\\noindent\\begin{minipage}[c]{1.25in}\\rplogo{1.1in}\\end{minipage}%\n")
+cat("\\begin{minipage}[c]{\\dimexpr\\linewidth-1.25in\\relax}\\sffamily\n")
+cat("{\\normalsize\\bfseries\\color{inkgray}U.S. Environmental Protection Agency \\textbar{} Region 2}\\\\[2pt]\n")
+cat("{\\small\\color{inkgray}National Pollutant Discharge Elimination System}\\\\[4pt]\n")
+cat("{\\color{epablue}\\LARGE\\bfseries Reasonable Potential Analysis Report}\n")
+cat("\\end{minipage}\n\n\\vspace{16pt}\n")
+# Permit band: white on EPA blue, which prints as white on dark grey.
+cat("\\noindent\\colorbox{epablue}{\\parbox{\\dimexpr\\linewidth-2\\fboxsep\\relax}{\\vspace{7pt}\\sffamily\\color{white}\\hspace{6pt}")
+cat(sprintf("{\\Large\\bfseries %s}", if (nzchar(permit_tex)) paste("Permit", permit_tex) else "NPDES Permit"))
+if (nzchar(facility_tex)) cat(sprintf("\\\\[3pt]\\hspace*{6pt}{\\large %s}", facility_tex))
+cat("\\vspace{7pt}}}\n\n")
+cat("\\noindent{\\color{epagreen}\\rule{\\linewidth}{2.5pt}}\n\n\\vspace{10pt}\n")
+cat("\\noindent\\begin{tabular}{@{}l l@{}}\n")
+cat(detail_row("Monitoring period",
+               if (nzchar(params$date_start)) paste(params$date_start, "to", params$date_end) else ""))
+cat(detail_row("Application forms", tex_escape(params$forms %||% "")))
+cat(detail_row("Report generated", generated))
+cat(detail_row("Tool version", if (nzchar(version_tex)) paste("RP Calculator", version_tex) else ""))
+cat("\\end{tabular}\n\n\\vspace{18pt}\n")
+cat("\\setcounter{tocdepth}{1}\n{\\hypersetup{linkcolor=inkgray}\\tableofcontents}\n")
+cat("```\n")
+```
+
+<!-- Each top-level section starts on a new page. -->
+```{=latex}
+\clearpage
+```
+
+# Summary
+
+Permit: `r params$permit_id`  
+Facility: `r params$facility_name`  
+Date range: `r params$date_start` to `r params$date_end`  
+Water class(es): `r water_classes_txt`  
+Selected forms: `r params$forms`  
+Dilution ratio: `r params$dilution_ratio`  
+Confidence level: `r params$confidence_level`  
+Target percentile: `r params$target_percentile`  
+Hardness setting: `r if (params$hardness_mode == "set") paste0("Set (", params$hardness_value, " mg/L as CaCO3)") else "Range"`  
+
+```{r}
+#| label: quick-run-warning
+#| echo: false
+#| results: asis
+if (isTRUE(quick_run) && length(quick_run_params_vec) > 0) {
+  cat("\n\n> **\\textcolor{red}{WARNING — PRELIMINARY REPORT (Quick Run)}**\n>\n")
+  cat("> This report was generated using Quick Run. The following parameters had unresolved\n")
+  cat("> data issues and were **automatically excluded** from analysis. Results should be\n")
+  cat("> considered preliminary. Re-run with all parameters reviewed for a final report.\n>\n")
+  cat(paste0("> *Excluded parameters: ", paste(quick_run_params_vec, collapse = "; "), "*\n\n"))
+}
+```
+
+## Included Pollutants
+
+The following table shows the available data for each pollutant included in this analysis. The *Basis for Inclusion* column records why each pollutant is present: required by a selected NPDES form (`r params$forms`); carried in because prior DMR data exists even though no selected form requires it (*Existing DMR*); or present only because the user supplied the monitoring data (*Manually Added*). A \ddag\ marker flags parameters whose record includes monitoring data manually added by the user on top of the base DMR record. For a complete list of pollutants that had no associated data, refer to @sec-unavailable.
+
+```{r}
+#| label: coverage
+#| echo: false
+
+if (!is.null(coverage_df) && nrow(coverage_df) > 0) {
+
+  # Determine which parameter codes had manual WQS entries (for dagger marker)
+  manual_codes <- if (!is.null(overrides_df) && nrow(overrides_df) > 0) {
+    overrides_df %>%
+      dplyr::filter(decision == "include") %>%
+      dplyr::pull(parameter_code)
+  } else character(0)
+
+  # `User Data` (from coverage.csv): "" none / "partial" some rows
+  # user-supplied / "all" every row user-supplied. Older coverage files
+  # without the column degrade gracefully to "".
+  has_user_col <- "User Data" %in% names(coverage_df)
+
+  top <- coverage_df %>%
+    dplyr::filter(`# Samples` > 0) %>%
+    dplyr::arrange(Pollutant) %>%
+    dplyr::distinct() %>%
+    dplyr::mutate(
+      # as.character() guards the readr type guess: a coverage.csv where
+      # every User Data value is empty parses as an all-NA *logical* column,
+      # and coalesce(<logical>, "") is a type error that kills the chunk.
+      user_flag = if (has_user_col) {
+        dplyr::coalesce(as.character(`User Data`), "")
+      } else {
+        ""
+      },
+      # Basis for Inclusion:
+      #   * form-required            -> "Form 2C" / "Forms 2C & 2F"
+      #   * non-form, base DMR data  -> "Existing DMR"
+      #   * non-form, all user rows  -> "Manually Added"
+      `Basis for Inclusion` = dplyr::case_when(
+        Form == "Not in selected forms" & user_flag == "all" ~ "Manually Added",
+        Form == "Not in selected forms" ~ "Existing DMR",
+        grepl("[,&]", Form) ~ paste("Forms", Form),
+        TRUE ~ paste("Form", Form)
+      ),
+      # Two independent footnote markers:
+      #   dagger  — WQS criterion manually entered (unchanged)
+      #   ddagger — record includes user-added monitoring rows, except when
+      #             the basis already says "Manually Added" (redundant there)
+      Flag = paste0(
+        dplyr::if_else(`Ref Param` %in% manual_codes, "\u2020", ""),
+        dplyr::if_else(
+          user_flag != "" & `Basis for Inclusion` != "Manually Added",
+          "\u2021",
+          ""
+        )
+      )
+    ) %>%
+    # No sample count here: coverage counts the whole facility, while every
+    # other count in the report is per outfall.
+    dplyr::select(
+      Pollutant, `Basis for Inclusion`, `Ref Param`, Flag
+    )
+
+  tbl <- kable(top,
+      format    = "latex",
+      booktabs  = TRUE,
+      longtable = TRUE,
+      col.names = c("Pollutant", "Basis for Inclusion", "Ref Param", "")) %>%
+    kable_styling(latex_options = c("striped", "repeat_header"))
+
+  # Print each footnote only when its marker actually appears in a cell;
+  # an unconditional footnote implies flagged rows that don't exist (and in
+  # a run with no overrides and no user-added data, no footnote at all).
+  has_dagger  <- any(grepl("\u2020", top$Flag))
+  has_ddagger <- any(grepl("\u2021", top$Flag))
+  fn_texts <- c(
+    if (has_dagger) {
+      "WQS criterion manually entered by user; see Manual WQS Overrides section."
+    } else {
+      NULL
+    },
+    if (has_ddagger) {
+      "Includes monitoring data manually added by the user."
+    } else {
+      NULL
+    }
+  )
+  fn_marks <- c(
+    if (has_dagger) "\u2020" else NULL,
+    if (has_ddagger) "\u2021" else NULL
+  )
+  if (length(fn_texts) > 0) {
+    tbl <- tbl %>%
+      footnote(symbol = fn_texts, symbol_manual = fn_marks, escape = FALSE)
+  }
+  tbl
+
+} else {
+  cat("No coverage summary available.")
+}
+```
+
+```{=latex}
+\clearpage
+```
+
+# RP Findings
+
+RP column: **YES** indicates the assessed value exceeds the criterion.
+**DEPENDS** indicates an exceedance was not observed but the tool cannot
+conclude no reasonable potential — see the note on the pollutant's section.
+**NO** indicates no exceedance.
+
+The Basis column distinguishes a *Calculated* receiving water concentration
+(TSD multiplying-factor projection, dilution ratio applied) from an
+*Observed* maximum or minimum compared directly to the criterion with no
+projection and no dilution. Values rounded to 2 decimals.
+
+```{r}
+#| label: rp-table
+#| echo: false
+
+rp_df %>%
+  mutate(Basis = basis_label(
+           if ("rp_method" %in% names(.)) rp_method else NA_character_,
+           if ("rp_operator" %in% names(.)) rp_operator else NULL
+         ),
+         RWC_rs = round(RWC_rs, 2),
+         CRITERION_VALUE = round(CRITERION_VALUE,2),
+         CRITERION_ID = gsub("_", "\\\\_", CRITERION_ID),
+         NPDES_Pollutant = gsub("_", "\\\\_", NPDES_Pollutant)) %>%
+  drop_na(RWC_rs) %>%
+  mutate(USE_CLASS_NAME_LOCATION_ETC = format_water_class(
+           USE_CLASS_NAME_LOCATION_ETC,
+           if ("sub_class" %in% names(.)) sub_class else NA_character_
+         ),
+         # Internal Outfalls: red bold text via cell_spec so they stay
+         # visibly distinct from External Outfalls in the PDF.
+         perm_feature_nmbr = {
+           lbl <- format_outfall_label(
+             perm_feature_nmbr,
+             if ("perm_feature_type_code" %in% names(.)) perm_feature_type_code else NA_character_
+           )
+           is_int <- !is.na(perm_feature_type_code) & perm_feature_type_code == "INO"
+           ifelse(
+             is_int,
+             kableExtra::cell_spec(lbl, format = "latex", color = "red", bold = TRUE),
+             lbl
+           )
+         }) %>%
+  select(CRITERION_ID, NPDES_Pollutant, perm_feature_nmbr, USE_CLASS_NAME_LOCATION_ETC, CRITERION_VALUE, RWC_rs, Basis, RP) %>%
+  # Severity order YES > DEPENDS > NO. A plain desc() on the character column
+  # would sort YES, NO, DEPENDS and bury the determinations needing review.
+  arrange(desc(factor(RP, levels = c("NO", "DEPENDS", "YES"), ordered = TRUE)),
+          NPDES_Pollutant) %>%
+  distinct() %>%
+  # \mbox stops LaTeX hyphenating "DEPENDS" in the narrow RP column.
+  mutate(RP = ifelse(is.na(RP), RP, paste0("\\mbox{", RP, "}"))) %>%
+  kable(
+    col.names = c("WQS ID","Pollutant","Outfall","Water Class","WQS Criterion","Value","Basis","RP"),
+    format    = "latex",
+    booktabs  = TRUE,
+    longtable = TRUE,
+    escape    = FALSE
+  ) %>%
+  kable_styling(latex_options = c("striped", "repeat_header"),
+                font_size = 9) %>%
+  # Explicit widths so all 8 columns fit within the 6.5in text block.
+  # Sum = 14.3cm, leaving room for inter-column padding. WQS ID is wide
+  # enough for manual IDs ("MANUAL-00010"), Basis for "Calculated" and RP
+  # for "DEPENDS" without hyphenation.
+  column_spec(1, width = "1.9cm") %>%   # WQS ID
+  column_spec(2, width = "2.5cm") %>%   # Pollutant
+  column_spec(3, width = "1.9cm") %>%   # Outfall (wraps for plain + coloured labels)
+  column_spec(4, width = "2.1cm") %>%   # Water Class
+  column_spec(5, width = "1.4cm") %>%   # WQS Criterion
+  column_spec(6, width = "1.3cm") %>%   # Value (calculated RWC or observed)
+  column_spec(7, width = "1.7cm") %>%   # Basis
+  column_spec(8, width = "1.5cm")       # RP
+```
+
+```{=latex}
+\clearpage
+```
+
+# Non-Concentration Based Measures
+
+Parameters in this section are assessed by direct comparison: the observed
+maximum (for a ceiling criterion) or minimum (for a floor) is compared to the
+criterion as reported. No multiplying factor is applied and the dilution ratio
+is not used.
+
+```{r}
+#| label: receiving-water
+#| echo: false
+#| fig-height: 2.9
+#| results: asis
+
+# Short enough that two table+plot blocks fit on one page. Set here because
+# knitr ignores opts_current$set() for plots printed inside a loop.
+
+direct_rp <- if ("rp_method" %in% names(rp_df)) {
+  rp_df %>%
+    dplyr::filter(!is.na(rp_method), rp_method == "direct") %>%
+    dplyr::mutate(
+      # pH carries two criterion rows (Max / Min) that belong in one section
+      # with one table; every other direct parameter is keyed by its display
+      # name, which keeps the two Enterococci statistics apart.
+      section = dplyr::if_else(
+        parameter_code == "00400",
+        "pH",
+        if ("criterion_label" %in% names(.)) {
+          dplyr::coalesce(dplyr::na_if(criterion_label, ""), NPDES_Pollutant)
+        } else {
+          NPDES_Pollutant
+        }
+      )
+    )
+} else {
+  rp_df[0, ]
+}
+
+if (nrow(direct_rp) == 0) {
+  cat("No direct-comparison parameters were assessed.\n\n")
+} else {
+  for (sec in sort(unique(direct_rp$section))) {
+    sec_rows <- direct_rp %>% dplyr::filter(section == sec)
+    sec_codes <- unique(sec_rows$parameter_code)
+
+    start_parameter_section(first = sec == sort(unique(direct_rp$section))[1])
+    cat(sprintf("\n\n## %s\n\n", latex_escape(sec)))
+
+    # Criterion note (Streeter-Phelps, Enterococci interval, temperature basis)
+    if ("rp_note" %in% names(sec_rows)) {
+      nt <- unique(sec_rows$rp_note)
+      nt <- nt[!is.na(nt) & nzchar(nt)]
+      if (length(nt) > 0) {
+        cat(sprintf("> **\\textcolor{orange}{Note}** — %s\n\n", latex_escape(nt[1])))
+      }
+    }
+    manual_wqs_callout(sec_codes)
+
+    ops <- unique(stats::na.omit(sec_rows$rp_operator))
+    cmp_txt <- if (all(c("<", ">") %in% ops)) {
+      "The observed maximum is compared to the upper criterion and the observed minimum to the lower criterion"
+    } else if (identical(ops, "<")) {
+      "The observed minimum is compared to the criterion"
+    } else {
+      "The observed maximum is compared to the criterion"
+    }
+    cat(sprintf(
+      "This parameter is assessed by direct comparison. %s as reported: no multiplying factor is applied and the dilution ratio is not used.\n\n",
+      cmp_txt
+    ))
+
+    two_bound <- all(c("<", ">") %in% ops)
+
+    for (of in sort(unique(stats::na.omit(sec_rows$perm_feature_nmbr)))) {
+      of_rows <- sec_rows %>% dplyr::filter(perm_feature_nmbr == of)
+      obs <- dmr_obs(sec_codes, of, unique(of_rows$statistic))
+
+      cat(sprintf("### %s\n\n", format_outfall_label_latex(of, outfall_type(of))))
+      negative_temp_flag(obs)
+      keep_together_begin()
+
+      summ <- of_rows %>%
+        dplyr::mutate(
+          water = format_water_class(
+            USE_CLASS_NAME_LOCATION_ETC,
+            if ("sub_class" %in% names(.)) sub_class else NA_character_
+          ),
+          bound = dplyr::if_else(!is.na(rp_operator) & rp_operator == "<", "Min", "Max"),
+          samples = n_used,
+          conv = units_converted_label(obs),
+          crit = round(CRITERION_VALUE, 4),
+          observed = round(
+            if ("observed_value" %in% names(.)) dplyr::coalesce(observed_value, RWC_rs) else RWC_rs,
+            4
+          )
+        ) %>%
+        dplyr::arrange(water, dplyr::desc(bound)) %>%
+        dplyr::select(CRITERION_ID, water, bound, samples, conv, crit, observed, RP) %>%
+        dplyr::distinct()
+
+      obs_hdr <- if (two_bound) "Observed" else if (identical(ops, "<")) "Observed Min" else "Observed Max"
+      if (!two_bound) summ <- dplyr::select(summ, -bound)
+      print(knitr::kable(
+        summ, format = "latex", booktabs = TRUE,
+        col.names = c("WQS ID", "Water Class", if (two_bound) "Bound",
+                      "Samples", "Units Converted", "WQS Criterion", obs_hdr, "RP")
+      # scale_down only shrinks a table wider than the text block (e.g. long
+      # manual WQS IDs with three water classes); others print unchanged.
+      ) %>% kableExtra::kable_styling(latex_options = c("HOLD_position", "scale_down")))
+      cat("\n\n")
+
+      if (nrow(obs) > 0) {
+        print(plot_direct(obs, of_rows, plot_title(sec, of)))
+        cat("\n\n")
+      } else {
+        cat("No dated observations to plot.\n\n")
+      }
+      keep_together_end()
+    }
+  }
+}
+```
+
+
+
+
+```{=latex}
+\clearpage
+```
+
+# Concentration Based Measures
+
+## RP Equations
+
+The following equations estimate the Receiving Water Concentration (RWC) for
+parameters assessed by projection. Parameters assessed by direct comparison
+are reported in the Non-Concentration Based Measures section.
+
+$$\sigma_g = \sqrt{\ln(\mathrm{CV}^2 + 1)}$$
+$$p = (1 - \mathrm{CL})^{1/n}$$
+$$z_p = \Phi^{-1}(p),\; z_{\text{target}} = \Phi^{-1}(\mathrm{target})$$
+$$\mathrm{MF} = \exp\big((z_{\text{target}} - z_p)\,\sigma_g\big)$$
+
+$$\text{RWC} = \frac{\max(x) \times MF}{DR}$$
+
+```{r}
+#| label: per-pollutant
+#| echo: false
+#| fig-height: 2.9
+#| results: asis
+
+# Short enough that two table+plot blocks fit on one page. Set here because
+# knitr ignores opts_current$set() for plots printed inside a loop.
+
+if (is.null(dmr_df) || nrow(dmr_df) == 0) {
+  cat("No DMR data were provided; per-pollutant sections are omitted.")
+} else {
+  pollutants <- rp_df %>%
+    dplyr::filter(
+      is.na(rp_method) | rp_method != "direct",
+      (!is.na(n_used) & n_used > 0) | is.finite(RWC_rs)
+    ) %>%
+    dplyr::distinct(NPDES_Pollutant) %>%
+    dplyr::pull()
+
+  for (poll in pollutants) {
+    sub_all <- rp_df %>%
+      dplyr::filter(NPDES_Pollutant == poll, is.na(rp_method) | rp_method != "direct")
+    param_codes <- sub_all %>% dplyr::distinct(parameter_code) %>% dplyr::pull()
+    param_code <- if (length(param_codes) > 0) param_codes[1] else NA_character_
+
+    start_parameter_section(first = poll == pollutants[1])
+    cat(sprintf("\n\n## %s\n\n", latex_escape(poll)))
+
+    # ── Criterion note (rp_note) ──────────────────────────────────────────
+    if ("rp_note" %in% names(sub_all)) {
+      note_txt <- sub_all %>%
+        dplyr::pull(rp_note) %>%
+        unique()
+      note_txt <- note_txt[!is.na(note_txt) & nzchar(note_txt)]
+      if (length(note_txt) > 0) {
+        cat(sprintf(
+          "> **\\textcolor{orange}{Note}** — %s\n\n",
+          latex_escape(note_txt[1])
+        ))
+      }
+    }
+    manual_wqs_callout(param_code)
+
+    outfalls_for_poll <- if ("perm_feature_nmbr" %in% names(sub_all)) {
+      unique(sub_all$perm_feature_nmbr)
+    } else if (!is.null(dmr_df) && "perm_feature_nmbr" %in% names(dmr_df)) {
+      unique(dplyr::filter(dmr_df, parameter_code == param_code)$perm_feature_nmbr)
+    } else NA_character_
+    outfalls_for_poll <- outfalls_for_poll[!is.na(outfalls_for_poll)]
+    if (length(outfalls_for_poll) == 0) outfalls_for_poll <- NA_character_
+
+    show_outfall_subheads <- is.numeric(outfall_count) && outfall_count > 1
+
+    for (of in sort(outfalls_for_poll)) {
+      # \nopagebreak[4] strongly discourages a page break immediately before
+      # the outfall subheading, keeping it with the first line of content.
+      cat("\n\n\\nopagebreak[4]\n\n")
+
+      if (show_outfall_subheads && !is.na(of)) {
+        cat(sprintf("### %s\n\n", format_outfall_label_latex(of, outfall_type(of))))
+      }
+
+      sub_rp <- if (!is.na(of)) sub_all %>% dplyr::filter(perm_feature_nmbr == of) else sub_all
+      obs <- dmr_obs(param_code, of)
+      n_samples <- nrow(obs)
+
+      rwc_val <- sub_rp %>%
+        dplyr::distinct(RWC_rs) %>% dplyr::pull(RWC_rs) %>% .[is.finite(.)]
+      rwc_val <- if (length(rwc_val) > 0) rwc_val[1] else NA_real_
+
+      negative_temp_flag(obs)
+      keep_together_begin()
+
+      # ── Summary table ─────────────────────────────────────────────────────
+      # The single table for the parameter at this outfall: one row per
+      # criterion, so several water classes simply add rows.
+      summ <- sub_rp %>%
+        dplyr::mutate(
+          water = format_water_class(
+            USE_CLASS_NAME_LOCATION_ETC,
+            if ("sub_class" %in% names(.)) sub_class else NA_character_
+          ),
+          samples = dplyr::coalesce(as.integer(n_used), n_samples),
+          conv = units_converted_label(obs),
+          rwc = signif(RWC_rs, 3)
+        ) %>%
+        dplyr::select(CRITERION_ID, water, samples, conv, CRITERION_VALUE, rwc, RP) %>%
+        dplyr::distinct()
+
+      if (nrow(summ) > 0) {
+        kable(summ,
+              format    = "latex",
+              booktabs  = TRUE,
+              col.names = c("WQS ID", "Water Class", "Samples", "Units Converted",
+                            "WQS Criterion", "RWC", "RP")) %>%
+          kable_styling(latex_options = c("HOLD_position", "scale_down")) %>%
+          print()
+        cat("\n\n")
+      } else {
+        cat("No WQS rows found for this pollutant/outfall.\n\n")
+      }
+
+      # wqs_lines drives the dashed criterion lines on the per-pollutant
+      # plot AND keys their legend entries via wqs_colors / wqs_linetypes.
+      # When a parameter has multiple criteria in the same base class that
+      # differ by sub_class (e.g., phosphorus SD streams 160 ug/L vs SD
+      # reservoir/lake 26 ug/L), we substitute the combined display label
+      # so each criterion gets its own legend entry and its own palette
+      # slot. Rows without sub_class fall through with the base class.
+      wqs_lines <- sub_rp %>%
+        dplyr::mutate(
+          USE_CLASS_NAME_LOCATION_ETC = format_water_class(
+            USE_CLASS_NAME_LOCATION_ETC,
+            if ("sub_class" %in% names(.)) sub_class else NA_character_
+          )
+        ) %>%
+        dplyr::select(CRITERION_ID, USE_CLASS_NAME_LOCATION_ETC, CRITERION_VALUE) %>%
+        dplyr::distinct() %>%
+        dplyr::filter(is.finite(CRITERION_VALUE))
+
+      # Hardness annotation (metals / range mode)
+      hardness_note <- NULL
+      if (!is.null(params$hardness_mode) &&
+          params$hardness_mode == "range" && is.finite(rwc_val)) {
+        sub_sd_metal <- sub_rp %>%
+          dplyr::filter(CRITERION_ID %in% metals_ids,
+                        USE_CLASS_NAME_LOCATION_ETC == "class SD waters")
+        if (nrow(sub_sd_metal) > 0) {
+          crit  <- sub_sd_metal$CRITERION_ID[1]
+          curve <- metal_limit_curve(crit)
+          if (!is.null(curve) && nrow(curve) > 0) {
+            h_row <- curve %>%
+              dplyr::mutate(diff = abs(limit - rwc_val)) %>%
+              dplyr::slice_min(diff, n = 1, with_ties = FALSE)
+            if (nrow(h_row) == 1 && is.finite(h_row$hardness)) {
+              hardness_note <- paste0("RWC > WQS at Hardness values < ",
+                                      round(h_row$hardness, 0),
+                                      " mg/L as CaCO₃")
+            }
+          }
+        }
+      }
+
+      # ── PLOT: Observed vs WQS / RWC ─────────────────────────────────────────
+      # Drawing order: WQS lines (thicker, drawn first) → RWC line (on top).
+      # WQS lines are drawn individually via a loop so each gets the correct
+      # class colour and linetype from the shared palette.
+      if (n_samples > 0 &&
+          all(c("monitoring_period_end_date", "dmr_value_nmbr") %in% names(obs))) {
+
+        ylab_txt         <- sub_rp$UNIT_NAME[1]
+        present_classes  <- unique(wqs_lines$USE_CLASS_NAME_LOCATION_ETC)
+
+        # y-axis bounds: include obs values, WQS lines, and RWC
+        all_y_vals <- c(obs$dmr_value_nmbr, wqs_lines$CRITERION_VALUE,
+                        if (is.finite(rwc_val)) rwc_val else numeric(0))
+        # Floor at 0 unless the data go negative (a suspect temperature
+        # conversion); clipping would hide exactly the values being flagged.
+        y_lo  <- min(all_y_vals, na.rm = TRUE)
+        y_min <- if (y_lo < 0) y_lo * 1.05 else y_lo * 0.95
+
+        # Mirror the app: many CWA criteria sit far below any achievable
+        # quantitation limit, and bacteria counts span five or six decades by
+        # nature, so a linear axis collapses the criterion line onto zero.
+        # Switch to log10 when that happens. This ratio is NOT a units check --
+        # reported units are reconciled upstream by get_unit_conversion(), so a
+        # large ratio here is normally a real exceedance or a naturally
+        # wide-range parameter, not a mg/L <-> ug/L reporting error.
+        pos_obs_r  <- obs$dmr_value_nmbr[is.finite(obs$dmr_value_nmbr) &
+          obs$dmr_value_nmbr > 0]
+        crit_min_r <- suppressWarnings(min(
+          wqs_lines$CRITERION_VALUE[is.finite(wqs_lines$CRITERION_VALUE) &
+            wqs_lines$CRITERION_VALUE > 0]
+        ))
+        oom_ratio_r <- if (length(pos_obs_r) > 0 && is.finite(crit_min_r) &&
+          crit_min_r > 0) {
+          max(pos_obs_r) / crit_min_r
+        } else {
+          NA_real_
+        }
+        use_log_r <- is.finite(oom_ratio_r) && oom_ratio_r >= 100
+        if (use_log_r) ylab_txt <- paste0(ylab_txt, " (log scale)")
+
+        # Non-detects (NODI B/Q, stored as 0) and literal reported zeros are
+        # dropped silently by log10. Plot them at a floor equal to the smallest
+        # positive value in the series, marked with open down-triangles, and
+        # disclose the substitution in the caption.
+        # Exact zeros only: a negative is a real (if suspect) temperature.
+        obs$is_nd_r <- is.finite(obs$dmr_value_nmbr) & obs$dmr_value_nmbr == 0
+        nd_floor_r <- if (length(pos_obs_r) > 0) min(pos_obs_r) else NA_real_
+        nd_at_floor_r <- use_log_r && any(obs$is_nd_r) && is.finite(nd_floor_r)
+        obs$y_plot_r <- ifelse(
+          obs$is_nd_r & nd_at_floor_r,
+          nd_floor_r,
+          obs$dmr_value_nmbr
+        )
+        nd_cap_r <- if (nd_at_floor_r) {
+          paste0("Open triangles are non-detects, plotted at ",
+                 signif(nd_floor_r, 3), ".")
+        } else if (any(obs$is_nd_r)) {
+          "Open triangles are non-detects."
+        } else {
+          NA_character_
+        }
+
+        p <- ggplot2::ggplot(
+          obs,
+          ggplot2::aes(x = monitoring_period_end_date, y = y_plot_r)
+        ) +
+          ggplot2::geom_line(color = "lightgrey", linetype = "dotted",
+                             linewidth = 0.5)
+
+        # Draw WQS lines first (thicker), one at a time for full palette control
+        if (nrow(wqs_lines) > 0) {
+          for (i in seq_len(nrow(wqs_lines))) {
+            row_i <- wqs_lines[i, ]
+            p <- p + ggplot2::geom_hline(
+              yintercept  = row_i$CRITERION_VALUE,
+              color       = class_colors(row_i$USE_CLASS_NAME_LOCATION_ETC),
+              linetype    = class_linetypes(row_i$USE_CLASS_NAME_LOCATION_ETC),
+              linewidth   = wqs_lwd_max,
+              inherit.aes = FALSE
+            )
+          }
+        }
+
+        # RWC line drawn last — on top of all WQS lines
+        if (is.finite(rwc_val)) {
+          p <- p + ggplot2::geom_hline(
+            yintercept  = rwc_val,
+            color       = rwc_color,
+            linetype    = "solid",
+            linewidth   = rwc_lwd,
+            inherit.aes = FALSE
+          )
+        }
+
+        # Observation points. The unit is already on the y-axis label, so the
+        # points are coloured by reported unit (with a legend) only when the
+        # record mixes units — the one case where the colour carries
+        # information the axis label doesn't.
+        mixed_units <- dplyr::n_distinct(obs$dmr_unit_desc[!obs$is_nd_r], na.rm = TRUE) > 1
+        if (mixed_units) {
+          p <- p +
+            ggplot2::geom_point(
+              data = obs[!obs$is_nd_r, , drop = FALSE],
+              ggplot2::aes(color = dmr_unit_desc),
+              alpha = 0.85
+            ) +
+            ggplot2::scale_color_manual(
+              name     = "Reported Unit",
+              values   = unit_colors,
+              na.value = "#999999"
+            )
+        } else {
+          p <- p + ggplot2::geom_point(
+            data = obs[!obs$is_nd_r, , drop = FALSE],
+            color = obs_point_color, alpha = 0.85
+          )
+        }
+
+        p <- p +
+          {
+            if (use_log_r) {
+              ggplot2::scale_y_log10()
+            } else {
+              ggplot2::scale_y_continuous(limits = c(y_min, NA))
+            }
+          } +
+          ggplot2::labs(
+            title = plot_title(poll, of),
+            x = "Monitoring date",
+            y = ylab_txt,
+            caption = if (!is.na(nd_cap_r)) nd_cap_r else NULL
+          ) +
+          report_plot_theme +
+          ggplot2::theme(
+            plot.caption = ggplot2::element_text(hjust = 0, color = rwc_color, size = 8)
+          )
+
+        # Non-detect markers drawn after the unit scale so they take no colour
+        # from it. inherit.aes keeps x and y_plot_r from the base mapping.
+        if (any(obs$is_nd_r)) {
+          p <- p + ggplot2::geom_point(
+            data  = obs[obs$is_nd_r, , drop = FALSE],
+            shape = 6, color = "grey30", size = 2.2, stroke = 0.9
+          )
+        }
+
+        # Water class legend via a second colour scale (separate from units)
+        if (length(present_classes) > 0) {
+          p <- p + ggnewscale::new_scale_color() +
+            ggplot2::geom_hline(
+              data = wqs_lines,
+              ggplot2::aes(yintercept  = CRITERION_VALUE,
+                           color       = USE_CLASS_NAME_LOCATION_ETC,
+                           linetype    = USE_CLASS_NAME_LOCATION_ETC),
+              linewidth   = wqs_lwd_max,
+              inherit.aes = FALSE,
+              show.legend = TRUE
+            ) +
+            ggplot2::scale_color_manual(
+              name   = "Water Class",
+              values = class_colors(present_classes)
+            ) +
+            ggplot2::scale_linetype_manual(
+              name   = "Water Class",
+              values = class_linetypes(present_classes)
+            )
+        }
+
+        # Hardness note goes in the caption (below the plot) rather than as an
+        # in-panel annotation, which previously ran off the right page margin.
+        if (!is.null(hardness_note) && is.finite(rwc_val)) {
+          p <- p + ggplot2::labs(caption = hardness_note)
+        }
+
+        print(p)
+        cat("\n\n")
+
+      } else {
+        cat("No dated observations to plot.\n\n")
+      }
+      keep_together_end()
+
+      # ── Hardness vs Limit (metals / range mode only) ────────────────────────
+      show_range_plot <-
+        (!is.null(params$hardness_mode) && params$hardness_mode == "range") &&
+        any(sub_rp$CRITERION_ID %in% metals_ids &
+              sub_rp$USE_CLASS_NAME_LOCATION_ETC == "class SD waters")
+
+      if (show_range_plot) {
+        crit  <- sub_rp %>%
+          dplyr::filter(CRITERION_ID %in% metals_ids,
+                        USE_CLASS_NAME_LOCATION_ETC == "class SD waters") %>%
+          dplyr::slice(1) %>% dplyr::pull(CRITERION_ID)
+        curve <- metal_limit_curve(crit)
+        if (!is.null(curve) && nrow(curve) > 0) {
+          ylab_txt <- sub_rp$UNIT_NAME[1]
+          p_h <- ggplot2::ggplot(curve, ggplot2::aes(x = hardness, y = limit)) +
+            ggplot2::geom_line(color = limit_color, linewidth = 1) +
+            ggplot2::scale_y_continuous(limits = c(0, NA)) +
+            ggplot2::labs(
+              title = paste("Hardness vs WQS Criterion —", poll, "(Class SD)"),
+              x     = "Hardness (mg/L as CaCO₃)",
+              y     = ylab_txt
+            ) +
+            report_plot_theme
+          knitr::opts_current$set(fig.height = 3.2)
+          print(p_h)
+          cat("\n\n")
+        }
+      }
+
+      # ── RWC calculation ─────────────────────────────────────────────────────
+      cat("**RWC Calculation**\n\n")
+      if (all(c("n_used","cv","sigma_g","p_percentile","z_p","z_target","MF") %in%
+              names(sub_rp))) {
+        n_val   <- sub_rp %>% dplyr::distinct(n_used)       %>% dplyr::pull() %>% .[is.finite(.)]
+        cv_val  <- sub_rp %>% dplyr::distinct(cv)           %>% dplyr::pull() %>% .[is.finite(.)]
+        sg_val  <- sub_rp %>% dplyr::distinct(sigma_g)      %>% dplyr::pull() %>% .[is.finite(.)]
+        p_val   <- sub_rp %>% dplyr::distinct(p_percentile) %>% dplyr::pull() %>% .[is.finite(.)]
+        zp_val  <- sub_rp %>% dplyr::distinct(z_p)          %>% dplyr::pull() %>% .[is.finite(.)]
+        zt_val  <- sub_rp %>% dplyr::distinct(z_target)     %>% dplyr::pull() %>% .[is.finite(.)]
+        mf_val  <- sub_rp %>% dplyr::distinct(MF)           %>% dplyr::pull() %>% .[is.finite(.)]
+        rwc_eq  <- sub_rp %>% dplyr::distinct(RWC_rs)       %>% dplyr::pull() %>% .[is.finite(.)]
+        max_val <- sub_rp %>% dplyr::distinct(max_value)    %>% dplyr::pull() %>% .[is.finite(.)]
+        cl_val  <- params$confidence_level
+        tgt_val <- params$target_percentile
+
+        if (length(n_val) > 0 && length(cv_val) > 0 && length(sg_val) > 0 &&
+            length(p_val) > 0 && length(zp_val) > 0 && length(zt_val) > 0 &&
+            length(mf_val) > 0 && is.finite(cl_val) && is.finite(tgt_val)) {
+
+          cat(sprintf("$$\\sigma_g = \\sqrt{\\ln(%s^2+1)} = %s$$\n",
+                      format(signif(cv_val[1], 2), scientific = FALSE),
+                      format(signif(sg_val[1], 2), scientific = FALSE)))
+          cat(sprintf("$$p = (1 - %s)^{1/%s} = %s$$\n",
+                      format(signif(cl_val, 2), scientific = FALSE),
+                      format(n_val[1]),
+                      format(signif(p_val[1], 2), scientific = FALSE)))
+          cat(sprintf("$$z_p = %s,\\; z_{\\text{target}} = %s$$\n",
+                      format(signif(zp_val[1], 2), scientific = FALSE),
+                      format(signif(zt_val[1], 2), scientific = FALSE)))
+          cat(sprintf(
+            "$$\\mathrm{MF} = \\exp\\big((%s - %s)\\times %s\\big) = %s$$\n",
+            format(signif(zt_val[1], 2), scientific = FALSE),
+            format(signif(zp_val[1], 2), scientific = FALSE),
+            format(signif(sg_val[1], 2), scientific = FALSE),
+            format(signif(mf_val[1], 2), scientific = FALSE)))
+          cat(sprintf(
+            "$$\\mathrm{RWC} = \\frac{\\max(x)\\times MF}{DR} = \\frac{%s\\times%s}{%s} = %s$$\n\n",
+            format(signif(max_val, 2), scientific = FALSE),
+            format(signif(mf_val,  2), scientific = FALSE),
+            format(signif(params$dilution_ratio, 2), scientific = FALSE),
+            format(signif(rwc_eq,  2), scientific = FALSE)))
+        }
+      }
+
+      # ── Permit Limit History (per outfall) ────────────────────────────────
+      # Limits can vary by outfall, so the table is scoped to the current outfall.
+      # Mass-load limits (e.g. kg/d) cannot be compared to concentration-based
+      # WQS criteria and are listed separately.
+      if (!is.null(limits) && is.data.frame(limits) && !is.na(param_code)) {
+        lim_base <- limits %>%
+          dplyr::filter(parameter_code == param_code)
+        if ("perm_feature_nmbr" %in% names(lim_base) && !is.na(of)) {
+          lim_base <- lim_base %>% dplyr::filter(perm_feature_nmbr == of)
+        }
+
+        lim_conc <- lim_base %>%
+          dplyr::filter(!is_mass_load) %>%
+          dplyr::transmute(
+            `Effluent Limit` = limit_value_nmbr,
+            `Unit`           = limit_unit_desc,
+            `Limit Start`    = format(limit_begin_date, "%m/%d/%Y"),
+            `Limit End`      = format(limit_end_date,   "%m/%d/%Y")
+          ) %>%
+          dplyr::distinct()
+
+        if (nrow(lim_conc) > 0) {
+          cat("**Permit Effluent Limit History**\n\n")
+          kable(lim_conc,
+                format    = "latex",
+                booktabs  = TRUE,
+                col.names = c("Effluent Limit", "Unit", "Limit Start", "Limit End")) %>%
+            kable_styling(latex_options = c("HOLD_position")) %>%
+            print()
+          cat("\n\n")
+        }
+
+        lim_mass <- lim_base %>%
+          dplyr::filter(is_mass_load) %>%
+          dplyr::transmute(
+            `Effluent Limit` = limit_value_nmbr,
+            `Unit`           = limit_unit_desc,
+            `Limit Start`    = format(limit_begin_date, "%m/%d/%Y"),
+            `Limit End`      = format(limit_end_date,   "%m/%d/%Y")
+          ) %>%
+          dplyr::distinct()
+
+        if (nrow(lim_mass) > 0) {
+          cat("**Mass-Load Effluent Limits (not used in WQS analysis)**\n\n")
+          cat(paste0("The following limits are expressed as mass-load quantities ",
+                     "(mass per unit time) and cannot be directly compared to the ",
+                     "concentration-based WQS criteria used in this analysis. ",
+                     "They are provided for reference only.\n\n"))
+          kable(lim_mass,
+                format    = "latex",
+                booktabs  = TRUE,
+                col.names = c("Effluent Limit", "Unit", "Limit Start", "Limit End")) %>%
+            kable_styling(latex_options = c("HOLD_position")) %>%
+            print()
+          cat("\n\n")
+        }
+      }
+
+    } # end outfall loop
+  } # end pollutant loop
+} # end dmr_df check
+```
+
+
+```{=latex}
+\clearpage
+```
+
+# Parameters from Applications without DMR Data {#sec-unavailable}
+
+```{r}
+#| label: unavailable
+#| echo: false
+
+# Rebuild bottom here so this chunk is self-contained and does not depend on
+# the coverage chunk having run successfully (e.g. in standalone mode where
+# coverage_df may be NULL).
+bottom_unavail <- if (!is.null(coverage_df) && nrow(coverage_df) > 0) {
+  coverage_df %>%
+    dplyr::filter(`# Samples` == 0) %>%
+    dplyr::arrange(Pollutant) %>%
+    dplyr::select(!dplyr::any_of(c("Form", "User Data"))) %>%
+    dplyr::distinct()
+} else {
+  NULL
+}
+
+if (!is.null(bottom_unavail) && nrow(bottom_unavail) > 0) {
+  kable(bottom_unavail,
+        format    = "latex",
+        booktabs  = TRUE,
+        longtable = TRUE,
+        col.names = c("Pollutant", "Ref Param", "# Samples")) %>%
+    kable_styling(latex_options = c("striped", "repeat_header"))
+} else {
+  cat("All expected pollutants had data available.")
+}
+```
+
+
+
+
+```{=latex}
+\clearpage
+```
+
+# Excluded Parameters {#sec-excluded}
+
+```{r}
+#| label: excluded-params
+#| echo: false
+#| results: asis
+
+excl_df <- if (!is.null(overrides_df) && nrow(overrides_df) > 0) {
+  overrides_df %>%
+    dplyr::filter(decision == "exclude") %>%
+    dplyr::select(
+      `Parameter`      = parameter_desc,
+      `Code`           = parameter_code,
+      `Flag Reason`    = case_reason,
+      `Samples in DMR` = dplyr::any_of("n_samples"),
+      `Reason for Exclusion` = notes
+    )
+} else NULL
+
+if (!is.null(excl_df) && nrow(excl_df) > 0) {
+  cat("The following parameters had DMR data available but were excluded from the RP ",
+      "analysis at the direction of the user.\n\n")
+  tbl <- kable(excl_df,
+        format    = "latex",
+        booktabs  = TRUE,
+        longtable = TRUE) %>%
+    kable_styling(latex_options = c("striped", "repeat_header")) %>%
+    # Widths on every column: with only Parameter and Reason fixed, a long
+    # Flag Reason pushed the table past the right margin and the Reason for
+    # Exclusion text was cut off. Content ~13.4cm + ~2.1cm padding fits 16.5cm.
+    column_spec(1, width = "3.2cm") %>%   # Parameter
+    column_spec(2, width = "1.2cm") %>%   # Code
+    column_spec(3, width = "2.8cm")       # Flag Reason
+  if (ncol(excl_df) == 5) tbl <- column_spec(tbl, 4, width = "1.4cm")  # Samples in DMR
+  print(column_spec(tbl, ncol(excl_df), width = "4.8cm"))             # Reason for Exclusion
+} else {
+  cat("No parameters were explicitly excluded from this analysis.")
+}
+```
+
+
+```{=latex}
+\clearpage
+```
+
+# Manual WQS Overrides {#sec-manual-wqs}
+
+```{r}
+#| label: manual-wqs
+#| echo: false
+#| results: asis
+
+manual_df <- if (!is.null(overrides_df) && nrow(overrides_df) > 0) {
+  overrides_df %>%
+    dplyr::filter(decision == "include") %>%
+    dplyr::select(
+      `Parameter`        = parameter_desc,
+      `Code`             = parameter_code,
+      `Flag Reason`      = case_reason,
+      `Water Class(es)`  = water_classes,
+      `Criterion Value`  = criterion_value,
+      `Unit`             = unit,
+      `Criterion Type`   = criterion_type,
+      `Basis / Notes`    = notes
+    )
+} else NULL
+
+if (!is.null(manual_df) && nrow(manual_df) > 0) {
+  cat(paste0(
+    "The following parameters had no matching WQS criterion for the selected water ",
+    "class and were evaluated using manually entered criteria. These criteria were ",
+    "supplied by the permit writer and are documented here as part of the permanent ",
+    "record. All manually entered criteria are flagged with a dagger symbol in the Coverage ",
+    "Summary table.\n\n"
+  ))
+  # print() is explicit: under results:asis an auto-printed kable can be
+  # skipped, so force the LaTeX out.
+  print(
+  kable(manual_df,
+        format    = "latex",
+        booktabs  = TRUE,
+        longtable = TRUE,
+        linesep   = "",
+        # Center the three short columns: Water Class(es), Criterion Value,
+        # Criterion Type. align applies to both header and body cells.
+        align     = c("l", "l", "l", "c", "c", "l", "c", "l")) %>%
+    kable_styling(latex_options = c("striped", "repeat_header")) %>%
+    # Fixed widths force wrapping at full font size. LaTeX adds ~0.42cm of
+    # padding (2\\tabcolsep) PER column on top of these p{} widths, so eight
+    # columns carry ~3.4cm of padding; the content widths below sum to 11.9cm,
+    # for ~15.3cm total inside the 16.5cm text block. Parameter and
+    # Basis/Notes are the narrow-and-wrapping columns per request.
+    column_spec(1, width = "2.4cm") %>%   # Parameter (wraps)
+    column_spec(2, width = "1.0cm") %>%   # Code
+    column_spec(3, width = "1.6cm") %>%   # Flag Reason (wraps)
+    column_spec(4, width = "1.7cm") %>%   # Water Class(es) (wraps, centered)
+    column_spec(5, width = "1.5cm") %>%   # Criterion Value (centered)
+    column_spec(6, width = "0.8cm") %>%   # Unit
+    column_spec(7, width = "1.3cm") %>%   # Criterion Type (centered)
+    column_spec(8, width = "1.9cm")       # Basis / Notes (wraps)
+  )
+} else {
+  cat("No manual WQS criteria were entered for this analysis.")
+}
+```
