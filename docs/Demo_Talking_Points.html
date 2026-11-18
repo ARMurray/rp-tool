@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>demo_talking_points</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Demo_Talking_Points_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Demo_Talking_Points_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Demo_Talking_Points_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Demo_Talking_Points_files/libs/quarto-html/popper.min.js"></script>
+<script src="Demo_Talking_Points_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Demo_Talking_Points_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Demo_Talking_Points_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Demo_Talking_Points_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Demo_Talking_Points_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Demo_Talking_Points_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Demo_Talking_Points_files/libs/bootstrap/bootstrap-215b371544c282197b31c8aa00ce3677.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="rp-tool-demo-talking-points-by-page" class="level1">
+<h1>RP Tool demo: talking points by page</h1>
+<p>Demo permit: <strong>PR0001031</strong> (class SB). Simpler backup: <strong>PR0024210</strong>. Suggested running time: about 20 minutes, 25 with questions. Minutes per page are in brackets.</p>
+<p>Numbers below come from the ECHO DMR exports for the app’s default window (2021-11-18 onward, data through early 2026). The app reads its own database snapshot, so counts on screen can differ a little. Anything marked <strong>(check live)</strong> should be confirmed in the app before the talk.</p>
+<hr>
+<section id="before-you-start" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Open the app, confirm the Home page shows a recent “Data last updated” line.</label></li>
+<li><label><input type="checkbox">Search page: set <strong>Water Type to Class SB and Surface Waters</strong> (both). The app defaults to Class SB only. Temperature and oil &amp; grease have their standards under “surface waters”, so with SB alone they land on Needs Attention instead of Findings. Showing that is optional (see page 4).</label></li>
+<li><label><input type="checkbox">Pick the NPDES form(s). The list starts empty and the Fetch button needs at least one.</label></li>
+<li><label><input type="checkbox">Leave the dates at the default five years.</label></li>
+<li><label><input type="checkbox">Run PR0001031 once beforehand with the default dates and check the Findings table looks like the one below.</label></li>
+<li><label><input type="checkbox">Confirm the permit’s status on the Search page (Effective or Administratively Continued) and that you are comfortable showing the facility.</label></li>
+<li><label><input type="checkbox">Have the graphics ready: <code>docs/graphics/06_backend_data_fixes.png</code> for page 3, and <code>01_overall_solved</code> or <code>02_by_region</code> for the close.</label></li>
+</ul>
+<hr>
+</section>
+<section id="home-page-1-min" class="level2">
+<h2 class="anchored" data-anchor-id="home-page-1-min">1. Home page [1 min]</h2>
+<p><strong>Show:</strong> the two workflow buttons, the “Data last updated” line, the User Guide button.</p>
+<ul>
+<li>Purpose in one sentence: helps permit writers decide whether <strong>reasonable potential</strong> exists for a discharge to exceed a water quality standard, using the TSD (1991) method.</li>
+<li>Two ways in: <strong>Connect to ICIS-NPDES</strong> (you have a permit ID) or <strong>Standalone Calculator</strong> (no ID, you bring your own data).</li>
+<li>Point at the data line: the tool reads a local snapshot of ICIS-NPDES DMR data. No live ECHO calls, so no rate limits and no waiting.</li>
+<li>It is built and tested on Puerto Rico. The pieces that are specific to a jurisdiction (water classes, standards, defaults) are data, not code. That is what the rest of the Regions would plug in.</li>
+</ul>
+<hr>
+</section>
+<section id="search-page-2-min" class="level2">
+<h2 class="anchored" data-anchor-id="search-page-2-min">2. Search page [2 min]</h2>
+<p><strong>Show:</strong> permit search box, map, facility details, date range, forms, water type, Fetch.</p>
+<ul>
+<li>Search by permit ID or facility name. PR0001031 is preselected.</li>
+<li>Facility panel: status, effective date, link to the ECHO report. Use it to say “this is the real ICIS record”.</li>
+<li>The map has a satellite toggle. Useful for outfall context, not for the calculation.</li>
+<li>Date range defaults to the last five years. The tool uses whatever is in that window.</li>
+<li><strong>Water Type is where the state standards come in.</strong> Class SB, SD, SG and “surface waters” are Puerto Rico’s use classes. For another Region this list becomes that state’s designated uses.</li>
+<li>Choose the NPDES forms, then click <strong>Fetch DMR Data</strong>.</li>
+</ul>
+<p><strong>If asked why Class SB:</strong> it is the PRWQS class for coastal and estuarine waters, and it has criteria for about 150 parameter codes in the crosswalk (Class SD is similar, Class SG about 115). It was chosen for this demo because the permit discharges to SB waters. Confirm the class wording against the PRWQS before saying more.</p>
+<hr>
+</section>
+<section id="data-overview-first-tab-after-fetch-4-min" class="level2">
+<h2 class="anchored" data-anchor-id="data-overview-first-tab-after-fetch-4-min">3. Data Overview (first tab after Fetch) [4 min]</h2>
+<p><strong>Show:</strong> the Coverage Summary table and the colored <strong>Unit_Status</strong> column. Then put up <code>06_backend_data_fixes.png</code>.</p>
+<p>This is the page that sells the tool. Everything on it happened automatically in the seconds after Fetch.</p>
+<ul>
+<li>One row per parameter with its ICIS code, sample count and a <strong>Unit_Status</strong> color: green MATCH, yellow PASS (converted), grey EXCLUDED, blue-grey NO WQS, red FAIL.</li>
+<li><strong>Mixed units, converted per record.</strong> Total residual chlorine (about 90 records) and zinc (about 65) are reported in mg/L; the standards are in ug/L. Both show PASS. Point at one and say: nobody opened a spreadsheet.</li>
+<li><strong>Temperature.</strong> PR0001031 reports it twice, as °C under code 00010 and as °F under code 00011. The tool converts the °F series to °C, merges the codes and drops the duplicate, so temperature shows about 44 samples, not the roughly 140 you would get by counting both series. (check live)</li>
+<li><strong>Flows and loads</strong> (kg/d, gal/d, MGD) are greyed out as EXCLUDED. Not an error: they cannot be compared to a concentration standard. They stay in the download.</li>
+<li><strong>Non-detects.</strong> About 365 records carry a “below detection” code with no value and no unit. The tool counts them as zero and fills the unit, so they are not silently lost.</li>
+<li>Say it plainly: this is the manual work the tool removes. Without it, someone converts units, reconciles codes and filters statistics by hand for every parameter at every outfall.</li>
+<li>Left panel: dilution ratio (1), confidence level (0.95), target percentile (0.95). These are the TSD defaults. Other Regions may want different ones, and that is a question for the room.</li>
+<li>Also here: <strong>Download Raw DMR</strong>, and <strong>Append DMR Data</strong> (download a template, add local data, upload) for monitoring that is not in ICIS.</li>
+</ul>
+<p><strong>Watch out:</strong> the non-detect treatment (set to zero) is a simplification. If someone challenges it, say it is the current default and that you would like the Regions’ view. The TSD allows other treatments.</p>
+<hr>
+</section>
+<section id="needs-attention-tab-3-min" class="level2">
+<h2 class="anchored" data-anchor-id="needs-attention-tab-3-min">4. Needs Attention tab [3 min]</h2>
+<p><strong>Show:</strong> the orange parameter cards, the Run RP button (disabled), Quick Run.</p>
+<ul>
+<li>With Class SB plus Surface Waters, expect roughly <strong>eight parameters</strong> with data but no standard in these classes: total suspended solids, settleable solids, color, BOD, COD, chromium, free chlorine and total nitrogen. (check live)</li>
+<li>The tool does not drop them and does not guess. Each card says <strong>why</strong>: no entry anywhere, wrong water class, missing value, narrative only, or the reported statistic does not match the criterion.</li>
+<li>Some cards carry a <strong>hint</strong>: free chlorine (50064) points to the criterion on 50060; chromium and total nitrogen get similar notes. The writer decides whether the translation is appropriate.</li>
+<li>Each card lets the writer <strong>include</strong> with a manual criterion (value, unit, class, ceiling or floor, note) or <strong>exclude</strong> with a note.</li>
+<li><strong>Run RP stays disabled until every flagged parameter is resolved.</strong> That is the guard against silent gaps.</li>
+<li><strong>Quick Run</strong> drops everything unresolved. Use it live to keep moving, and say so out loud.</li>
+<li>Manual entries and exclusions are recorded in the report, so the decisions are auditable.</li>
+</ul>
+<p><strong>Optional 30-second variant:</strong> reset the Water Type to Class SB only and re-fetch. Temperature and oil &amp; grease now appear here as “wrong water class”. It shows that the class choice drives what gets evaluated.</p>
+<hr>
+</section>
+<section id="wqs-reference-tab-1-min" class="level2">
+<h2 class="anchored" data-anchor-id="wqs-reference-tab-1-min">5. WQS Reference tab [1 min]</h2>
+<p><strong>Show:</strong> the searchable table.</p>
+<ul>
+<li>The full crosswalk: criterion ID, value, unit, water class, and the ICIS code each one is tied to.</li>
+<li>Use it before making a manual entry on Needs Attention.</li>
+<li>This table is what scales. Puerto Rico’s is hand-built and reviewed. The national build now ties <strong>84% of all 46,235 criteria</strong> to an ICIS code, including the states, territories and tribes (<code>02_by_region</code>), and what is left is a resolver tool away. Mention it only if the audience asks about expansion; the closing slide covers it.</li>
+</ul>
+<hr>
+</section>
+<section id="findings-page-6-min" class="level2">
+<h2 class="anchored" data-anchor-id="findings-page-6-min">6. Findings page [6 min]</h2>
+<p><strong>Show:</strong> the RP table on the left, the plot on the right, the banner along the bottom.</p>
+<p><strong>Orientation (30 seconds)</strong> - Table columns: outfall (E = external, I = internal, shown in red), pollutant, WQS, water class, RWC, RP. Sorted <strong>YES, then DEPENDS, then NO</strong>, with filters on every column. - Click a row and the plot updates: observed samples, the WQS line, the RWC, and the prior permit limit if there is one. The prior limit is converted to the WQS unit so the lines are comparable. - Plot subtitle: sample count, maximum, RWC, and the RP verdict. - Banner: “Exceedances Detected” or “No Exceedances Found”.</p>
+<p><strong>Expected mix for PR0001031 (about 22 YES, 11 NO, 1 DEPENDS across 4 outfalls)</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Click this row</th>
+<th>What to say</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Chlorine, total residual, outfall 001</strong> (about 44 samples, RWC about 225 vs 7.5 ug/L)</td>
+<td>Reported in mg/L, plotted in ug/L, so the unit conversion is what makes this comparison possible. A clear YES.</td>
+</tr>
+<tr class="even">
+<td><strong>Copper, outfall 001</strong> (about 84 samples, 15.6 vs 3.7 ug/L)</td>
+<td>A metal with a numeric standard, plenty of data. Show the plot and the RWC above the line.</td>
+</tr>
+<tr class="odd">
+<td><strong>Nickel, outfall 001</strong> (3 samples)</td>
+<td>Small sample. With fewer than 10 results the tool uses the TSD default CV of 0.6, which widens the multiplying factor. This is why a thin dataset still produces a protective answer.</td>
+</tr>
+<tr class="even">
+<td><strong>Silver or thallium, outfall 001</strong> (RWC about 1.15 vs 2.24; about 0.45 vs 0.47 ug/L)</td>
+<td>A <strong>NO</strong>. Thallium is close, and it is worth saying that NO means the projection stays below the standard, not that it is far below it.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cyanide, outfall 001</strong> (about 1.007 vs 1.0 ug/L)</td>
+<td>A YES by a hair, which is a good moment to say the tool applies a strict comparison with a tiny rounding tolerance, so conversion error cannot flip a result.</td>
+</tr>
+<tr class="even">
+<td><strong>Temperature, outfall 001</strong> (observed maximum about 37.4 °C vs 30)</td>
+<td>A <strong>direct comparison</strong>: no multiplying factor, no dilution. The subtitle says “Observed maximum … no RWC calculated”. The °F series was converted on the way in.</td>
+</tr>
+<tr class="odd">
+<td><strong>Dissolved oxygen, outfall 001</strong> (observed minimum 4.4 vs 5 mg/L)</td>
+<td>A <strong>floor</strong> criterion, so the tool compares the observed minimum.</td>
+</tr>
+<tr class="even">
+<td><strong>Dissolved oxygen, outfall 002</strong> (1 sample)</td>
+<td>The one <strong>DEPENDS</strong>. Open the note under the plot: a defensible DO analysis needs a Streeter-Phelps model, which ICIS data cannot supply, so “no excursion seen” is not enough to say no RP.</td>
+</tr>
+<tr class="odd">
+<td><strong>pH, outfall 01A</strong> (min 6.4 vs 7.3, max 8.9 vs 8.5)</td>
+<td>Two-sided criterion handled as a minimum row and a maximum row.</td>
+</tr>
+</tbody>
+</table>
+<p>Pick four or five of these, not all. A good arc is: chlorine (units), copper (a clean YES), thallium (a close NO), temperature (direct comparison), DO outfall 002 (DEPENDS).</p>
+<p><strong>Points to hit</strong> - <strong>YES, NO and DEPENDS are all real determinations.</strong> DEPENDS is not “unknown”. - Two methods in one table: projected (TSD multiplying factor from the data) and direct comparison (pH, temperature, DO, turbidity, oil &amp; grease). - Internal outfalls are flagged in red because some PR permits label real discharges as internal in ICIS. - The method choice, operator and statistic come from the crosswalk, so a new state is data, not code.</p>
+<p><strong>Watch out</strong> - Outfall 002 oil &amp; grease has one record of 1.4 ug/L that looks like a unit entry error. The tool converts it to 0.0014 mg/L and still returns YES (the “standard” is a detection test). Skip that row unless asked. - Several outfalls carry the same pollutant. If someone asks why chlorine appears three times, the answer is that it is evaluated per outfall.</p>
+<hr>
+</section>
+<section id="report-download-1-min" class="level2">
+<h2 class="anchored" data-anchor-id="report-download-1-min">7. Report download [1 min]</h2>
+<p><strong>Show:</strong> the Download Report button and the “Include Data in Download” checkbox.</p>
+<ul>
+<li>One click produces a PDF: coverage table, the basis for including each pollutant, each finding with its plot, and flags for any manual entries or user-added data.</li>
+<li>Tick <strong>Include Data</strong> and you get a ZIP with the underlying data and the criteria table used, so a reviewer can reproduce the numbers.</li>
+<li>This is the record that goes into the fact sheet file.</li>
+</ul>
+<hr>
+</section>
+<section id="standalone-calculator-optional-1-min" class="level2">
+<h2 class="anchored" data-anchor-id="standalone-calculator-optional-1-min">8. Standalone Calculator [optional, 1 min]</h2>
+<ul>
+<li>For facilities with no NPDES ID, or data that is not in ICIS. Download the DMR template, fill it in, upload, and the same cleaning and RP steps run.</li>
+<li>Mention it for pre-permit work, or any facility whose data is not in ICIS.</li>
+</ul>
+<hr>
+</section>
+<section id="close-what-it-takes-to-go-regional-2-min" class="level2">
+<h2 class="anchored" data-anchor-id="close-what-it-takes-to-go-regional-2-min">9. Close: what it takes to go regional [2 min]</h2>
+<p><strong>Show:</strong> <code>docs/graphics/01_overall_solved</code> and <code>02_by_region</code>, then the one-page summary (<code>docs/Regional_Expansion_Summary.html</code>).</p>
+<ul>
+<li>What is region-specific is <strong>data</strong>: the state standards tied to ICIS codes, and the defaults.</li>
+<li>The national crosswalk is built: <strong>84%</strong> of all 46,235 criteria are already tied to an ICIS code (states and DC 84%, territories 88%, tribes 83%). By Region, states run 82% to 87% and tribes 65% (Region 2, one tribe) to 89%. The rest is a resolver tool away.</li>
+<li>Tribes are in the numbers on purpose: those are the permits Regions are most likely to be reviewing themselves. <code>04b_by_tribe</code> shows each one. The lowest are Colville (56%), Bishop Paiute (59%) and Saint Regis Mohawk (65%, in Region 2).</li>
+<li>Ask the room two questions:
+<ol type="1">
+<li>Which <strong>defaults</strong> do your states use (dilution ratio, CV, confidence level, percentile, non-detect treatment)?</li>
+<li>Which <strong>jurisdictions</strong> should go first?</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="optional-segment-total-ammonia-nitrogen-tan-class-sd-3-min" class="level2">
+<h2 class="anchored" data-anchor-id="optional-segment-total-ammonia-nitrogen-tan-class-sd-3-min">Optional segment: total ammonia nitrogen (TAN), Class SD [3 min]</h2>
+<p>TAN exists only for <strong>Class SD</strong> waters, so this needs a second permit and a different Water Type. Permit: <strong>PR0025283</strong> (one outfall, 001; about 1,330 records; monthly data through Jan 2026).</p>
+<p><strong>Setup:</strong> on the Search page set Water Type to <strong>Class SD</strong> only. Search PR0025283, pick a form, Fetch. On the settings page a <strong>Receiving Water Inputs (Class SD)</strong> block appears: hardness (default 100 mg/L), receiving-water pH (default 6) and temperature (default 30 °C).</p>
+<p><strong>Say:</strong> - The ammonia standard is not a number. It is a formula of pH and temperature (PRWQS 1303.2(C)(2)(l)), so the tool calculates it at run time from the receiving-water values you enter. - At the defaults (pH 6, 30 °C) the criterion is about <strong>1.16 mg/L N</strong>. At pH 8.0 and 25 °C it is about 0.56. At pH 8.5 and 30 °C it is about 0.18. The criterion on the plot and in the table moves with the inputs. - Same idea for <strong>copper and lead</strong>: the limit depends on hardness. Tick “Show hardness range analysis” and the Findings page offers a Hardness vs Limit view. - Same permit also shows the <strong>stream vs reservoir/lake</strong> split for total phosphorus (160 vs 26 ug/L) and mg/L to ug/L conversion for chlorine and phosphorus.</p>
+<p><strong>Expected on Findings (about, check live):</strong> TAN n = 50, maximum 45.5 mg/L, RWC about 48 mg/L. That is far above the criterion, so it is a <strong>YES at every pH and temperature</strong> in the plausible range (the criterion never exceeds about 8 mg/L). The inputs change the line, not the verdict. Copper (RWC about 77 vs 9.3 ug/L at hardness 100) and lead (about 15 vs 3.2) are also YES.</p>
+<p><strong>Watch out</strong> - This permit is a poor fit for “mix of YES and NO”. Almost everything exceeds. Use it for the formulas, not the mix. - pH minimum includes five reported values of 0 (no discharge entered as zero), which drives a YES on pH. Skip that row or explain it. - <strong>Do not substitute another permit without testing.</strong> 146 other PR permits report ammonia as code 82230. The app recodes it to 00610, but the records keep a NO_WQS unit flag and are dropped before the RP math, so no TAN result appears. PR0025283 works because it also reports 00610 directly. See the note in the hand-off.</p>
+<hr>
+</section>
+<section id="quick-answers-for-likely-questions" class="level2">
+<h2 class="anchored" data-anchor-id="quick-answers-for-likely-questions">Quick answers for likely questions</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Why is the CV 0.6?</td>
+<td>The TSD default when there are fewer than 10 results. With 10 or more, the tool computes the CV from the data.</td>
+</tr>
+<tr class="even">
+<td>Why a dilution ratio of 1?</td>
+<td>A conservative default: no mixing credit. It is a setting, so a writer can enter the facility’s value.</td>
+</tr>
+<tr class="odd">
+<td>How are non-detects handled?</td>
+<td>Counted as zero, with the unit filled in. A known simplification; open to the Regions’ preference.</td>
+</tr>
+<tr class="even">
+<td>What if units cannot be converted?</td>
+<td>The record is flagged FAIL, kept in the download and left out of the math. Flows and loads are EXCLUDED the same way.</td>
+</tr>
+<tr class="odd">
+<td>What about hardness-dependent metals and ammonia?</td>
+<td>Class SD only. The limit is calculated at run time from hardness, or from pH and temperature for ammonia. Not part of the SB demo.</td>
+</tr>
+<tr class="even">
+<td>Is it live ICIS data?</td>
+<td>A local snapshot refreshed on a schedule. The Home page shows the date.</td>
+</tr>
+<tr class="odd">
+<td>Can I add my own data?</td>
+<td>Yes: Append DMR Data on the settings page, or the Standalone Calculator.</td>
+</tr>
+<tr class="even">
+<td>Does it replace the permit writer’s judgment?</td>
+<td>No.&nbsp;It does the arithmetic and the data cleanup. The writer still decides what to include, exclude and how to translate a standard.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="before-you-commit-to-this-permit" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-commit-to-this-permit">Before you commit to this permit</h2>
+<p>The numbers above come from my reconstruction of the app’s logic on the ECHO exports, not from the app itself. Run the permit with the default dates before the talk and check:</p>
+<ol type="1">
+<li>The Findings table has roughly the YES, NO and DEPENDS mix above.</li>
+<li>Chlorine and zinc show PASS, and temperature shows PASS.</li>
+<li>Needs Attention lists the parameters you expect.</li>
+</ol>
+<p>If anything looks off, switch to <strong>PR0024210</strong>: one outfall, about 15 parameters, phosphorus reported in both ug/L and mg/L.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

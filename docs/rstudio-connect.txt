@@ -1,0 +1,944 @@
+2026/11/18 13:19:42.681089814 [connect-session] Connect Session v2026.06.1
+2026/11/18 13:19:42.681457323 [connect-session] Content GUID: d57d5789-d384-42f5-9251-cf70387e7511
+2026/11/18 13:19:42.681469818 [connect-session] Content ID: 1303
+2026/11/18 13:19:42.681474475 [connect-session] Bundle ID: 14248
+2026/11/18 13:19:42.681478819 [connect-session] Job Key: azdXilcQawh0bo17
+2026/11/18 13:19:42.993997514 Running on host: ip-10-151-34-206.ec2.internal
+2026/11/18 13:19:42.994008991 Process ID: 76397
+2026/11/18 13:19:43.002713601 Linux distribution: Ubuntu 24.04.5 LTS (noble)
+2026/11/18 13:19:43.005255271 Running as user: uid=997(rstudio-connect) gid=996(rstudio-connect) groups=996(rstudio-connect)
+2026/11/18 13:19:43.005263040 Connect version: 2026.06.1
+2026/11/18 13:19:43.005316271 LANG: C.UTF-8
+2026/11/18 13:19:43.005320455 Working directory: /opt/rstudio-connect/mnt/app
+2026/11/18 13:19:43.005579551 Using R 4.5.3
+2026/11/18 13:19:43.005586047 R.home(): /opt/R/4.5.3/lib/R
+2026/11/18 13:19:43.006028898 Content will use associated Packrat library
+2026/11/18 13:19:44.568577551 Adding Packrat library to R_LIBS and .libPaths: /opt/rstudio-connect/mnt/app/packrat/lib/x86_64-pc-linux-gnu/4.5.3
+2026/11/18 13:19:44.568941891 R_LIBS: /opt/rstudio-connect/mnt/app/packrat/lib/x86_64-pc-linux-gnu/4.5.3:/opt/rstudio-connect/mnt/R/4.5.3
+2026/11/18 13:19:44.568951170 .libPaths(): /opt/rstudio-connect/mnt/app/packrat/lib/x86_64-pc-linux-gnu/4.5.3, /opt/rstudio-connect/mnt/R/4.5.3, /opt/R/4.5.3/lib/R/library
+2026/11/18 13:19:44.638903451 shiny version: 1.13.0
+2026/11/18 13:19:44.638915397 httpuv version: 1.6.16
+2026/11/18 13:19:44.638980658 rmarkdown version: 2.30
+2026/11/18 13:19:44.638981948 knitr version: 1.50
+2026/11/18 13:19:44.638997073 jsonlite version: 2.0.0
+2026/11/18 13:19:44.638997663 RJSONIO version: (none)
+2026/11/18 13:19:44.639031631 htmltools version: 0.5.8.1
+2026/11/18 13:19:44.639041533 reticulate version: (none)
+2026/11/18 13:19:44.639242311 Using pandoc: /opt/rstudio-connect/ext/pandoc/2.16
+2026/11/18 13:19:46.093670434 Using Shiny bookmarking base directory /opt/rstudio-connect/mnt/bookmarks
+2026/11/18 13:19:46.094421045 Shiny application starting ...
+2026/11/18 13:19:47.403391847 
+2026/11/18 13:19:47.403404844 Attaching package: ‘dplyr’
+2026/11/18 13:19:47.403476715 
+2026/11/18 13:19:47.404164706 The following objects are masked from ‘package:stats’:
+2026/11/18 13:19:47.404173574 
+2026/11/18 13:19:47.404218345     filter, lag
+2026/11/18 13:19:47.404219322 
+2026/11/18 13:19:47.404453651 The following objects are masked from ‘package:base’:
+2026/11/18 13:19:47.404460753 
+2026/11/18 13:19:47.404509232     intersect, setdiff, setequal, union
+2026/11/18 13:19:47.404512590 
+2026/11/18 13:19:47.639474485 
+2026/11/18 13:19:47.639489056 Attaching package: ‘lubridate’
+2026/11/18 13:19:47.639561607 
+2026/11/18 13:19:47.639771955 The following objects are masked from ‘package:base’:
+2026/11/18 13:19:47.639781464 
+2026/11/18 13:19:47.639822107     date, intersect, setdiff, union
+2026/11/18 13:19:47.639823052 
+2026/11/18 13:19:47.779752673 
+2026/11/18 13:19:47.779765966 Attaching package: ‘DT’
+2026/11/18 13:19:47.779813226 
+2026/11/18 13:19:47.780056264 The following objects are masked from ‘package:shiny’:
+2026/11/18 13:19:47.780064280 
+2026/11/18 13:19:47.780111865     dataTableOutput, renderDataTable
+2026/11/18 13:19:47.780113465 
+2026/11/18 13:19:48.274468723 Loading required package: ggplot2
+2026/11/18 13:19:49.777470108 
+2026/11/18 13:19:49.777481714 Attaching package: ‘plotly’
+2026/11/18 13:19:49.777542448 
+2026/11/18 13:19:49.777866916 The following object is masked from ‘package:ggplot2’:
+2026/11/18 13:19:49.777872624 
+2026/11/18 13:19:49.777910373     last_plot
+2026/11/18 13:19:49.777912447 
+2026/11/18 13:19:49.778151507 The following object is masked from ‘package:stats’:
+2026/11/18 13:19:49.778156794 
+2026/11/18 13:19:49.778186057     filter
+2026/11/18 13:19:49.778188125 
+2026/11/18 13:19:49.778440555 The following object is masked from ‘package:graphics’:
+2026/11/18 13:19:49.778447596 
+2026/11/18 13:19:49.778489421     layout
+2026/11/18 13:19:49.778492312 
+2026/11/18 13:19:49.896629937 
+2026/11/18 13:19:49.896639637 Attaching package: ‘shinyjs’
+2026/11/18 13:19:49.896689724 
+2026/11/18 13:19:49.896984355 The following object is masked from ‘package:lubridate’:
+2026/11/18 13:19:49.896994488 
+2026/11/18 13:19:49.897044676     show
+2026/11/18 13:19:49.897046395 
+2026/11/18 13:19:49.897297434 The following object is masked from ‘package:shiny’:
+2026/11/18 13:19:49.897302746 
+2026/11/18 13:19:49.897334271     runExample
+2026/11/18 13:19:49.897335880 
+2026/11/18 13:19:49.897614407 The following objects are masked from ‘package:methods’:
+2026/11/18 13:19:49.897618345 
+2026/11/18 13:19:49.897646016     removeClass, show
+2026/11/18 13:19:49.897647834 
+2026/11/18 13:19:50.125396391 
+2026/11/18 13:19:50.125407922 Attaching package: ‘bslib’
+2026/11/18 13:19:50.125457656 
+2026/11/18 13:19:50.125777745 The following object is masked from ‘package:utils’:
+2026/11/18 13:19:50.125783185 
+2026/11/18 13:19:50.125820044     page
+2026/11/18 13:19:50.125821398 
+2026/11/18 13:19:51.715862284 Rows: 289 Columns: 5
+2026/11/18 13:19:51.724926628 ── Column specification ────────────────────────────────────────────────────────
+2026/11/18 13:19:51.724948390 Delimiter: ","
+2026/11/18 13:19:51.725005442 chr (5): Pollutant, Form, Table, SubTable, CAS
+2026/11/18 13:19:51.734755198 
+2026/11/18 13:19:51.734765075 ℹ Use `spec()` to retrieve the full column specification for this data.
+2026/11/18 13:19:51.734817311 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+2026/11/18 13:19:51.833563602 Loading facility cache from SQLite: data/pr_rp.sqlite
+2026/11/18 13:19:52.599569281 Loaded 207 facilities from SQLite.
+2026/11/18 13:19:53.178465528 
+2026/11/18 13:19:53.178476921 Listening on http://127.0.0.1:38901
+2026/11/18 13:20:27.512431482 DMR load successful!!!
+2026/11/18 13:21:20.107910996 DMR load successful!!!
+2026/11/18 13:37:21.818882717 DMR load successful!!!
+2026/11/18 13:48:32.867442217 DMR load successful!!!
+2026/11/18 13:48:50.623140455 
+2026/11/18 13:48:50.627617104 Trying to get metal IDs
+2026/11/18 13:48:50.634465504 Retrieved metals crosswalk
+2026/11/18 13:48:50.672824260 filtered cb
+2026/11/18 13:48:50.693347496 rwc calculated
+2026/11/18 13:48:50.696452960  Made it past metals limits
+2026/11/18 13:48:50.759113302 Warning in dplyr::left_join(., direct_dmr, by = c("parameter_code", "statistic")) :
+2026/11/18 13:48:50.759123297   Detected an unexpected many-to-many relationship between `x` and `y`.
+2026/11/18 13:48:50.759189913 ℹ Row 5 of `x` matches multiple rows in `y`.
+2026/11/18 13:48:50.759191432 ℹ Row 3 of `y` matches multiple rows in `x`.
+2026/11/18 13:48:50.759226298 ℹ If a many-to-many relationship is expected, set `relationship =
+2026/11/18 13:48:50.759235411   "many-to-many"` to silence this warning.
+2026/11/18 13:48:50.775629826  Joining rwc to criterion IDS
+2026/11/18 13:48:50.782693493  joining metals
+2026/11/18 13:48:50.782701312  Finding maximums
+2026/11/18 13:48:50.782745519 
+2026/11/18 13:48:50.782749361  Determining RP
+2026/11/18 13:48:50.782764006  rwc_criteria columns: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes
+2026/11/18 13:48:50.791631620 
+2026/11/18 13:48:50.796907755 columns in joined data: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes, RP, value_basis
+2026/11/18 13:48:51.452069872 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 13:48:51.452084829   Ignoring unknown aesthetics: text
+2026/11/18 13:48:51.475525029 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 13:48:51.475538425   Ignoring unknown aesthetics: text
+2026/11/18 13:48:51.871091104 Warning: No shared levels found between `names(values)` of the manual scale and the
+2026/11/18 13:48:51.871105222 data's shape values.
+2026/11/18 13:49:13.113077321 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 13:49:13.113089455   Ignoring unknown aesthetics: text
+2026/11/18 13:49:13.128070042 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 13:49:13.128076377   Ignoring unknown aesthetics: text
+2026/11/18 13:49:52.654947770 [31m
+2026/11/18 13:49:52.654959491 
+2026/11/18 13:49:52.655010785 processing file: report.qmd
+2026/11/18 13:49:52.674667481 [39m1/21                    
+2026/11/18 13:49:52.675350965 2/21 [setup]            
+2026/11/18 13:49:57.839534869 3/21                    
+2026/11/18 13:49:57.839547186 4/21 [title-block]      
+2026/11/18 13:49:58.052028723 5/21                    
+2026/11/18 13:49:58.054036072 6/21 [quick-run-warning]
+2026/11/18 13:49:58.064720607 7/21                    
+2026/11/18 13:49:58.065345010 8/21 [coverage]         
+2026/11/18 13:49:58.110470612 9/21                    
+2026/11/18 13:49:58.110483542 10/21 [rp-table]         
+2026/11/18 13:49:58.241842829 11/21                    
+2026/11/18 13:49:58.241853444 12/21 [receiving-water]  
+2026/11/18 13:50:00.714838647 13/21                    
+2026/11/18 13:50:00.714851800 14/21 [per-pollutant]    
+2026/11/18 13:50:04.282326733 15/21                    
+2026/11/18 13:50:04.282337322 16/21 [unavailable]      
+2026/11/18 13:50:04.336807188 17/21                    
+2026/11/18 13:50:04.336819575 18/21 [excluded-params]  
+2026/11/18 13:50:04.379290006 19/21                    
+2026/11/18 13:50:04.379301425 20/21 [manual-wqs]       
+2026/11/18 13:50:04.396679609 21/21                    
+2026/11/18 13:50:04.397741009 [31moutput file: report.knit.md
+2026/11/18 13:50:04.397754011 
+2026/11/18 13:50:04.418619962 [39m[31mThere were 12 warnings (use warnings() to see them)
+2026/11/18 13:50:07.699445343 [39m[1mpandoc [22m
+2026/11/18 13:50:07.700217765   to: latex
+2026/11/18 13:50:07.700226019   output-file: report.tex
+2026/11/18 13:50:07.700279970   standalone: true
+2026/11/18 13:50:07.700281409   pdf-engine: lualatex
+2026/11/18 13:50:07.700316718   variables:
+2026/11/18 13:50:07.700321117     graphics: true
+2026/11/18 13:50:07.700369268     tables: true
+2026/11/18 13:50:07.700370487   default-image-extension: pdf
+2026/11/18 13:50:07.700386910   toc: false
+2026/11/18 13:50:07.700387813   toc-depth: 1
+2026/11/18 13:50:07.700402735   number-sections: true
+2026/11/18 13:50:07.700403325   
+2026/11/18 13:50:07.700414243 [1mmetadata[22m
+2026/11/18 13:50:07.700414763   block-headings: true
+2026/11/18 13:50:07.700428441   geometry:
+2026/11/18 13:50:07.700429234     - margin=1in
+2026/11/18 13:50:07.700457373     - headheight=30pt
+2026/11/18 13:50:07.700460009     - headsep=16pt
+2026/11/18 13:50:07.700485553   documentclass: article
+2026/11/18 13:50:07.700486215   output-file: report.pdf
+2026/11/18 13:50:07.700502543   
+2026/11/18 13:50:09.190109530 [1m[34m
+2026/11/18 13:50:09.190119992 Rendering PDF[39m[22m
+2026/11/18 13:50:09.190166500 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 13:50:20.125112929   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 13:50:20.125129769    restricted system commands enabled.
+2026/11/18 13:50:20.125195999   
+2026/11/18 13:50:20.125201240   luaotfload | db : Font names database not found, generating new one.
+2026/11/18 13:50:20.125259191   luaotfload | db : This can take several minutes; please be patient.
+2026/11/18 13:50:20.132330092 [1m[34mrunning lualatex - 2[39m[22m
+2026/11/18 13:50:23.019523321   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 13:50:23.019533286    restricted system commands enabled.
+2026/11/18 13:50:23.019585543   
+2026/11/18 13:50:23.026637012 
+2026/11/18 13:50:23.040253931 Output created: report.pdf
+2026/11/18 13:50:23.040261657 
+2026/11/18 14:09:36.478659328 DMR load successful!!!
+2026/11/18 14:10:27.765434115 DMR load successful!!!
+2026/11/18 14:16:14.353786166 
+2026/11/18 14:16:14.358556096 Trying to get metal IDs
+2026/11/18 14:16:14.366688274 Retrieved metals crosswalk
+2026/11/18 14:16:14.452615456 filtered cb
+2026/11/18 14:16:14.454079592 rwc calculated
+2026/11/18 14:16:14.454432159  Made it past metals limits
+2026/11/18 14:16:14.505600384  Joining rwc to criterion IDS
+2026/11/18 14:16:14.505608782  joining metals
+2026/11/18 14:16:14.505649956  Finding maximums
+2026/11/18 14:16:14.505650674 
+2026/11/18 14:16:14.505666182  Determining RP
+2026/11/18 14:16:14.505667240  rwc_criteria columns: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes
+2026/11/18 14:16:14.508229075 
+2026/11/18 14:16:14.513906209 columns in joined data: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes, RP, value_basis
+2026/11/18 14:16:14.894659665 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:16:14.894673737   Ignoring unknown aesthetics: text
+2026/11/18 14:16:14.910813046 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:16:14.910822295   Ignoring unknown aesthetics: text
+2026/11/18 14:19:12.835461117 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:12.835472288   Ignoring unknown aesthetics: text
+2026/11/18 14:19:12.850838786 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:12.850852608   Ignoring unknown aesthetics: text
+2026/11/18 14:19:16.021408654 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:16.021420097   Ignoring unknown aesthetics: text
+2026/11/18 14:19:16.037367108 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:16.037379452   Ignoring unknown aesthetics: text
+2026/11/18 14:19:16.838609321 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:16.838619359   Ignoring unknown aesthetics: text
+2026/11/18 14:19:16.857703672 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:16.857713039   Ignoring unknown aesthetics: text
+2026/11/18 14:19:18.200234578 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:18.200247107   Ignoring unknown aesthetics: text
+2026/11/18 14:19:18.223138888 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:18.223148783   Ignoring unknown aesthetics: text
+2026/11/18 14:19:19.097119441 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:19.097135146   Ignoring unknown aesthetics: text
+2026/11/18 14:19:19.121158836 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:19.121171929   Ignoring unknown aesthetics: text
+2026/11/18 14:19:22.050036389 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:22.050047368   Ignoring unknown aesthetics: text
+2026/11/18 14:19:22.077768250 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:22.077778398   Ignoring unknown aesthetics: text
+2026/11/18 14:19:22.392808199 Warning: No shared levels found between `names(values)` of the manual scale and the
+2026/11/18 14:19:22.392819029 data's shape values.
+2026/11/18 14:19:23.456938501 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:23.456951462   Ignoring unknown aesthetics: text
+2026/11/18 14:19:23.473320511 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:23.473329915   Ignoring unknown aesthetics: text
+2026/11/18 14:19:25.182861853 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:25.182872742   Ignoring unknown aesthetics: text
+2026/11/18 14:19:25.208582167 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:25.208590697   Ignoring unknown aesthetics: text
+2026/11/18 14:19:32.607102475 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:32.607115698   Ignoring unknown aesthetics: text
+2026/11/18 14:19:32.624279193 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:32.624291598   Ignoring unknown aesthetics: text
+2026/11/18 14:19:35.690253387 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:19:35.690262293   Ignoring unknown aesthetics: text
+2026/11/18 14:19:35.705804105 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:19:35.705811044   Ignoring unknown aesthetics: text
+2026/11/18 14:23:29.917349206 [31m
+2026/11/18 14:23:29.917361767 
+2026/11/18 14:23:29.917429581 processing file: report.qmd
+2026/11/18 14:23:29.937768346 [39m1/21                    
+2026/11/18 14:23:29.938566867 2/21 [setup]            
+2026/11/18 14:23:33.561120375 3/21                    
+2026/11/18 14:23:33.561147739 4/21 [title-block]      
+2026/11/18 14:23:33.773211957 5/21                    
+2026/11/18 14:23:33.775159352 6/21 [quick-run-warning]
+2026/11/18 14:23:33.785914197 7/21                    
+2026/11/18 14:23:33.786653469 8/21 [coverage]         
+2026/11/18 14:23:33.836288698 9/21                    
+2026/11/18 14:23:33.836299573 10/21 [rp-table]         
+2026/11/18 14:23:33.986768966 11/21                    
+2026/11/18 14:23:33.986783812 12/21 [receiving-water]  
+2026/11/18 14:23:38.637664168 13/21                    
+2026/11/18 14:23:38.637674288 14/21 [per-pollutant]    
+2026/11/18 14:23:47.536280334 15/21                    
+2026/11/18 14:23:47.536291464 16/21 [unavailable]      
+2026/11/18 14:23:47.594095236 17/21                    
+2026/11/18 14:23:47.594103596 18/21 [excluded-params]  
+2026/11/18 14:23:47.637745681 19/21                    
+2026/11/18 14:23:47.637761297 20/21 [manual-wqs]       
+2026/11/18 14:23:47.689097008 21/21                    
+2026/11/18 14:23:47.690444278 [31moutput file: report.knit.md
+2026/11/18 14:23:47.690450402 
+2026/11/18 14:23:47.714915615 [39m[31mThere were 30 warnings (use warnings() to see them)
+2026/11/18 14:23:48.503294558 [39m[1mpandoc [22m
+2026/11/18 14:23:48.504013399   to: latex
+2026/11/18 14:23:48.504021424   output-file: report.tex
+2026/11/18 14:23:48.504068727   standalone: true
+2026/11/18 14:23:48.504070631   pdf-engine: lualatex
+2026/11/18 14:23:48.504093347   variables:
+2026/11/18 14:23:48.504094103     graphics: true
+2026/11/18 14:23:48.504110294     tables: true
+2026/11/18 14:23:48.504111273   default-image-extension: pdf
+2026/11/18 14:23:48.504128879   toc: false
+2026/11/18 14:23:48.504129471   toc-depth: 1
+2026/11/18 14:23:48.504140512   number-sections: true
+2026/11/18 14:23:48.504141049   
+2026/11/18 14:23:48.504153985 [1mmetadata[22m
+2026/11/18 14:23:48.504154550   block-headings: true
+2026/11/18 14:23:48.504170431   geometry:
+2026/11/18 14:23:48.504173754     - margin=1in
+2026/11/18 14:23:48.504210162     - headheight=30pt
+2026/11/18 14:23:48.504223756     - headsep=16pt
+2026/11/18 14:23:48.504224961   documentclass: article
+2026/11/18 14:23:48.504245804   output-file: report.pdf
+2026/11/18 14:23:48.504246796   
+2026/11/18 14:23:49.843127874 [1m[34m
+2026/11/18 14:23:49.843138564 Rendering PDF[39m[22m
+2026/11/18 14:23:49.843183785 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 14:23:52.655204896   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:23:52.655218646    restricted system commands enabled.
+2026/11/18 14:23:52.655279016   
+2026/11/18 14:23:52.655280377 [1m[34mupdating tlmgr[39m[22m
+2026/11/18 14:23:56.532522788 
+2026/11/18 14:23:56.532537500 [1m[34mupdating existing packages[39m[22m
+2026/11/18 14:24:23.285565232 [91mERROR: 
+2026/11/18 14:24:23.285575980 compilation failed- error[39m
+2026/11/18 14:24:23.285633848 Extra alignment tab has been changed to \cr.
+2026/11/18 14:24:23.285635755 <recently read> \endtemplate 
+2026/11/18 14:24:23.285655932              
+2026/11/18 14:24:23.285656620 l.370 ...s SB waters & 0.00 & 12.10 & Observed max &
+2026/11/18 14:24:23.285680474                                                    \mbox{YES}\\
+2026/11/18 14:24:23.285681161 
+2026/11/18 14:24:23.285692728 
+2026/11/18 14:24:23.285693298 see /opt/rstudio-connect/mnt/tmp/Rtmp0U21J1/rp_report_12a6d339360e9/report.log for more information.
+2026/11/18 14:24:23.286335448 [33mWARN: Error encountered when rendering files[39m
+2026/11/18 14:24:23.491236606 Warning: Error in quarto::quarto_render: ! Error running quarto CLI from R.
+2026/11/18 14:24:23.491248632 Caused by error:
+2026/11/18 14:24:23.491306758 ! Could not evaluate cli `{}` expression: `YES`.
+2026/11/18 14:24:23.491307946 Caused by error:
+2026/11/18 14:24:23.491321764 ! object 'YES' not found
+2026/11/18 14:24:23.504876623   110: <Anonymous>
+2026/11/18 14:24:23.504885054   109: stop
+2026/11/18 14:24:23.504928954   108: func
+2026/11/18 14:24:23.504930026   106: f
+2026/11/18 14:24:23.504950967   105: Reduce
+2026/11/18 14:24:23.504951910    96: do
+2026/11/18 14:24:23.504972496    95: hybrid_chain
+2026/11/18 14:24:23.504973506    88: contextFunc
+2026/11/18 14:24:23.505003137    87: env$runWith
+2026/11/18 14:24:23.505007057    74: Context$new(getDefaultReactiveDomain(), "[download]")$run
+2026/11/18 14:24:23.505037094    73: shinysession$handleRequest
+2026/11/18 14:24:23.505038331    68: handler
+2026/11/18 14:24:23.505065998    67: handler
+2026/11/18 14:24:23.505067205    66: handlers$invoke
+2026/11/18 14:24:23.505097075    34: handler
+2026/11/18 14:24:23.505101033    33: func
+2026/11/18 14:24:23.505152527    32: compute
+2026/11/18 14:24:23.505153819    27: rookCall
+2026/11/18 14:24:23.505181374    26: <Anonymous>
+2026/11/18 14:24:23.505183029    25: execCallbacks
+2026/11/18 14:24:23.505210632    24: run_now
+2026/11/18 14:24:23.505215853    23: service
+2026/11/18 14:24:23.505239357    22: serviceApp
+2026/11/18 14:24:23.505253964    15: <Anonymous>
+2026/11/18 14:24:23.505254916    13: fn
+2026/11/18 14:24:23.505275444     8: retry
+2026/11/18 14:24:23.505276476     7: connect$retryingStartServer
+2026/11/18 14:24:23.505301785     6: eval
+2026/11/18 14:24:23.505303626     5: eval
+2026/11/18 14:24:23.505321199     4: eval
+2026/11/18 14:24:23.505321726     3: eval
+2026/11/18 14:24:23.505334188     2: eval.parent
+2026/11/18 14:24:23.505335153     1: local
+2026/11/18 14:24:23.742630169 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:24:23.742638276   Ignoring unknown aesthetics: text
+2026/11/18 14:24:23.757098811 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:24:23.757107674   Ignoring unknown aesthetics: text
+2026/11/18 14:24:24.074661573 Warning: No shared levels found between `names(values)` of the manual scale and the
+2026/11/18 14:24:24.074671593 data's shape values.
+2026/11/18 14:33:40.687421252 DMR load successful!!!
+2026/11/18 14:33:43.013405877 
+2026/11/18 14:33:43.017574808 Trying to get metal IDs
+2026/11/18 14:33:43.025102190 Retrieved metals crosswalk
+2026/11/18 14:33:43.040299502 filtered cb
+2026/11/18 14:33:43.041497221 rwc calculated
+2026/11/18 14:33:43.041637523  Made it past metals limits
+2026/11/18 14:33:43.105296074  Joining rwc to criterion IDS
+2026/11/18 14:33:43.105306341  joining metals
+2026/11/18 14:33:43.105358902  Finding maximums
+2026/11/18 14:33:43.105369504 
+2026/11/18 14:33:43.105401027  Determining RP
+2026/11/18 14:33:43.105411605  rwc_criteria columns: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes
+2026/11/18 14:33:43.107937778 
+2026/11/18 14:33:43.117499104 columns in joined data: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes, RP, value_basis
+2026/11/18 14:33:43.452012634 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:33:43.452024739   Ignoring unknown aesthetics: text
+2026/11/18 14:33:43.467356661 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:33:43.467370619   Ignoring unknown aesthetics: text
+2026/11/18 14:33:50.574284659 [31m
+2026/11/18 14:33:50.574294942 
+2026/11/18 14:33:50.574340790 processing file: report.qmd
+2026/11/18 14:33:50.594885803 [39m1/21                    
+2026/11/18 14:33:50.595742107 2/21 [setup]            
+2026/11/18 14:33:53.986706984 3/21                    
+2026/11/18 14:33:53.986717608 4/21 [title-block]      
+2026/11/18 14:33:54.204023303 5/21                    
+2026/11/18 14:33:54.206028636 6/21 [quick-run-warning]
+2026/11/18 14:33:54.217118853 7/21                    
+2026/11/18 14:33:54.217926534 8/21 [coverage]         
+2026/11/18 14:33:54.262468962 9/21                    
+2026/11/18 14:33:54.262481617 10/21 [rp-table]         
+2026/11/18 14:33:54.404177386 11/21                    
+2026/11/18 14:33:54.404189573 12/21 [receiving-water]  
+2026/11/18 14:33:57.489575632 13/21                    
+2026/11/18 14:33:57.489587901 14/21 [per-pollutant]    
+2026/11/18 14:34:06.748716035 15/21                    
+2026/11/18 14:34:06.748727119 16/21 [unavailable]      
+2026/11/18 14:34:06.806710975 17/21                    
+2026/11/18 14:34:06.806722019 18/21 [excluded-params]  
+2026/11/18 14:34:06.850927295 19/21                    
+2026/11/18 14:34:06.850938392 20/21 [manual-wqs]       
+2026/11/18 14:34:06.868498618 21/21                    
+2026/11/18 14:34:06.869747824 [31moutput file: report.knit.md
+2026/11/18 14:34:06.869764837 
+2026/11/18 14:34:06.892868016 [39m[31mThere were 26 warnings (use warnings() to see them)
+2026/11/18 14:34:07.695825221 [39m[1mpandoc [22m
+2026/11/18 14:34:07.696765616   to: latex
+2026/11/18 14:34:07.696774454   output-file: report.tex
+2026/11/18 14:34:07.696822775   standalone: true
+2026/11/18 14:34:07.696823973   pdf-engine: lualatex
+2026/11/18 14:34:07.696852315   variables:
+2026/11/18 14:34:07.696856590     graphics: true
+2026/11/18 14:34:07.696903245     tables: true
+2026/11/18 14:34:07.696906670   default-image-extension: pdf
+2026/11/18 14:34:07.696948559   toc: false
+2026/11/18 14:34:07.696949426   toc-depth: 1
+2026/11/18 14:34:07.696966800   number-sections: true
+2026/11/18 14:34:07.696967767   
+2026/11/18 14:34:07.696995524 [1mmetadata[22m
+2026/11/18 14:34:07.696997388   block-headings: true
+2026/11/18 14:34:07.697031553   geometry:
+2026/11/18 14:34:07.697032535     - margin=1in
+2026/11/18 14:34:07.697056067     - headheight=30pt
+2026/11/18 14:34:07.697058741     - headsep=16pt
+2026/11/18 14:34:07.697088853   documentclass: article
+2026/11/18 14:34:07.697089850   output-file: report.pdf
+2026/11/18 14:34:07.697113907   
+2026/11/18 14:34:08.996262617 [1m[34m
+2026/11/18 14:34:08.996274440 Rendering PDF[39m[22m
+2026/11/18 14:34:08.996334312 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 14:34:12.745959955   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:34:12.745970386    restricted system commands enabled.
+2026/11/18 14:34:12.746020061   
+2026/11/18 14:34:12.753274898 [1m[34mrunning lualatex - 2[39m[22m
+2026/11/18 14:34:15.919819444   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:34:15.919831198    restricted system commands enabled.
+2026/11/18 14:34:15.919899587   
+2026/11/18 14:34:15.921727878 
+2026/11/18 14:34:15.938688479 Output created: report.pdf
+2026/11/18 14:34:15.938696243 
+2026/11/18 14:34:15.972266352 Warning in writexl::write_xlsx(sheets, file.path(tmp_dir, xlsx_name)) :
+2026/11/18 14:34:15.972279235   Column '.vals' has unrecognized data type.
+2026/11/18 14:34:15.972344040 Warning in writexl::write_xlsx(sheets, file.path(tmp_dir, xlsx_name)) :
+2026/11/18 14:34:15.972349133   Column 'mf' has unrecognized data type.
+2026/11/18 14:34:18.528066786 [31m
+2026/11/18 14:34:18.528080722 
+2026/11/18 14:34:18.528141239 processing file: report.qmd
+2026/11/18 14:34:18.548406355 [39m1/21                    
+2026/11/18 14:34:18.549287586 2/21 [setup]            
+2026/11/18 14:34:21.212927877 3/21                    
+2026/11/18 14:34:21.212939993 4/21 [title-block]      
+2026/11/18 14:34:21.425397157 5/21                    
+2026/11/18 14:34:21.427566654 6/21 [quick-run-warning]
+2026/11/18 14:34:21.437858534 7/21                    
+2026/11/18 14:34:21.438565783 8/21 [coverage]         
+2026/11/18 14:34:21.481965028 9/21                    
+2026/11/18 14:34:21.481974092 10/21 [rp-table]         
+2026/11/18 14:34:21.624584199 11/21                    
+2026/11/18 14:34:21.624597201 12/21 [receiving-water]  
+2026/11/18 14:34:24.688825059 13/21                    
+2026/11/18 14:34:24.688839396 14/21 [per-pollutant]    
+2026/11/18 14:34:33.814487730 15/21                    
+2026/11/18 14:34:33.814498475 16/21 [unavailable]      
+2026/11/18 14:34:33.868904596 17/21                    
+2026/11/18 14:34:33.868916762 18/21 [excluded-params]  
+2026/11/18 14:34:33.881133302 19/21                    
+2026/11/18 14:34:33.881144015 20/21 [manual-wqs]       
+2026/11/18 14:34:33.893335453 21/21                    
+2026/11/18 14:34:33.894584102 [31moutput file: report.knit.md
+2026/11/18 14:34:33.894591807 
+2026/11/18 14:34:33.916589652 [39m[31mThere were 26 warnings (use warnings() to see them)
+2026/11/18 14:34:34.667943619 [39m[1mpandoc [22m
+2026/11/18 14:34:34.668779685   to: latex
+2026/11/18 14:34:34.668790773   output-file: report.tex
+2026/11/18 14:34:34.668841585   standalone: true
+2026/11/18 14:34:34.668845487   pdf-engine: lualatex
+2026/11/18 14:34:34.668885544   variables:
+2026/11/18 14:34:34.668887232     graphics: true
+2026/11/18 14:34:34.668909552     tables: true
+2026/11/18 14:34:34.668922145   default-image-extension: pdf
+2026/11/18 14:34:34.668922960   toc: false
+2026/11/18 14:34:34.668937615   toc-depth: 1
+2026/11/18 14:34:34.668938273   number-sections: true
+2026/11/18 14:34:34.668953576   
+2026/11/18 14:34:34.668954638 [1mmetadata[22m
+2026/11/18 14:34:34.668981362   block-headings: true
+2026/11/18 14:34:34.668982995   geometry:
+2026/11/18 14:34:34.669013168     - margin=1in
+2026/11/18 14:34:34.669014693     - headheight=30pt
+2026/11/18 14:34:34.669040953     - headsep=16pt
+2026/11/18 14:34:34.669041985   documentclass: article
+2026/11/18 14:34:34.669055196   output-file: report.pdf
+2026/11/18 14:34:34.669055873   
+2026/11/18 14:34:35.861848066 [1m[34m
+2026/11/18 14:34:35.861862927 Rendering PDF[39m[22m
+2026/11/18 14:34:35.861919752 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 14:34:39.642307576   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:34:39.642326404    restricted system commands enabled.
+2026/11/18 14:34:39.642395516   
+2026/11/18 14:34:39.650501573 [1m[34mrunning lualatex - 2[39m[22m
+2026/11/18 14:34:42.860061414   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:34:42.860073657    restricted system commands enabled.
+2026/11/18 14:34:42.860117531   
+2026/11/18 14:34:42.868439469 
+2026/11/18 14:34:42.894635000 Output created: report.pdf
+2026/11/18 14:34:42.894644291 
+2026/11/18 14:34:44.988872268 [31m
+2026/11/18 14:34:44.988885549 
+2026/11/18 14:34:44.988946222 processing file: report.qmd
+2026/11/18 14:34:45.009695765 [39m1/21                    
+2026/11/18 14:34:45.022745076 2/21 [setup]            
+2026/11/18 14:34:47.753396291 3/21                    
+2026/11/18 14:34:47.753410320 4/21 [title-block]      
+2026/11/18 14:34:47.966026761 5/21                    
+2026/11/18 14:34:47.967479123 6/21 [quick-run-warning]
+2026/11/18 14:34:47.977935510 7/21                    
+2026/11/18 14:34:47.979564233 8/21 [coverage]         
+2026/11/18 14:34:48.021245157 9/21                    
+2026/11/18 14:34:48.021258371 10/21 [rp-table]         
+2026/11/18 14:34:48.161317728 11/21                    
+2026/11/18 14:34:48.161330595 12/21 [receiving-water]  
+2026/11/18 14:34:51.292718270 13/21                    
+2026/11/18 14:34:51.292728563 14/21 [per-pollutant]    
+2026/11/18 14:35:00.634961394 15/21                    
+2026/11/18 14:35:00.634972167 16/21 [unavailable]      
+2026/11/18 14:35:00.691304894 17/21                    
+2026/11/18 14:35:00.691313311 18/21 [excluded-params]  
+2026/11/18 14:35:00.703914277 19/21                    
+2026/11/18 14:35:00.703924457 20/21 [manual-wqs]       
+2026/11/18 14:35:00.716643073 21/21                    
+2026/11/18 14:35:00.718632001 [31moutput file: report.knit.md
+2026/11/18 14:35:00.718641488 
+2026/11/18 14:35:00.740722684 [39m[31mThere were 26 warnings (use warnings() to see them)
+2026/11/18 14:35:01.532732478 [39m[1mpandoc [22m
+2026/11/18 14:35:01.534248969   to: latex
+2026/11/18 14:35:01.534258730   output-file: report.tex
+2026/11/18 14:35:01.534332628   standalone: true
+2026/11/18 14:35:01.534339417   pdf-engine: lualatex
+2026/11/18 14:35:01.534365577   variables:
+2026/11/18 14:35:01.534366435     graphics: true
+2026/11/18 14:35:01.534377822     tables: true
+2026/11/18 14:35:01.534378374   default-image-extension: pdf
+2026/11/18 14:35:01.534390819   toc: false
+2026/11/18 14:35:01.534391358   toc-depth: 1
+2026/11/18 14:35:01.534417382   number-sections: true
+2026/11/18 14:35:01.534418592   
+2026/11/18 14:35:01.534439072 [1mmetadata[22m
+2026/11/18 14:35:01.534440037   block-headings: true
+2026/11/18 14:35:01.534457749   geometry:
+2026/11/18 14:35:01.534458299     - margin=1in
+2026/11/18 14:35:01.534475217     - headheight=30pt
+2026/11/18 14:35:01.534476375     - headsep=16pt
+2026/11/18 14:35:01.534510679   documentclass: article
+2026/11/18 14:35:01.534513169   output-file: report.pdf
+2026/11/18 14:35:01.534544475   
+2026/11/18 14:35:02.858531740 [1m[34m
+2026/11/18 14:35:02.858544923 Rendering PDF[39m[22m
+2026/11/18 14:35:02.858595516 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 14:35:06.652559865   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:35:06.652571477    restricted system commands enabled.
+2026/11/18 14:35:06.652635957   
+2026/11/18 14:35:06.659830909 [1m[34mrunning lualatex - 2[39m[22m
+2026/11/18 14:35:09.826542534   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:35:09.826559016    restricted system commands enabled.
+2026/11/18 14:35:09.826620593   
+2026/11/18 14:35:09.828522323 
+2026/11/18 14:35:09.845865941 Output created: report.pdf
+2026/11/18 14:35:09.845878158 
+2026/11/18 14:40:33.891214756 DMR load successful!!!
+2026/11/18 14:47:04.377723317 
+2026/11/18 14:47:04.382225963 Trying to get metal IDs
+2026/11/18 14:47:04.390200542 Retrieved metals crosswalk
+2026/11/18 14:47:04.407606721 filtered cb
+2026/11/18 14:47:04.408828663 rwc calculated
+2026/11/18 14:47:04.409132602  Made it past metals limits
+2026/11/18 14:47:04.456998313  Joining rwc to criterion IDS
+2026/11/18 14:47:04.457010211  joining metals
+2026/11/18 14:47:04.457072679  Finding maximums
+2026/11/18 14:47:04.457073883 
+2026/11/18 14:47:04.457093074  Determining RP
+2026/11/18 14:47:04.457093977  rwc_criteria columns: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes
+2026/11/18 14:47:04.459536368 
+2026/11/18 14:47:04.465295465 columns in joined data: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes, RP, value_basis
+2026/11/18 14:47:04.964559689 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 14:47:04.964570176   Ignoring unknown aesthetics: text
+2026/11/18 14:47:04.979933826 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 14:47:04.979946128   Ignoring unknown aesthetics: text
+2026/11/18 14:47:14.529354025 [31m
+2026/11/18 14:47:14.529367091 
+2026/11/18 14:47:14.529428092 processing file: report.qmd
+2026/11/18 14:47:14.550232176 [39m1/21                    
+2026/11/18 14:47:14.551015332 2/21 [setup]            
+2026/11/18 14:47:17.927664177 3/21                    
+2026/11/18 14:47:17.927675023 4/21 [title-block]      
+2026/11/18 14:47:18.143587348 5/21                    
+2026/11/18 14:47:18.146160424 6/21 [quick-run-warning]
+2026/11/18 14:47:18.156808012 7/21                    
+2026/11/18 14:47:18.157572735 8/21 [coverage]         
+2026/11/18 14:47:18.211073417 9/21                    
+2026/11/18 14:47:18.211084649 10/21 [rp-table]         
+2026/11/18 14:47:18.376370838 11/21                    
+2026/11/18 14:47:18.376383722 12/21 [receiving-water]  
+2026/11/18 14:47:23.252284092 13/21                    
+2026/11/18 14:47:23.252294388 14/21 [per-pollutant]    
+2026/11/18 14:47:34.337874746 15/21                    
+2026/11/18 14:47:34.337884848 16/21 [unavailable]      
+2026/11/18 14:47:34.392911328 17/21                    
+2026/11/18 14:47:34.392922299 18/21 [excluded-params]  
+2026/11/18 14:47:34.435978140 19/21                    
+2026/11/18 14:47:34.435988056 20/21 [manual-wqs]       
+2026/11/18 14:47:34.484992321 21/21                    
+2026/11/18 14:47:34.486034641 [31moutput file: report.knit.md
+2026/11/18 14:47:34.486041919 
+2026/11/18 14:47:34.510011382 [39m[31mThere were 35 warnings (use warnings() to see them)
+2026/11/18 14:47:35.350898574 [39m[1mpandoc [22m
+2026/11/18 14:47:35.351741117   to: latex
+2026/11/18 14:47:35.351751896   output-file: report.tex
+2026/11/18 14:47:35.351804659   standalone: true
+2026/11/18 14:47:35.351817738   pdf-engine: lualatex
+2026/11/18 14:47:35.351847685   variables:
+2026/11/18 14:47:35.351849034     graphics: true
+2026/11/18 14:47:35.351872521     tables: true
+2026/11/18 14:47:35.351881865   default-image-extension: pdf
+2026/11/18 14:47:35.351903933   toc: false
+2026/11/18 14:47:35.351905168   toc-depth: 1
+2026/11/18 14:47:35.351927361   number-sections: true
+2026/11/18 14:47:35.351928365   
+2026/11/18 14:47:35.351950241 [1mmetadata[22m
+2026/11/18 14:47:35.351951525   block-headings: true
+2026/11/18 14:47:35.351974011   geometry:
+2026/11/18 14:47:35.351975223     - margin=1in
+2026/11/18 14:47:35.351997800     - headheight=30pt
+2026/11/18 14:47:35.351998968     - headsep=16pt
+2026/11/18 14:47:35.352025324   documentclass: article
+2026/11/18 14:47:35.352026562   output-file: report.pdf
+2026/11/18 14:47:35.352050139   
+2026/11/18 14:47:36.813950980 [1m[34m
+2026/11/18 14:47:36.813962333 Rendering PDF[39m[22m
+2026/11/18 14:47:36.814008472 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 14:47:39.642637951   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:47:39.642653171    restricted system commands enabled.
+2026/11/18 14:47:39.642720308   
+2026/11/18 14:47:39.642722025 [1m[34mupdating tlmgr[39m[22m
+2026/11/18 14:47:42.869896579 
+2026/11/18 14:47:42.869907154 [1m[34mupdating existing packages[39m[22m
+2026/11/18 14:47:46.119679744 [91mERROR: 
+2026/11/18 14:47:46.119691142 compilation failed- error[39m
+2026/11/18 14:47:46.119750294 Extra alignment tab has been changed to \cr.
+2026/11/18 14:47:46.119752396 <recently read> \endtemplate 
+2026/11/18 14:47:46.119773349              
+2026/11/18 14:47:46.119774308 l.363 ...s SB waters & 0.00 & 12.10 & Observed max &
+2026/11/18 14:47:46.119789115                                                    \mbox{YES}\\
+2026/11/18 14:47:46.119789710 
+2026/11/18 14:47:46.119801385 
+2026/11/18 14:47:46.119801974 see /opt/rstudio-connect/mnt/tmp/Rtmp0U21J1/rp_report_12a6d5258ef21/report.log for more information.
+2026/11/18 14:47:46.119829744 [33mWARN: Error encountered when rendering files[39m
+2026/11/18 14:47:46.381972889 Warning: Error in quarto::quarto_render: ! Error running quarto CLI from R.
+2026/11/18 14:47:46.381986745 Caused by error:
+2026/11/18 14:47:46.382069262 ! Could not evaluate cli `{}` expression: `YES`.
+2026/11/18 14:47:46.382074805 Caused by error:
+2026/11/18 14:47:46.382125711 ! object 'YES' not found
+2026/11/18 14:47:46.390381841   110: <Anonymous>
+2026/11/18 14:47:46.390392496   109: stop
+2026/11/18 14:47:46.390437543   108: func
+2026/11/18 14:47:46.390438433   106: f
+2026/11/18 14:47:46.390461448   105: Reduce
+2026/11/18 14:47:46.390465521    96: do
+2026/11/18 14:47:46.390505374    95: hybrid_chain
+2026/11/18 14:47:46.390509158    88: contextFunc
+2026/11/18 14:47:46.390546257    87: env$runWith
+2026/11/18 14:47:46.390547652    74: Context$new(getDefaultReactiveDomain(), "[download]")$run
+2026/11/18 14:47:46.390582207    73: shinysession$handleRequest
+2026/11/18 14:47:46.390583557    68: handler
+2026/11/18 14:47:46.390607738    67: handler
+2026/11/18 14:47:46.390611403    66: handlers$invoke
+2026/11/18 14:47:46.390637007    34: handler
+2026/11/18 14:47:46.390638355    33: func
+2026/11/18 14:47:46.390663611    32: compute
+2026/11/18 14:47:46.390676059    27: rookCall
+2026/11/18 14:47:46.390677595    26: <Anonymous>
+2026/11/18 14:47:46.390703982    25: execCallbacks
+2026/11/18 14:47:46.390705716    24: run_now
+2026/11/18 14:47:46.390730568    23: service
+2026/11/18 14:47:46.390731887    22: serviceApp
+2026/11/18 14:47:46.390759573    15: <Anonymous>
+2026/11/18 14:47:46.390761321    13: fn
+2026/11/18 14:47:46.390790104     8: retry
+2026/11/18 14:47:46.390795660     7: connect$retryingStartServer
+2026/11/18 14:47:46.390815325     6: eval
+2026/11/18 14:47:46.390816445     5: eval
+2026/11/18 14:47:46.390837094     4: eval
+2026/11/18 14:47:46.390838204     3: eval
+2026/11/18 14:47:46.390858244     2: eval.parent
+2026/11/18 14:47:46.390859638     1: local
+2026/11/18 14:48:11.942814741 [31m
+2026/11/18 14:48:11.942827235 
+2026/11/18 14:48:11.942878965 processing file: report.qmd
+2026/11/18 14:48:11.963249331 [39m1/21                    
+2026/11/18 14:48:11.963990879 2/21 [setup]            
+2026/11/18 14:48:14.654969277 3/21                    
+2026/11/18 14:48:14.655690733 4/21 [title-block]      
+2026/11/18 14:48:14.871458744 5/21                    
+2026/11/18 14:48:14.873488029 6/21 [quick-run-warning]
+2026/11/18 14:48:14.883974223 7/21                    
+2026/11/18 14:48:14.884732482 8/21 [coverage]         
+2026/11/18 14:48:14.937236906 9/21                    
+2026/11/18 14:48:14.937247021 10/21 [rp-table]         
+2026/11/18 14:48:15.106164499 11/21                    
+2026/11/18 14:48:15.106178351 12/21 [receiving-water]  
+2026/11/18 14:48:19.924350128 13/21                    
+2026/11/18 14:48:19.924363778 14/21 [per-pollutant]    
+2026/11/18 14:48:30.871388200 15/21                    
+2026/11/18 14:48:30.871398600 16/21 [unavailable]      
+2026/11/18 14:48:30.928133045 17/21                    
+2026/11/18 14:48:30.928145898 18/21 [excluded-params]  
+2026/11/18 14:48:30.971459876 19/21                    
+2026/11/18 14:48:30.971470466 20/21 [manual-wqs]       
+2026/11/18 14:48:31.022328780 21/21                    
+2026/11/18 14:48:31.023663757 [31moutput file: report.knit.md
+2026/11/18 14:48:31.023671537 
+2026/11/18 14:48:31.047869874 [39m[31mThere were 35 warnings (use warnings() to see them)
+2026/11/18 14:48:31.905676895 [39m[1mpandoc [22m
+2026/11/18 14:48:31.906445110   to: latex
+2026/11/18 14:48:31.906450514   output-file: report.tex
+2026/11/18 14:48:31.906481291   standalone: true
+2026/11/18 14:48:31.906482007   pdf-engine: lualatex
+2026/11/18 14:48:31.906505595   variables:
+2026/11/18 14:48:31.906519704     graphics: true
+2026/11/18 14:48:31.906564975     tables: true
+2026/11/18 14:48:31.906578628   default-image-extension: pdf
+2026/11/18 14:48:31.906580001   toc: false
+2026/11/18 14:48:31.906603859   toc-depth: 1
+2026/11/18 14:48:31.906605060   number-sections: true
+2026/11/18 14:48:31.906626180   
+2026/11/18 14:48:31.906627309 [1mmetadata[22m
+2026/11/18 14:48:31.906645066   block-headings: true
+2026/11/18 14:48:31.906646132   geometry:
+2026/11/18 14:48:31.906667422     - margin=1in
+2026/11/18 14:48:31.906668500     - headheight=30pt
+2026/11/18 14:48:31.906696210     - headsep=16pt
+2026/11/18 14:48:31.906697715   documentclass: article
+2026/11/18 14:48:31.906719239   output-file: report.pdf
+2026/11/18 14:48:31.906720273   
+2026/11/18 14:48:33.439050358 [1m[34m
+2026/11/18 14:48:33.439062667 Rendering PDF[39m[22m
+2026/11/18 14:48:33.439115574 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 14:48:36.285368213   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 14:48:36.285381951    restricted system commands enabled.
+2026/11/18 14:48:36.285452388   
+2026/11/18 14:48:36.285454128 [1m[34mupdating tlmgr[39m[22m
+2026/11/18 14:48:41.509073666 
+2026/11/18 14:48:41.509085998 [1m[34mupdating existing packages[39m[22m
+2026/11/18 14:48:45.298477070 [91mERROR: 
+2026/11/18 14:48:45.298491508 compilation failed- error[39m
+2026/11/18 14:48:45.298542224 Extra alignment tab has been changed to \cr.
+2026/11/18 14:48:45.298548081 <recently read> \endtemplate 
+2026/11/18 14:48:45.298575333              
+2026/11/18 14:48:45.298580580 l.363 ...s SB waters & 0.00 & 12.10 & Observed max &
+2026/11/18 14:48:45.298628879                                                    \mbox{YES}\\
+2026/11/18 14:48:45.298630302 
+2026/11/18 14:48:45.298658644 
+2026/11/18 14:48:45.298660468 see /opt/rstudio-connect/mnt/tmp/Rtmp0U21J1/rp_report_12a6d4b3b7657/report.log for more information.
+2026/11/18 14:48:45.298698769 [33mWARN: Error encountered when rendering files[39m
+2026/11/18 14:48:45.504778839 Warning: Error in quarto::quarto_render: ! Error running quarto CLI from R.
+2026/11/18 14:48:45.504793021 Caused by error:
+2026/11/18 14:48:45.504866098 ! Could not evaluate cli `{}` expression: `YES`.
+2026/11/18 14:48:45.504871328 Caused by error:
+2026/11/18 14:48:45.504919930 ! object 'YES' not found
+2026/11/18 14:48:45.512615863   110: <Anonymous>
+2026/11/18 14:48:45.512623592   109: stop
+2026/11/18 14:48:45.512644005   108: func
+2026/11/18 14:48:45.512647793   106: f
+2026/11/18 14:48:45.512658784   105: Reduce
+2026/11/18 14:48:45.512666404    96: do
+2026/11/18 14:48:45.512674615    95: hybrid_chain
+2026/11/18 14:48:45.512681481    88: contextFunc
+2026/11/18 14:48:45.512704344    87: env$runWith
+2026/11/18 14:48:45.512705328    74: Context$new(getDefaultReactiveDomain(), "[download]")$run
+2026/11/18 14:48:45.512722818    73: shinysession$handleRequest
+2026/11/18 14:48:45.512723337    68: handler
+2026/11/18 14:48:45.512746815    67: handler
+2026/11/18 14:48:45.512750185    66: handlers$invoke
+2026/11/18 14:48:45.512787616    34: handler
+2026/11/18 14:48:45.512791350    33: func
+2026/11/18 14:48:45.512831622    32: compute
+2026/11/18 14:48:45.512832686    27: rookCall
+2026/11/18 14:48:45.512864156    26: <Anonymous>
+2026/11/18 14:48:45.512865577    25: execCallbacks
+2026/11/18 14:48:45.512890371    24: run_now
+2026/11/18 14:48:45.512891004    23: service
+2026/11/18 14:48:45.512901663    22: serviceApp
+2026/11/18 14:48:45.512902176    15: <Anonymous>
+2026/11/18 14:48:45.512915101    13: fn
+2026/11/18 14:48:45.512915640     8: retry
+2026/11/18 14:48:45.512931817     7: connect$retryingStartServer
+2026/11/18 14:48:45.512933061     6: eval
+2026/11/18 14:48:45.512961520     5: eval
+2026/11/18 14:48:45.512967387     4: eval
+2026/11/18 14:48:45.513003226     3: eval
+2026/11/18 14:48:45.513018954     2: eval.parent
+2026/11/18 14:48:45.513020296     1: local
+2026/11/18 15:00:03.965956465 DMR load successful!!!
+2026/11/18 15:05:25.539373628 
+2026/11/18 15:05:25.543873213 Trying to get metal IDs
+2026/11/18 15:05:25.551617604 Retrieved metals crosswalk
+2026/11/18 15:05:25.568187723 filtered cb
+2026/11/18 15:05:25.569276488 rwc calculated
+2026/11/18 15:05:25.569571232  Made it past metals limits
+2026/11/18 15:05:25.616286512  Joining rwc to criterion IDS
+2026/11/18 15:05:25.616295534  joining metals
+2026/11/18 15:05:25.616347496  Finding maximums
+2026/11/18 15:05:25.616351389 
+2026/11/18 15:05:25.616370516  Determining RP
+2026/11/18 15:05:25.616371790  rwc_criteria columns: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes
+2026/11/18 15:05:25.618742467 
+2026/11/18 15:05:25.624241378 columns in joined data: NPDES_Pollutant, CRITERION_ID, CRITERION_VALUE, UNIT_NAME, parameter_code, USE_CLASS_NAME_LOCATION_ETC, sub_class, rp_method, rp_operator, statistic, criterion_form, criterion_label, no_exceed_rp, rp_note, Method, perm_feature_nmbr, parameter_desc, perm_feature_type_code, .vals, n_used, min_value, max_value, mean_value, sd_val, mf, cv, sigma_g, p_percentile, z_p, z_target, MF, RWC_rs, dilution_ratio, confidence_level, target_percentile, notes, RP, value_basis
+2026/11/18 15:05:26.295531933 Warning in geom_point(data = obs[!obs$is_nondetect, , drop = FALSE], aes(color = dmr_unit_desc,  :
+2026/11/18 15:05:26.295542818   Ignoring unknown aesthetics: text
+2026/11/18 15:05:26.310648359 Warning in geom_point(data = obs[obs$is_nondetect, , drop = FALSE], aes(shape = "Non-detect",  :
+2026/11/18 15:05:26.310657401   Ignoring unknown aesthetics: text
+2026/11/18 15:05:43.382110048 [31m
+2026/11/18 15:05:43.382121346 
+2026/11/18 15:05:43.382166245 processing file: report.qmd
+2026/11/18 15:05:43.402646353 [39m1/21                    
+2026/11/18 15:05:43.402655334 2/21 [setup]            
+2026/11/18 15:05:47.530007793 3/21                    
+2026/11/18 15:05:47.530022260 4/21 [title-block]      
+2026/11/18 15:05:47.753665683 5/21                    
+2026/11/18 15:05:47.755267944 6/21 [quick-run-warning]
+2026/11/18 15:05:47.755276724 7/21                    
+2026/11/18 15:05:47.756264038 8/21 [coverage]         
+2026/11/18 15:05:47.808673299 9/21                    
+2026/11/18 15:05:47.808683722 10/21 [rp-table]         
+2026/11/18 15:05:47.971934318 11/21                    
+2026/11/18 15:05:47.971943864 12/21 [receiving-water]  
+2026/11/18 15:05:52.823314817 13/21                    
+2026/11/18 15:05:52.823328935 14/21 [per-pollutant]    
+2026/11/18 15:06:03.461367014 15/21                    
+2026/11/18 15:06:03.461377057 16/21 [unavailable]      
+2026/11/18 15:06:03.518245796 17/21                    
+2026/11/18 15:06:03.518258946 18/21 [excluded-params]  
+2026/11/18 15:06:03.555662347 19/21                    
+2026/11/18 15:06:03.555673345 20/21 [manual-wqs]       
+2026/11/18 15:06:03.604525521 21/21                    
+2026/11/18 15:06:03.605890163 [31moutput file: report.knit.md
+2026/11/18 15:06:03.605901119 
+2026/11/18 15:06:03.630748028 [39m[31mThere were 34 warnings (use warnings() to see them)
+2026/11/18 15:06:04.491968327 [39m[1mpandoc [22m
+2026/11/18 15:06:04.493105770   to: latex
+2026/11/18 15:06:04.493113484   output-file: report.tex
+2026/11/18 15:06:04.493153341   standalone: true
+2026/11/18 15:06:04.493154441   pdf-engine: lualatex
+2026/11/18 15:06:04.493170196   variables:
+2026/11/18 15:06:04.493170779     graphics: true
+2026/11/18 15:06:04.493181717     tables: true
+2026/11/18 15:06:04.493182265   default-image-extension: pdf
+2026/11/18 15:06:04.493195749   toc: false
+2026/11/18 15:06:04.493196265   toc-depth: 1
+2026/11/18 15:06:04.493209077   number-sections: true
+2026/11/18 15:06:04.493210014   
+2026/11/18 15:06:04.493238790 [1mmetadata[22m
+2026/11/18 15:06:04.493241054   block-headings: true
+2026/11/18 15:06:04.493265142   geometry:
+2026/11/18 15:06:04.493265686     - margin=1in
+2026/11/18 15:06:04.493279030     - headheight=30pt
+2026/11/18 15:06:04.493279650     - headsep=16pt
+2026/11/18 15:06:04.493291008   documentclass: article
+2026/11/18 15:06:04.493291566   output-file: report.pdf
+2026/11/18 15:06:04.493304293   
+2026/11/18 15:06:05.916096517 [1m[34m
+2026/11/18 15:06:05.916107344 Rendering PDF[39m[22m
+2026/11/18 15:06:05.916158451 [1m[34mrunning lualatex - 1[39m[22m
+2026/11/18 15:06:08.740535501   This is LuaHBTeX, Version 1.24.0 (TeX Live 2026) 
+2026/11/18 15:06:08.740548547    restricted system commands enabled.
+2026/11/18 15:06:08.740607440   
+2026/11/18 15:06:08.740608985 [1m[34mupdating tlmgr[39m[22m
+2026/11/18 15:06:12.311975517 
+2026/11/18 15:06:12.311988837 [1m[34mupdating existing packages[39m[22m
+2026/11/18 15:07:22.069970234 [91mERROR: 
+2026/11/18 15:07:22.069983750 compilation failed- error[39m
+2026/11/18 15:07:22.070048759 Extra alignment tab has been changed to \cr.
+2026/11/18 15:07:22.070050972 <recently read> \endtemplate 
+2026/11/18 15:07:22.070079424              
+2026/11/18 15:07:22.070080526 l.362 ...s SB waters & 0.00 & 12.10 & Observed max &
+2026/11/18 15:07:22.070105516                                                    \mbox{YES}\\
+2026/11/18 15:07:22.070106645 
+2026/11/18 15:07:22.070139990 
+2026/11/18 15:07:22.070144354 see /opt/rstudio-connect/mnt/tmp/Rtmp0U21J1/rp_report_12a6d5d2afc9e/report.log for more information.
+2026/11/18 15:07:22.070190000 [33mWARN: Error encountered when rendering files[39m
+2026/11/18 15:07:22.258614014 Warning: Error in quarto::quarto_render: ! Error running quarto CLI from R.
+2026/11/18 15:07:22.258627225 Caused by error:
+2026/11/18 15:07:22.258687535 ! Could not evaluate cli `{}` expression: `YES`.
+2026/11/18 15:07:22.258688768 Caused by error:
+2026/11/18 15:07:22.258714839 ! object 'YES' not found
+2026/11/18 15:07:22.266558969   110: <Anonymous>
+2026/11/18 15:07:22.266567374   109: stop
+2026/11/18 15:07:22.266606225   108: func
+2026/11/18 15:07:22.266607681   106: f
+2026/11/18 15:07:22.266627453   105: Reduce
+2026/11/18 15:07:22.266628702    96: do
+2026/11/18 15:07:22.266651786    95: hybrid_chain
+2026/11/18 15:07:22.266652943    88: contextFunc
+2026/11/18 15:07:22.266684286    87: env$runWith
+2026/11/18 15:07:22.266691315    74: Context$new(getDefaultReactiveDomain(), "[download]")$run
+2026/11/18 15:07:22.266722334    73: shinysession$handleRequest
+2026/11/18 15:07:22.266722967    68: handler
+2026/11/18 15:07:22.266738151    67: handler
+2026/11/18 15:07:22.266738678    66: handlers$invoke
+2026/11/18 15:07:22.266759750    34: handler
+2026/11/18 15:07:22.266760380    33: func
+2026/11/18 15:07:22.266779036    32: compute
+2026/11/18 15:07:22.266779691    27: rookCall
+2026/11/18 15:07:22.266794413    26: <Anonymous>
+2026/11/18 15:07:22.266795275    25: execCallbacks
+2026/11/18 15:07:22.266812649    24: run_now
+2026/11/18 15:07:22.266814103    23: service
+2026/11/18 15:07:22.266841221    22: serviceApp
+2026/11/18 15:07:22.266842820    15: <Anonymous>
+2026/11/18 15:07:22.266870938    13: fn
+2026/11/18 15:07:22.266871903     8: retry
+2026/11/18 15:07:22.266893088     7: connect$retryingStartServer
+2026/11/18 15:07:22.266894260     6: eval
+2026/11/18 15:07:22.266914183     5: eval
+2026/11/18 15:07:22.266914732     4: eval
+2026/11/18 15:07:22.266934320     3: eval
+2026/11/18 15:07:22.266935953     2: eval.parent
+2026/11/18 15:07:22.266964409     1: local
