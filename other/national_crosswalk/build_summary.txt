@@ -1,0 +1,47 @@
+criteria (all entities): 46235
+criteria with at least one code: 38834 (84.0%)
+states + territories: 25978 criteria, 84.5% matched
+
+criteria by match_type:
+match_type
+EXACT_PR           32311
+UNRESOLVED          7401
+ICIS_DESC_EXACT     3258
+CAS_PR              1416
+NORM_VALENCE         751
+NORM_PR              704
+PR_CROSSWALK         394
+criteria rows using an INACTIVE ICIS code (mostly inherited from the PR crosswalk): 1454
+
+distinct names (excluding PR-only): 1143
+names by match_type:
+match_type
+UNRESOLVED         631
+ICIS_DESC_EXACT    236
+EXACT_PR           147
+CAS_PR             106
+NORM_PR             21
+NORM_VALENCE         2
+
+unresolved names by rows affected (top 20):
+                             POLLUTANT_NAME  n_criteria   CAS_NO
+                                   chloride         241 16887006
+                                    ammonia         227  7664417
+             temperature rise above ambient         206      NaN
+             gamma-hch (gamma-bhc, lindane)         205    58899
+                   4,4'-ddt and derivatives         204    50293
+                                  beryllium         171  7440417
+                      dioxin (2,3,7,8-tcdd)         167  1746016
+                 1,2-trans-dichloroethylene         152   156605
+                         turbidity increase         149      NaN
+                                  manganese         144  7439965
+                                     barium         136  7440393
+                                      boron         131  7440428
+               bis(2-chloroisopropyl) ether         124   108601
+                        gamma-bhc (lindane)         114    58899
+                               pH variation         113      NaN
+                              chloropyrifos         109  2921882
+                    total residual chlorine         105      NaN
+                             dinitrophenols         101 25550587
+dibromochloromethane (chlorodibromomethane)          91   124481
+                                    guthion          87    86500
